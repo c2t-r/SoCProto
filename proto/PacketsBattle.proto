@@ -1,0 +1,1168 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package battle;
+
+message Vector3 {
+  sint32 x = 1;
+  sint32 double_y = 2;
+  sint32 z = 3;
+}
+
+message Attributes {
+  sint32 tp = 1;
+  sint32 tp_max = 2;
+  sint32 hp = 5;
+  sint32 hp_max = 6;
+  sint32 physic_attack = 7;
+  sint32 spell_attack = 8;
+  sint32 physic_defence = 9;
+  sint32 spell_defence = 10;
+  sint32 crit_damage = 14;
+  sint32 crit_resist = 15;
+  sint32 crit_reduce = 16;
+  sint32 crit_ratio = 17;
+  sint32 boss_armor = 18;
+  sint32 physic_armor = 19;
+  sint32 spell_armor = 20;
+}
+
+message Movement {
+  sint32 wait_time = 1;
+  sint32 mobility = 2;
+  uint32 move_type = 3;
+  uint32 stay_type = 4;
+  sint32 jump_up = 5;
+  sint32 jump_down = 6;
+  sint32 height = 8;
+  sint32 speed = 9;
+}
+
+message Speciality {
+  uint32 id = 1;
+  uint32 type = 2;
+  uint32 category = 3;
+  uint32 active_time = 4;
+  string active_param = 5;
+  uint32 target_type = 6;
+  sint32 param0 = 7;
+  sint32 param1 = 8;
+  sint32 param2 = 9;
+  sint32 param3 = 10;
+  string sparam = 11;
+  sint32 limit_count = 12;
+  sint32 limit_count_turn = 13;
+  bool islimit_max = 14;
+  sint32 stack_count = 15;
+  sint32 unit_index = 16;
+  repeated uint32 group_skills = 17;
+  bool target_to_caster = 18;
+  string skill_active_param = 19;
+}
+
+message Restrain {
+  uint32 id = 1;
+  uint32 origin = 2;
+  uint32 target = 3;
+  repeated uint32 specs = 4;
+  uint32 evaluate = 5;
+}
+
+message Modify {
+  uint32 id = 1;
+  repeated uint32 specs = 2;
+}
+
+message Buff {
+  uint32 id = 1;
+  uint32 category = 2;
+  uint32 effect_type = 3;
+  uint32 buff_type = 4;
+  uint32 stack_count = 5;
+  repeated uint32 specs = 6;
+  uint32 end_time = 7;
+  bool candispel = 8;
+  bool canimmune = 9;
+  sint32 category_priority = 10;
+  uint32 middle_type = 11;
+  uint32 sub_type = 12;
+  string active_param = 13;
+}
+
+message MapBuff {
+  uint32 id = 1;
+  uint32 buff_id = 2;
+  uint32 target_type = 3;
+}
+
+message Skill {
+  uint32 id = 1;
+  uint32 category = 2;
+  uint32 type = 3;
+  uint32 phase = 4;
+  uint32 damage_type = 5;
+  uint32 attack_method = 6;
+  sint32 tp = 7;
+  sint32 hp = 9;
+  uint32 range_min = 10;
+  uint32 range_max = 11;
+  sint32 attack_up = 12;
+  sint32 attack_down = 13;
+  sint32 damage = 14;
+  sint32 damage_factor = 15;
+  sint32 physic_factor = 16;
+  sint32 spell_factor = 17;
+  sint32 defence_ignore = 18;
+  uint32 target_method = 19;
+  uint32 target_select = 20;
+  sint32 target_width = 21;
+  uint32 cooldown = 22;
+  uint32 pre_cooldown = 23;
+  sint32 clip_capacity = 24;
+  uint32 crit_chance = 25;
+  sint32 limit_count = 26;
+  sint32 limit_count_turn = 27;
+  repeated uint32 specs = 28;
+  uint32 idskill_follow = 29;
+  bool cancounter = 30;
+  string active_param = 31;
+  string skill_tag_ids = 32;
+  uint32 range_tag = 33;
+  uint32 hit_method = 34;
+  uint32 skill_type = 35;
+  string target_param = 36;
+  bool is_profession = 37;
+  bool is_tactic = 38;
+  uint32 skill_cast_id = 39;
+  bool skill_cast_parent_target = 40;
+  sint32 source = 41;
+  uint32 tactic_skill_id = 42;
+  sint32 damage_percent = 43;
+  uint32 target_type = 44;
+  string cast_param = 45;
+  uint32 surprise_skill_id = 46;
+}
+
+message AIPoint {
+  sint32 x = 1;
+  sint32 z = 2;
+  uint32 area_size = 3;
+}
+
+message Entity {
+  enum Type {
+    None = 0;
+    Unit = 1;
+    Props = 2;
+    Trap = 3;
+    Widget = 4;
+  }
+  enum Facing {
+    South = 0;
+    West = 1;
+    North = 2;
+    East = 3;
+    All = 4;
+  }
+  enum Side {
+    Player = 0;
+    Friend = 1;
+    FriendNpc = 2;
+    Neutral = 3;
+    Enemy = 4;
+    EnemyPlayer = 5;
+  }
+  enum Direction {
+    Front = 0;
+    Back = 1;
+    Left = 2;
+    Right = 3;
+  }
+}
+
+message Unit {
+  uint32 id = 1;
+  uint32 name = 2;
+  uint32 level = 3;
+  battle.Attributes attributes = 4;
+  battle.Movement movement = 5;
+  sint32 x = 6;
+  sint32 y = 7;
+  sint32 z = 8;
+  uint32 race = 9;
+  uint32 profession = 10;
+  battle.Entity.Facing facing = 11;
+  battle.Entity.Side side = 12;
+  uint32 melee_skill = 13;
+  uint32 reactive_skill = 14;
+  repeated uint32 skills = 15;
+  uint32 leader_skill = 16;
+  uint32 ai_id = 17;
+  sint32 editor_index = 18;
+  bool editor_visible = 19;
+  bool istemplate = 20;
+  repeated battle.Unit._Buff buffs = 21;
+  uint32 ailink = 22;
+  sint32 priority = 23;
+  uint32 character_unit_id = 24;
+  repeated uint32 feature_skills = 25;
+  sint32 intensity = 26;
+  bool is_player_caster = 27;
+  uint32 unit_npc_id = 28;
+  bool is_boss = 29;
+  sint32 editor_wave = 30;
+  uint32 counter_skill = 31;
+  bool ai_skill_sorted = 32;
+  bool boss_skill_mode = 33;
+  repeated uint32 boss_skills = 34;
+  sint32 team = 35;
+  uint32 star = 36;
+  uint32 personality_id = 37;
+  uint32 rarity = 38;
+  uint32 character_building_id = 39;
+  bool is_elite = 40;
+  bool is_summoned = 41;
+  string display_name = 42;
+  repeated uint32 blessing_effect_ids = 43;
+  uint32 skin = 44;
+  uint32 model_skin = 45;
+  battle.BattleUnit.Type type = 46;
+  message _Buff {
+    uint32 index = 1;
+    sint32 turn = 2;
+    uint32 stack = 3;
+  }
+}
+
+message AIMachine {
+  battle.AIMachine.AI_ROLER_BATTLE ai_roler_battle = 1;
+  battle.AIMachine.AI_ROLER_STATE ai_roler_state = 2;
+  repeated battle.AIPoint patrol_points = 3;
+  repeated battle.AIPoint alert_points = 4;
+  repeated battle.AIPoint trigger_points = 5;
+  int32 alert_dist = 6;
+  battle.AIMachine.AI_PATROL_TYPE ai_patrol_type = 7;
+  bool skill_by_order = 8;
+  enum AI_ROLER_BATTLE {
+    None = 0;
+    Normal = 1;
+    offense = 2;
+    defense = 3;
+    heal = 4;
+    buff = 5;
+    debuff = 6;
+  }
+  enum AI_ROLER_STATE {
+    Idle = 0;
+    Patrol = 1;
+    War = 2;
+    Escape = 3;
+    Banished = 4;
+    AlertAll = 5;
+  }
+  enum AI_PATROL_TYPE {
+    Round_trip = 0;
+    Loop = 1;
+    One_way = 2;
+  }
+}
+
+message FieldStatus {
+  uint32 id = 1;
+  string type = 2;
+  sint32 mobility = 3;
+  repeated uint32 specs = 4;
+  bool irreplaceable = 5;
+  sint32 priority = 6;
+  repeated uint32 operations = 7;
+}
+
+message Block {
+  sint32 x = 1;
+  sint32 y = 2;
+  sint32 z = 3;
+  uint32 type = 4;
+}
+
+message BlockStatus {
+  sint32 x = 1;
+  sint32 z = 2;
+  uint32 status = 3;
+  sint32 status_count = 4;
+  sint32 editor_index = 5;
+  bool editor_visible = 6;
+}
+
+message Props {
+  uint32 id = 1;
+  uint32 level = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  sint32 z = 5;
+  sint32 hp = 6;
+  sint32 hp_max = 7;
+  sint32 physic_defence = 8;
+  sint32 spell_defence = 9;
+  sint32 height = 10;
+  repeated uint32 specs = 11;
+  battle.Entity.Side side = 12;
+  sint32 editor_index = 13;
+  bool editor_visible = 14;
+  sint32 priority = 15;
+  sint32 team = 16;
+  sint32 editor_wave = 17;
+  uint32 character_building_id = 18;
+  repeated battle.Props._Buff buffs = 19;
+  bool is_summoned = 20;
+  bool attackable = 21;
+  bool movable = 22;
+  bool collidable = 23;
+  uint32 state = 24;
+  uint32 unit_large_id = 25;
+  bool ignore_side_beattacked_aoe = 26;
+  message _Buff {
+    uint32 index = 1;
+    sint32 turn = 2;
+    uint32 stack = 3;
+  }
+}
+
+message Trap {
+  uint32 id = 1;
+  uint32 level = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  sint32 z = 5;
+  repeated uint32 specs = 6;
+  bool attackable = 7;
+  battle.Entity.Facing facing = 8;
+  battle.Entity.Side side = 9;
+  sint32 editor_index = 10;
+  bool editor_visible = 11;
+  sint32 priority = 12;
+  sint32 team = 13;
+  uint32 trigger_skill = 14;
+  uint32 destroy_skill = 15;
+  uint32 character_building_id = 16;
+  sint32 editor_wave = 17;
+  bool harmful = 18;
+  sint32 mobility = 19;
+  uint32 trigger_type = 20;
+}
+
+message Widget {
+  uint32 id = 1;
+  uint32 level = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  sint32 z = 5;
+  uint32 melee_skill = 6;
+  battle.Entity.Facing facing = 7;
+  sint32 editor_index = 8;
+  bool editor_visible = 9;
+  sint32 priority = 10;
+  string sparam = 11;
+  uint32 type = 12;
+  uint32 trigger_type = 13;
+}
+
+message Area {
+  sint32 index = 1;
+  string name = 2;
+  repeated uint32 blocks = 3;
+}
+
+message UnitGroup {
+  sint32 index = 1;
+  string name = 2;
+  repeated battle.UnitGroup._Unit units = 3;
+  message _Unit {
+    sint32 index = 1;
+    sint32 weight = 2;
+  }
+}
+
+message PropsGroup {
+  sint32 index = 1;
+  string name = 2;
+  repeated sint32 props = 3;
+}
+
+message TrapGroup {
+  sint32 index = 1;
+  string name = 2;
+  repeated sint32 traps = 3;
+}
+
+message WidgetGroup {
+  sint32 index = 1;
+  string name = 2;
+  repeated sint32 widgets = 3;
+}
+
+message Weather {
+  uint32 id = 1;
+  repeated uint32 specs = 2;
+}
+
+message BattleEvent {
+  sint32 index = 1;
+  string name = 2;
+  sint32 trigger_limit = 3;
+  battle.BattleEvent.Trigger trigger = 4;
+  repeated battle.BattleEvent.Condition conditions = 5;
+  battle.BattleEvent.Section main_section = 6;
+  repeated battle.BattleEvent.Section sections = 7;
+  string category = 8;
+  battle.BattleEvent.PerformMode perform_mode = 9;
+  string tag = 10;
+  string conditionExpression = 11;
+  message Trigger {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+    sint32 param2 = 4;
+    sint32 param3 = 5;
+    string sparam = 6;
+  }
+  message Condition {
+    uint32 type = 1;
+    bool isand = 2;
+    sint32 param0 = 3;
+    sint32 param1 = 4;
+    sint32 param2 = 5;
+    sint32 param3 = 6;
+    string sparam = 7;
+  }
+  message Action {
+    battle.BattleEvent.Action.Type type = 1;
+    string sparam = 2;
+    bool need_finish = 3;
+    sint32 wait_time = 4;
+    sint32 index = 5;
+    battle.BattleEvent.Action.ActorSelectType actor_select_type = 6;
+    enum Type {
+      Dialogue = 0;
+      UnitMove = 1;
+      UnitAct = 2;
+      UnitSendOff = 3;
+      Facing = 4;
+      ChangeSide = 5;
+      UnitSkillToUnit = 6;
+      UnitSkillToBlock = 7;
+      CameraLookAtUnit = 8;
+      CameraLookAtBlock = 9;
+      BattleEnd = 10;
+      SpawnWaveUnit = 11;
+      ChangeFlag = 12;
+      ChangeSubConditionResult = 13;
+      ChangeAIToWar = 14;
+      ChangeBgm = 15;
+      BlockGridEffect = 16;
+      ChangeBattleConditionText = 17;
+      AddBuffToUnit = 18;
+      AddBuffToArea = 19;
+      FacingUnit = 20;
+      ChangeAI = 21;
+      SpawnFieldStatus = 22;
+      CalculateFlag = 23;
+      BubbleEmoji = 24;
+      RemoveBuffFromUnit = 25;
+      PropsSendOff = 26;
+      WidgetStartUp = 27;
+      WidgetSendOff = 28;
+      WidgetCurLimitCountModify = 29;
+      ChangeWeather = 30;
+      UnitHideWeapon = 31;
+      UnitShowWeapon = 32;
+    }
+    enum ActorSelectType {
+      Unit = 0;
+      UnitGroup = 1;
+      Side = 2;
+    }
+    enum BlockSelectType {
+      Block = 0;
+      Area = 1;
+    }
+  }
+  message Option {
+    sint32 index = 1;
+    bool selectable = 2;
+    string content = 3;
+    sint32 miniIconType = 4;
+    sint32 sectionIndex = 5;
+  }
+  message Selection {
+    sint32 index = 1;
+    sint32 positionType = 2;
+    string face = 3;
+    repeated battle.BattleEvent.Option options = 4;
+    sint32 portraitStatus = 5;
+    string showName = 6;
+  }
+  message Section {
+    sint32 index = 1;
+    string name = 2;
+    repeated battle.BattleEvent.Action actions = 3;
+    battle.BattleEvent.Selection selection = 4;
+  }
+  enum PerformMode {
+    Rule = 0;
+    ForceOn = 1;
+    ForceOff = 2;
+  }
+}
+
+message BattleCondition {
+  bool isKillAll = 1;
+  repeated battle.BattleCondition.Condition conditions = 2;
+  string win_expression = 3;
+  string lose_expression = 4;
+  message Condition {
+    uint32 type = 1;
+    bool iswin = 2;
+    bool isand = 3;
+    sint32 param0 = 4;
+    sint32 param1 = 5;
+    sint32 param2 = 6;
+    sint32 param3 = 7;
+    string sparam = 8;
+    string name = 9;
+    bool ismain = 10;
+    uint32 template_id = 11;
+    string tag = 12;
+    string desc = 13;
+  }
+}
+
+message ConditionParams {
+  uint32 type = 1;
+  sint32 param0 = 2;
+  sint32 param1 = 3;
+  sint32 param2 = 4;
+  sint32 param3 = 5;
+  string sparam = 6;
+}
+
+message BattleChallenge {
+  sint32 index = 1;
+  string name = 2;
+  string expression = 3;
+  repeated battle.BattleChallenge.Condition conditions = 4;
+  string desc = 5;
+  message Condition {
+    bool isand = 1;
+    battle.ConditionParams checkpoint = 2;
+    battle.ConditionParams condition = 3;
+  }
+}
+
+message AITemplate {
+  battle.AITemplate.AI_ROLER_BATTLE ai_roler_battle = 1;
+  battle.AITemplate.AI_ROLER_STATE ai_roler_state = 2;
+  repeated battle.Vector3 patrol_points = 3;
+  repeated battle.Vector3 alert_points = 4;
+  repeated battle.Vector3 trigger_points = 5;
+  int32 alert_dist = 6;
+  battle.AITemplate.AI_PATROL_TYPE ai_patrol_type = 7;
+  uint32 id = 8;
+  repeated battle.Vector3 escape_points = 9;
+  string name = 10;
+  enum AI_ROLER_BATTLE {
+    None = 0;
+    Normal = 1;
+    Offense = 2;
+    Defense = 3;
+    Heal = 4;
+    Buff = 5;
+    Debuff = 6;
+  }
+  enum AI_ROLER_STATE {
+    Idle = 0;
+    Patrol = 1;
+    War = 2;
+    Escape = 3;
+    Banished = 4;
+    AlertAll = 5;
+  }
+  enum AI_PATROL_TYPE {
+    Round_trip = 0;
+    Loop = 1;
+    One_way = 2;
+  }
+}
+
+message Mission {
+  string map_name = 1;
+  repeated battle.Mission._Block blocks = 2;
+  repeated battle.Mission._Props props = 3;
+  repeated battle.Mission._Unit units = 4;
+  repeated battle.Mission._Spawn spawns = 5;
+  repeated sint32 deactive_props = 6;
+  repeated battle.Area areas = 7;
+  repeated battle.BattleEvent events = 8;
+  sint32 time = 9;
+  sint32 turn_max = 10;
+  repeated battle.AITemplate ais = 11;
+  battle.BattleCondition condition = 12;
+  repeated sint32 destroy_props = 13;
+  uint32 role_max = 14;
+  uint32 ground_buff = 15;
+  repeated uint32 extra_buffs = 16;
+  repeated battle.UnitGroup unit_groups = 17;
+  repeated battle.PropsGroup props_groups = 18;
+  uint32 map_id = 19;
+  repeated battle.Mission._SpawnUnit spawn_units = 20;
+  repeated battle.Mission._Trap traps = 21;
+  sint32 type = 22;
+  repeated battle.Mission._Path paths = 23;
+  repeated battle.Mission._Widget widgets = 24;
+  repeated battle.Mission._SpawnGroup spawn_groups = 25;
+  repeated battle.Mission._Deployment deployments = 26;
+  repeated battle.Mission._Wave waves = 27;
+  string main_conditions_desc = 28;
+  string sub_conditions_desc = 29;
+  string lose_conditions_desc = 30;
+  repeated battle.Mission.Flag flags = 31;
+  bool skip_formation = 32;
+  bool forbid_tactic_skill = 33;
+  uint32 mission_id = 34;
+  bool keep_current_bgm = 35;
+  bool ignore_busy = 36;
+  bool ignore_tired = 37;
+  repeated battle.BattleChallenge challenges = 38;
+  uint32 requireLevel = 39;
+  uint32 level = 40;
+  uint32 hero_max = 41;
+  uint32 merc_max = 42;
+  string exp_restrict = 43;
+  repeated uint32 override_tactic_skills = 44;
+  uint32 bgm_sound = 45;
+  repeated battle.TrapGroup trap_groups = 46;
+  bool disable_battle_lose_back = 47;
+  repeated uint32 mission_buffs = 48;
+  bool use_camera_target = 49;
+  uint32 camera_target_block_index = 50;
+  repeated battle.Area arena_areas = 51;
+  repeated battle.WidgetGroup widget_groups = 52;
+  bool force_role_max = 53;
+  uint32 temp_tactic_skill = 54;
+  repeated uint32 special_effect_ids = 55;
+  bool forbid_formation_auto_in = 56;
+  bool forbid_player_tactic_skill = 57;
+  uint32 weather = 58;
+  uint32 random_weather = 59;
+  bool active_random_weather = 60;
+  repeated uint32 override_surprise_skills = 61;
+  uint32 override_surprise_skill_point = 62;
+  message _Block {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    bool visible = 4;
+    uint32 status = 5;
+    sint32 status_count = 6;
+    sint32 wave = 7;
+    bool forbid = 8;
+  }
+  message _Props {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    bool visible = 4;
+    uint32 type = 5;
+    battle.Entity.Facing facing = 6;
+    battle.Entity.Side side = 7;
+    sint32 wave = 8;
+    sint32 priority = 9;
+    uint32 level = 10;
+    sint32 team = 11;
+    bool is_summoned = 12;
+  }
+  message _Trap {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    bool visible = 4;
+    uint32 type = 5;
+    battle.Entity.Facing facing = 6;
+    battle.Entity.Side side = 7;
+    sint32 wave = 8;
+    sint32 priority = 9;
+    sint32 team = 10;
+  }
+  message _Widget {
+    sint32 x = 1;
+    sint32 y = 2;
+    sint32 z = 3;
+    sint32 index = 4;
+    bool visible = 5;
+    uint32 type = 6;
+    battle.Entity.Facing facing = 7;
+    sint32 priority = 8;
+    string sparam = 9;
+  }
+  message _Unit {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    bool visible = 4;
+    uint32 type = 5;
+    battle.Entity.Facing facing = 6;
+    battle.Entity.Side side = 7;
+    uint32 level = 8;
+    repeated battle.Mission._Unit._Buff buffs = 9;
+    uint32 ai_id = 10;
+    string name = 11;
+    bool istemplate = 12;
+    sint32 wave = 13;
+    uint32 ai_link = 14;
+    sint32 priority = 15;
+    uint32 character_unit_id = 16;
+    sint32 intensity = 17;
+    sint32 hp_percent_lost = 18;
+    sint32 tp_percent_lost = 19;
+    bool is_boss = 21;
+    repeated uint32 temporary_skills = 22;
+    sint32 level_modifier = 23;
+    uint32 level_max = 24;
+    uint32 level_min = 25;
+    uint32 level_force = 26;
+    string display_name = 27;
+    bool visible_editor = 28;
+    sint32 team = 29;
+    sint32 physic_attack_mod = 30;
+    sint32 spell_attack_mod = 31;
+    sint32 physic_defence_mod = 32;
+    sint32 spell_defence_mod = 33;
+    sint32 crit_ratio_mod = 34;
+    sint32 hp_max_mod = 35;
+    sint32 speed_mod = 36;
+    bool is_elite = 37;
+    bool is_summoned = 38;
+    bool only_debug = 39;
+    uint32 skin = 40;
+    uint32 model_skin = 41;
+    message _Buff {
+      uint32 id = 1;
+      sint32 turn = 2;
+      uint32 stack = 3;
+    }
+  }
+  message _Spawn {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    battle.Entity.Facing facing = 4;
+    sint32 spawn_tag = 5;
+    sint32 category = 6;
+    sint32 intensity = 7;
+    uint32 ai_id = 8;
+    uint32 ai_link = 9;
+    bool not_visible = 10;
+  }
+  message _SpawnPoint {
+    sint32 x = 1;
+    sint32 z = 2;
+    sint32 index = 3;
+    battle.Entity.Facing facing = 4;
+  }
+  message _SpawnGroup {
+    sint32 index = 1;
+    sint32 type = 2;
+    uint32 unit_group = 3;
+    uint32 ai_id = 4;
+    uint32 ai_link = 5;
+    repeated battle.Mission._SpawnPoint points = 6;
+    uint32 unit_count = 7;
+    uint32 difficulty = 8;
+    bool is_target = 9;
+    string name = 10;
+    sint32 level_modifier = 11;
+    uint32 level_max = 12;
+    uint32 level_min = 13;
+    uint32 level_force = 14;
+    bool is_protect_target = 15;
+    bool is_manual = 16;
+    string display_name = 17;
+    repeated battle.Mission._SpawnGroup._Buff buffs = 18;
+    message _Buff {
+      uint32 id = 1;
+      sint32 turn = 2;
+      uint32 stack = 3;
+    }
+  }
+  message _SpawnUnit {
+    uint32 type = 1;
+    sint32 count = 2;
+  }
+  message _Path {
+    sint32 index = 1;
+    string name = 2;
+    repeated uint32 blocks = 3;
+  }
+  message _Condition {
+    uint32 difficulty = 1;
+    uint32 lost_turn = 2;
+    uint32 killed_num = 3;
+    uint32 destroy_num = 4;
+  }
+  message _Deployment {
+    sint32 index = 1;
+    uint32 main_condition = 2;
+    repeated sint32 spawn_groups = 3;
+    uint32 faction = 4;
+    string name = 5;
+    sint32 survive_turn = 6;
+    sint32 lost_turn = 7;
+    sint32 killed_num = 8;
+    repeated battle.Mission._Condition conditions = 9;
+    string tags = 10;
+  }
+  message _Wave {
+    uint32 wave = 1;
+    sint32 turn = 2;
+  }
+  message Flag {
+    uint32 index = 1;
+    string name = 2;
+  }
+}
+
+message Map {
+  uint32 seed = 1;
+  battle.Mission mission = 2;
+  repeated battle.Block blocks = 3;
+  repeated battle.Props props = 4;
+  repeated battle.Unit units = 5;
+  repeated battle.Trap traps = 6;
+  repeated battle.Widget widgets = 7;
+}
+
+message Player {
+  uint64 id = 1;
+  string name = 2;
+  repeated battle.Unit units = 3;
+  sint32 tactic_point = 4;
+  repeated uint32 tactic_skills = 5;
+  sint32 team = 6;
+  battle.TacticPoint tactic_point_param = 7;
+  battle.BackCount back_count_param = 8;
+  battle.SurpriseCount surprise_count_param = 9;
+  uint32 name_id = 11;
+  uint32 level = 12;
+  uint32 avatar_id = 13;
+  uint32 portrait_id = 14;
+  uint32 portrait_frame_id = 15;
+  uint32 portrait_bg_id = 16;
+}
+
+message TacticPoint {
+  sint32 initial_point = 1;
+  sint32 max_point = 2;
+  sint32 point_per_turn = 3;
+  sint32 point_per_round = 4;
+  sint32 point_recover_turn_max = 5;
+}
+
+message BackCount {
+  sint32 count = 1;
+  sint32 monthly_card_count = 2;
+}
+
+message SurpriseCount {
+  sint32 count = 1;
+}
+
+message Setting {
+  battle.Map map = 1;
+  repeated battle.Player players = 2;
+  repeated battle.Skill skills = 3;
+  repeated battle.Buff buffs = 4;
+  repeated battle.Speciality specs = 5;
+  repeated battle.Props props = 6;
+  repeated battle.FieldStatus field_status = 7;
+  repeated battle.MapBuff map_buffs = 8;
+  string name = 9;
+  bool can_retry = 10;
+  bool can_giveup = 11;
+  bool gain_exp = 12;
+  uint32 world_level = 13;
+  bool hide_giveup = 14;
+  bool hide_back = 15;
+  repeated battle.Restrain restrains = 16;
+  repeated battle.Modify modifies = 17;
+  repeated battle.Trap traps = 18;
+  uint32 level = 19;
+  battle.DefenceFormation defence_formation = 20;
+  repeated uint32 temp_tactic_skill = 21;
+  repeated uint32 special_effect_ids = 22;
+  sint32 crit_base_chance = 23;
+  sint32 crit_base_damage = 24;
+  sint32 fall_damage = 25;
+  sint32 fall_damage_height = 26;
+  sint32 knockback_impact_damage = 27;
+  uint32 tip_text_id = 28;
+  repeated battle.Weather weathers = 29;
+  bool is_pvp = 30;
+  uint32 surprise_skill_point = 31;
+  uint32 online_quest_id = 32;
+  repeated uint32 mutator_ids = 33;
+  repeated uint32 contract_ids = 34;
+  repeated uint32 assist_unit_ids = 35;
+  bool use_role_unit = 36;
+}
+
+message Action {
+  sint32 index = 1;
+  sint32 index_parent = 2;
+  battle.Action.Type type = 3;
+  sint32 time = 4;
+  sint32 idowner = 5;
+  repeated sint32 iparams = 6;
+  string sparam = 7;
+  sint32 delay_time = 8;
+  repeated battle.Action.PathPoint path_points = 9;
+  message PathPoint {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    battle.Action.PathPoint.Type type = 4;
+    sint32 duration = 5;
+    enum Type {
+      Line = 0;
+      ArcXToZ = 1;
+      ArcZToX = 2;
+    }
+  }
+  enum Type {
+    None = 0;
+    Move = 1;
+    Skill = 2;
+    Speciality = 3;
+    Attribute = 4;
+    Delay = 5;
+    Dispel = 6;
+    Damage = 7;
+    Projectile = 8;
+    SkillLimit = 9;
+    SpecLimit = 10;
+    RoundStart = 11;
+    RoundEnd = 12;
+    Operation = 13;
+    SpawnUnit = 14;
+    SpawnProps = 15;
+    SpawnFieldStatus = 16;
+    UnitSendOff = 17;
+    UnitAct = 18;
+    UnitDialogue = 19;
+    Buff = 20;
+    Die = 21;
+    Facing = 22;
+    Path = 23;
+    PathAlert = 24;
+    AITriggered = 25;
+    EventStart = 26;
+    EventEnd = 27;
+    ChangeSide = 28;
+    CameraLookAt = 29;
+    BattleEnd = 30;
+    ChangeFlag = 31;
+    ChangeSubConditionResult = 32;
+    CreateSkill = 33;
+    AIPatrolTargetChange = 34;
+    EventTriggered = 35;
+    SpawnWaveUnitDelay = 36;
+    BlockGridEffect = 37;
+    ChangeBattleConditionText = 38;
+    ChangeBgm = 39;
+    TurnStartUI = 40;
+    ChangeAI = 41;
+    CreateFieldStatus = 42;
+    UnitBubbleEmoji = 43;
+    TacticPointChangeMax = 44;
+    DialogueSelection = 45;
+    SkillCD = 46;
+    TrapTriggered = 47;
+    ForceStop = 48;
+    BuffImmune = 49;
+    SpawnTrap = 50;
+    WidgetTriggered = 51;
+    WidgetCurLimitCountChange = 52;
+    ChangeWeather = 53;
+    UnitSwitchWeaponDisplay = 54;
+    ShowSkillName = 55;
+  }
+}
+
+message Command {
+  sint32 idunit = 1;
+  battle.Command.Type type = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  sint32 z = 5;
+  repeated sint32 iparams = 6;
+  string sparam = 7;
+  battle.Command.Status unit_status = 8;
+  repeated battle.Action actions = 9;
+  sint32 random_count = 10;
+  sint32 index = 11;
+  bool isAI = 12;
+  enum Type {
+    Standby = 0;
+    Skill = 1;
+    DelaySkill = 2;
+    Item = 3;
+    TurnStart = 4;
+    TurnEnd = 5;
+    RoundStart = 6;
+    RoundEnd = 7;
+    Event = 8;
+    BattleStart = 9;
+    EventTrigger = 10;
+    PreBattleStart = 11;
+    EventSelection = 12;
+    ContinueAI = 13;
+  }
+  enum Status {
+    None = 0;
+    WaitMove = 1;
+    Moving = 2;
+    WaitAct = 3;
+    Acting = 4;
+    ActedWaitMove = 5;
+    ActedMoving = 6;
+    WaitDelay = 7;
+    MoveAgain = 8;
+    Finished = 9;
+  }
+}
+
+message Report {
+  bool isWin = 1;
+  uint32 turn_count = 2;
+  repeated battle.Command commands = 3;
+  repeated battle.Report.SubConditionResult sub_condition_results = 4;
+  repeated battle.Report.CharUnit units = 5;
+  uint32 enemy_dead_count = 6;
+  repeated battle.Report.SubConditionResult challenge_results = 7;
+  battle.Report.Statistics statistics = 8;
+  uint32 back_count = 9;
+  repeated battle.Report.ArenaDefenceBuilding buildings = 10;
+  repeated battle.Report.CharUnit defence_units = 11;
+  sint32 boss_hp = 12;
+  bool hasLogicError = 13;
+  string logicError = 14;
+  bool isGiveUp = 15;
+  uint32 unitDeadCount = 16;
+  uint32 totalDamageTaken = 17;
+  uint32 totalHp = 18;
+  uint32 lastTurnRoundStartCount = 19;
+  uint32 bossOverFlowDamage = 20;
+  uint32 bossTotalHp = 21;
+  uint32 soldierOverFlowDamage = 22;
+  uint32 soldierTotalHp = 23;
+  battle.Report.BattleStatus battle_status = 24;
+  message SubConditionResult {
+    uint32 id = 1;
+    bool isClear = 2;
+    string tag = 3;
+  }
+  message CharUnit {
+    uint32 id = 1;
+    bool alive = 2;
+    uint64 player_id = 3;
+    battle.BattleUnit.Type type = 4;
+  }
+  message Statistics {
+    repeated battle.Report.TacticSkillTime tactic_skill_times = 1;
+    string json_data = 2;
+  }
+  message TacticSkillTime {
+    uint32 id = 1;
+    uint32 times = 2;
+  }
+  message ArenaDefenceBuilding {
+    uint32 id = 1;
+    uint32 num = 2;
+  }
+  enum BattleStatus {
+    None = 0;
+    Win = 1;
+    Fail = 2;
+    GiveUp = 3;
+  }
+}
+
+message BattleReport {
+  battle.Report report = 1;
+  battle.Setting setting = 2;
+  bytes last_msg = 3;
+  uint32 battle_type = 4;
+  uint32 battle_index = 5;
+}
+
+message MissionMod {
+  sint32 player_spawn_tag = 1;
+  sint32 enemy_spawn_tag1 = 2;
+  sint32 enemy_spawn_tag2 = 3;
+  sint32 enemy_spawn_tag3 = 4;
+  repeated uint32 player_units = 5;
+  repeated uint32 enemy_units = 6;
+  repeated uint32 boss_units = 7;
+  sint32 player_target_position_tag = 8;
+  sint32 player_escort_friend_tag = 9;
+  sint32 player_guard_props_tag = 10;
+  sint32 enemy_destory_props_tag = 11;
+  repeated uint32 dummy_units = 12;
+  repeated uint32 escort_units = 13;
+  repeated uint32 conditions = 14;
+  repeated uint32 affixes = 15;
+  sint32 mission_type = 16;
+  uint32 rank = 17;
+  uint32 complexity = 18;
+}
+
+message CharUnit {
+  uint32 unit_id = 1;
+  sint32 x = 2;
+  sint32 z = 3;
+  uint32 facing = 4;
+}
+
+message DefenceFormation {
+  repeated battle.CharUnit units = 1;
+  repeated battle.CharUnit buildings = 2;
+  uint64 iduser = 3;
+}
+
+message SnapshotUnit {
+  battle.Unit unit = 1;
+  uint32 melee_skill_id = 2;
+  uint32 reactive_skill_id = 3;
+  uint32 leader_skill_id = 4;
+  uint32 skill1_id = 5;
+  uint32 skill2_id = 6;
+  uint32 skill3_id = 7;
+  repeated battle.SnapshotUnit.SkillsEntry skills = 8;
+  repeated uint32 replaceable_skill_ids = 9;
+  message SkillsEntry {
+    uint32 key = 1;
+    uint32 value = 2;
+  }
+}
+
+message BattleUnit {
+  uint32 unit_id = 1;
+  sint32 x = 2;
+  sint32 z = 3;
+  uint32 facing = 4;
+  uint32 spawn_index = 5;
+  battle.BattleUnit.Type type = 6;
+  enum Type {
+    Common = 0;
+    AssistUnit = 1;
+    RoleUnit = 2;
+  }
+}

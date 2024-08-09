@@ -1,0 +1,978 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsGame.proto";
+import "PacketsGuild.proto";
+import "PacketsCommon.proto";
+import "PacketsBattle.proto";
+import "PacketsSandbox2Common.proto";
+
+message DBPlayerMainQuestChapter {
+  protos.db_player_main_quest_chapter data = 1;
+  repeated protos.db_player_main_quest main_quests = 2;
+}
+
+message DBPlayerMail {
+  uint32 id = 1;
+  bool is_read = 2;
+  bool is_get = 3;
+  string title = 4;
+  string content = 5;
+  uint32 template_id = 6;
+  protos.DBTreasurePackage treasure_package = 7;
+  uint32 created_at = 8;
+  uint32 expired_at = 9;
+  bool is_important = 10;
+}
+
+message DBPlayerRole {
+  protos.db_player_role data = 1;
+  protos.DBPlayerRoleUnit role_unit = 2;
+  repeated protos.DBPlayerRoleStory role_stories = 3;
+}
+
+message DBPlayerRoleUnit {
+  protos.db_player_role_unit data = 1;
+}
+
+message PlayerActivityQuestInfo {
+  repeated uint32 used_units = 1;
+  uint32 progress = 2;
+  repeated protos.PlayerActivityQuestInfo.ExpQuest exp_quests = 3;
+  sint32 tactic_point = 4;
+  message ExpQuest {
+    uint32 index = 1;
+    uint32 quest_id = 2;
+    uint32 level = 3;
+    repeated uint32 exp_quest_unit_pool_ids = 4;
+  }
+}
+
+message DBPlayerActivity {
+  protos.db_player_activity activity = 1;
+  repeated protos.db_player_activity_quest activity_quests = 2;
+  int32 buffed_limit_count = 3;
+  int32 buffed_high_bonus_count = 4;
+  uint32 schedule_id = 5;
+}
+
+message DBPlayerChangedRole {
+  uint32 id = 1;
+  sint32 changed_exp = 2;
+  sint32 old_exp = 3;
+  uint32 old_level = 4;
+  sint32 exp = 5;
+  uint32 level = 6;
+  repeated protos.db_player_role_unit units = 7;
+  uint32 role_id = 8;
+  uint32 practice_cd_at = 9;
+}
+
+message DBPlayerChangedRoleFriendship {
+  uint32 role_id = 1;
+  sint32 changed_exp = 2;
+  sint32 old_exp = 3;
+  uint32 old_level = 4;
+  sint32 exp = 5;
+  uint32 level = 6;
+}
+
+message OnlineShopData {
+  repeated protos.OnlineShopData.ItemStatusesEntry item_statuses = 1;
+  message ShopItemStatus {
+    uint32 id = 1;
+    sint32 purchase_count = 2;
+    uint32 next_refresh_at = 3;
+    bool get_first_double_bonus = 4;
+    bool can_buy = 5;
+    bool is_show = 6;
+  }
+  message ItemStatusesEntry {
+    uint32 key = 1;
+    protos.OnlineShopData.ShopItemStatus value = 2;
+  }
+}
+
+message OnlineExchangeShopData {
+  repeated protos.OnlineExchangeShopData.ItemStatusesEntry item_statuses = 1;
+  message ExchangeShopItemStatus {
+    uint32 id = 1;
+    sint32 purchase_count = 2;
+  }
+  message ItemStatusesEntry {
+    uint32 key = 1;
+    protos.OnlineExchangeShopData.ExchangeShopItemStatus value = 2;
+  }
+}
+
+message DBPlayerBattleSettingQuest {
+  repeated protos.DBPlayerBattleSettingQuest.StarInfo star_info = 1;
+  repeated protos.DBPlayerBattleSettingQuest.ChallengeInfo challenge_info = 2;
+  uint32 online_quest_id = 3;
+  message StarInfo {
+    int32 star_param = 1;
+    bool clear = 2;
+    uint32 treasure_type = 4;
+    sint32 treasure_param0 = 5;
+    sint32 treasure_param1 = 6;
+  }
+  message ChallengeInfo {
+    string name = 1;
+    string challenge = 2;
+    bool clear = 3;
+    uint32 treasure_type = 4;
+    sint32 treasure_param0 = 5;
+    sint32 treasure_param1 = 6;
+  }
+}
+
+message DBPlayerWeapon {
+  protos.db_player_weapon data = 1;
+  protos.DBPlayerWeapon.Enchanting enchanting_data = 2;
+  bool is_new_template = 3;
+  message Enchanting {
+    uint32 element = 1;
+    repeated protos.DBPlayerWeapon.Enchanting.Entry entries = 2;
+    sint32 score = 3;
+    uint32 enchanting_element = 4;
+    repeated protos.DBPlayerWeapon.Enchanting.Entry enchanting_entries = 5;
+    message Entry {
+      uint32 attribute_type = 1;
+      sint32 attribute_value = 2;
+      sint32 attribute_permillage = 3;
+      sint32 range_percent = 4;
+    }
+  }
+}
+
+message DBPlayerCharm {
+  protos.db_player_charm data = 1;
+  repeated protos.DBPlayerCharm.Entry entries = 2;
+  message Entry {
+    uint32 id = 1;
+    sint32 value = 2;
+    uint32 rarity = 3;
+    bool unlocked = 4;
+  }
+}
+
+message DBAchievementQuestStatus {
+  protos.DBAchievementQuestStatus.Type type = 1;
+  protos.DBAchievementQuestStatus.Status status = 2;
+  repeated protos.DBAchievementQuestStatus.Quest quests = 3;
+  repeated protos.DBAchievementQuestStatus.PointTreasure point_treasures = 4;
+  message Status {
+    uint32 point = 1;
+    uint32 next_refresh_at = 2;
+  }
+  message Quest {
+    uint32 id = 1;
+    uint32 progress = 2;
+    bool is_finish = 3;
+    bool is_get = 4;
+  }
+  message PointTreasure {
+    uint32 id = 1;
+    uint32 point = 2;
+    bool is_get = 3;
+  }
+  enum Type {
+    Daily = 0;
+    Arena = 1;
+  }
+}
+
+message DBBattlePassStatus {
+  protos.db_player_battle_pass_status status = 1;
+  repeated protos.DBBattlePassStatus.Quest quests = 3;
+  message Quest {
+    uint32 id = 1;
+    uint32 progress = 2;
+    bool is_finish = 3;
+    bool is_get = 4;
+    uint32 finish_count = 5;
+    uint32 get_count = 6;
+  }
+  enum BonusType {
+    Normal = 0;
+    Purchase1 = 1;
+    Purchase2 = 2;
+  }
+}
+
+message PlayerRemind {
+  repeated uint32 system_unlock = 1;
+  repeated protos.PlayerRemind.RemindsEntry reminds = 2;
+  message Data {
+    sint32 count = 1;
+    repeated uint32 ids = 2;
+    repeated protos.PlayerRemind.Data.IdMapEntry id_map = 3;
+    message List {
+      repeated uint32 value = 1;
+      sint32 count = 2;
+    }
+    message IdMapEntry {
+      uint64 key = 1;
+      protos.PlayerRemind.Data.List value = 2;
+    }
+  }
+  message RemindsEntry {
+    uint32 key = 1;
+    protos.PlayerRemind.Data value = 2;
+  }
+}
+
+message PlayerChatRemind {
+  repeated protos.PlayerChatRemind.RemindsEntry reminds = 1;
+  message List {
+    repeated protos.PlayerChatRemind.List.Data list = 1;
+    message Data {
+      uint64 to_id = 1;
+      sint32 count = 2;
+      uint32 updated_at = 3;
+    }
+  }
+  message RemindsEntry {
+    uint32 key = 1;
+    protos.PlayerChatRemind.List value = 2;
+  }
+}
+
+message DBPlayerLevelChange {
+  uint32 old_level = 1;
+  uint32 cur_level = 2;
+  sint32 old_stamina = 3;
+  sint32 cur_stamina = 4;
+  sint32 old_exp = 5;
+  sint32 cur_exp = 6;
+  uint32 stamina_recover_at = 7;
+}
+
+message DBPlayerTowerQuest {
+  protos.db_player_tower_quest data = 1;
+  uint32 online_quest_id = 2;
+}
+
+message DBPlayerTower {
+  protos.db_player_tower tower = 1;
+  repeated protos.DBPlayerTower.QuestEntry quest = 2;
+  message QuestEntry {
+    uint32 key = 1;
+    uint32 value = 2;
+  }
+}
+
+message DBPlayerOperationActivity {
+  protos.db_player_operation_activity data = 1;
+  protos.DBPlayerOperationActivity.TypeAQuests type_a_quests = 2;
+  protos.DBPlayerOperationActivity.TypeBQuests type_b_quests = 3;
+  protos.DBPlayerOperationActivity.TypeCQuests type_c_quests = 4;
+  protos.DBPlayerOperationActivity.TypeDQuests type_d_quests = 5;
+  protos.DBPlayerOperationActivity.TypeEQuests type_e_quests = 6;
+  protos.DBPlayerOperationActivity.TypeHQuests type_h_quests = 7;
+  protos.DBPlayerOperationActivity.TypeJQuests type_j_quests = 8;
+  protos.DBPlayerOperationActivity.TypeKQuests type_k_quests = 9;
+  protos.DBPlayerOperationActivity.TypeLQuests type_l_quests = 10;
+  protos.DBPlayerOperationActivity.TypeMQuests type_m_quests = 11;
+  protos.DBPlayerOperationActivity.TypeNQuests type_n_quests = 13;
+  protos.OperationActivityExtraData extra_data = 99;
+  message Quest {
+    uint32 id = 1;
+    uint32 progress = 2;
+    bool is_finish = 3;
+    bool is_get = 4;
+  }
+  message TypeAQuests {
+    repeated protos.DBPlayerOperationActivity.TypeAQuests.Day days = 1;
+    message Day {
+      uint32 id = 1;
+      repeated protos.DBPlayerOperationActivity.Quest quests = 2;
+      bool is_finish = 3;
+      bool is_get = 4;
+    }
+  }
+  message TypeBQuests {
+    repeated uint32 treasure_got_ids = 1;
+    protos.DBPlayerOperationActivity.Quest quest = 2;
+  }
+  message TypeCQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeDQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeEQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeHQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 2;
+    protos.DBPlayerOperationActivity.TypeHQuests.Hint key_hint = 4;
+    message Hint {
+      int32 index = 1;
+      uint32 num = 2;
+    }
+  }
+  message TypeJQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeKQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeLQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+    string treasure_got_ids = 2;
+  }
+  message TypeMQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+  message TypeNQuests {
+    repeated protos.DBPlayerOperationActivity.Quest quests = 1;
+  }
+}
+
+message OperationActivityExtraData {
+  protos.db_player_exchange_shop exchange_shop = 1;
+  protos.LotteryActivity lottery_activity = 2;
+  string inv_code = 3;
+}
+
+message OnlineEvent {
+  uint32 id = 1;
+  bool refresh_npc = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+}
+
+message DBPlayerTechCategory {
+  protos.db_player_tech_category data = 1;
+  repeated protos.DBPlayerTechCategory.NodesEntry nodes = 2;
+  message Node {
+    uint32 id = 1;
+    uint32 level = 2;
+    bool affect = 3;
+  }
+  message NodesEntry {
+    uint32 key = 1;
+    protos.DBPlayerTechCategory.Node value = 2;
+  }
+}
+
+message DBPlayerCard {
+  protos.db_player_card card = 1;
+  protos.DBSimplePlayer player_data = 2;
+  sint32 tower_top_floor_progress = 5;
+  sint32 tower_top_quest_progress = 6;
+  sint32 arena_score = 7;
+  repeated protos.DBPlayerCard.RoleUnitDisplayed role_units_displayed = 8;
+  repeated protos.db_player_sandbox_trophy sandbox_trophies = 9;
+  protos.DBPlayerRoleUnit kanban_role_unit = 10;
+  uint32 sandbox_tour_level = 11;
+  repeated uint32 system_ids = 12;
+  uint32 elysium_placement_furniture_count = 13;
+  int64 player_message_liked_count = 14;
+  uint32 abyss_level = 15;
+  int64 abyss_rank_no = 16;
+  int32 abyss_rank_percent = 17;
+  bool has_all_abyss_guild_pass = 18;
+  int32 abyss_tag_count = 19;
+  uint32 abyss_rank_id = 20;
+  message RoleUnitDisplayed {
+    protos.DBPlayerRoleUnit role_unit = 1;
+    protos.DBPlayerWeapon weapon_main = 2;
+    protos.DBPlayerWeapon weapon_offhand = 3;
+    protos.DBPlayerCharm charm = 4;
+    sint32 hp = 5;
+    sint32 speed = 6;
+    sint32 physic_attack = 7;
+    sint32 physic_defence = 8;
+    sint32 spell_attack = 9;
+    sint32 spell_defence = 10;
+    sint32 battle_power = 11;
+  }
+}
+
+message OnlineCardHeadPortraitChange {
+  enum Type {
+    Bg = 0;
+    Portrait = 1;
+    Frame = 2;
+    Title = 3;
+  }
+}
+
+message DBSimplePlayer {
+  uint64 id = 1;
+  string nickname = 2;
+  uint32 level = 3;
+  uint32 avatar_id = 4;
+  uint32 portrait_id = 5;
+  uint32 portrait_frame_id = 6;
+  uint32 portrait_bg_id = 7;
+  sint32 exp = 8;
+  string account_id = 9;
+  uint32 last_logout = 10;
+  bool is_online = 11;
+  uint32 name_id = 99;
+  protos.db_guild guild = 12;
+  uint32 title_id = 13;
+  string title_param = 14;
+}
+
+message DBSandboxTourBehavioursStatus {
+  repeated protos.DBSandboxTourBehavioursStatus.DBSandboxTourBehaviour status = 1;
+  uint32 change_exp = 2;
+  uint32 change_level = 3;
+  uint32 old_exp = 4;
+  uint32 old_level = 5;
+  message DBSandboxTourBehaviour {
+    uint32 tour_behaviour_id = 1;
+    uint32 result_count = 2;
+    uint32 cur_count = 3;
+    bool had_resulted = 4;
+  }
+}
+
+message DBPlayerRoleStory {
+  protos.db_player_role_story data = 1;
+  repeated protos.db_player_role_story_unlock_quest quests = 2;
+}
+
+message DBSandboxStatistics {
+  uint32 round = 1;
+  uint32 battle_win_count = 2;
+  uint32 battle_kill_count = 3;
+  uint32 money_count = 4;
+  uint32 practice_count = 5;
+  uint32 training_count = 6;
+  uint32 smithy_count = 7;
+  uint32 workshop_count = 8;
+  uint32 hospital_count = 9;
+  uint32 shop_count = 10;
+  uint32 tavern_count = 11;
+  uint32 battle_tactics_skill_count = 12;
+  uint32 game_count = 13;
+  uint32 ending_count = 14;
+}
+
+message DBGuild {
+  protos.db_guild data = 1;
+  repeated protos.DBGuild.Member members = 2;
+  repeated uint32 guild_challenge_ids = 3;
+  message Member {
+    protos.DBSimplePlayer player = 1;
+    uint32 role_id = 2;
+    uint32 joined_at = 3;
+    uint32 challenge_score = 4;
+    uint32 challenge_normal_quest_battle_power = 5;
+    uint32 challenge_boss_quest_battle_power = 6;
+    uint32 point = 7;
+    uint32 point_next_refresh_at = 8;
+    bool can_impeach = 9;
+  }
+  message Apply {
+    protos.DBSimplePlayer player = 1;
+    uint32 applied_at = 2;
+  }
+}
+
+message DBSimpleGuild {
+  protos.db_guild data = 1;
+  protos.DBGuild.Member master_member = 2;
+}
+
+message DBGuildChallenge {
+  uint32 id = 1;
+  repeated protos.DBGuildChallenge.quest normal_quests = 2;
+  repeated protos.DBGuildChallenge.quest boss_quests = 3;
+  repeated uint32 used_unit_ids = 4;
+  message quest {
+    uint32 id = 1;
+    uint32 battle_power = 2;
+    bool can_challenge = 3;
+    uint32 score = 4;
+    repeated uint32 buff_ids = 5;
+  }
+}
+
+message GuildRemind {
+  repeated protos.GuildRemind.RemindsEntry reminds = 1;
+  message Data {
+    sint32 count = 1;
+    repeated uint32 ids = 2;
+  }
+  message RemindsEntry {
+    uint32 key = 1;
+    protos.GuildRemind.Data value = 2;
+  }
+}
+
+message DBPlayerGachaStatus {
+  protos.db_player_gacha_status data = 1;
+  repeated protos.db_player_gacha_pool pools = 2;
+}
+
+message PlayerSetting {
+  repeated protos.PlayerSetting.ParamsEntry params = 1;
+  protos.PlayerSetting.Voice voice = 2;
+  message Voice {
+    uint32 default_lang = 1;
+    uint32 default_unit_lang = 2;
+    repeated protos.PlayerSetting.Voice.UnitVoice unit_voices = 3;
+    message UnitVoice {
+      uint32 lang = 1;
+      repeated uint32 ids = 2;
+    }
+  }
+  message ParamsEntry {
+    string key = 1;
+    string value = 2;
+  }
+}
+
+message OnlineTreasureSelectableChestSelectData {
+  repeated protos.OnlineTreasureSelectableChestSelectData.Select data = 1;
+  message Select {
+    uint32 id = 1;
+    sint32 index = 2;
+    sint32 count = 3;
+  }
+}
+
+message OnlineArenaSeasonResult {
+  bool is_season_change = 1;
+  uint32 last_season_id = 2;
+  int32 last_season_score = 3;
+  int32 last_season_building_point = 4;
+  protos.DBTreasurePackage score_treasure_package = 5;
+  protos.DBTreasurePackage building_point_package = 6;
+}
+
+message DBPlayerArena {
+  protos.db_player_arena data = 1;
+  repeated protos.DBPlayerArena.Building buildings = 2;
+  message Building {
+    uint32 id = 1;
+    uint32 level = 2;
+  }
+}
+
+message PlayerRankingScore {
+  uint32 ranking = 1;
+  protos.DBSimplePlayer player = 2;
+  uint64 score = 3;
+  double ranking_percent = 4;
+}
+
+message PlayerContractActivityPointTreasureStatus {
+  repeated protos.PlayerContractActivityPointTreasureStatus.PointTreasure point_treasures = 1;
+  message PointTreasure {
+    uint32 id = 1;
+    sint32 point = 2;
+    bool is_get = 3;
+  }
+}
+
+message PlayerContractActivity {
+  uint32 id = 1;
+  sint32 point = 2;
+  sint32 total_point = 3;
+  repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 4;
+  repeated protos.DBPlayerActivity activities = 5;
+  repeated protos.db_player_contract_activity_quest quest_status = 6;
+  protos.PlayerContractActivityPointTreasureStatus point_treasure_status = 7;
+  repeated protos.db_player_shop shops = 8;
+  repeated protos.PlayerContractActivity.chosen_contract activity_chosen_contracts = 9;
+  repeated uint32 own_contract = 10;
+  repeated protos.PlayerContractActivity.quest_max_hard quests_max_hard = 11;
+  uint32 max_hard = 12;
+  repeated protos.PlayerContractActivity.tech_slot tech_slots = 13;
+  repeated protos.PlayerContractActivityChallengeQuest challenge_quest_group = 14;
+  repeated protos.PlayerContractActivity.GlobalQuest global_quest_group = 15;
+  message chosen_contract {
+    uint32 contract_activity_type = 1;
+    uint32 contract_activity_param = 2;
+    repeated uint32 contract_ids = 3;
+  }
+  message quest_max_hard {
+    uint32 quest_id = 1;
+    uint32 hard = 2;
+  }
+  message tech_slot {
+    uint32 slot_id = 1;
+    uint32 slot_tech_id = 2;
+  }
+  message GlobalQuest {
+    protos.OnlineGlobalQuest quest = 1;
+    repeated protos.DBSimplePlayer players = 2;
+  }
+}
+
+message PlayerContractActivitySimpleInfo {
+  uint32 activity_id = 1;
+  uint32 cleared_main_quest_process = 2;
+  repeated uint32 can_buy_shop_ids = 3;
+  bool can_get_point_treasure = 4;
+  bool is_new = 5;
+  repeated uint32 tech_ids = 6;
+  int32 tech_point = 7;
+}
+
+message PlayerContractActivityChallengeQuest {
+  uint32 id = 1;
+  int32 contract_point = 2;
+  int32 point = 3;
+  int32 contract_max_point = 4;
+  int32 max_point = 5;
+  bool is_unlocked = 6;
+  bool is_passed = 7;
+}
+
+message PlayerFriendApply {
+  protos.DBSimplePlayer player = 1;
+  uint32 applied_at = 2;
+}
+
+message PlayerFriend {
+  protos.DBSimplePlayer player = 1;
+  bool is_send_point = 2;
+  bool is_receive_point = 3;
+  bool is_received_point = 4;
+  uint32 created_at = 7;
+}
+
+message FriendBattleApplyReplyType {
+  enum Type {
+    Accept = 0;
+    Refuse = 1;
+    Decline = 2;
+  }
+}
+
+message AbyssInfo {
+  uint32 id = 1;
+  protos.AbyssInfo.Type type = 2;
+  enum Type {
+    Guide = 0;
+    RankDetail = 1;
+  }
+}
+
+message BattleUnitSnapshotData {
+  repeated battle.SnapshotUnit battle_units = 1;
+  repeated protos.BattleUnitSnapshotDisplay display_units = 2;
+}
+
+message BattleUnitSnapshotDisplay {
+  protos.DBPlayerRoleUnit role_unit = 1;
+  protos.DBPlayerWeapon weapon_main = 2;
+  protos.DBPlayerWeapon weapon_offhand = 3;
+  protos.DBPlayerCharm charm = 4;
+  protos.DBPlayerRole role = 5;
+  sint32 hp = 6;
+  sint32 speed = 7;
+  sint32 physic_attack = 8;
+  sint32 physic_defence = 9;
+  sint32 spell_attack = 10;
+  sint32 spell_defence = 11;
+  sint32 battle_power = 12;
+}
+
+message PlayerAbyssSimpleInfo {
+  bool is_abyss_guide_all_passed = 1;
+  repeated protos.PlayerAbyssGuide guides = 2;
+  protos.PlayerAbyssRank rank = 3;
+  repeated protos.PlayerAbyssDisplaySnapshot snapshots = 4;
+}
+
+message PlayerAbyssDisplaySnapshot {
+  uint32 battle_field_id = 1;
+  repeated protos.BattleUnitSnapshotDisplay displays = 2;
+}
+
+message PlayerAbyssBattleField {
+  uint32 id = 1;
+  repeated protos.PlayerAbyssBattleField.quest quests = 2;
+  message quest {
+    uint32 quest_id = 1;
+    bool unlocked = 2;
+    bool passed = 3;
+    int32 point = 4;
+    int32 max_point = 5;
+    int32 base_score = 6;
+    int32 damage_score = 7;
+    int32 round_score = 8;
+    int32 turn_score = 9;
+    int32 survival_score = 10;
+    int32 hp_score = 11;
+    repeated uint32 unit_ids = 12;
+  }
+}
+
+message PlayerAbyssGuide {
+  protos.db_player_abyss_guide guid = 1;
+  repeated protos.db_player_abyss_guide_quest guide_quests = 2;
+  repeated protos.PlayerAbyssBattleField battle_fields = 3;
+}
+
+message PlayerAbyssRankPointTreasureStatus {
+  repeated protos.PlayerAbyssRankPointTreasureStatus.PointTreasure point_treasures = 1;
+  message PointTreasure {
+    uint32 id = 1;
+    sint32 point = 2;
+    bool is_get = 3;
+  }
+}
+
+message PlayerAbyssRankDetail {
+  protos.db_player_abyss_rank_detail rank_details = 1;
+  repeated protos.PlayerAbyssBattleField battle_fields = 2;
+}
+
+message PlayerAbyssRank {
+  protos.db_player_abyss_rank rank_info = 1;
+  protos.PlayerAbyssRankPointTreasureStatus point_treasure_status = 2;
+  repeated protos.PlayerAbyssRankDetail details = 3;
+}
+
+message BattleRecord {
+  uint32 battle_index = 1;
+  uint32 battle_type = 2;
+  uint32 online_quest_id = 3;
+  uint32 online_tower_quest_id = 4;
+  uint32 turn_count = 7;
+  uint32 created_at = 8;
+  bool is_win = 9;
+  string oss_url = 10;
+  uint64 playerId = 12;
+  uint32 favorite_id = 13;
+  protos.BattleRecord.Player attacker = 15;
+  protos.BattleRecord.Player defender = 16;
+  message Unit {
+    uint32 id = 1;
+    uint32 rarity = 2;
+    uint32 level = 3;
+    uint32 star = 4;
+  }
+  message Player {
+    uint64 id = 1;
+    string nickname = 2;
+    uint32 name_id = 3;
+    uint32 level = 4;
+    uint32 avatar_id = 5;
+    uint32 portrait_id = 6;
+    uint32 portrait_frame_id = 7;
+    uint32 portrait_bg_id = 8;
+    repeated protos.BattleRecord.Unit units = 9;
+  }
+}
+
+message BattleRecords {
+  repeated protos.BattleRecord Records = 1;
+}
+
+message SingleBattle {
+  enum Type {
+    None = 0;
+    Command = 1;
+    ReplayEnd = 2;
+    RoundStart = 4;
+    RoundEnd = 5;
+    GiveUp = 10;
+  }
+}
+
+message BattleUseEffects {
+  bool use_effect = 1;
+}
+
+message BattleServerReturn {
+  uint32 type = 1;
+  bytes commands = 2;
+  bytes report = 3;
+  bool is_end = 4;
+  protos.BattleResultType battle_result = 5;
+}
+
+message LotteryActivity {
+  uint32 round = 1;
+  uint32 draw_count = 2;
+  bool can_reset = 3;
+  repeated protos.LotteryActivity.Treasure treasures = 4;
+  repeated protos.LotteryActivity.TreasureSlot treasure_slots = 5;
+  repeated protos.LotteryActivity.TreasureSlotOption treasure_slot_options = 6;
+  message Treasure {
+    uint32 treasure_id = 1;
+    bool is_got = 2;
+  }
+  message TreasureSlot {
+    uint32 slot_id = 1;
+    uint32 treasure_option_id = 2;
+    bool is_got = 3;
+  }
+  message TreasureSlotOption {
+    uint32 slot_id = 1;
+    repeated protos.LotteryActivity.TreasureSlotOption.Record records = 2;
+    message Record {
+      uint32 treasure_option_id = 1;
+      int32 count = 2;
+    }
+  }
+}
+
+message PlayerSandboxStatusDetailData {
+  protos.PlayerSandboxStatusDetailData.Sandbox1 sandbox1 = 1;
+  protos.PlayerSandboxStatusDetailData.Sandbox2 sandbox2 = 2;
+  message SandboxAchievement {
+    uint32 achievement_id = 1;
+    bool is_new = 2;
+  }
+  message Sandbox1 {
+    protos.PlayerSandboxStatusDetailData.Sandbox1.LaunchData launch_data = 1;
+    repeated uint32 token_ids = 2;
+    repeated uint32 token_history_ids = 3;
+    protos.PlayerSandboxStatusDetailData.Sandbox1.ResultData result_data = 4;
+    repeated uint32 sandbox_storyline_chapter_ids = 5;
+    repeated uint32 chapter_history_ids = 6;
+    uint32 last_result_chapter_count = 7;
+    uint32 last_sandbox_ending_id = 8;
+    uint32 last_sandbox_ending_quote_id = 11;
+    protos.PlayerSandboxStatusDetailData.Sandbox1.StatusFlag status_flag = 9;
+    message LaunchData {
+      protos.PlayerSandboxStatusDetailData.Sandbox1.LaunchData.Phase phase = 1;
+      uint32 sandbox_preface_id = 2;
+      uint32 token_id = 3;
+      repeated uint32 role_unit_ids = 4;
+      repeated uint32 minor_arcana_ids = 5;
+      repeated uint32 debug_speciality_ids = 6;
+      uint32 ep = 7;
+      repeated uint32 random_major_arcana_ids = 8;
+      uint32 selected_major_arcana_id = 9;
+      protos.DBTreasurePackage init_tp = 10;
+      enum Phase {
+        None = 0;
+        PlayPreface = 1;
+        SelectToken = 2;
+        BringMinorArcanas = 3;
+        BringUnits = 4;
+        Divination = 5;
+        SandboxStart = 6;
+      }
+    }
+    message ResultData {
+      uint32 sandbox_ending_id = 1;
+      uint32 sandbox_ending_quote_id = 2;
+      repeated uint32 minor_arcana_ids = 3;
+      repeated uint32 role_unit_ids = 4;
+      uint32 token_id = 5;
+      repeated protos.PlayerSandboxStatusDetailData.Sandbox1.ResultData.UnitDisplayed units_displayed = 6;
+      repeated protos.PlayerSandboxStatusDetailData.SandboxAchievement achievements = 8;
+      protos.DBTreasurePackage tp = 9;
+      bool is_give_up = 10;
+      protos.SandboxStatistic statistic = 11;
+      uint32 round_count = 12;
+      uint32 tactics_skill_count = 13;
+      uint32 character_title = 14;
+      uint32 level = 15;
+      uint32 commerce_grading_id = 17;
+      bool character_reputation_use_commerce_grading_value = 18;
+      uint32 result_chapter_count = 19;
+      message UnitDisplayed {
+        uint32 role_id = 1;
+        uint32 unit_id = 2;
+      }
+      message UnitDisplayedWithScore {
+        protos.PlayerSandboxStatusDetailData.Sandbox1.ResultData.UnitDisplayed unit_info = 1;
+        int32 score = 2;
+      }
+    }
+    enum StatusFlag {
+      None = 0;
+      LaunchProcessing = 1;
+      SandboxStart = 2;
+      InitCharacter = 3;
+      Resulting = 4;
+    }
+  }
+  message Sandbox2 {
+    protos.PlayerSandboxStatusDetailData.Sandbox2.LaunchData launch_data = 1;
+    protos.PlayerSandboxStatusDetailData.Sandbox2.ResultData result_data = 2;
+    protos.PlayerSandboxStatusDetailData.Sandbox2.StatusFlag status_flag = 3;
+    repeated uint32 chapter_history_ids = 4;
+    message LaunchData {
+      protos.PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Phase phase = 1;
+      repeated uint32 role_unit_ids = 2;
+      protos.DBTreasurePackage init_tp = 3;
+      protos.PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Mode mode = 4;
+      uint32 token_id = 5;
+      repeated uint32 debug_speciality_ids = 6;
+      enum Phase {
+        None = 0;
+        BringUnits = 1;
+        SandboxStart = 2;
+      }
+      enum Mode {
+        Story = 0;
+        Free = 1;
+      }
+    }
+    message ResultData {
+      repeated uint32 role_unit_ids = 2;
+      repeated protos.PlayerSandboxStatusDetailData.SandboxAchievement achievements = 3;
+      bool is_give_up = 4;
+      protos.Sandbox2Statistic statistic = 5;
+      uint32 round_count = 6;
+      uint32 tactics_skill_count = 7;
+      uint32 result_chapter_count = 8;
+      uint32 sandbox_ending_id = 9;
+    }
+    enum StatusFlag {
+      None = 0;
+      LaunchProcessing = 1;
+      SandboxStart = 2;
+      InitCharacter = 3;
+      Resulting = 4;
+    }
+  }
+}
+
+message DBPlayerSandboxStatus {
+  protos.db_player_sandbox_status status = 1;
+  repeated protos.db_player_sandbox_status_detail status_details = 2;
+}
+
+message DBPlayerCareer {
+  protos.db_player_career data = 1;
+  repeated protos.db_player_career_quest quests = 2;
+}
+
+message OnlineUnitSkinChange {
+  enum Type {
+    Card = 0;
+    Model = 1;
+  }
+}
+
+message OnlineGlobalQuest {
+  uint32 id = 1;
+  uint32 progress = 2;
+  bool is_finish = 3;
+  bool is_get = 4;
+  sint32 behaviour_count = 5;
+}
+
+message ChatMessage {
+  string message_id = 1;
+  uint32 type = 2;
+  uint64 player_id = 3;
+  protos.DBSimplePlayer player = 4;
+  string message = 5;
+  uint32 created_at = 6;
+}
+
+enum BattleResultType {
+  Id = 0;
+  Win = 1;
+  Draw = 2;
+  Lose = 3;
+}

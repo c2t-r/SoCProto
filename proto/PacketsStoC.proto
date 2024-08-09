@@ -1,0 +1,764 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsGame.proto";
+import "PacketsCommon.proto";
+import "PacketsOnlineCommon.proto";
+
+message SCAccountLoginError {
+}
+
+message SCXDLoginError {
+}
+
+message SCGuestLoginError {
+}
+
+message SCGameLogin {
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 1;
+}
+
+message SCDebugTreasureAdd {
+  protos.DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugTreasureAll {
+  protos.DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugUnitAdd {
+  protos.DBUnit unit = 1;
+}
+
+message SCDebugMissionRand {
+  bytes mission = 1;
+}
+
+message SCDebugBattleStart {
+  protos.db_character_battle_setting battle_setting = 1;
+}
+
+message SCDebugRecoverAll {
+  sint32 act_pt = 1;
+  repeated protos.DBChangedUnit units = 2;
+}
+
+message SCDebugUnitAddWithSkills {
+  protos.DBUnit unit = 1;
+}
+
+message SCDebugUnitsLevel {
+  repeated protos.DBUnit units = 1;
+}
+
+message SCDebugSystemsUnlock {
+  protos.DBTraining training = 1;
+  protos.db_character_hospital hospital = 2;
+  protos.DBSmithy smithy = 3;
+  protos.db_character_tavern tavern = 4;
+  repeated protos.db_character_capital_event capital_events = 5;
+  repeated protos.db_character_shop shops = 6;
+  repeated uint32 system_unlocked_ids = 7;
+  protos.DBWorkshop workshop = 8;
+  protos.db_character character = 9;
+  protos.DBBlessing blessing = 10;
+}
+
+message SCDebugUnitMoraleSet {
+  repeated protos.DBChangedUnit units = 1;
+}
+
+message SCDebugCharacterWorldLevel {
+  uint32 world_level = 1;
+}
+
+message SCDebugCharacterLevel {
+  uint32 level = 1;
+}
+
+message SCDebugUnitStudySkill {
+  protos.DBUnit unit = 1;
+}
+
+message SCDebugUnitRandomSkillByBuild {
+  repeated protos.SCDebugUnitRandomSkillByBuild.UnitBuildSkill unitskills = 1;
+  message UnitBuildSkill {
+    uint32 id = 1;
+    uint32 idunit_build = 2;
+    uint32 skill_id = 3;
+    uint32 type = 4;
+    uint32 weight = 5;
+  }
+}
+
+message SCDebugUnitRandomSkillByBonus {
+  repeated protos.SCDebugUnitRandomSkillByBonus.UnitBuildSkill unitskills = 1;
+  message UnitBuildSkill {
+    uint32 id = 1;
+    uint32 idunit_build = 2;
+    uint32 skill_id = 3;
+    uint32 type = 4;
+    uint32 weight = 5;
+  }
+}
+
+message SCDebugTacticsSkillRemove {
+  uint32 id = 1;
+}
+
+message SCDebugCapitalEventRefresh {
+  repeated protos.db_character_capital_event events = 1;
+}
+
+message SCDebugGetSaveDatas {
+  repeated protos.db_character_save_data datas = 1;
+}
+
+message SCDebugSaveData {
+  protos.db_character_save_data data = 1;
+}
+
+message SCDebugLoadData {
+}
+
+message SCDebugGenDataSecret {
+  string secret = 1;
+}
+
+message SCDebugLoadDataSecret {
+  string secret = 1;
+}
+
+message SCDebugBattlePremake {
+  protos.db_character_battle_setting battle_setting = 1;
+}
+
+message SCDebugMissionEditorBattleStart {
+  protos.db_character_battle_setting battle_setting = 1;
+  bytes mission_data = 2;
+}
+
+message SCDebugAddSandboxEffect {
+  protos.db_character_sandbox_effect sandbox_effect = 1;
+}
+
+message SCDebugRemoveSandboxEffect {
+  uint32 sandbox_effect_id = 1;
+}
+
+message SCDebugGameEnd {
+  protos.db_player_sandbox_status sandbox_status = 1;
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 2;
+}
+
+message SCDebugAddEntrustBattleByTemplate {
+}
+
+message SCDebugSandboxLauncher {
+  protos.db_player_sandbox_status status = 1;
+}
+
+message SCDebugSandboxLauncherWithSpeciality {
+  protos.db_player_sandbox_status status = 1;
+  protos.db_player_sandbox_status_detail status_detail = 2;
+}
+
+message SCDebugGetTreasurePackage {
+  protos.DBTreasurePackage treasure_package = 1;
+  bool is_online = 2;
+}
+
+message SCDebugNextRound {
+}
+
+message SCDebugBattleReportCheck {
+  uint32 result = 1;
+  uint32 run_time = 2;
+  string err_msg = 3;
+}
+
+message SCDebugFinishWorkshopBattleQuestImm {
+}
+
+message SCDebugBlessing {
+  protos.db_character_unit unit = 1;
+}
+
+message SCDebugCommerceOrderAdd {
+}
+
+message SCDebugCommerceTradePointAdd {
+}
+
+message SCCharacterInfo {
+  protos.db_character character = 1;
+  repeated protos.db_character_treasure treasures = 2;
+  repeated protos.db_character_weapon weapons = 4;
+  repeated protos.DBUnit units = 5;
+  protos.db_character_battle_setting battle_setting = 6;
+  repeated protos.db_character_capital_event capital_events = 7;
+  repeated protos.db_character_faction factions = 8;
+  repeated protos.db_player_intelligence intelligences = 9;
+  protos.DBTraining training = 11;
+  repeated protos.db_character_sandbox_effect sandbox_effects = 12;
+  protos.db_character_hospital hospital = 14;
+  protos.db_character_entrust entrust = 15;
+  protos.DBSmithy smithy = 16;
+  repeated protos.db_character_shop shops = 17;
+  repeated protos.db_character_blueprint blueprints = 18;
+  repeated protos.db_character_tactics_skill tactics_skills = 19;
+  protos.db_character_milestone milestone = 21;
+  repeated uint32 system_ids = 22;
+  repeated uint32 system_tech_ids = 23;
+  protos.DBWorkshop workshop = 24;
+  protos.DBBlessing blessing = 26;
+  protos.DBCommerce commerce = 27;
+  repeated protos.db_character_commerce_prop commerce_props = 28;
+  protos.SCCharacterPostData post_data = 99;
+}
+
+message SCEventTrigger {
+  protos.SandboxEvent event = 1;
+  uint32 phase = 2;
+  bool is_change_phase = 3;
+  bool is_end = 4;
+  uint32 ending_id = 5;
+  protos.DBTreasurePackage event_treasure = 6;
+  repeated protos.db_character_capital_event capital_events = 7;
+  uint32 system = 8;
+  protos.db_character character = 10;
+  repeated protos.DBUnit units = 12;
+  repeated protos.SandboxConsume consumes = 13;
+  repeated protos.db_character_shop shops = 14;
+  protos.db_player player = 15;
+  repeated uint32 remove_unit_ids = 16;
+  bool is_stop_custom = 17;
+  bool is_capital_event_refreshed = 19;
+  bool refresh_capital_event_now = 20;
+  repeated protos.db_character_sandbox_effect effects = 21;
+  protos.SandboxMilestoneAction milestone_action = 23;
+  uint32 encounter_count = 24;
+  protos.SandboxChangeValues change_values = 25;
+  bool is_chapter_end = 26;
+  uint32 chapter_id = 27;
+  protos.db_player_sandbox_status player_sandbox_status = 28;
+  protos.db_player_sandbox_status_detail player_sandbox_status_detail = 29;
+  protos.PlayerSetting setting = 99;
+}
+
+message SCRoundReport {
+  protos.SandboxRoundReport report = 1;
+}
+
+message SCCustomEventTrigger {
+  protos.SCEventTrigger sandbox = 1;
+}
+
+message SCEventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+  repeated protos.SandboxEvent.Option options = 3;
+  protos.db_player_scenario_log log = 4;
+}
+
+message SCUnitSync {
+  repeated protos.DBUnit units = 1;
+  repeated protos.DBPlayerRoleUnit role_units = 2;
+}
+
+message SCMilestoneParamStatus {
+  protos.db_character_milestone milestone = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCCharacterPostData {
+  protos.db_character_battle_setting battle_setting = 1;
+  protos.SCEventTrigger sandbox = 2;
+  repeated protos.DBTreasurePackage treasure_packages = 3;
+  protos.DBEntrustBattle entrust_battle = 5;
+  protos.SCEntrustBattleFinish entrust_battle_finish = 6;
+  protos.SCCommerceOrderEncounterFinished order_encounter_finish = 7;
+}
+
+message SCPostDataSync {
+  repeated uint32 types = 1;
+  protos.DBTraining training = 2;
+  protos.db_character_hospital hospital = 3;
+  protos.db_character_entrust entrust = 4;
+  protos.DBSmithy smithy = 5;
+  protos.DBWorkshop workshop = 6;
+  protos.DBBlessing blessing = 7;
+  protos.DBCommerce commerce = 8;
+}
+
+message SCSandboxResult {
+  protos.db_player_sandbox_status status = 1;
+  protos.SandboxStatistic statistic = 2;
+  repeated protos.DBUnit units = 3;
+  uint32 sandbox_id = 4;
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 5;
+}
+
+message SCCharacterSimpleInfo {
+  repeated protos.db_character_sandbox_effect sandbox_effects = 1;
+  repeated protos.db_character_tactics_skill tactics_skills = 2;
+  protos.SandboxStatistic statistic = 3;
+  uint32 commerce_order_count = 4;
+}
+
+message SCSmithyEnter {
+  protos.DBSmithy smithy = 1;
+  repeated protos.db_character_blueprint blueprints = 2;
+}
+
+message SCSmithyForge {
+  protos.db_character_smithy_seat seat = 1;
+  protos.DBConsumes consumes = 2;
+  protos.DBConsume extra_consume = 3;
+  protos.db_character_blueprint blueprint = 4;
+}
+
+message SCSmithyForgeCancel {
+  protos.db_character_smithy_seat seat = 1;
+  protos.db_character_blueprint blueprint = 2;
+  protos.DBConsumes consumes_return = 3;
+}
+
+message SCSmithyForgeResult {
+  protos.DBSmithyForgeResult result = 1;
+  protos.db_character_smithy_seat seat = 2;
+  protos.db_character_weapon weapon = 3;
+}
+
+message SCSmithyForgeSelect {
+  protos.db_character_weapon weapon = 1;
+  protos.db_character_smithy_seat seat = 2;
+  protos.db_character_blueprint blueprint = 3;
+  protos.DBConsume consume_return = 4;
+}
+
+message SCSmithyProcess {
+  uint32 seat_id = 1;
+  protos.DBConsumes consumes = 2;
+  protos.DBSmithy smithy = 3;
+}
+
+message SCSmithyProcessCancel {
+  protos.db_character_smithy_seat seat = 1;
+  protos.DBConsumes consumes_return = 2;
+}
+
+message SCSmithyProcessResult {
+  protos.DBTreasurePackage treasure = 1;
+  protos.db_character_smithy_seat seat = 2;
+}
+
+message SCShopGet {
+  uint32 capital_event_id = 1;
+  protos.ShopData shop_data = 2;
+}
+
+message SCShopBuy {
+  uint32 capital_event_id = 1;
+  uint32 id = 2;
+  protos.ShopData shop_data = 3;
+  protos.DBTreasurePackage treasure_package = 4;
+  protos.DBConsume consume = 5;
+}
+
+message SCShopSell {
+  uint32 capital_event_id = 1;
+  protos.ShopData shop_data = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  repeated protos.DBConsume consumes = 4;
+}
+
+message SCHospitalEnter {
+  protos.db_character_hospital hospital = 1;
+}
+
+message SCHospitalSetUnits {
+  protos.db_character_hospital hospital = 1;
+  repeated protos.DBUnit units = 2;
+}
+
+message SCHospitalSetUnit {
+  protos.db_character_hospital hospital = 1;
+  protos.DBUnit unit = 2;
+}
+
+message SCTavernEnter {
+  protos.db_character_tavern tavern = 1;
+  repeated protos.db_character_tavern_unit units = 2;
+}
+
+message SCTavernRecruit {
+  uint32 id = 1;
+  sint32 price = 2;
+  protos.db_character_tavern tavern = 3;
+  protos.DBUnit unit = 4;
+  protos.DBTreasurePackage treasure_package = 5;
+}
+
+message SCTavernEnterUI {
+}
+
+message SCSandboxNoteEnter {
+  repeated protos.db_character_sandbox_note notes = 1;
+}
+
+message SCSandboxEventLogEnter {
+  repeated protos.db_character_sandbox_event_log logs = 1;
+}
+
+message SCUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCEntrustBattleStart {
+}
+
+message SCEntrustPracticeStart {
+  uint32 id = 1;
+  repeated uint32 unit_ids = 2;
+  protos.DBEntrustPractice practice = 3;
+  uint32 practice_count = 4;
+  repeated protos.DBUnit units = 5;
+  protos.db_character_entrust entrust = 6;
+}
+
+message SCEntrustPracticeEnd {
+  uint32 id = 1;
+  protos.DBEntrustPractice practice = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  repeated protos.DBChangedUnit changed_units = 4;
+  uint32 changed_character_exp = 5;
+  protos.db_character_entrust entrust = 6;
+  bool republish = 7;
+}
+
+message SCEntrustBattleFinish {
+  uint32 id = 1;
+  protos.DBEntrustBattle battle = 2;
+  protos.DBTreasurePackage treasure_package = 4;
+  protos.SandboxChangeValues faction_change_values = 5;
+  protos.SandboxChangeValues enemy_faction_change_values = 6;
+  int32 act_pt = 8;
+  protos.SCEventTrigger sandbox = 9;
+  bool is_win = 10;
+}
+
+message SCEntrustEventFinish {
+  uint32 id = 1;
+}
+
+message SCEntrustPracticeGiveUp {
+  uint32 id = 1;
+  repeated protos.DBChangedUnit changed_units = 2;
+  protos.db_character_entrust entrust = 3;
+}
+
+message SCBattleStart {
+  protos.db_character_battle_setting battle_setting = 1;
+  repeated uint32 units = 2;
+}
+
+message SCBattleEnd {
+  bool is_win = 1;
+  protos.db_character_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  int32 fate_power = 4;
+  bool unmarshal_report_error = 5;
+}
+
+message SCBattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCBattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCBattlePremake {
+  protos.db_character_battle_setting battle_setting = 1;
+}
+
+message SCBattleFinish {
+  uint32 id = 1;
+  repeated protos.DBChangedUnit changed_units = 2;
+  protos.SCBattleFinish.changed_character_exp changed_exp = 3;
+  protos.SCBattleFinish.sandbox_event event = 4;
+  protos.DBWorkshop workshop = 5;
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+  message sandbox_event {
+    bool win = 1;
+    uint32 mission_battle_param_id = 2;
+    protos.SCEventTrigger event_trigger = 3;
+  }
+}
+
+message SCBattleServerLogin {
+  uint32 server_id = 1;
+}
+
+message SCBattleServerCheck {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes setting = 3;
+  bytes report = 4;
+  bool is_pvp = 5;
+}
+
+message SCBattleServerInit {
+  repeated uint64 user_ids = 1;
+  bytes setting = 2;
+  bytes report = 3;
+  bytes message = 4;
+  bool isOnline = 5;
+  uint32 battle_type = 6;
+}
+
+message SCBattleServerMessage {
+  uint32 type = 1;
+  uint64 user_id = 2;
+  uint32 unit_index = 3;
+  bytes command = 4;
+  uint32 back_index = 5;
+  uint32 command_index = 6;
+}
+
+message SCBattleServerCheckDamage {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes setting = 3;
+  bytes report = 4;
+  bool is_pvp = 5;
+}
+
+message SCBattleServerStatus {
+}
+
+message SCTrainingEnter {
+  protos.DBTraining training = 1;
+  protos.db_character character = 2;
+}
+
+message SCTrainingSetUnit {
+  protos.DBTraining training = 1;
+  protos.DBUnit unit = 2;
+  sint32 price = 3;
+}
+
+message SCTrainingCancelTrain {
+  protos.DBTraining training = 1;
+  protos.DBUnit unit = 2;
+  sint32 price = 3;
+}
+
+message SCTrainingFinish {
+  protos.DBTraining training = 1;
+  protos.DBUnit unit = 2;
+  protos.SCTrainingFinish.Result result = 3;
+  protos.DBChangedUnit changed_unit = 4;
+  message result_data {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+  }
+  message Result {
+    uint32 type = 1;
+    repeated protos.SCTrainingFinish.result_data datas = 2;
+  }
+}
+
+message SCTrainingStudyProfessionSkill {
+  protos.DBTraining training = 1;
+  protos.DBUnit unit = 2;
+  uint32 skill_id = 3;
+  protos.DBChangedUnit changed_unit = 4;
+}
+
+message SCTrainingResetSeat {
+  protos.DBTraining training = 1;
+  protos.DBUnit unit = 2;
+}
+
+message SCTacticsSkillEquip {
+  repeated protos.db_character_tactics_skill tactics_skills = 1;
+}
+
+message SCTacticsSkillEnter {
+  repeated protos.db_character_tactics_skill tactics_skills = 1;
+}
+
+message SCTreasureChestSelect {
+  protos.DBTreasure treasure = 1;
+  protos.db_character character = 2;
+}
+
+message SCTreasureSkillGet {
+  protos.DBTreasure treasure = 1;
+}
+
+message SCTreasureSkip {
+  protos.DBTreasure treasure = 1;
+}
+
+message SCWorldMapEnter {
+  repeated protos.db_character_faction factions = 1;
+  repeated protos.DBEntrustBattle battle = 3;
+  repeated protos.DBEntrustPractice practice = 4;
+  uint32 practice_count = 5;
+  repeated protos.db_character_tactics_skill tactics_skills = 6;
+  repeated protos.db_character_map_pin map_pins = 7;
+}
+
+message SCWarehouseEnter {
+  repeated protos.db_character_blueprint blueprints = 1;
+  repeated protos.db_character_treasure treasures = 2;
+  repeated protos.db_character_weapon weapons = 3;
+}
+
+message SCCapitalAreaSystemEventRefresh {
+  repeated protos.db_character_capital_event events = 1;
+}
+
+message SCCapitalSandboxEventTrigger {
+  protos.SCEventTrigger sandbox = 1;
+  uint32 capital_event_id = 2;
+}
+
+message SCCapitalEventSecondaryPerformPlay {
+  protos.db_character_capital_event event = 1;
+}
+
+message SCMilestoneResetCache {
+}
+
+message SCWorkshopEnter {
+  protos.DBWorkshop workshop = 1;
+}
+
+message SCWorkshopQuestResult {
+  protos.DBWorkshop workshop = 1;
+  protos.DBConsumes consumes = 2;
+  protos.DBUnit unit = 3;
+  repeated protos.SCWorkshopQuestResult.QuestResult results = 4;
+  message QuestResult {
+    uint32 bonus_id = 1;
+    protos.DBTreasurePackage treasure_package = 2;
+  }
+}
+
+message SCWorkshopNodeLevelUp {
+  protos.DBWorkshop workshop = 1;
+  protos.DBConsumes consumes = 2;
+  protos.db_character_tactics_skill tactics_skill = 3;
+  uint32 replace_tactics_skill_id = 4;
+  protos.db_character character = 5;
+  uint32 system_tech_id = 6;
+  uint32 replace_system_tech_id = 7;
+}
+
+message SCWorkshopChooseOneOfThree {
+  protos.DBWorkshop workshop = 1;
+}
+
+message SCBlessingPrayer {
+  protos.db_character_blessing_seat seat = 1;
+}
+
+message SCBlessingBaptism {
+  protos.db_character_blessing_seat seat = 1;
+}
+
+message SCBlessingEffectChoose {
+  repeated protos.db_character_unit units = 1;
+  repeated protos.DBBlessingRevelationData revelation_datas = 2;
+  protos.db_character_blessing_seat seat = 3;
+}
+
+message SCBlessingHalidomUpgrade {
+  protos.db_character_blessing_halidom halidom = 1;
+  repeated protos.db_character_blessing_seat seats = 2;
+  protos.db_character_blessing blessing = 3;
+  protos.DBConsumes consumes = 4;
+}
+
+message SCBlessingEnter {
+  protos.DBBlessing blessing = 1;
+}
+
+message SCCommerceEnter {
+  protos.DBCommerce commerce = 1;
+}
+
+message SCCommerceOrderStart {
+  protos.db_character_commerce_order order = 1;
+  repeated protos.DBUnit units = 2;
+  protos.DBConsumes consumes = 3;
+}
+
+message SCCommerceOrderCancel {
+  protos.db_character_commerce_order order = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCCommerceOrderFinish {
+  protos.db_character_commerce_order order = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  repeated protos.DBChangedUnit changed_units = 3;
+  protos.SCCommerceOrderFinish.changed_character_exp changed_exp = 4;
+  protos.SCEventTrigger sandbox = 5;
+  uint32 new_bonus_id = 6;
+  bool trade_point_is_level_up = 7;
+  uint32 opportunity_id = 8;
+  protos.SCCommerceOrderFinish.propensity_for_war_level_up propensity_for_war = 11;
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+  message propensity_for_war_level_up {
+    uint32 id = 1;
+    int32 value = 2;
+  }
+}
+
+message SCCommerceOrderEncounterStart {
+  uint32 id = 1;
+  protos.DBEntrustBattle battle = 2;
+}
+
+message SCCommerceOrderEncounterGiveUp {
+}
+
+message SCCommerceOrderEncounterFinished {
+  uint32 id = 1;
+  protos.DBEntrustBattle battle = 2;
+  protos.SandboxChangeValues faction_change_values = 3;
+  protos.SandboxChangeValues enemy_faction_change_values = 4;
+  bool is_win = 5;
+  protos.SCCommerceOrderFinish orderData = 6;
+}

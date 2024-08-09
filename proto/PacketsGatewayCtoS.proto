@@ -1,0 +1,68 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsOnlineCommon.proto";
+
+message CSTCPPing {
+  uint32 timestamp = 1;
+}
+
+message CSKCPPing {
+  uint32 timestamp = 1;
+}
+
+message CSReconnect {
+  string token = 1;
+}
+
+message CSOnlinePlayerRemind {
+}
+
+message CSOnlinePlayerRemindRead {
+  protos.CSOnlinePlayerRemindRead.ClearType clear_type = 1;
+  uint32 remind_type = 2;
+  protos.CSOnlinePlayerRemindRead.Data data = 3;
+  message Data {
+    uint32 id = 1;
+    repeated protos.CSOnlinePlayerRemindRead.Data.IdMapEntry id_map = 2;
+    uint32 id_map_key = 3;
+    uint32 system = 4;
+    repeated uint32 ids = 5;
+    message IdMapEntry {
+      uint32 key = 1;
+      protos.PlayerRemind.Data.List value = 2;
+    }
+  }
+  enum ClearType {
+    Id = 0;
+    IdMap = 1;
+    IdMapKey = 2;
+    System = 3;
+    Count = 4;
+  }
+}
+
+message CSMultipleJoinRoom {
+  uint64 room_id = 1;
+}
+
+message CSOnlinePlayerChatRemindRead {
+  protos.CSOnlinePlayerChatRemindRead.ClearType clear_type = 1;
+  uint32 remind_type = 2;
+  protos.CSOnlinePlayerChatRemindRead.Data data = 3;
+  message Data {
+    uint64 id = 1;
+  }
+  enum ClearType {
+    Id = 0;
+  }
+}
+
+message CSLogin {
+  string token = 1;
+  string device = 2;
+  string device_sn = 3;
+  string os = 4;
+}

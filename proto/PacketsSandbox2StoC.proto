@@ -1,0 +1,250 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsSandbox2Common.proto";
+import "PacketsSandbox2.gen.proto";
+import "PacketsCommon.proto";
+import "PacketsGame.proto";
+import "PacketsBattle.proto";
+
+message SCDebugClueWallAdd {
+  uint32 template_id = 1;
+}
+
+message SCDebugFoodAdd {
+}
+
+message SCDebugAddAccessoryItem {
+  protos.db_sandbox2_accessory_item accessory_item = 1;
+}
+
+message SCDebugAddChapterGoal {
+  protos.db_sandbox2_chapter_goal chapter_goal = 1;
+}
+
+message SCDebugAddChapterGoalProgress {
+  uint32 progress = 1;
+}
+
+message SCDebugSetChapterGoalStatus {
+  protos.db_sandbox2_chapter_goal.STATUS status = 1;
+}
+
+message SCDebugResetChapterGoalData {
+}
+
+message SCDebugAddSandbox2EntrustBattle {
+}
+
+message SCDebugSandbox2Treasure {
+  protos.DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugSandbox2SaveData {
+  repeated protos.SCDebugSandbox2SaveData.Namespace namespaces = 1;
+  repeated protos.NewSandboxSaveData save_datas = 2;
+  message Namespace {
+    string name = 1;
+  }
+}
+
+message SCDebugSandbox2Unit {
+  repeated protos.db_sandbox2_unit units = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugSandbox2Flow {
+  protos.db_sandbox2_character character = 1;
+}
+
+message SCSandbox2Login {
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 1;
+}
+
+message SCSandbox2CharacterInfo {
+  protos.db_sandbox2_character character = 1;
+  repeated protos.db_sandbox2_accessory_item accessory_item_list = 2;
+  protos.db_sandbox2_entrust entrust = 3;
+  protos.db_sandbox2_capital capital = 4;
+  repeated uint32 system_ids = 5;
+  repeated uint32 system_tech_ids = 6;
+  repeated protos.db_sandbox2_unit units = 7;
+  repeated protos.db_sandbox2_shop shops = 8;
+  repeated protos.db_sandbox2_weapon weapons = 9;
+  protos.Sandbox2PostData post_data = 99;
+}
+
+message Sandbox2PostData {
+  protos.NewSandboxEventTriggerResult result = 1;
+  protos.db_sandbox2_battle_setting battle_setting = 2;
+  repeated protos.DBTreasurePackage treasure_packages = 3;
+  protos.db_sandbox2_entrust_battle entrust_battle = 4;
+  protos.SCSandbox2EntrustBattleFinish entrust_battle_finish = 5;
+}
+
+message SCSandbox2GetChapterGoalReward {
+  uint32 template_id = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCSandbox2EventTrigger {
+  protos.NewSandboxEventTriggerResult result = 1;
+  protos.db_sandbox2_character character = 2;
+  protos.Sandbox2NewRoundDataSync data_sync = 3;
+}
+
+message SCSandbox2EventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+  repeated protos.NewSandboxEvent.Option options = 3;
+  protos.db_player_scenario_log log = 4;
+}
+
+message SCSandbox2CustomEventTrigger {
+  protos.NewSandboxEventTriggerResult result = 1;
+  protos.NewSandboxCustomEventTriggerParams custom_params = 2;
+  protos.db_sandbox2_character character = 3;
+}
+
+message SCSandbox2TreasureChestSelect {
+  protos.DBTreasure treasure = 1;
+  protos.db_sandbox2_character character = 2;
+}
+
+message SCSandbox2PostDataSync {
+  repeated uint32 types = 1;
+  protos.db_sandbox2_chapter_goal chapter_goal = 2;
+  protos.db_sandbox2_capital capital = 3;
+  repeated uint32 food_ids = 4;
+  repeated protos.db_sandbox2_shop shops = 5;
+  protos.db_sandbox2_entrust entrust = 6;
+  repeated uint32 system_ids = 7;
+  protos.DBTreasurePackage treasure_package = 8;
+}
+
+message SCSandbox2InferenceClue {
+  uint32 template_id = 1;
+  protos.NewSandboxEventTriggerResult event_trigger = 2;
+}
+
+message SCSandbox2BattlePremake {
+  protos.db_sandbox2_battle_setting battle_setting = 1;
+}
+
+message SCSandbox2BattleStart {
+  protos.db_sandbox2_battle_setting battle_setting = 1;
+}
+
+message SCSandbox2BattleEnd {
+  bool is_win = 1;
+  protos.db_sandbox2_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  bool unmarshal_report_error = 4;
+  int32 fate_power = 5;
+}
+
+message SCSandbox2BattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCSandbox2BattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCSandbox2BattleFinish {
+  uint32 id = 1;
+  repeated protos.Sandbox2ChangedUnit changed_units = 2;
+  protos.SCSandbox2BattleFinish.sandbox_event event = 3;
+  message sandbox_event {
+    bool win = 1;
+    uint32 mission_battle_param_id = 2;
+    protos.NewSandboxEventTriggerResult event_trigger = 3;
+  }
+}
+
+message SCSandbox2EntrustBattleStart {
+  protos.db_sandbox2_entrust_battle data = 1;
+}
+
+message SCSandbox2EntrustBattleFinish {
+  uint32 id = 1;
+  protos.db_sandbox2_entrust_battle battle = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  bool is_win = 4;
+  protos.NewSandboxEventTriggerResult sandbox_result = 5;
+  protos.db_sandbox2_character character = 6;
+}
+
+message SCSandbox2ShopGet {
+  protos.db_sandbox2_shop shop = 1;
+}
+
+message SCSandbox2ShopBuy {
+  uint32 id = 1;
+  protos.db_sandbox2_shop shop = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  protos.DBConsume consume = 4;
+}
+
+message SCSandbox2UnitWeaponReplace {
+  uint32 weapon_new_id = 1;
+  uint32 weapon_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCSandbox2UnitStudySkill {
+  protos.db_sandbox2_unit unit = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCSandbox2TacticsSkillEquip {
+  repeated protos.db_sandbox2_tactics_skill tactics_skills = 1;
+}
+
+message SCSandbox2TrainingEnter {
+  protos.db_sandbox2_training training = 1;
+  repeated protos.db_sandbox2_tactics_skill tactics_skills = 2;
+  repeated protos.db_sandbox2_surprise_skill surprise_skills = 3;
+  battle.TacticPoint tactic_point_param = 4;
+  battle.SurpriseCount surprise_count_param = 5;
+}
+
+message SCSandbox2TrainingNodeLevelUp {
+  protos.db_sandbox2_training training = 1;
+  protos.DBConsumes consumes = 2;
+  protos.db_sandbox2_tactics_skill tactics_skill = 3;
+  uint32 replace_tactics_skill_id = 4;
+  protos.db_sandbox2_surprise_skill surprise_skill = 5;
+  uint32 replace_surprise_skill_id = 6;
+  uint32 system_tech_id = 7;
+  uint32 replace_system_tech_id = 8;
+  battle.TacticPoint tactic_point_param = 9;
+  battle.SurpriseCount surprise_count_param = 10;
+  protos.db_sandbox2_character character = 99;
+}
+
+message SCSandbox2UnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCSandbox2AccessoryItemReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  repeated protos.db_sandbox2_accessory_item accessory_item_list = 4;
+}
+
+message SCSandbox2GetAccessoryItemList {
+  repeated protos.db_sandbox2_accessory_item accessory_item_list = 1;
+}
+
+message SCSandbox2CapitalEventSecondaryPerformPlay {
+  protos.db_sandbox2_capital_event event = 1;
+}

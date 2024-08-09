@@ -1,0 +1,10 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+message db_account {
+  uint64 id = 1;
+  string username = 2;
+  bool is_internet = 4;
+}

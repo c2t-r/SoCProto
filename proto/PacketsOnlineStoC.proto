@@ -1,0 +1,1883 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsGame.proto";
+import "PacketsGuild.proto";
+import "PacketsOnlineCommon.proto";
+import "PacketsCommon.proto";
+import "PacketsSandbox2.gen.proto";
+
+message SCOnlineLogin {
+  uint32 result = 1;
+}
+
+message SCOnlineLogout {
+}
+
+message SCOnlineCheckMails {
+  repeated uint64 player_ids = 1;
+}
+
+message SCGatewayLogin {
+  protos.SCGatewayLogin.Client client = 1;
+  message Client {
+    sint64 last_packet_time = 1;
+    sint64 login_time = 2;
+    sint32 client_index = 3;
+    sint32 server_index = 4;
+    repeated protos.SCGatewayLogin.Client.CacheData cache_data = 5;
+    message CacheData {
+      sint32 index = 1;
+      bytes data = 2;
+    }
+  }
+}
+
+message SCGatewayQuestionnaireFinish {
+  bool is_online = 1;
+}
+
+message SCGatewayOnlineCount {
+  string server = 1;
+  sint32 online = 2;
+  int64 timestamp = 3;
+}
+
+message SCOnlineReconnect {
+}
+
+message SCGatewayPurchase {
+  bool is_online = 1;
+}
+
+message SCGatewayOperationActivityGetTreasure {
+  bool is_online = 1;
+  sint32 result = 2;
+}
+
+message SCTreasureConsume {
+  protos.DBConsumes consumes = 1;
+}
+
+message SCOnlinePlayerInfo {
+  protos.db_player player = 1;
+  repeated protos.DBPlayerRole roles = 2;
+  repeated protos.DBPlayerRoleUnit units = 3;
+  repeated protos.db_player_treasure treasures = 4;
+  repeated uint32 system_ids = 5;
+  repeated protos.DBPlayerWeapon weapons = 6;
+  protos.DBAchievementQuestStatus daily_quest_status = 7;
+  repeated protos.db_player_achievement achievements = 9;
+  protos.DBPlayerSandboxStatus sandbox_status = 10;
+  protos.PlayerRemind remind = 11;
+  repeated protos.DBPlayerActivity activities = 12;
+  repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 13;
+  repeated protos.DBPlayerCharm charms = 14;
+  repeated protos.DBPlayerOperationActivity operation_activities = 16;
+  repeated protos.DBPlayerTechCategory tech_categories = 17;
+  repeated protos.db_player_tactics_skill tactics_skills = 18;
+  protos.DBPlayerTower tower = 19;
+  repeated protos.DBPlayerTowerQuest tower_quest = 21;
+  protos.db_player_role_friendship role_friendship = 22;
+  protos.db_player_monthly_login monthly_login = 23;
+  protos.db_player_card card = 24;
+  repeated protos.DBBattlePassStatus battle_pass_statuses = 25;
+  repeated protos.DBPlayerRoleStory role_friendship_stories = 26;
+  repeated protos.db_player_elysium_placement_furniture elysium_placement_furnitures = 27;
+  protos.db_player_revelation revelation = 28;
+  protos.DBGuild guild = 29;
+  protos.GuildRemind guild_remind = 30;
+  protos.db_player_friend_status friend_status = 31;
+  repeated protos.PlayerFriend friends = 32;
+  repeated protos.DBSimplePlayer block_players = 33;
+  repeated protos.db_player_shop shops = 34;
+  protos.db_player_battle_guidebook battle_guidebook = 35;
+  repeated protos.DBPlayerCareer careers = 36;
+  protos.PlayerSetting setting = 97;
+  protos.SCOnlinePlayerPostData post_data = 98;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+  repeated protos.PlayerContractActivitySimpleInfo contract_activity_simple_infos = 101;
+  uint32 arena_season_id = 102;
+  protos.PlayerAbyssSimpleInfo abyss_simple_info = 103;
+  repeated protos.db_player_unit_skin player_unit_skins = 104;
+  protos.PlayerChatRemind chat_remind = 37;
+}
+
+message SCOnlinePlayerSetName {
+  protos.db_player player = 1;
+}
+
+message SCOnlinePlayerAddStamina {
+  protos.db_player player = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlinePlayerSetGender {
+  protos.db_player player = 1;
+}
+
+message SCOnlinePlayerSetAvatar {
+  uint32 avatar_id = 1;
+}
+
+message SCOnlinePlayerChangeAvatar {
+  uint32 avatar_id = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlinePlayerSetPartnerName {
+  protos.db_player player = 1;
+}
+
+message SCOnlinePlayerChangeName {
+  protos.db_player player = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlinePlayerChangePartnerName {
+  protos.db_player player = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlineMailEnter {
+  repeated protos.DBPlayerMail mails = 1;
+}
+
+message SCOnlineMailRead {
+}
+
+message SCOnlineMailDelete {
+  repeated uint32 mail_ids = 1;
+}
+
+message SCOnlineMailGetTreasure {
+  repeated uint32 mail_ids = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineLoginCheck {
+  protos.db_player_monthly_login monthly_login = 1;
+  protos.db_player_sandbox_status sandbox_status = 2;
+  uint32 player_portrait_id = 3;
+  uint32 player_portrait_frame_id = 4;
+  uint32 player_portrait_bg_id = 5;
+  uint32 player_title_id = 6;
+  string player_title_param = 7;
+}
+
+message SCOnlineQuestionnaireFinish {
+  repeated uint32 operation_activity_ids = 1;
+}
+
+message SCOnlineMonthlyLoginGetTreasure {
+  protos.db_player_monthly_login monthly_login = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineGiftCodeExchange {
+}
+
+message SCOnlineSettingSetDefaultVoice {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingSetUnitVoice {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingSetParam {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineUseTreasure {
+  protos.db_player player = 1;
+  protos.DBConsume consume = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineGetRankingData {
+  repeated protos.PlayerRankingScore ranking_data = 1;
+  protos.PlayerRankingScore my_ranking_data = 2;
+}
+
+message SCOnlineMobileBindVerificationCodeGet {
+}
+
+message SCOnlineMobileBind {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineMobileUnbindVerificationCodeGet {
+}
+
+message SCOnlineMobileUnbind {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineEmailBindVerificationCodeGet {
+}
+
+message SCOnlineEmailBind {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineEmailUnbindVerificationCodeGet {
+}
+
+message SCOnlineEmailUnbind {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingResetUnitVoice {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineQuestionnaireUrlGet {
+  string url = 1;
+}
+
+message SCOnlineGetChatMessageList {
+  repeated protos.ChatMessage messages = 1;
+  protos.PlayerChatRemind chat_remind = 2;
+}
+
+message SCOnlineSendChatMessage {
+  uint32 type = 1;
+  uint64 id = 2;
+  protos.ChatMessage message = 3;
+  protos.PlayerChatRemind chat_remind = 4;
+}
+
+message SCMarqueeNoticeUpdate {
+  string version = 1;
+}
+
+message SCOnlinePlayerPostData {
+  protos.db_player_battle_setting battle_setting = 1;
+  repeated protos.DBTreasurePackage treasure_packages = 2;
+  uint64 roomid = 3;
+}
+
+message SCOnlinePlayerLevelChangePostData {
+  protos.DBPlayerLevelChange player_level_change = 1;
+}
+
+message SCOnlinePostDataSync {
+  repeated uint32 types = 1;
+  repeated uint32 system_ids = 2;
+  repeated protos.DBPlayerActivity activities = 3;
+  repeated protos.DBPlayerOperationActivity operation_activities = 4;
+  repeated protos.DBPlayerTechCategory tech_categories = 5;
+  protos.DBPlayerTower tower = 6;
+  protos.db_player_role_friendship role_friendship = 7;
+  repeated protos.DBPlayerRoleStory role_friendship_stories = 8;
+  protos.db_player_revelation revelation = 9;
+  protos.DBPlayerCareer career = 10;
+  protos.db_player_sandbox_status sandbox_status = 11;
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 12;
+  repeated protos.db_player_achievement achievements = 13;
+  repeated protos.db_player_sandbox_trophy trophies = 14;
+  repeated protos.db_player_sandbox_photo photos = 15;
+  protos.DBAchievementQuestStatus arena_quest_status = 16;
+  repeated protos.db_player_contract_activity_quest contract_activity_quests = 17;
+  repeated protos.db_player_abyss_guide_quest abyss_guide_quests = 18;
+  repeated protos.DBBattlePassStatus battle_pass_statuses = 19;
+}
+
+message SCDebugReloadGameServer {
+}
+
+message SCDebugReloadDBServer {
+}
+
+message SCDebugServerTime {
+  uint32 timestamp = 1;
+}
+
+message SCDebugSetServerTime {
+  uint32 timestamp = 1;
+}
+
+message SCDebugRemoveAccountLink {
+}
+
+message SCDebugLog {
+  repeated protos.SCDebugLog.Log logs = 1;
+  message Log {
+    string tab = 1;
+    string log = 2;
+  }
+}
+
+message SCDebugOnlineBattleStart {
+  protos.db_player_battle_setting battle_setting = 1;
+}
+
+message SCDebugOnlineMissionRand {
+  bytes mission = 1;
+}
+
+message SCDebugOnlineBattlePremake {
+  protos.db_player_battle_setting battle_setting = 1;
+  repeated uint32 forbid_role_ids = 2;
+}
+
+message SCDebugSetPlayerLevel {
+  uint32 level = 1;
+}
+
+message SCDebugOnlineMainQuestUnlock {
+  repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 1;
+  protos.db_player player = 2;
+}
+
+message SCDebugGenerateServerData {
+}
+
+message SCDebugChangeGameStartProcedureChecked {
+}
+
+message SCDebugOnlineActivityQuestAllStar {
+}
+
+message SCDebugOnlineSandboxLauncherDivinationOpen {
+  protos.db_player_sandbox_status status = 1;
+}
+
+message SCDebugOnlineUnit {
+  repeated protos.DBPlayerRole roles = 1;
+  repeated protos.DBPlayerRoleUnit units = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  repeated protos.db_player_unit_skin unit_skins = 4;
+}
+
+message SCDebugOnlineWeapon {
+  repeated protos.DBPlayerWeapon weapons = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugOnlineCharm {
+  repeated protos.DBPlayerCharm charms = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugOnlineAchievementQuest {
+  protos.DBAchievementQuestStatus daily_quest_status = 1;
+  repeated protos.db_player_achievement achievements = 2;
+}
+
+message SCDebugOnlineTech {
+  repeated protos.DBPlayerTechCategory tech_categories = 1;
+  repeated protos.db_player_tactics_skill tactics_skills = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+}
+
+message SCDebugOnlineTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugOnlineOperationActivity {
+  repeated protos.DBPlayerOperationActivity operation_activities = 1;
+}
+
+message SCDebugOnlineSaveData {
+  repeated protos.SCDebugOnlineSaveData.Namespace namespaces = 1;
+  repeated protos.SCDebugOnlineSaveData.SaveData save_datas = 2;
+  message Namespace {
+    string name = 1;
+  }
+  message SaveData {
+    string name = 1;
+    string player_id = 2;
+    string player_level = 3;
+    repeated string scopes = 4;
+    uint32 updated_at = 5;
+  }
+}
+
+message SCDebugOnlineEvent {
+  bool result = 1;
+}
+
+message SCDebugOnlineFlow {
+  protos.db_player player = 1;
+}
+
+message SCDebugOnlineSandbox {
+  repeated protos.db_player_sandbox_trophy trophies = 1;
+  repeated protos.db_player_sandbox_photo photos = 2;
+  protos.db_player_sandbox_status sandbox_status = 3;
+}
+
+message SCDebugOnlineArena {
+  protos.DBPlayerArena arena = 1;
+  protos.DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCDebugOnlineFriendship {
+  protos.db_player_role_friendship role_friendship = 1;
+  repeated protos.DBPlayerRole roles = 2;
+  repeated protos.DBPlayerRoleStory stories = 3;
+  protos.DBTreasurePackage treasure_package = 4;
+}
+
+message SCDebugOnlineBattlePass {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCDebugOnlineActivity {
+}
+
+message SCDebugOnlineGuildChallenge {
+}
+
+message SCDebugOnlineReset {
+}
+
+message SCDebugOnlineTower {
+}
+
+message SCDebugOnlineGuildActivityGetKey {
+  uint64 key = 1;
+}
+
+message SCDebugMultipleSetBattleSetting {
+  uint64 roomid = 1;
+}
+
+message SCDebugAbyssCalQuestPoint {
+  int32 point = 1;
+  int32 base_score = 2;
+  int32 damage_score = 3;
+  int32 round_score = 4;
+  int32 turn_score = 5;
+  int32 survive_score = 6;
+  int32 hp_score = 7;
+}
+
+message SCDebugSingleBattleStart {
+  protos.SCOnlineSingleBattleStart sub = 2;
+}
+
+message SCDebugAbyssUnlock {
+  repeated protos.PlayerAbyssGuide guides = 1;
+  protos.PlayerAbyssRank rank = 2;
+}
+
+message SCDebugAbyssChangeRank {
+  repeated protos.PlayerAbyssGuide guides = 1;
+  protos.PlayerAbyssRank rank = 2;
+}
+
+message SCDebugAbyssChangeRankingPoint {
+  repeated protos.PlayerAbyssGuide guides = 1;
+  protos.PlayerAbyssRank rank = 2;
+}
+
+message SCDebugCareerFinishQuest {
+}
+
+message SCDebugMultipleTopArenaApply {
+  bool apply = 1;
+}
+
+message SCDebugGuildBuildActivityChangeGuildBeacon {
+}
+
+message SCOnlineMainQuestEnter {
+  repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 1;
+}
+
+message SCOnlineMainQuestStart {
+}
+
+message SCOnlineMainQuestChapterGetTreasure {
+  protos.DBTreasurePackage treasure = 1;
+}
+
+message SCOnlineMainQuestGetBonus {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 2;
+  repeated uint32 unlocked_system_ids = 3;
+  bool unlock_next_chapter = 4;
+  bool newChallenge = 5;
+  uint32 main_quest_not_play_finished_scenario_id = 6;
+  repeated uint32 meet_role_ids = 7;
+  string str_meet_role_ids = 8;
+  protos.db_player player = 9;
+}
+
+message SCOnlineMainQuestFinishedScenarioPlayEnd {
+}
+
+message SCOnlineMainQuestChapterGetPerfectTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  uint32 chapter_id = 2;
+}
+
+message SCOnlineBattleStart {
+  protos.db_player_battle_setting battle_setting = 1;
+}
+
+message SCOnlineBattleEnd {
+  bool is_win = 1;
+  protos.db_player_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  repeated protos.DBPlayerChangedRole changed_roles = 4;
+  protos.SCOnlineBattleEnd.changed_player_exp changed_exp = 5;
+  protos.SCOnlineBattleEnd.main_quest_data main_quest = 6;
+  protos.SCOnlineBattleEnd.activityData activity_data = 7;
+  protos.db_player player = 8;
+  uint32 quest_template_id = 9;
+  protos.SCOnlineBattleEnd.ArenaData arena_data = 10;
+  protos.SCOnlineBattleEnd.towerData tower_data = 11;
+  protos.SCOnlineBattleEnd.roleFriendshipStoryData role_friendship_story_data = 12;
+  sint32 changed_friendship_exp = 13;
+  protos.SCOnlineBattleEnd.guildChallengeBossData guild_challenge_boss_data = 14;
+  protos.SCOnlineBattleEnd.contractActivityData contract_activity_data = 15;
+  protos.SCOnlineBattleEnd.abyssData abyss_data = 16;
+  protos.SCOnlineBattleEnd.gachaData gacha_data = 17;
+  bool unmarshal_report_error = 98;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+  message changed_player_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 changed_exp = 3;
+  }
+  message main_quest_data {
+    protos.DBTreasurePackage treasure_package = 1;
+    repeated protos.DBPlayerMainQuestChapter main_quest_chapters = 3;
+    repeated uint32 unlocked_system_ids = 4;
+    bool unlock_next_chapter = 5;
+    bool newChallenge = 6;
+    bool unlock_hard = 7;
+    repeated uint32 meet_role_ids = 8;
+    string str_meet_role_ids = 9;
+    repeated protos.DBPlayerActivity unlocked_activity_datas = 10;
+  }
+  message activityData {
+    protos.DBTreasurePackage treasure_package = 1;
+    protos.DBPlayerActivity data = 2;
+  }
+  message ArenaData {
+    protos.DBTreasurePackage treasure_package = 1;
+    repeated protos.db_player_arena_record records = 2;
+    protos.DBPlayerArena data = 3;
+    int32 destroy_base = 4;
+    int32 destroy_building = 5;
+    int32 destroy_unit = 6;
+    int32 offence_coefficient = 7;
+    int32 all_building = 8;
+    int32 all_unit = 9;
+    int32 building_score = 10;
+    int32 score = 11;
+    int32 coin = 12;
+    repeated protos.ArenaEnemy enemies = 13;
+    int32 old_score = 14;
+  }
+  message towerData {
+    protos.DBPlayerTower tower = 1;
+    protos.DBPlayerTowerQuest tower_quest = 2;
+    protos.DBTreasurePackage treasure_package = 3;
+    bool cleared_disable_buff_floor = 4;
+    repeated protos.DBPlayerTowerQuest unlock_tower_quest = 5;
+    repeated uint32 unlocked_system_ids = 6;
+  }
+  message roleFriendshipStoryData {
+    protos.db_player_role_story story = 1;
+    protos.DBTreasurePackage treasure_package = 2;
+    repeated protos.DBPlayerRoleStory stories = 3;
+    bool isFirstClear = 4;
+    bool isClear = 5;
+    uint32 friendshipLevelChanged = 6;
+    protos.DBTreasurePackage Level_up_treasure_package = 7;
+    protos.db_player_role role = 8;
+  }
+  message guildChallengeBossData {
+    uint32 leftBossBattlePower = 1;
+    uint32 trueBattlePower = 2;
+    uint32 score = 3;
+    bool isChallengeEnd = 4;
+    bool notInGuild = 5;
+    protos.DBTreasurePackage treasure_package = 6;
+  }
+  message contractActivityData {
+    uint32 contract_activity_id = 1;
+    uint32 old_max_hard = 2;
+    uint32 max_hard = 3;
+    int32 quest_old_max_score = 4;
+    int32 score = 5;
+    int32 base_score = 6;
+    int32 damage_score = 7;
+    int32 round_score = 8;
+    int32 turn_score = 9;
+    int32 survival_score = 10;
+    int32 hp_score = 11;
+    bool is_battle_time_out = 12;
+    bool is_first_pass = 13;
+    repeated uint32 unlocked_quest_ids = 14;
+    int32 history_score = 15;
+  }
+  message abyssData {
+    uint32 last_quest_passed_count = 1;
+    uint32 cur_quest_passed_count = 2;
+    int32 quest_old_max_score = 3;
+    int32 score = 4;
+    protos.PlayerAbyssRank abyss_rank = 5;
+    repeated protos.PlayerAbyssGuide changed_guides = 6;
+    int32 base_score = 7;
+    int32 damage_score = 8;
+    int32 round_score = 9;
+    int32 turn_score = 10;
+    int32 survival_score = 11;
+    int32 hp_score = 12;
+    bool is_battle_time_out = 13;
+    bool is_first_pass = 14;
+    uint32 unlocked_quest_id = 15;
+    int32 history_score = 16;
+  }
+  message gachaData {
+    protos.DBTreasurePackage treasure_package = 1;
+    protos.DBPlayerGachaStatus gacha_status = 2;
+  }
+}
+
+message SCOnlineBattlePremake {
+  protos.db_player_battle_setting battle_setting = 1;
+  repeated uint32 forbid_role_ids = 2;
+  bytes defence_formation = 3;
+  repeated protos.SCOnlineBattlePremake.SpawnUnit units = 4;
+  message SpawnUnit {
+    uint32 spawn_index = 1;
+    uint32 unit_id = 2;
+  }
+}
+
+message SCOnlineBattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCOnlineBattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCOnlineBattleReportDataGet {
+  bytes battle_setting = 1;
+  bytes battle_report = 2;
+}
+
+message SCOnlineBattleBackErr {
+}
+
+message SCOnlineGetBattleRecords {
+  repeated protos.BattleRecord records = 1;
+}
+
+message SCOnlineUploadReport {
+  uint32 battle_index = 1;
+  string oss_url = 2;
+}
+
+message SCOnlineReportFavoriteGetList {
+  repeated protos.BattleRecord records = 1;
+}
+
+message SCOnlineReportFavoriteAdd {
+  uint32 battle_index = 1;
+  string oss_url = 2;
+  uint64 attacker_id = 3;
+  uint32 id = 4;
+}
+
+message SCOnlineReportFavoriteDel {
+  uint32 id = 1;
+}
+
+message SCOnlineSingleBattlePremake {
+  protos.SCOnlineBattlePremake sub = 1;
+}
+
+message SCOnlineSingleBattleStart {
+  protos.SCOnlineBattleStart sub = 1;
+  bytes report = 2;
+  protos.BattleServerReturn battle_return = 3;
+}
+
+message SCOnlineSingleBattleEnd {
+  protos.SCOnlineBattleEnd sub = 1;
+}
+
+message SCOnlineSingleBattleMessage {
+  uint32 command_start = 1;
+  uint32 result = 2;
+  protos.SingleBattle.Type type = 3;
+  bytes commands = 4;
+  bytes report = 5;
+  bool is_end = 6;
+  protos.BattleResultType battle_result = 7;
+  protos.BattleServerReturn battle_return = 8;
+}
+
+message SCOnlineSingleBattleBack {
+  protos.SCOnlineBattleBack sub = 1;
+  protos.BattleServerReturn battle_return = 3;
+}
+
+message SCOnlineSandboxLaunch {
+  protos.db_player_sandbox_status status = 1;
+  protos.db_player_sandbox_status_detail status_detail = 2;
+  protos.DBConsumes ticket_consumes = 3;
+  uint32 result_chapter_times = 4;
+  uint32 sandbox_id = 5;
+  protos.PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Mode sandbox2_mode = 6;
+}
+
+message SCOnlineSandboxStatusProcessing {
+  protos.db_player_sandbox_status status = 1;
+  protos.db_player_sandbox_status_detail status_detail = 2;
+  uint32 sandbox_id = 3;
+}
+
+message SCOnlineSandboxEntryEnter {
+  protos.db_character character = 1;
+  protos.db_sandbox2_character sandbox2_character = 2;
+  protos.DBPlayerSandboxStatus sandbox_status = 3;
+  bool has_give_up_unlocked = 4;
+  repeated uint32 history_sandbox_ending_ids = 5;
+}
+
+message SCOnlineSandboxTechNodeUnlock {
+  protos.db_player_sandbox_status sandbox_status = 1;
+}
+
+message SCOnlineSandboxResulted {
+  protos.db_player_sandbox_status sandbox_status = 1;
+  uint32 sandbox_id = 2;
+  protos.db_player_sandbox_status_detail sandbox_status_detail = 3;
+}
+
+message SCOnlineSandboxMemoirLock {
+  protos.db_player_sandbox_memoir sandbox_memoir = 1;
+}
+
+message SCOnlineSandboxMemoirEnter {
+  repeated protos.db_player_sandbox_memoir sandbox_memoirs = 1;
+}
+
+message SCOnlineSandboxMemoirPlay {
+  protos.PlayerSandboxStatusDetailData.Sandbox1.ResultData record = 1;
+}
+
+message SCOnlineSandboxMemoirDelete {
+  uint32 id = 1;
+}
+
+message SCOnlineSandboxTourLevelTreasureGet {
+  repeated uint32 level_ids = 1;
+  protos.DBTreasurePackage tp = 2;
+  protos.db_player_sandbox_status sandbox_status = 3;
+}
+
+message SCOnlineSandboxFix {
+  uint32 sandbox_id = 1;
+}
+
+message SCOnlineSandboxUpdateLogEnter {
+}
+
+message SCOnlineSandboxUpdateLogRead {
+  protos.db_player_sandbox_status sandbox_status = 1;
+}
+
+message SCOnlineUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCOnlineUnitSkinChange {
+  protos.OnlineUnitSkinChange.Type type = 1;
+  uint32 skin_id = 2;
+  uint32 unit_id = 3;
+  protos.DBPlayerRoleUnit unit = 4;
+}
+
+message SCOnlineUnitSkinActive {
+  protos.db_player_unit_skin unit_skin = 1;
+}
+
+message SCOnlineUpgradeRoleStar {
+  protos.DBPlayerRoleUnit unit = 1;
+  protos.DBConsumes consumes = 2;
+  repeated protos.db_player_unit_skin unit_skins = 3;
+}
+
+message SCOnlineUpgradeRoleRank {
+  protos.DBPlayerRoleUnit unit = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineChooseRankSkill {
+  protos.DBPlayerRoleUnit unit = 1;
+  repeated protos.DBPlayerRoleUnit units = 3;
+}
+
+message SCOnlineUseRoleUnitExp {
+  protos.DBPlayerRole role = 1;
+  repeated protos.DBPlayerRoleUnit units = 2;
+  protos.DBConsume consume = 3;
+}
+
+message SCOnlineUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCOnlineStudyRankSkill {
+  protos.DBPlayerRoleUnit unit = 1;
+  protos.DBConsume consume = 2;
+  repeated protos.DBPlayerRoleUnit units = 3;
+}
+
+message SCOnlineUnitCharmReplace {
+  uint32 charm_new_id = 1;
+  uint32 charm_old_id = 2;
+  uint32 unit_id = 3;
+}
+
+message SCOnlineUnitPieceRecycle {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineUnitChangeCurrentUnit {
+  protos.DBPlayerRole role = 1;
+  uint32 weapon_main_id = 2;
+  uint32 weapon_offhand_id = 3;
+  uint32 charm_id = 4;
+  repeated protos.DBPlayerRoleUnit units = 5;
+}
+
+message SCOnlineUnitEquipmentAutoEquip {
+  uint32 unit_id = 1;
+  repeated protos.DBPlayerWeapon weapons = 2;
+  protos.DBPlayerCharm charm = 3;
+}
+
+message SCOnlineActivityUIEnter {
+  repeated protos.DBPlayerActivity activities = 1;
+}
+
+message SCOnlineActivityEnter {
+}
+
+message SCOnlineActivityQuestStart {
+  protos.db_player_activity_quest activity_quest = 1;
+}
+
+message SCOnlineActivityQuestRefresh {
+  protos.db_player_activity_quest activity_quest = 1;
+}
+
+message SCOnlineActivityQuestGiveUp {
+  protos.db_player_activity activity = 1;
+}
+
+message SCOnlinePracticeStart {
+  protos.db_player_activity activity = 1;
+  protos.db_player player = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  repeated protos.DBPlayerChangedRole changed_roles = 4;
+  protos.SCOnlineBattleEnd.changed_player_exp changed_exp = 5;
+  sint32 changed_friendship_exp = 6;
+}
+
+message SCOnlinePracticeLogListGet {
+  repeated protos.db_player_practice_log logs = 1;
+}
+
+message SCOnlinePracticeFinishUseTicket {
+  protos.db_player_activity activity = 1;
+  protos.db_player player = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  repeated protos.DBPlayerChangedRole changed_roles = 4;
+  protos.SCOnlineBattleEnd.changed_player_exp changed_exp = 5;
+  protos.DBConsume ticket_consume = 6;
+}
+
+message SCOnlineShopEnter {
+  repeated protos.db_player_shop shops = 1;
+}
+
+message SCOnlineShopBuy {
+  protos.db_player_shop shop = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  protos.DBConsume consume = 3;
+  string order_id = 4;
+  bool is_refresh = 5;
+}
+
+message SCOnlineShopGet {
+  protos.db_player_shop shop = 1;
+}
+
+message SCOnlineShopPurchase {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated protos.db_player_shop shops = 2;
+}
+
+message SCOnlineGachaEnter {
+  protos.DBPlayerGachaStatus status = 1;
+}
+
+message SCOnlineGacha {
+  protos.DBPlayerGachaStatus status = 1;
+  repeated protos.DBSimpleTreasure result = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  protos.DBConsume consume = 4;
+  uint32 id = 5;
+}
+
+message SCOnlineGachaLogGet {
+  uint32 gacha_times = 1;
+  uint32 gacha_ssr_count = 2;
+  repeated protos.db_player_gacha_log logs = 3;
+  sint32 type = 4;
+}
+
+message SCOnlineGachaSelectUp {
+  protos.db_player_gacha_pool pool = 1;
+}
+
+message SCOnlineWarehouseEnter {
+  repeated protos.db_player_treasure treasures = 1;
+  repeated protos.DBConsume expired_treasures = 2;
+}
+
+message SCOnlineGameStartProcedureChangePostData {
+  uint32 game_start_procedure_checked = 1;
+}
+
+message SCOnlineGameStartProcedureChecked {
+}
+
+message SCOnlineGameStartProcedureGacha {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.DBConsume ticket_consume = 2;
+}
+
+message SCOnlineTutorialUpdatePostData {
+  uint32 tutorial = 1;
+}
+
+message SCOnlineTutorialUpdate {
+  uint32 tutorial = 1;
+}
+
+message SCOnlineStamina {
+  sint32 stamina = 1;
+  uint32 stamina_recover_at = 2;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+}
+
+message SCOnlineTacticsSkillEnter {
+  repeated protos.db_player_tactics_skill tactics_skills = 1;
+}
+
+message SCOnlineTacticsSkillEquip {
+  repeated protos.db_player_tactics_skill tactics_skills = 1;
+}
+
+message SCOnlineTutorialBitUpdate {
+  string tutorial_ids = 1;
+}
+
+message SCOnlineScenarioPlay {
+}
+
+message SCOnlineNavigationKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message SCOnlineGoodReviewGuideUpdateTimestamp {
+  protos.PlayerSetting setting = 1;
+}
+
+message SCOnlineGetBannerIds {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineBattleGuidebookTrigger {
+  protos.db_player_battle_guidebook battle_guidebook = 1;
+}
+
+message SCOnlineBattleGuidebookEnter {
+  protos.db_player_battle_guidebook battle_guidebook = 1;
+}
+
+message SCOnlinePlayerMessageLike {
+}
+
+message SCOnlinePlayerMessageGetList {
+  repeated protos.SCOnlinePlayerMessageGetList.msg message_infos = 1;
+  message msg {
+    string id = 1;
+    uint64 owner_id = 2;
+    int64 liked_count = 3;
+    bool liked = 4;
+  }
+}
+
+message SCOnlinePlayerMessageUnlike {
+}
+
+message SCOnlinePlayerMessageGetLikeNotifyList {
+  repeated protos.SCOnlinePlayerMessageGetLikeNotifyList.notify notify_list = 1;
+  message notify {
+    string msg_id = 1;
+    uint64 iduser = 2;
+    uint32 timestamp = 3;
+    string nick_name = 4;
+    uint32 msg_type = 5;
+    uint32 battle_type = 6;
+    uint32 template_id = 7;
+    uint32 quest_id = 8;
+  }
+}
+
+message SCOnlineShare {
+}
+
+message SCOnlineWeaponLevelUp {
+  protos.DBPlayerWeapon weapon = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponUpgradeStar {
+  protos.DBPlayerWeapon weapon = 1;
+  uint32 consume_weapon_id = 2;
+  protos.DBConsumes consumes = 3;
+}
+
+message SCOnlineWeaponBreak {
+  protos.DBPlayerWeapon weapon = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponLock {
+  protos.DBPlayerWeapon weapon = 1;
+}
+
+message SCOnlineWeaponsRecycle {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated uint32 weapon_ids = 2;
+}
+
+message SCOnlineWeaponEnchanting {
+  protos.DBPlayerWeapon weapon = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponEnchantingSelect {
+  protos.DBPlayerWeapon weapon = 1;
+}
+
+message SCOnlineAchievementQuestEnter {
+  protos.DBAchievementQuestStatus daily_quest_status = 1;
+  repeated protos.db_player_achievement achievements = 2;
+}
+
+message SCOnlineGetAchievementTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated protos.db_player_achievement achievements = 2;
+}
+
+message SCOnlineGetAchievementQuestTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineGetAchievementQuestPointTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineGetAchievementQuestAllTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineSandboxCollectionEnter {
+  repeated protos.db_player_sandbox_trophy trophies = 1;
+  repeated protos.db_player_sandbox_photo photos = 2;
+  repeated protos.db_character_achievement achievements = 3;
+  protos.DBSandboxStatistics sandbox_statistics = 4;
+}
+
+message SCOnlineGetSandboxTrophyTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player_sandbox_trophy trophy = 2;
+}
+
+message SCOnlineGetSandboxPhotoTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player_sandbox_photo photo = 2;
+}
+
+message SCOnlineIntelligenceEnter {
+  repeated protos.db_player_intelligence intelligences = 1;
+}
+
+message SCOnlineBattlePassEnter {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetBattlePassQuestExp {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetAllBattlePassQuestExp {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetBattlePassLevelTreasure {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineGetAllBattlePassLevelTreasure {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineBuyBattlePassLevel {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlineGetBattlePassLoopTreasure {
+  protos.DBBattlePassStatus battle_pass_status = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message ArenaEnemy {
+  uint32 idx = 1;
+  sint32 score = 2;
+  protos.DBSimplePlayer player = 3;
+}
+
+message SCOnlineArenaEnter {
+  protos.DBPlayerArena arena = 1;
+  protos.DBAchievementQuestStatus quest_status = 2;
+  repeated protos.ArenaEnemy enemies = 3;
+  repeated protos.db_player_arena_record records = 4;
+  protos.OnlineArenaSeasonResult season_result = 5;
+  uint32 latest_defence_count = 6;
+}
+
+message SCOnlineArenaRefresh {
+  protos.DBPlayerArena arena = 1;
+  repeated protos.ArenaEnemy enemies = 2;
+  repeated protos.db_player_arena_record records = 3;
+  protos.DBConsume consume = 4;
+}
+
+message SCOnlineArenaSaveDefence {
+  protos.DBPlayerArena arena = 1;
+}
+
+message SCOnlineArenaUpgradeBuilding {
+  protos.DBPlayerArena arena = 1;
+  int32 cost = 2;
+}
+
+message SCOnlineArenaLevelReset {
+  protos.DBPlayerArena arena = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineArenaDowngradeBuilding {
+  protos.DBPlayerArena arena = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineArenaGetRecordList {
+  uint32 latest_defence_count = 1;
+  repeated protos.db_player_arena_record records = 2;
+}
+
+message SCOnlineCharmLevelUp {
+  protos.DBPlayerCharm charm = 1;
+  protos.DBConsumes consumes = 2;
+}
+
+message SCOnlineCharmLock {
+  protos.DBPlayerCharm charm = 1;
+}
+
+message SCOnlineCharmsRecycle {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated uint32 charm_ids = 2;
+}
+
+message SCOnlineTowerEnter {
+  protos.DBPlayerTower tower = 1;
+  repeated protos.DBPlayerTowerQuest tower_quest = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTowerQuestStart {
+  bool is_changed = 1;
+}
+
+message SCOnlineTowerFloorTreasure {
+  protos.DBPlayerTower tower = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  repeated protos.DBPlayerTowerQuest tower_quest = 3;
+  bool is_changed = 4;
+  repeated uint32 unlocked_system_ids = 5;
+}
+
+message SCOnlineTowerWeekTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  string got_week_treasure = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTowerWeekTreasureAll {
+  protos.DBTreasurePackage treasure_package = 1;
+  string got_week_treasure = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTechEnter {
+  repeated protos.DBPlayerTechCategory tech_categories = 1;
+  repeated protos.db_player_tactics_skill tactics_skills = 2;
+}
+
+message SCOnlineTechNodeLevelUp {
+  protos.DBPlayerTechCategory tech_category = 1;
+  protos.DBConsumes consumes = 3;
+  protos.db_player_tactics_skill tactics_skill = 4;
+  uint32 prev_tactics_skill_id = 5;
+}
+
+message SCOnlineOperationActivityGet {
+  protos.DBPlayerOperationActivity activity = 1;
+}
+
+message SCOnlineOperationActivityGetQuestTreasure {
+  protos.DBPlayerOperationActivity activity = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetDayTreasure {
+  protos.DBPlayerOperationActivity activity = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetTreasure {
+  protos.DBPlayerOperationActivity activity = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetDayTreasures {
+  protos.DBPlayerOperationActivity activity = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityEnter {
+  repeated protos.DBPlayerOperationActivity activities = 1;
+}
+
+message SCOnlineOperationActivityUrlGet {
+  string url = 1;
+}
+
+message SCOnlineOperationActivityGetTreasureCallback {
+  sint32 result = 1;
+}
+
+message SCOnlineOperationActivityGetSpecialDayTreasure {
+  protos.DBPlayerOperationActivity activity = 1;
+}
+
+message SCOnlineOperationActivitySaveExtraData {
+  uint32 id = 1;
+  string extra_data = 2;
+}
+
+message SCOnlineElysiumEnter {
+  protos.OnlineEvent event = 1;
+  repeated protos.db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineEventTrigger {
+  protos.OnlineEvent event = 1;
+  repeated protos.db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineCustomEventTrigger {
+  protos.OnlineEvent event = 1;
+  repeated protos.db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineEventForceTrigger {
+}
+
+message SCOnlineRoleFriendshipUIEnter {
+  protos.db_player_role role = 1;
+  uint32 friendshipLevelChanged = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  protos.DBPlayerChangedRoleFriendship friendshipChanged = 4;
+  protos.db_player_role_friendship role_friendship = 5;
+}
+
+message SCOnlineRoleFriendshipStoryUIEnter {
+  repeated protos.DBPlayerRoleStory stories = 1;
+}
+
+message SCOnlineRoleNicknameChange {
+  protos.db_player_role role = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlineRoleNicknameReset {
+  protos.db_player_role role = 1;
+}
+
+message SCOnlineRoleFriendshipInteract {
+  protos.db_player_role role = 1;
+  protos.db_player_role_friendship role_friendship = 2;
+  uint32 friendshipLevelChanged = 3;
+  protos.DBTreasurePackage treasure_package = 4;
+}
+
+message SCOnlineRoleFriendshipStoryStart {
+  protos.db_player_role_story story = 1;
+}
+
+message SCOnlineRoleFriendshipStoryNext {
+  protos.db_player_role_story story = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  repeated protos.DBPlayerRoleStory stories = 3;
+  bool isClear = 4;
+  bool isFirstClear = 5;
+  uint32 friendshipLevelChanged = 6;
+  protos.DBTreasurePackage Level_up_treasure_package = 7;
+  protos.db_player_role role = 8;
+}
+
+message SCOnlineCardEnter {
+  uint64 iduser = 1;
+  protos.DBPlayerCard player_card = 2;
+  repeated protos.db_player_sandbox_trophy sandbox_trophies = 3;
+  repeated protos.db_player_head_portrait head_portraits = 4;
+  repeated protos.db_player_head_portrait_bg head_portrait_bgs = 5;
+  repeated protos.db_player_head_portrait_frame head_portrait_frames = 6;
+  repeated protos.db_player_title titles = 7;
+  protos.db_player player = 8;
+}
+
+message SCOnlineCardHeadPortraitChange {
+  protos.OnlineCardHeadPortraitChange.Type type = 1;
+  uint32 id = 2;
+}
+
+message SCOnlineCardSandboxTrophiesModify {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineCardRoleUnitsModify {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineCardKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message SCOnlineFriendEnter {
+  protos.db_player_friend_status status = 1;
+  repeated protos.PlayerFriend friends = 2;
+  repeated protos.DBSimplePlayer block_players = 3;
+}
+
+message SCOnlineFriendRecommendedGet {
+  repeated protos.DBSimplePlayer players = 1;
+}
+
+message SCOnlineFriendApplyListGet {
+  repeated protos.PlayerFriendApply applies = 1;
+}
+
+message SCOnlineFriendApply {
+  protos.db_player_friend_status status = 1;
+}
+
+message SCOnlineFriendApplyPass {
+  repeated protos.PlayerFriend friends = 1;
+}
+
+message SCOnlineFriendApplyDecline {
+}
+
+message SCOnlineFriendBlock {
+  protos.DBSimplePlayer block_player = 1;
+}
+
+message SCOnlineFriendUnblock {
+}
+
+message SCOnlineFriendPointOperate {
+  protos.db_player_friend_status status = 1;
+  protos.PlayerFriend friend = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineFriendPointAllSend {
+  repeated protos.PlayerFriend friends = 1;
+}
+
+message SCOnlineFriendPointAllReceive {
+  protos.db_player_friend_status status = 1;
+  repeated protos.PlayerFriend friends = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineFriendSearch {
+  protos.DBSimplePlayer player = 1;
+}
+
+message SCOnlineFriendDelete {
+}
+
+message SCOnlineFriendPostData {
+  sint32 apply_count = 1;
+  protos.PlayerFriend friend = 2;
+  uint64 blocked_player_id = 3;
+  uint64 unblock_player_id = 4;
+  uint64 delete_player_id = 5;
+}
+
+message SCOnlineFriendBattleApply {
+  protos.db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleApplyCancel {
+  protos.db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleApplyReply {
+  protos.FriendBattleApplyReplyType.Type reply = 1;
+  protos.db_player_friend_status self_status = 3;
+}
+
+message SCOnlineFriendBattleStartPostData {
+  protos.db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleEndPostData {
+  protos.db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleSelfInfoPostData {
+  protos.db_player_friend_status status = 1;
+}
+
+message SCOnlineGuildCreate {
+  protos.DBGuild guild = 1;
+  protos.db_player player = 2;
+}
+
+message SCOnlineGuildJoin {
+  protos.DBGuild guild = 1;
+}
+
+message SCOnlineGuildLeave {
+  protos.db_player player = 1;
+}
+
+message SCOnlineGuildSearch {
+  repeated protos.DBSimpleGuild guilds = 1;
+}
+
+message SCOnlineGuildRecommendedGet {
+  repeated protos.DBSimpleGuild guilds = 1;
+}
+
+message SCOnlineGuildChangeName {
+  protos.db_guild guild = 1;
+  protos.DBConsume consume = 2;
+}
+
+message SCOnlineGuildInfoChange {
+  protos.db_guild guild = 1;
+}
+
+message SCOnlineGuildApplyPass {
+  protos.db_guild guild = 1;
+  repeated protos.DBGuild.Member members = 2;
+}
+
+message SCOnlineGuildApplyDecline {
+}
+
+message SCOnlineGuildMemberRoleGive {
+  repeated protos.DBGuild.Member members = 1;
+}
+
+message SCOnlineGuildMemberKick {
+  protos.db_guild guild = 1;
+  protos.DBGuild.Member member = 2;
+}
+
+message SCOnlineGuildEnter {
+  protos.DBGuild guild = 1;
+  protos.db_player player = 2;
+}
+
+message SCOnlineGuildApplyListGet {
+  repeated protos.DBGuild.Apply applies = 1;
+}
+
+message SCOnlineGuildLogListGet {
+  repeated protos.db_guild_log logs = 1;
+}
+
+message SCOnlineGuildPostData {
+  uint32 guild_id = 1;
+  repeated protos.DBGuild.Member members = 2;
+  uint64 leave_player_id = 3;
+  uint64 impeach_player_id = 4;
+  uint32 inspect_end_at = 5;
+}
+
+message SCOnlineGuildImpeach {
+  uint64 impeach_player_id = 1;
+  uint32 inspect_end_at = 2;
+}
+
+message SCOnlineGuildChallengeStart {
+  protos.DBGuildChallenge guild_challenge = 1;
+  protos.DBGuild guild = 2;
+}
+
+message SCOnlineGuildChallengeEnter {
+  protos.DBGuildChallenge guild_challenge = 1;
+}
+
+message SCOnlineGuildChallengeStartNormalBattle {
+  bool pass = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  uint32 score = 3;
+  uint32 logic_battle_power = 4;
+  uint32 true_battle_power = 5;
+  protos.DBGuildChallenge guild_challenge = 6;
+}
+
+message SCOnlineGuildChallengeEnd {
+  protos.DBGuild guild = 1;
+}
+
+message SCOnlineGuildChallengeGetAllMember {
+  repeated protos.DBGuild.Member members = 1;
+}
+
+message SCOnlineGuildGetPointTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player player = 2;
+}
+
+message SCOnlineGuildGetAllPointTreasures {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player player = 2;
+}
+
+message SCOnlineGuildRemindRead {
+}
+
+message SCOnlineGuildBuildActivityEnter {
+  repeated protos.SCOnlineGuildBuildActivityEnter.DayBeacon beacon_record = 1;
+  uint32 guild_beacon_count = 2;
+  uint32 cur_day = 3;
+  message DayBeacon {
+    uint32 day = 1;
+    bool is_get = 2;
+    string first_unlock_player = 3;
+  }
+}
+
+message SCOnlineGuildBuildActivityTryUnlockBeacon {
+  bool unlocked = 1;
+  bool is_first = 2;
+  protos.DBTreasurePackage treasure_package = 3;
+  int32 guild_beacon_count = 4;
+  uint32 err_num = 5;
+  string first_unlock_player = 6;
+}
+
+message SCOnlineGuildBuildActivityGetBeaconTreasureRecord {
+  protos.DBTreasurePackage treasure_package = 1;
+  bool is_shared = 2;
+}
+
+message SCOnlineGuildBuildActivityGetShareTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+}
+
+message SCOnlineRevelationEnter {
+  protos.db_player_revelation data = 1;
+  repeated protos.db_player_scenario_log scenario_log = 2;
+}
+
+message SCOnlineRevelationGetTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player_revelation data = 2;
+}
+
+message SCOnlineRevelationPutTarot {
+  protos.db_player_revelation data = 2;
+}
+
+message SCOnlineElysiumPlacementSave {
+  repeated protos.db_player_elysium_placement_furniture furnitures = 1;
+  repeated protos.DBPlayerRole roles = 2;
+}
+
+message SCOnlineContractActivityEnter {
+  repeated protos.PlayerContractActivitySimpleInfo infos = 1;
+}
+
+message SCOnlineContractActivityGetQuestTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player_contract_activity_quest quest = 2;
+  repeated uint32 unlock_contracts = 3;
+}
+
+message SCOnlineContractActivityGetQuestPointTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.PlayerContractActivityPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineContractActivityGetQuestAllPointTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.PlayerContractActivityPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineContractActivityGetQuestAllTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated protos.db_player_contract_activity_quest quests = 2;
+  repeated uint32 unlock_contracts = 3;
+}
+
+message SCOnlineContractActivityGetData {
+  protos.PlayerContractActivity player_contract_activity = 1;
+}
+
+message SCOnlineContractActivityChooseContract {
+  repeated protos.SCOnlineContractActivityChooseContract.chosen_contract activity_chosen_contracts = 1;
+  message chosen_contract {
+    uint32 contract_activity_type = 1;
+    uint32 contract_activity_param = 2;
+    repeated uint32 contract_ids = 3;
+  }
+}
+
+message SCOnlineContractActivityGetChosenContract {
+  repeated uint32 contract_ids = 1;
+  uint32 quest_max_hard = 2;
+  uint32 contract_hard = 3;
+}
+
+message SCOnlineContractActivityTechEnter {
+  repeated uint32 tech_ids = 1;
+  repeated protos.SCOnlineContractActivityTechEnter.tech_slot tech_slots = 2;
+  int32 tech_point = 3;
+  message tech_slot {
+    uint32 slot_id = 1;
+    uint32 slot_tech_id = 2;
+  }
+}
+
+message SCOnlineContractActivityUnlockTech {
+  repeated uint32 tech_ids = 1;
+  int32 tech_point = 2;
+}
+
+message SCOnlineContractActivityChooseTech {
+  repeated protos.SCOnlineContractActivityChooseTech.tech_slot tech_slots = 1;
+  message tech_slot {
+    uint32 slot_id = 1;
+    uint32 slot_tech_id = 2;
+  }
+}
+
+message SCOnlineContractActivityGetRank {
+  repeated protos.SCOnlineContractActivityGetRank.ContractActivityRankingScore ranking_data = 1;
+  protos.SCOnlineContractActivityGetRank.ContractActivityRankingScore my_ranking_data = 2;
+  message ContractActivityRankingScore {
+    protos.PlayerRankingScore ranking_data = 1;
+    repeated uint32 units = 2;
+  }
+}
+
+message SCOnlineContractActivitySyncGlobalQuest {
+  repeated protos.SCOnlineContractActivitySyncGlobalQuest.GlobalQuest global_quest_group = 1;
+  message GlobalQuest {
+    protos.OnlineGlobalQuest quest = 1;
+    repeated protos.DBSimplePlayer players = 2;
+  }
+}
+
+message SCOnlineContractActivityGetGlobalQuestTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.OnlineGlobalQuest quest = 2;
+}
+
+message SCOnlineAbyssUIEnter {
+  repeated protos.PlayerAbyssGuide guide = 1;
+  protos.PlayerAbyssRank rank = 2;
+  bool is_new_rank = 3;
+}
+
+message SCOnlineAbyssSwitch {
+  repeated protos.PlayerAbyssGuide changed_guides = 1;
+  repeated protos.PlayerAbyssRankDetail changed_rank_details = 2;
+  repeated protos.PlayerAbyssDisplaySnapshot snapshots = 3;
+}
+
+message SCOnlineAbyssRankGetQuestPointTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.PlayerAbyssRankPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineAbyssGuideGetQuestTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  protos.db_player_abyss_guide_quest quest = 2;
+}
+
+message SCOnlineAbyssGuideGetQuestAllTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  repeated protos.db_player_abyss_guide_quest quests = 2;
+}
+
+message SCOnlineAbyssRankGetRank {
+  int32 rank_percent = 1;
+  int64 rank_no = 2;
+}
+
+message SCOnlineAbyssRankGetProcessTreasure {
+  protos.DBTreasurePackage treasure_package = 1;
+  int32 rank_percent = 2;
+  int32 max_point = 3;
+  int64 rank_no = 4;
+}
+
+message SCOnlineAbyssGetBattleUnitSnapshot {
+  repeated protos.PlayerAbyssDisplaySnapshot snapshots = 1;
+}
+
+message SCOnlineAbyssModifyBattleUnitSnapshot {
+  repeated protos.PlayerAbyssDisplaySnapshot snapshots = 1;
+  repeated protos.PlayerAbyssGuide changed_guides = 2;
+  repeated protos.PlayerAbyssRankDetail changed_rank_details = 3;
+  protos.db_player_abyss_rank rank = 4;
+}
+
+message SCOnlineAbyssResetData {
+  repeated protos.PlayerAbyssGuide changed_guides = 1;
+  repeated protos.PlayerAbyssRankDetail changed_rank_details = 2;
+}
+
+message SCOnlineAbyssUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCOnlineAbyssSetFirstPassShowed {
+  repeated protos.PlayerAbyssGuide changed_guides = 1;
+  repeated protos.PlayerAbyssRankDetail changed_rank_details = 2;
+}
+
+message SCOnlineLotteryActivityEnter {
+  protos.LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineLotteryActivitySelectTreasureOption {
+  protos.LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineLotteryActivityDraw {
+  protos.LotteryActivity lottery_activity = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineLotteryActivityResetRound {
+  protos.LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineExchangeShopBuy {
+  protos.db_player_exchange_shop shop = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+  uint32 consume_type = 3;
+  uint32 consume_instance_id = 4;
+  protos.DBConsume consume = 5;
+}
+
+message SCOnlineCareerEnter {
+  repeated protos.DBPlayerCareer careers = 1;
+}
+
+message SCOnlineCareerQuestGetTreasure {
+  protos.DBPlayerCareer career = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerChallengeGetTreasure {
+  protos.DBPlayerCareer career = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetTreasure {
+  repeated protos.DBPlayerCareer careers = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetAllTreasure {
+  protos.DBPlayerCareer career = 1;
+  protos.DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineTopArenaApply {
+  bool apply = 1;
+}
+
+message SCOnlineTopArenaModifyBattleUnitSnapshot {
+  repeated protos.BattleUnitSnapshotDisplay displays = 1;
+}
+
+message SCOnlineTopArenaGetBattleUnitSnapshot {
+  repeated protos.BattleUnitSnapshotDisplay displays = 1;
+}
+
+message SCOnlineTopArenaUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}

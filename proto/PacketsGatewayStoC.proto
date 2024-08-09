@@ -1,0 +1,66 @@
+// this proto is dumped by c2t-r
+syntax = "proto3";
+
+package protos;
+
+import "PacketsOnlineCommon.proto";
+import "PacketsMultipleCommon.proto";
+
+message SCTCPPing {
+  uint32 timestamp = 1;
+}
+
+message SCKCPPing {
+  uint32 timestamp = 1;
+}
+
+message SCOffline {
+  uint32 result = 1;
+}
+
+message SCMaintenance {
+  string message = 1;
+}
+
+message SCClientUpdated {
+  uint32 result = 1;
+}
+
+message SCReconnect {
+  uint32 result = 1;
+  uint32 udp_port = 2;
+  uint64 room_id = 3;
+  bool relogin = 4;
+}
+
+message SCOnlineAddPlayerRemindCount {
+  repeated protos.SCOnlineAddPlayerRemindCount.DataEntry data = 1;
+  message DataEntry {
+    uint32 key = 1;
+    sint32 value = 2;
+  }
+}
+
+message SCOnlinePlayerRemind {
+  protos.PlayerRemind remind = 1;
+}
+
+message SCOnlinePlayerRemindRead {
+}
+
+message SCMultipleJoinRoom {
+  protos.Room room = 1;
+}
+
+message SCOnlineGuildRemind {
+  protos.GuildRemind remind = 1;
+}
+
+message SCOnlinePlayerChatRemindRead {
+  protos.PlayerChatRemind chat_remind = 1;
+}
+
+message SCLogin {
+  uint32 result = 1;
+  uint32 udp_port = 2;
+}
