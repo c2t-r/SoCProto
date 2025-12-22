@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message db_new_sandbox_base_capital_map_event {
+  enum IMPORTANCE {
+    IMPORTANCE_FIRST = 0;
+    Normal = 1;
+    Important = 2;
+    Emergency = 3;
+  }
+
+  uint64 id_character = 1;
+  uint32 id_capital = 2;
+  uint32 id = 3;
+  uint32 sandbox_event = 4;
+  uint32 point_id = 5;
+  uint32 bubble_id = 6;
+  sint32 end_round = 7;
+  sint32 importance = 8;
+}
+

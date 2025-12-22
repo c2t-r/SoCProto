@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message SCException {
+  uint32 proto_id = 1;
+  uint32 code = 2;
+  uint32 from_proto_id = 3;
+}
+
+message SCError {
+  uint32 proto_id = 1;
+  uint32 code = 2;
+  uint32 from_proto_id = 3;
+  bool is_tip = 4;
+}
+
+message SCBattleError {
+}
+
+message SCOnlineArenaError {
+}
+
+message SCSystemDisable {
+}
+
+message SCNewSandboxError {
+}
+
+message SCNewSandboxCustomEventTriggerError {
+}
+
+message SCOnlineAfkError {
+}
+
+message SCMiniSandboxError {
+}
+
+message SCMiniSandboxEventTriggerError {
+}
+

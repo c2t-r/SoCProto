@@ -1,0 +1,350 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message db_sandbox2_accessory_item {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 unit_id = 4;
+  uint32 slot_id = 5;
+}
+
+message db_sandbox2_achievement {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  uint32 value = 3;
+  bool is_finish = 4;
+}
+
+message db_sandbox2_battle_setting {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Battling = 2;
+    Finished = 3;
+  }
+
+  enum BATTLE_RESULT_TYPE {
+    BATTLE_RESULT_TYPE_FIRST = 0;
+    Success = 1;
+    Failure = 2;
+    Normal = 3;
+    Branch = 4;
+  }
+
+  enum TYPE {
+    TYPE_FIRST = 0;
+    Debug = 1;
+    Entrust = 2;
+    SandboxEvent = 3;
+  }
+
+  uint64 id_character = 1;
+  uint32 battle_index = 2;
+  sint32 status = 3;
+  bytes battle_setting = 4;
+  bytes report = 5;
+  string result = 6;
+  uint32 entrust_battle_id = 7;
+  sint32 battle_result_type = 8;
+  bool use_fate_power = 9;
+  bytes sandbox_event_battle_param = 10;
+  sint32 type = 11;
+}
+
+message db_sandbox2_behaviour_counter {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  bytes data = 3;
+}
+
+message db_sandbox2_capital {
+  uint64 id_character = 1;
+  repeated db_sandbox2_capital_area areas = 2;
+  repeated db_sandbox2_capital_event events = 3;
+  repeated db_sandbox2_capital_map_event map_events = 4;
+  uint32 event_group_unique_id = 5;
+}
+
+message db_sandbox2_capital_area {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    Locked = 1;
+    Open = 2;
+    Closed = 3;
+  }
+
+  uint64 id_character = 1;
+  uint32 id_capital = 2;
+  uint32 id = 3;
+  sint32 status = 4;
+}
+
+message db_sandbox2_capital_event {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    Triggered = 1;
+    Happening = 2;
+    Closed = 3;
+  }
+
+  enum SPAWN_TYPE {
+    SPAWN_TYPE_FIRST = 0;
+    Resident = 1;
+    Appointed = 2;
+    Random = 3;
+    None = 4;
+  }
+
+  uint64 id_character = 1;
+  uint32 id_capital = 2;
+  uint32 id = 3;
+  uint32 event_index = 4;
+  sint32 status = 5;
+  sint32 priority = 6;
+  uint32 sandbox_event = 7;
+  uint32 area_id = 8;
+  sint32 spawn_type = 9;
+  uint32 spawn_index = 10;
+  uint32 npc_form = 11;
+  uint32 behavioral_sequence_index = 12;
+  sint32 end_round = 13;
+  bool is_important = 14;
+  uint32 system_id = 15;
+  sint32 secondary_perform_played_round = 16;
+  uint32 bubble_id = 17;
+  uint32 group_id = 19;
+}
+
+message db_sandbox2_capital_map_event {
+  enum IMPORTANCE {
+    IMPORTANCE_FIRST = 0;
+    Normal = 1;
+    Important = 2;
+    Emergency = 3;
+  }
+
+  uint64 id_character = 1;
+  uint32 id_capital = 2;
+  uint32 id = 3;
+  uint32 sandbox_event = 4;
+  uint32 point_id = 5;
+  uint32 bubble_id = 6;
+  sint32 end_round = 7;
+  sint32 importance = 8;
+}
+
+message db_sandbox2_chapter_goal {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    Normal = 1;
+    Break = 2;
+    Sacrifice = 3;
+  }
+
+  enum REWARD_STATUS {
+    REWARD_STATUS_FIRST = 0;
+    Unfinished = 1;
+    Finished = 2;
+    Received = 3;
+  }
+
+  uint64 id_character = 1;
+  uint32 template_id = 2;
+  uint32 progress = 3;
+  sint32 status = 4;
+  sint32 reward_status = 5;
+}
+
+message db_sandbox2_character {
+  uint64 id = 1;
+  sint32 round = 2;
+  uint32 level = 3;
+  string role_unit_ids = 6;
+  string additional_event_queue = 7;
+  uint32 forced_entrust_count = 8;
+  string time_out_event_ids = 9;
+  uint32 custom_event_system = 10;
+  uint32 custom_event_id = 11;
+  uint32 sandbox_token_id = 12;
+  string clue_ids = 13;
+  uint32 date_id = 14;
+  uint32 prev_date_id = 15;
+  string weather_ids = 16;
+  string food_ids = 17;
+  repeated db_sandbox2_treasure treasures = 18;
+  db_sandbox2_chapter_goal chapter_goal = 20;
+  repeated db_sandbox2_effect effects = 21;
+}
+
+message db_sandbox2_effect {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  sint32 start_round = 3;
+  sint32 end_round = 4;
+}
+
+message db_sandbox2_entrust {
+  uint64 id_character = 1;
+  uint32 result_battle_id = 3;
+  string last_battle_unit_ids = 4;
+  bool result_battle_is_completed = 5;
+  bool result_battle_is_win = 6;
+  uint32 residence_id = 7;
+  bool stop = 8;
+  repeated db_sandbox2_entrust_battle entrust_battles = 10;
+}
+
+message db_sandbox2_entrust_battle {
+  uint64 id_character = 1;
+  uint32 id_entrust = 2;
+  uint32 id = 3;
+  sint32 difficulty = 4;
+  bool second_state = 5;
+  uint32 position_id = 6;
+  sint32 open_time = 7;
+  sint32 country_stability = 8;
+  bool finished = 9;
+  sint32 create_entrust_round = 10;
+  uint32 template_id = 11;
+  bool condition2_finished = 12;
+  bytes condition_bonus = 13;
+  sint32 fate_power = 14;
+  uint32 publish_system_id = 15;
+}
+
+message db_sandbox2_sandbox {
+  uint64 id_character = 1;
+  string current_event_data = 2;
+  string custom_event_data = 3;
+  sint32 chapter_round = 4;
+  uint32 chapter_id = 5;
+  uint32 result_chapter_id = 6;
+  uint32 event_group_id = 7;
+  bool is_change_chapter = 8;
+  uint32 current_phase = 9;
+  string skip_phase_ids = 10;
+  string rule_ids = 11;
+  bytes sorted_event_data = 12;
+  uint32 system = 13;
+  bytes last_event_result_proto = 14;
+  uint32 ending_id = 15;
+  bool is_end = 16;
+  bytes scenario_proto = 17;
+  bool is_force_change_phase = 18;
+  db_sandbox2_sandbox_driver driver = 19;
+}
+
+message db_sandbox2_sandbox_driver {
+  uint64 id_character = 1;
+  uint32 id_sandbox = 2;
+  string variables = 3;
+  string flags = 4;
+}
+
+message db_sandbox2_sandbox_event_battle {
+  uint64 id_character = 1;
+  uint32 template_id = 2;
+  bool is_finished = 3;
+  bool is_win = 4;
+  sint32 fate_power = 5;
+  string conditions = 6;
+  bytes mission_data = 7;
+}
+
+message db_sandbox2_shop {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  uint32 event_group_id = 3;
+  uint32 shop_id = 4;
+  sint32 start_round = 5;
+  bytes data = 6;
+}
+
+message db_sandbox2_surprise_skill {
+  uint64 id_character = 1;
+  uint32 id = 2;
+}
+
+message db_sandbox2_tactics_skill {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  bool is_equipped = 3;
+}
+
+message db_sandbox2_training {
+  uint64 id_character = 1;
+  uint32 point = 2;
+  repeated db_sandbox2_training_node nodes = 3;
+}
+
+message db_sandbox2_training_node {
+  uint64 id_character = 1;
+  uint32 id_training = 2;
+  uint32 id = 3;
+  uint32 level = 4;
+}
+
+message db_sandbox2_treasure {
+  uint64 id_character = 1;
+  uint32 type = 2;
+  sint32 param0 = 3;
+  sint32 count = 4;
+}
+
+message db_sandbox2_treasure_package {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  bytes data = 3;
+  uint32 system = 4;
+}
+
+message db_sandbox2_unit {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  sint32 name_type = 3;
+  uint32 name_id = 4;
+  uint32 template_id = 5;
+  uint32 level = 6;
+  sint32 exp = 7;
+  uint32 star = 8;
+  uint32 rarity = 9;
+  sint32 hp = 10;
+  sint32 physic_attack = 11;
+  sint32 physic_defence = 12;
+  sint32 spell_attack = 13;
+  sint32 spell_defence = 14;
+  sint32 speed = 15;
+  uint32 melee_skill_id = 16;
+  uint32 reactive_skill_id = 17;
+  uint32 leader_skill_id = 18;
+  uint32 skill1_id = 19;
+  uint32 skill2_id = 20;
+  uint32 skill3_id = 21;
+  string skill_ids = 22;
+  uint32 random_id = 23;
+  uint32 role_unit_id = 24;
+  uint32 skin_id = 25;
+  uint32 model_skin_id = 26;
+  repeated db_sandbox2_unit_skill_node skill_nodes = 28;
+}
+
+message db_sandbox2_unit_skill_node {
+  uint64 id_character = 1;
+  uint32 id_unit = 2;
+  uint32 id = 3;
+  uint32 skill1_id = 4;
+  uint32 skill2_id = 5;
+}
+
+message db_sandbox2_weapon {
+  uint64 id_character = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 unit_id = 4;
+}
+

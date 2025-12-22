@@ -1,0 +1,2290 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message db_character {
+  uint64 id = 1;
+  uint32 level = 2;
+  sint32 money = 3;
+  sint32 exp = 4;
+  sint32 round = 5;
+  uint32 world_level = 6;
+  sint32 act_pt = 9;
+  bool is_infinity = 10;
+  uint32 depend_faction_id = 11;
+  sint32 country_stability = 12;
+  uint32 milestone_param_id = 13;
+  uint32 sandbox_capital_event_id = 14;
+  uint32 forced_entrust_count = 15;
+  sint32 reputation = 16;
+  uint32 title_id = 17;
+  uint32 year = 18;
+  uint32 month = 19;
+  uint32 week = 20;
+  string time_out_event_ids = 21;
+  bytes round_info = 22;
+  string effect_ids = 23;
+  sint32 workshop_exp = 24;
+  string capital_areas = 25;
+  string training_faction_skill_ids = 28;
+  string next_round_event = 30;
+  uint32 commerce_forced_count = 31;
+  uint32 sandbox_token_id = 32;
+  uint32 commerce_force_complete_count = 33;
+  uint32 commerce_grading_id = 34;
+  uint32 main_entrance_area_id = 35;
+  bool disable_map = 36;
+  bool disable_round_report = 37;
+  sint32 show_week = 38;
+}
+
+message db_character_achievement {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 value = 3;
+  bool is_finish = 4;
+}
+
+message db_character_battle_setting {
+  enum TYPE {
+    TYPE_FIRST = 0;
+    mission = 1;
+    entrust_battle = 2;
+    sandbox_event = 3;
+    multiple = 4;
+    debug = 5;
+    commerce = 6;
+    region = 7;
+  }
+
+  enum STATUS {
+    STATUS_FIRST = 0;
+    none = 1;
+    battling = 2;
+    finished = 3;
+  }
+
+  enum BATTLE_RESULT_TYPE {
+    BATTLE_RESULT_TYPE_FIRST = 0;
+    success = 1;
+    failure = 2;
+    normal = 3;
+    branch = 4;
+  }
+
+  uint64 iduser = 1;
+  uint32 battle_index = 2;
+  sint32 type = 3;
+  sint32 status = 4;
+  uint32 mission_id = 5;
+  bytes battle_setting = 6;
+  bytes report = 7;
+  bytes sandbox_event_battle_param = 8;
+  uint32 entrust_battle_id = 9;
+  string result = 10;
+  sint32 battle_result_type = 11;
+  bool use_fate_power = 12;
+}
+
+message db_character_behaviour_counter {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes data = 3;
+}
+
+message db_character_blessing {
+  uint64 iduser = 1;
+  sint32 prayer_revelation_chance_modify = 2;
+  sint32 baptism_revelation_chance_modify = 3;
+  sint32 prayer_level_modify = 4;
+  sint32 baptism_level_modify = 5;
+  sint32 prayer_cooldown_modify = 6;
+  sint32 baptism_cooldown_modify = 7;
+  sint32 prayer_duration_modify = 8;
+  sint32 baptism_duration_modify = 9;
+  sint32 prayer_energy_cost_modify = 10;
+  sint32 baptism_energy_cost_modify = 11;
+  sint32 prayer_energy_recover_modify = 12;
+  sint32 baptism_energy_recover_modify = 13;
+  sint32 prayer_energy_max_modify = 14;
+  sint32 baptism_energy_max_modify = 15;
+  sint32 prayer_unit_max_modify = 16;
+  sint32 baptism_unit_max_modify = 17;
+  uint32 prayer_seat_count = 18;
+  uint32 baptism_seat_count = 19;
+}
+
+message db_character_blessing_halidom {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+}
+
+message db_character_blessing_seat {
+  uint64 iduser = 1;
+  uint32 idcharacter_blessing = 2;
+  uint32 id = 3;
+  uint32 blessing_template_id = 4;
+  uint32 cooldown = 5;
+  uint32 energy = 6;
+  string effect_data = 7;
+}
+
+message db_character_blueprint {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    InUse = 2;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  sint32 status = 4;
+  bool next_round_delete = 5;
+}
+
+message db_character_capital_event {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    triggered = 1;
+    happening = 2;
+    closed = 3;
+  }
+
+  enum SPAWN_TYPE {
+    SPAWN_TYPE_FIRST = 0;
+    resident = 1;
+    appointed = 2;
+    random = 3;
+    none = 4;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 event_index = 3;
+  sint32 status = 4;
+  sint32 priority = 5;
+  uint32 sandbox_event = 6;
+  sint32 spawn_type = 7;
+  uint32 npc_form = 8;
+  uint32 behavioral_sequence_index = 9;
+  uint32 area_id = 10;
+  uint32 spawn_index = 11;
+  sint32 end_round = 12;
+  bool is_important = 13;
+  uint32 system_id = 14;
+  sint32 secondary_perform_played_round = 15;
+}
+
+message db_character_commerce {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 propensity_for_war_id = 3;
+  sint32 propensity_for_war_value = 4;
+  string opportunity = 5;
+  sint32 grading_value = 6;
+  uint32 result_battle_order_id = 7;
+  bool result_battle_is_win = 10;
+  sint32 order_count = 11;
+  string completed_orders = 12;
+  sint32 order_count_max = 13;
+  string props_price = 14;
+  sint32 order_price = 15;
+}
+
+message db_character_commerce_order {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Progressing = 2;
+    Finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_commerce = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  uint32 create_round = 5;
+  sint32 encounter_level = 6;
+  sint32 entrust_battle_template_id = 7;
+  sint32 start_round = 8;
+  uint32 trade_point_template_id = 9;
+  string consumes = 10;
+  uint32 bonus_id = 11;
+  sint32 status = 12;
+  string unit_ids = 13;
+  uint32 entrust_battle_id = 14;
+  double grading_value = 15;
+  sint32 duration_round = 16;
+}
+
+message db_character_commerce_prop {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 props_template_id = 3;
+  sint32 count = 4;
+}
+
+message db_character_commerce_trade_point {
+  uint64 iduser = 1;
+  uint32 idcharacter_commerce = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  sint32 level = 5;
+  sint32 status = 6;
+  sint32 order_count = 7;
+  sint32 development_value = 8;
+  sint32 round_max = 9;
+}
+
+message db_character_entrust {
+  uint64 iduser = 1;
+  sint32 practice_count = 8;
+  uint32 result_battle_id = 10;
+  bool result_battle_is_win = 23;
+  uint32 residence_id = 24;
+  bool residence_switch = 25;
+  uint32 encounter_count = 26;
+  bool stop = 28;
+}
+
+message db_character_entrust_battle {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  uint32 enemy_faction_id = 4;
+  sint32 area_id = 5;
+  sint32 condition1 = 6;
+  string condition2 = 7;
+  sint32 diff = 8;
+  sint32 reputation = 9;
+  sint32 enemy_reputation = 10;
+  uint32 milestone_param_id = 11;
+  sint32 milestone_param_value = 12;
+  bool second_state = 13;
+  uint32 block_id = 14;
+  uint32 position_id = 15;
+  sint32 story_type = 16;
+  sint32 open_time = 17;
+  bool appoint = 18;
+  string appoint_punish = 19;
+  bytes mission_data = 20;
+  uint32 publisher_faction_id = 21;
+  sint32 publisher_influence = 22;
+  sint32 enemy_influence = 23;
+  sint32 country_stability = 24;
+  sint32 camp_type = 25;
+  bool finished = 26;
+  uint32 mission_id = 27;
+  sint32 create_entrust_round = 28;
+  uint32 template_id = 29;
+  bytes condition1_bonus = 30;
+  bytes condition2_bonus = 31;
+  bool condition2_finished = 32;
+  bytes condition_bonus = 33;
+  sint32 fate_power = 34;
+  uint32 publish_system_id = 35;
+}
+
+message db_character_entrust_practice {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Progressing = 2;
+    Finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  sint32 condition1 = 4;
+  sint32 condition1_count = 5;
+  sint32 condition2 = 6;
+  sint32 condition2_count = 7;
+  sint32 duration_time = 8;
+  bool career_bonus_state = 9;
+  uint32 block_id = 10;
+  uint32 position_id = 11;
+  string unit_ids = 12;
+  sint32 start_round = 13;
+  sint32 end_round = 14;
+  sint32 status = 15;
+  uint32 publisher_faction_id = 16;
+  sint32 create_entrust_round = 17;
+  sint32 difficulty = 18;
+  uint32 template_id = 19;
+  bytes condition_bonus = 20;
+  uint32 publish_system_id = 21;
+}
+
+message db_character_faction {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 influence = 3;
+  sint32 reputation = 4;
+  uint32 reputation_level = 5;
+  string exclusive_block_ids = 6;
+  string battle_block_ids = 7;
+  string haunt_block_ids = 8;
+  string occupied_block_ids = 9;
+  string enemy_faction_ids = 10;
+  string battle_faction_ids = 11;
+  uint32 policy_type = 12;
+  bool is_world_faction = 13;
+  uint32 recent_development_id = 14;
+}
+
+message db_character_hospital {
+  uint64 iduser = 1;
+  sint32 morale_cure_modify = 2;
+  sint32 natural_morale_cure_modify = 3;
+  uint32 seat_count = 4;
+  string unit_ids = 5;
+}
+
+message db_character_map_pin {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 block_id = 4;
+  uint32 position_id = 5;
+  uint32 event_id = 6;
+  uint32 result_id = 7;
+  uint32 battle_result_id = 8;
+  bool use_event_name = 9;
+  bool use_event_result_desc = 10;
+  sint32 end_round = 11;
+}
+
+message db_character_milestone {
+  uint64 iduser = 1;
+  uint32 param_id = 2;
+  sint32 param_value = 3;
+  sint32 start_round = 4;
+  sint32 end_round = 5;
+  bytes treasures = 6;
+  bool is_finished = 7;
+  bytes action_queue_proto = 8;
+}
+
+message db_character_mission_battle_param_package {
+  uint64 iduser = 1;
+  uint32 level = 2;
+  uint32 mission_id = 3;
+  uint32 battle_param_id = 4;
+  bool condition2_state = 5;
+  uint32 story_id = 6;
+  bool finished = 7;
+  bool is_win = 8;
+  string conditions = 9;
+  bytes mission_data = 10;
+  sint32 fate_power = 11;
+}
+
+message db_character_region {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 count = 3;
+  sint32 count_max = 4;
+  string region_progress = 5;
+  uint32 result_battle_id = 6;
+  bool result_battle_is_win = 8;
+  bool is_close = 9;
+}
+
+message db_character_region_battle {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Progressing = 2;
+    Finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_region = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  sint32 create_round = 5;
+  uint32 entrust_battle_template_id = 6;
+  sint32 start_round = 7;
+  sint32 status = 8;
+  string unit_ids = 9;
+  uint32 entrust_battle_id = 10;
+  sint32 duration_round = 11;
+}
+
+message db_character_region_consume {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Progressing = 2;
+    Finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_region = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  sint32 create_round = 5;
+  sint32 start_round = 6;
+  sint32 status = 7;
+  sint32 duration_round = 8;
+  string consume = 9;
+  bytes bonus = 10;
+  uint32 position_id = 11;
+}
+
+message db_character_region_practice {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Progressing = 2;
+    Finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_region = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  sint32 create_round = 5;
+  uint32 entrust_practice_template_id = 6;
+  sint32 start_round = 7;
+  sint32 status = 8;
+  string unit_ids = 9;
+  uint32 entrust_practice_id = 10;
+  sint32 duration_round = 11;
+}
+
+message db_character_sandbox {
+  uint64 iduser = 1;
+  string current_event_data = 2;
+  string custom_event_data = 3;
+  uint32 current_phase = 9;
+  uint32 event_limit = 10;
+  string variables = 13;
+  uint32 system = 16;
+  bytes last_proto = 17;
+  uint32 ending_id = 18;
+  bool is_end = 19;
+  bytes log_proto = 20;
+  bytes scenario_proto = 21;
+  bool is_force_change_phase = 22;
+}
+
+message db_character_sandbox_effect {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 start_round = 3;
+  sint32 end_round = 4;
+}
+
+message db_character_sandbox_event_log {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 event_id = 3;
+  uint32 result_id = 4;
+  uint32 battle_result_id = 5;
+  string event_scenario_data = 6;
+  string result_scenario_data = 7;
+  string battle_scenario_data = 8;
+  uint32 year = 9;
+  uint32 month = 10;
+  uint32 week = 11;
+  sint32 round = 12;
+}
+
+message db_character_sandbox_note {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  string data = 4;
+  uint32 year = 5;
+  uint32 month = 6;
+  uint32 week = 7;
+}
+
+message db_character_save_data {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string name = 3;
+  sint32 round = 4;
+  bool is_auto = 5;
+  uint32 updated_at = 8;
+}
+
+message db_character_shop {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 event_id = 3;
+  uint32 npc_id = 4;
+  uint32 shop_id = 5;
+  sint32 start_round = 6;
+}
+
+message db_character_smithy {
+  uint64 iduser = 1;
+  uint32 seat_count = 2;
+  sint32 forge_cost_modify = 3;
+  uint32 forge_result_count_modify = 4;
+  uint32 permanent_forge_result_count_modify = 5;
+  uint32 forge_upgrade_ratio_modify = 6;
+  uint32 permanent_forge_upgrade_ratio_modify = 7;
+  sint32 forge_round_modify = 8;
+  sint32 permanent_forge_round_modify = 9;
+  sint32 plan_round_modify = 10;
+  uint32 forge_no_cost_ratio_modify = 11;
+  sint32 process_bonus_modify = 12;
+}
+
+message db_character_smithy_seat {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Forge = 2;
+    Process = 3;
+  }
+
+  enum FORGE_STATUS {
+    FORGE_STATUS_FIRST = 0;
+    NoneForge = 1;
+    Permanent = 2;
+    Blueprint = 3;
+    Plan = 4;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_smithy = 2;
+  uint32 id = 3;
+  uint32 forge_id = 4;
+  uint32 blueprint_id = 5;
+  uint32 process_id = 6;
+  sint32 end_round = 9;
+  sint32 status = 13;
+  sint32 forge_status = 14;
+}
+
+message db_character_table_version {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 version = 3;
+}
+
+message db_character_tactics_skill {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_equipped = 3;
+  sint32 end_round = 4;
+}
+
+message db_character_tavern {
+  uint64 iduser = 1;
+  sint32 unit_count_modify = 2;
+  sint32 cd_modify = 3;
+  sint32 cost_modify = 4;
+  sint32 level_floating_modify = 5;
+  sint32 skill_count_modify = 6;
+  sint32 refresh_round = 7;
+  uint32 recruit_count = 8;
+}
+
+message db_character_tavern_unit {
+  uint64 iduser = 1;
+  uint32 idcharacter_tavern = 2;
+  uint32 id = 3;
+  uint32 rarity = 4;
+  bytes unit_data = 5;
+  bool is_recruit = 6;
+}
+
+message db_character_training {
+  uint64 iduser = 1;
+  sint32 exp_round_modify = 2;
+  sint32 skill_round_modify = 3;
+  sint32 faction_skill_round_modify = 4;
+  sint32 exp_cost_modify = 5;
+  sint32 skill_cost_modify = 6;
+  sint32 faction_skill_cost_modify = 7;
+  sint32 exp_modify = 8;
+  sint32 extra_exp = 9;
+  uint32 seat_count = 10;
+  sint32 faction_skill_count_modify = 11;
+}
+
+message db_character_training_seat {
+  enum TYPE {
+    TYPE_FIRST = 0;
+    None = 1;
+    Exp = 2;
+    ProfessionSkill = 3;
+    FactionSkill = 4;
+  }
+
+  uint64 iduser = 1;
+  uint32 idcharacter_training = 2;
+  uint32 id = 3;
+  sint32 type = 4;
+  uint32 unit_id = 5;
+  sint32 start_round = 6;
+  sint32 end_round = 7;
+  sint32 exp = 8;
+  string profession_skill_ids = 9;
+  uint32 faction_skill_id = 10;
+  sint32 money = 11;
+}
+
+message db_character_treasure {
+  uint64 iduser = 1;
+  uint32 type = 2;
+  sint32 param0 = 3;
+  sint32 count = 4;
+}
+
+message db_character_unique_id {
+  uint64 iduser = 1;
+  string unique_ids = 2;
+}
+
+message db_character_unit {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Practice = 2;
+    Hospital = 3;
+    Mission = 4;
+    Training = 5;
+    Leave = 6;
+    Commerce = 7;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 name_type = 3;
+  uint32 name_id = 4;
+  uint32 template_id = 5;
+  uint32 level = 6;
+  sint32 exp = 7;
+  uint32 star = 8;
+  sint32 morale = 9;
+  uint32 rarity = 10;
+  sint32 hp = 11;
+  sint32 physic_attack = 12;
+  sint32 physic_defence = 13;
+  sint32 spell_attack = 14;
+  sint32 spell_defence = 15;
+  sint32 speed = 16;
+  uint32 melee_skill_id = 17;
+  uint32 reactive_skill_id = 18;
+  uint32 leader_skill_id = 19;
+  uint32 skill1_id = 20;
+  uint32 skill2_id = 21;
+  uint32 skill3_id = 22;
+  sint32 status = 23;
+  uint32 random_id = 24;
+  uint32 core_priority = 25;
+  uint32 study_count = 26;
+  string skill_ids = 27;
+  sint32 entrust_practice_id = 28;
+  uint32 role_unit_id = 29;
+  uint32 skin_id = 30;
+  sint32 sandbox_score = 31;
+  uint32 created_at = 32;
+  string blessing_effect_ids = 33;
+  sint32 blessing_effect_end_round = 34;
+  uint32 model_skin_id = 35;
+}
+
+message db_character_weapon {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 character_unit_id = 4;
+  uint32 create_time = 5;
+  bool next_round_delete = 6;
+}
+
+message db_character_workshop {
+  uint64 iduser = 1;
+  uint32 level = 2;
+  sint32 exp = 3;
+  uint32 tactics_skill_use_count = 4;
+  string battle_quest_ids_not_resulted = 5;
+  uint32 battle_quest_id = 6;
+  bool battle_quest_finished = 7;
+  sint32 battle_quest_end_round = 8;
+  sint32 research_count_modify = 9;
+  sint32 quest_cold_time_modify = 10;
+  string extra_research_pool_ids = 11;
+  sint32 consume_exp_modify = 12;
+  string node_pool_ids_selectable = 13;
+  string random_node_ids_selectable = 14;
+  string slot_next_refresh_round = 15;
+}
+
+message db_character_workshop_node {
+  uint64 iduser = 1;
+  uint32 idcharacter_workshop = 2;
+  uint32 id = 3;
+  uint32 workshop_level = 4;
+  uint32 level = 5;
+  uint32 extra_id = 6;
+}
+
+message db_character_workshop_quest {
+  uint64 iduser = 1;
+  uint32 idcharacter_workshop = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  sint32 end_round = 5;
+}
+
+message db_player {
+  enum GENDER {
+    GENDER_FIRST = 0;
+    Male = 1;
+    Female = 2;
+  }
+
+  uint64 id = 1;
+  string nickname = 3;
+  sint32 gender = 4;
+  uint32 avatar_id = 5;
+  uint32 portrait_id = 6;
+  uint32 portrait_frame_id = 7;
+  uint32 portrait_bg_id = 8;
+  string partner_nickname = 9;
+  uint32 level = 10;
+  sint32 stamina = 11;
+  uint32 stamina_recover_at = 12;
+  uint32 stamina_purchase_count = 13;
+  uint32 stamina_purchase_next_refresh_at = 14;
+  sint32 cash = 15;
+  sint32 diamond = 16;
+  sint32 money = 17;
+  sint32 exp = 18;
+  sint32 social_point = 19;
+  bool is_gm = 20;
+  bool is_name_changed = 22;
+  uint32 total_time = 26;
+  sint32 unit_exp = 27;
+  sint32 weapon_exp = 28;
+  sint32 charm_exp = 29;
+  sint32 tech_coin = 30;
+  sint32 unit_piece_crystal = 31;
+  sint32 main_quest_progress = 32;
+  uint32 tutorial = 33;
+  string tutorial_ids = 34;
+  uint32 game_start_procedure_checked = 35;
+  uint64 main_quest_not_play_scenario_id = 38;
+  uint32 guild_id = 39;
+  uint32 guild_join_cd = 40;
+  uint32 navigation_kanban_type = 42;
+  uint32 navigation_kanban_id = 43;
+  uint32 navigation_unit_skin_id = 44;
+  uint32 guild_point_next_refresh_at = 52;
+  string guild_point_treasure_got_ids = 53;
+  uint32 title_id = 54;
+  string title_param = 55;
+  uint32 card_bg_id = 56;
+  sint32 infinite_challenge_progress = 57;
+  sint32 main_quest_extreme_progress = 58;
+  string rank_role_unit_ids = 59;
+  uint32 rank_role_unit_cd = 60;
+  bool rank_role_unit_unpublic = 61;
+}
+
+message db_player_abyss {
+  uint64 iduser = 1;
+}
+
+message db_player_abyss_challenge {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 max_point = 3;
+  string challenge_detail_ids = 4;
+  sint32 cached_rank_percent = 5;
+  sint64 cached_rank_no = 6;
+  bool is_rewarded = 7;
+  sint32 old_max_point = 8;
+}
+
+message db_player_abyss_challenge_battle_field {
+  uint64 iduser = 1;
+  uint32 idplayer_abyss_challenge_detail = 2;
+  uint32 id = 3;
+  string passed_quest_data = 4;
+  string limited_quest_data = 5;
+}
+
+message db_player_abyss_challenge_detail {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  sint32 max_point = 4;
+  sint32 point = 5;
+  bool is_running = 6;
+  bool is_passed = 7;
+  bool is_unlocked = 8;
+  bool is_first_pass_showed = 9;
+  string modified_battle_units = 10;
+  string max_point_battle_units = 11;
+  bool is_get = 12;
+}
+
+message db_player_abyss_guide {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 point = 3;
+  sint32 max_point = 4;
+  bool is_running = 5;
+  bool is_passed = 6;
+  sint32 challenge_count = 7;
+  uint32 challenge_count_recover_at = 8;
+  bool is_unlocked = 9;
+  bool can_modify = 10;
+  bool is_first_pass_showed = 11;
+}
+
+message db_player_abyss_guide_battle_field {
+  uint64 iduser = 1;
+  uint32 idplayer_abyss_guide = 2;
+  uint32 id = 3;
+  string passed_quest_data = 4;
+}
+
+message db_player_abyss_guide_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_abyss_guide = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_abyss_rank {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 max_point = 3;
+  string rank_detail_ids = 4;
+  sint32 cached_rank_percent = 5;
+  sint64 cached_rank_no = 6;
+  string point_treasure_data = 7;
+  string point_treasure_got_ids = 8;
+  bool is_rewarded = 9;
+  sint32 old_max_point = 10;
+  string modified_battle_units = 11;
+  string max_point_battle_units = 12;
+}
+
+message db_player_abyss_rank_battle_field {
+  uint64 iduser = 1;
+  uint32 idplayer_abyss_rank_detail = 2;
+  uint32 id = 3;
+  string passed_quest_data = 4;
+}
+
+message db_player_abyss_rank_detail {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  sint32 max_point = 4;
+  sint32 point = 5;
+  bool is_running = 6;
+  bool is_passed = 7;
+  sint32 challenge_count = 8;
+  uint32 challenge_count_recover_at = 9;
+  bool is_unlocked = 10;
+  bool can_modify = 11;
+  bool is_first_pass_showed = 12;
+}
+
+message db_player_achievement {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 value = 3;
+  bool is_unlock = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_activity {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    locked = 1;
+    opening = 2;
+    closed = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 played_times = 3;
+  sint32 status = 4;
+  sint32 selected_quest_id = 5;
+  uint32 time_id = 6;
+  uint32 open_at = 7;
+  uint32 close_at = 8;
+  uint32 next_refresh_at = 9;
+  uint32 high_treasure_get_times = 10;
+  uint32 need_reward_quest_id = 11;
+}
+
+message db_player_activity_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_activity = 2;
+  uint32 id = 3;
+  bool cleared = 4;
+  bytes info = 5;
+  string stars = 6;
+  string challenges = 7;
+}
+
+message db_player_activity_quest_mission_data {
+  uint64 iduser = 1;
+  uint32 idplayer_activity = 2;
+  uint32 id = 3;
+  bytes mission_data = 4;
+}
+
+message db_player_adventure {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 select_adventure_level = 3;
+  uint32 template_id = 4;
+  uint32 high_count = 5;
+  uint32 high_count_max = 6;
+  uint32 year = 7;
+  uint32 week = 8;
+  uint32 contract_activity_id = 9;
+  uint32 style_id = 10;
+  uint32 level = 11;
+  sint32 exp = 12;
+  sint32 current_week_exp = 13;
+  string report = 14;
+  string got_exp_treasure_ids = 15;
+}
+
+message db_player_adventure_level {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  bool cleared = 4;
+  bool is_get = 5;
+  string select_mission_buff_pool_ids = 6;
+  bool unlocked = 7;
+  bytes current_quest_mission_data = 8;
+  string report = 9;
+}
+
+message db_player_adventure_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_adventure_level = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  bool cleared = 5;
+  uint32 online_quest_id = 6;
+  string debuff_ids = 7;
+  uint32 mission_buff_pool_id = 8;
+  uint32 quest_type_id = 9;
+  string need_select_mission_buff_ids = 10;
+}
+
+message db_player_afk_info {
+  uint64 iduser = 1;
+  uint32 start_time = 2;
+  uint32 next_refresh_at = 3;
+  uint32 afk_pay_result_count = 4;
+  bytes afk_material_speed = 5;
+  bytes afk_tower_progress = 6;
+}
+
+message db_player_arena {
+  uint64 iduser = 1;
+  uint32 season_id = 2;
+  sint32 score = 3;
+  bytes defence_formation = 4;
+  sint32 refresh_times = 6;
+  uint32 next_refresh_at = 7;
+  sint32 building_point = 9;
+  sint32 building_point_today = 10;
+  sint32 challenge_times = 11;
+  uint32 latest_defence_count = 13;
+}
+
+message db_player_arena_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_arena_quest_status = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_arena_quest_status {
+  uint64 iduser = 1;
+  uint32 season_id = 2;
+  uint32 point = 3;
+  uint32 next_refresh_at = 4;
+  string point_treasure_data = 5;
+  string point_treasure_got_ids = 6;
+}
+
+message db_player_arena_record {
+  uint64 iduser = 1;
+  uint32 season_id = 2;
+  uint32 id = 3;
+  string enemy_data = 4;
+  sint32 enemy_score = 5;
+  bool is_win = 6;
+  sint64 time = 7;
+  uint32 player_level = 8;
+  sint32 player_score = 9;
+  sint32 score = 10;
+  sint32 building_point = 11;
+  bool is_offence = 12;
+  uint32 report_id = 13;
+  sint32 origin_point = 14;
+  string my_unit = 15;
+  string enemy_unit = 16;
+  uint32 turn_count = 17;
+  string oss_url = 18;
+  string my_data = 19;
+}
+
+message db_player_artifact {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  string level_treasure_got_ids = 4;
+}
+
+message db_player_artifact_collection {
+  uint64 iduser = 1;
+  uint32 idplayer_artifact = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+  bool is_active = 7;
+}
+
+message db_player_auto_chess {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    PreOpen = 2;
+    Open = 3;
+    Result = 4;
+    LoseResult = 5;
+    ContinueResult = 6;
+    GetTreasure = 7;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 current_difficulty = 3;
+  uint32 round = 4;
+  sint32 unit_count = 5;
+  uint32 unit_level = 6;
+  sint32 treasure_radio = 7;
+  sint32 battle_buff_refresh_count = 8;
+  uint32 daily_buff_id = 9;
+  uint32 next_refresh_at = 10;
+  sint32 status = 11;
+  string weapon_collection = 15;
+  string unit_word_collection = 16;
+}
+
+message db_player_auto_chess_material {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+}
+
+message db_player_auto_chess_mode_status {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 latest_difficulty = 4;
+  sint32 stamina = 5;
+  string used_unit_ids = 6;
+  string unlock_difficulty_ids = 7;
+}
+
+message db_player_auto_chess_prove {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 mode = 4;
+  uint32 difficulty = 5;
+  uint32 round = 6;
+  uint32 consume_money = 7;
+  uint32 weapon_count = 8;
+  uint32 kill_count = 9;
+  uint32 killed_count = 10;
+  string unit_ids = 11;
+  uint32 created_at = 12;
+}
+
+message db_player_auto_chess_schedule {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 team_id = 5;
+  string mission_buff_pool_ids = 6;
+}
+
+message db_player_auto_chess_team {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 name_id = 4;
+  string unit_npc_ids = 5;
+}
+
+message db_player_auto_chess_unit {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 level = 4;
+  uint32 star = 5;
+  uint32 weapon_id = 6;
+}
+
+message db_player_auto_chess_weapon {
+  uint64 iduser = 1;
+  uint32 idplayer_auto_chess = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+}
+
+message db_player_battle_guidebook {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string part_ids = 3;
+}
+
+message db_player_battle_pass_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_battle_pass_status = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+  uint32 finish_count = 7;
+  uint32 get_count = 8;
+}
+
+message db_player_battle_pass_status {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 level = 4;
+  sint32 exp = 5;
+  sint32 weekly_exp = 6;
+  uint32 weekly_quest_next_refresh_at = 7;
+  string treasure_got_data = 8;
+  uint32 daily_quest_next_refresh_at = 10;
+  sint32 loop_treasure_progress = 11;
+  sint32 loop_treasure_finish_count = 12;
+  sint32 loop_treasure_get_count = 13;
+  uint32 start_at = 14;
+  uint32 end_at = 15;
+  bool is_end = 16;
+  uint32 draw_count = 17;
+}
+
+message db_player_battle_setting {
+  enum TYPE {
+    TYPE_FIRST = 0;
+    mission = 1;
+    multiple = 2;
+    main_quest = 3;
+    activity_quest = 4;
+    arena = 5;
+    arena_formation = 6;
+    tower = 7;
+    friendship_story = 8;
+    contract_main_quest = 9;
+    contract_activity_quest = 10;
+    guild_challenge_boss = 11;
+    guild_challenge_normal = 12;
+    abyss_guide = 13;
+    abyss_rank = 14;
+    abyss_guide_observer = 15;
+    abyss_rank_observer = 16;
+    contract_activity_challenge = 17;
+    gacha_unit = 18;
+    top_arena = 19;
+    adventure = 20;
+    friend_bpmode = 21;
+    afk_tower = 22;
+    boss_challenge = 23;
+    expedition = 24;
+  }
+
+  enum STATUS {
+    STATUS_FIRST = 0;
+    none = 1;
+    battling = 2;
+    finished = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 battle_index = 2;
+  sint32 status = 4;
+  bytes battle_setting = 5;
+  bytes report = 6;
+  uint32 chapter_id = 7;
+  uint32 quest_id = 8;
+  bytes quest_data = 9;
+  uint32 extra_id = 10;
+  bool need_check = 11;
+  bool is_back_err = 12;
+  sint32 battle_type = 13;
+  string battle_params = 14;
+}
+
+message db_player_battle_unit_snapshot {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes data = 3;
+}
+
+message db_player_behaviour_counter {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes data = 3;
+}
+
+message db_player_buff {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expire_at = 3;
+}
+
+message db_player_card {
+  uint64 iduser = 1;
+  string role_unit_ids = 2;
+  string sandbox_trophy_ids = 3;
+  string kanban_ids = 4;
+  uint32 kanban_type = 5;
+  uint32 kanban_id = 6;
+  uint32 unit_skin_id = 7;
+  sint64 message_liked_count = 8;
+}
+
+message db_player_card_bg {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expire_at = 3;
+}
+
+message db_player_career {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_finish = 3;
+  bool is_get = 4;
+  string challenge_progress = 5;
+  bool challenge_is_finish = 6;
+  bool challenge_is_get = 7;
+}
+
+message db_player_career_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_career = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+  uint32 template_id = 7;
+}
+
+message db_player_chaos_faction {
+  uint64 iduser = 1;
+  uint32 score = 2;
+  uint32 win_count = 3;
+  uint32 fail_count = 4;
+  uint32 rank = 5;
+  uint32 season_id = 6;
+  uint32 next_refresh_at = 7;
+}
+
+message db_player_charm {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 level = 4;
+  uint32 rarity = 5;
+  uint32 player_role_unit_id = 6;
+  bool is_locked = 8;
+  uint32 create_time = 9;
+  bool is_discard = 10;
+}
+
+message db_player_commerce {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 association_level = 3;
+  uint32 next_refresh_at = 4;
+  uint32 guard_max_count = 5;
+  uint32 caravan_count = 6;
+  uint32 career_phase = 7;
+  string career_got_treasure_ids = 8;
+  sint32 daily_team_count = 9;
+  uint32 weather_day = 10;
+  uint32 afk_start_time = 12;
+  sint32 premake_team_max_count = 13;
+  bool is_auto_select = 14;
+}
+
+message db_player_commerce_career_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_commerce_market_item {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  string consume_props_ids = 4;
+  sint32 consume_count = 5;
+  string treasure_props_ids = 6;
+  string treasure_ids = 7;
+  sint32 treasure_count = 8;
+  sint32 limit_count = 9;
+  sint32 purchase_count = 10;
+}
+
+message db_player_commerce_premake_team {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  string name = 4;
+  uint32 edit_at = 5;
+  uint32 captain_unit_id = 6;
+  string guard_unit_ids = 7;
+}
+
+message db_player_commerce_props {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+}
+
+message db_player_commerce_seat {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  uint32 unit_id = 4;
+}
+
+message db_player_commerce_team {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  uint32 association_level = 4;
+  uint32 start_at = 5;
+  uint32 finish_at = 6;
+  uint32 trade_point_id = 7;
+  sint32 power = 8;
+  string event_ids = 9;
+  uint32 captain_unit_id = 10;
+  string guard_unit_ids = 11;
+  uint32 caravan_count = 12;
+  string modify_data = 13;
+}
+
+message db_player_commerce_trade_point {
+  uint64 iduser = 1;
+  uint32 idplayer_commerce = 2;
+  uint32 id = 3;
+  sint32 trade_count = 4;
+}
+
+message db_player_contract_activity {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 point = 3;
+  sint32 total_point = 4;
+  string point_treasure_data = 5;
+  string point_treasure_got_ids = 6;
+  string chosen_contract_data = 7;
+  string contract_data = 8;
+  uint32 cleared_main_quest_num = 9;
+  uint32 passed_max_hard = 10;
+  string quest_max_hard_data = 11;
+  sint32 tech_point = 12;
+  string tech_slot_data = 13;
+  string tech_data = 14;
+  sint32 main_quest_progress = 15;
+  sint32 max_challenge_point = 16;
+  bool is_process_treasure_get = 17;
+  string global_effect_ids = 18;
+  string day_treasure_got_ids = 19;
+  uint32 next_refresh_at = 20;
+}
+
+message db_player_contract_activity_achievement {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 progress = 3;
+  bool is_finish = 4;
+  bool is_get = 5;
+}
+
+message db_player_contract_activity_challenge_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_contract_activity = 2;
+  uint32 id = 3;
+  sint32 point = 4;
+  sint32 max_point = 5;
+  bool is_unlocked = 6;
+  bool is_passed = 7;
+}
+
+message db_player_contract_activity_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_contract_activity = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_contract_activity_treasure {
+  uint64 iduser = 1;
+  uint32 idplayer_contract_activity = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+  sint32 total_count = 5;
+}
+
+message db_player_daily_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_daily_quest_status = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_daily_quest_status {
+  uint64 iduser = 1;
+  uint32 point = 2;
+  uint32 next_refresh_at = 3;
+  string point_treasure_data = 4;
+  string point_treasure_got_ids = 5;
+}
+
+message db_player_dreamland_archive {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string name = 3;
+  string code = 4;
+  string data = 5;
+}
+
+message db_player_dreamland_placement_area {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string data = 3;
+}
+
+message db_player_dreamworld {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  sint32 exp = 4;
+  uint32 chapter_id = 5;
+  string card_ids = 6;
+  string equip_card_ids = 7;
+  uint32 guaranteed_card_score = 9;
+  bool unlocked = 10;
+}
+
+message db_player_elysium_perform {
+  enum ACTOR_TYPE {
+    ACTOR_TYPE_FIRST = 0;
+    online_role = 1;
+    elysium_npc = 2;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 actor_type = 3;
+  uint32 actor_id = 4;
+  uint32 spawn_index = 5;
+  uint32 elysium_placement_anchor_id = 6;
+  uint32 elysium_secondary_perform = 7;
+  uint32 online_event_id = 8;
+  bool is_important = 9;
+}
+
+message db_player_elysium_placement_area {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 warmth = 3;
+  uint32 warmth_level = 4;
+}
+
+message db_player_elysium_placement_furniture {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 area_id = 4;
+  uint32 pos_x = 5;
+  uint32 pos_z = 6;
+  uint32 facing = 7;
+  uint32 anchor_id = 8;
+  bool is_set = 9;
+}
+
+message db_player_event_status {
+  uint64 iduser = 1;
+  string current_events_data = 2;
+}
+
+message db_player_exchange_shop {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes data = 3;
+}
+
+message db_player_expedition {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  uint32 quest_id = 4;
+  sint32 reset_count = 5;
+  uint32 reset_count_recover_at = 6;
+  string limited_units = 7;
+  uint32 challenge_count = 8;
+  sint32 tactic_point = 9;
+  sint32 hp_percent = 10;
+  string enemy_unit_data = 11;
+  sint32 hp_max = 12;
+  uint32 treasure_level = 13;
+  string passed_quest_data = 14;
+  string prove_data = 15;
+  bool is_pass = 16;
+}
+
+message db_player_formation_unit {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string units = 3;
+}
+
+message db_player_friend {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Apply = 2;
+    Approve = 3;
+    Friend = 4;
+    Block = 5;
+  }
+
+  uint64 iduser = 1;
+  uint64 id = 2;
+}
+
+message db_player_friend_battle_record {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint64 friend_id = 3;
+  bool is_win = 4;
+  uint32 report_id = 5;
+  uint32 created_at = 6;
+}
+
+message db_player_friend_status {
+  uint64 iduser = 1;
+  sint32 received_count = 2;
+  uint32 next_refresh_at = 3;
+  sint32 daily_apply_count = 4;
+  bool is_active_apply = 5;
+  uint32 battle_end_at = 6;
+  bool is_in_lobby = 7;
+  uint64 battle_friend_id = 8;
+}
+
+message db_player_gacha_log {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 created_at = 3;
+  uint32 pool_id = 4;
+  uint32 rule_id = 5;
+  sint32 type = 6;
+  uint32 result_id = 7;
+}
+
+message db_player_gacha_pool {
+  uint64 iduser = 1;
+  uint32 idplayer_gacha_status = 2;
+  uint32 id = 3;
+  uint32 gacha_times = 4;
+  uint32 start_at = 5;
+  uint32 end_at = 6;
+  string group_gacha_data = 8;
+  string pick_up_ids = 9;
+  string selected_ids = 10;
+  string battle_got_treasure_ids = 11;
+  uint32 free_gacha_times = 12;
+  string discount_data = 14;
+  uint32 package_id = 16;
+}
+
+message db_player_gacha_status {
+  uint64 iduser = 1;
+  uint32 today_gacha_times = 2;
+  uint32 today_gacha_times_next_refresh_at = 3;
+  string guaranteed_gacha_data = 9;
+  string guaranteed_gacha_type_data = 10;
+  uint32 gacha_count = 11;
+  string guaranteed_gacha_selectable_data = 12;
+}
+
+message db_player_global_quest {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint64 progress = 3;
+  bool is_finish = 4;
+  bool is_get = 5;
+  sint32 behaviour_count = 6;
+  string data = 7;
+}
+
+message db_player_global_vote {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_rewarded = 3;
+  string vote_data = 4;
+  sint64 free_vote_count = 5;
+  bool unlocked = 6;
+}
+
+message db_player_guild_build_activity {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 guild_id = 3;
+  sint32 beacon_count = 4;
+  string daily_beacon_data = 5;
+  string treasure_data = 6;
+  bool is_treasure_shared = 7;
+}
+
+message db_player_guild_grant_info {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes data = 3;
+  uint32 cur_star_milestone_id = 4;
+  uint32 record_index_incr = 5;
+  uint32 all_send_count = 6;
+  uint32 today_receive_count = 7;
+  bool finish_star_milestone = 8;
+  uint32 next_refresh_at = 9;
+}
+
+message db_player_guild_grant_reply {
+  uint64 iduser = 1;
+  uint64 id = 2;
+  uint32 guild_grant_id = 3;
+  string message = 4;
+  uint32 created_at = 5;
+}
+
+message db_player_head_portrait {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expire_at = 3;
+}
+
+message db_player_head_portrait_bg {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expire_at = 3;
+}
+
+message db_player_head_portrait_frame {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expire_at = 3;
+}
+
+message db_player_infinite_challenge_license {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool unlocked = 3;
+  bool cleared = 4;
+  bool is_get = 5;
+}
+
+message db_player_infinite_challenge_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_infinite_challenge_license = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  bool unlocked = 5;
+  bool cleared = 6;
+  string latest_record = 7;
+}
+
+message db_player_intelligence {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 created_at = 3;
+}
+
+message db_player_lottery_activity {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 round = 3;
+  uint32 draw_count = 4;
+  uint32 all_draw_count = 5;
+  bool can_reset = 6;
+  uint32 free_draw_num = 7;
+  uint32 next_refresh_at = 8;
+  string treasure_slot = 9;
+  string treasure_data = 10;
+  string treasure_option_data = 11;
+}
+
+message db_player_mail {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 4;
+  bool is_read = 5;
+  bool is_get = 6;
+  string title = 7;
+  string content = 8;
+  bytes treasure_package_pd = 9;
+  bool is_important = 10;
+  uint32 created_at = 11;
+  uint32 expired_at = 12;
+}
+
+message db_player_main_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_main_quest_chapter = 2;
+  uint32 id = 3;
+  uint32 template_id = 4;
+  bool unlocked = 5;
+  bool cleared = 6;
+  string stars = 7;
+  string challenges = 8;
+  string selected_contract_ids = 9;
+  uint32 max_difficulty = 10;
+  string max_selected_contract_ids = 11;
+  string latest_record = 12;
+}
+
+message db_player_main_quest_chapter {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool unlocked = 3;
+  bool cleared = 4;
+  string got_treasures = 5;
+  uint32 star_count = 6;
+  bool got_perfect_treasure = 7;
+  bool paid = 8;
+}
+
+message db_player_main_quest_chapter_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_main_quest_chapter = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_match {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    NotOpen = 1;
+    BeforeMatch = 2;
+    InProgress = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  sint32 exp = 4;
+  sint32 daily_exp = 5;
+  uint32 battle_count = 6;
+  uint32 mode = 8;
+  uint32 current_schedule_id = 9;
+  sint32 status = 10;
+  uint32 next_refresh_at = 11;
+}
+
+message db_player_match_material {
+  uint64 iduser = 1;
+  uint32 idplayer_match = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+}
+
+message db_player_match_schedule {
+  uint64 iduser = 1;
+  uint32 idplayer_match = 2;
+  uint32 id = 3;
+  uint32 type = 4;
+  uint32 team1_id = 6;
+  uint32 team2_id = 7;
+  uint32 win_team_id = 8;
+  string mission_buff_pool_ids = 9;
+}
+
+message db_player_match_team {
+  uint64 iduser = 1;
+  uint32 idplayer_match = 2;
+  uint32 id = 3;
+  uint32 name_id = 4;
+  string unit_npc_ids = 5;
+}
+
+message db_player_monthly_login {
+  uint64 iduser = 1;
+  uint32 count = 2;
+  uint32 next_refresh_at = 3;
+  uint32 monthly_next_refresh_at = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+  bool card_bonus_is_get = 7;
+  uint32 template_id = 8;
+}
+
+message db_player_operation_activity {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 point = 3;
+  uint32 next_refresh_at = 4;
+  uint32 start_at = 5;
+  uint32 end_at = 6;
+  bool is_get = 10;
+  string special_day_treasure_got_data = 11;
+  string extra_data = 15;
+  bool is_end = 17;
+  string point_treasure_got_ids = 19;
+  bool is_reunion = 20;
+}
+
+message db_player_operation_activity_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_operation_activity = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+}
+
+message db_player_practice_log {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 activity_id = 3;
+  uint32 quest_id = 4;
+  bool is_high = 5;
+  uint32 start_at = 6;
+  uint32 end_at = 7;
+  string unit_ids = 8;
+  sint32 unit_exp = 9;
+  sint32 player_exp = 10;
+  bytes bonus_pd = 11;
+}
+
+message db_player_ranking_extra_data {
+  enum DATA_TYPE {
+    DATA_TYPE_FIRST = 0;
+    battle_units = 1;
+    contracts = 2;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 extra_id = 3;
+  string extra_data = 4;
+  sint32 data_type = 5;
+}
+
+message db_player_recover_count {
+  uint64 iduser = 1;
+  uint32 type = 2;
+  sint32 param0 = 3;
+  sint32 count = 4;
+}
+
+message db_player_report_favorite {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string data = 3;
+}
+
+message db_player_revelation {
+  uint64 iduser = 1;
+  string got_online_revelation_tarot_collection_ids = 2;
+  string put_online_revelation_tarot_collection_ids = 3;
+  uint32 unlock_main_quest_chapter_id = 4;
+}
+
+message db_player_richman {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 cur_circle = 3;
+  uint32 cur_pos_id = 4;
+  uint32 dice_count = 5;
+  uint32 magic_dice_count = 6;
+  uint32 magic_dice_get_circle = 7;
+  uint32 all_throw_count = 8;
+  bool finish_guide = 9;
+  bool use_magic = 10;
+  uint32 circle_earning = 11;
+  sint32 casino_income = 12;
+  string buy_ids = 13;
+  string build_ids = 14;
+  string finish_game_ids = 15;
+  uint32 next_refresh_at = 16;
+}
+
+message db_player_richman_money {
+  uint64 iduser = 1;
+  uint32 idplayer_richman = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+  sint64 total_count = 5;
+}
+
+message db_player_role {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 current_unit_id = 3;
+  uint32 level = 4;
+  sint32 exp = 5;
+  uint32 friendship_level = 6;
+  uint32 reputation_level = 7;
+  sint32 friendship_exp = 8;
+  sint32 friendship_exp_pool = 9;
+  bool nickname_change_unlock = 10;
+  bool nickname_changed = 11;
+  string nickname = 12;
+  bool is_head_portrait_get = 13;
+  uint32 practice_cd_at = 14;
+  uint32 elysium_placement_area_id = 15;
+  uint32 elysium_placement_anchor_id = 16;
+  uint32 elysium_placement_at = 17;
+  string got_role_friendship_head_portrait_ids = 18;
+  string custom_tag_ids = 19;
+}
+
+message db_player_role_friendship {
+  uint64 iduser = 1;
+  sint32 interact_point = 2;
+  sint32 interact_crystal = 3;
+  string meet_role_ids = 4;
+  uint32 next_refresh_at = 5;
+}
+
+message db_player_role_story {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 role_template_id = 3;
+  bool unlocked = 4;
+  bool cleared = 5;
+  sint32 step_idx = 6;
+}
+
+message db_player_role_story_unlock_quest {
+  uint64 iduser = 1;
+  uint32 idplayer_role_story = 2;
+  uint32 id = 3;
+  uint32 progress = 4;
+  bool is_finish = 5;
+}
+
+message db_player_role_unit {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 4;
+  uint32 level = 5;
+  uint32 rank = 6;
+  uint32 star = 7;
+  uint32 melee_skill_id = 8;
+  uint32 reactive_skill_id = 9;
+  uint32 leader_skill_id = 10;
+  uint32 skill1_id = 11;
+  uint32 skill2_id = 12;
+  uint32 skill3_id = 13;
+  string rank_skill_ids = 14;
+  uint32 skin_id = 15;
+  string special_skill_ids = 16;
+  uint32 created_at = 17;
+  uint32 model_skin_id = 18;
+  uint32 module_skill_id = 19;
+  string module_skill_ids = 20;
+}
+
+message db_player_role_unit_preset_equipment {
+  uint64 iduser = 1;
+  uint32 idplayer_role_unit = 2;
+  uint32 id = 3;
+  uint32 main_weapon_id = 4;
+  uint32 offhand_weapon_id = 5;
+  uint32 charm_id = 6;
+}
+
+message db_player_role_unit_preset_skill {
+  uint64 iduser = 1;
+  uint32 idplayer_role_unit = 2;
+  uint32 id = 3;
+  uint32 melee_skill_id = 4;
+  uint32 reactive_skill_id = 5;
+  uint32 skill1_id = 6;
+  uint32 skill2_id = 7;
+  uint32 skill3_id = 8;
+  uint32 module_skill_id = 9;
+}
+
+message db_player_ryori_cook {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  sint32 exp = 4;
+  string cookbook_data = 5;
+  string ryori_data = 6;
+  string ingredient_data = 7;
+  string ryori_slot_data = 8;
+}
+
+message db_player_sandbox_achievement {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 value = 3;
+  bool is_finish = 4;
+}
+
+message db_player_sandbox_battle_report {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 game_count = 3;
+  uint32 result = 4;
+  bytes battle_setting = 5;
+  bytes report = 6;
+  uint32 run_time = 8;
+  string err_msg = 9;
+}
+
+message db_player_sandbox_memoir {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_lock = 3;
+  uint32 create_at = 5;
+  uint32 sandbox_ending_id = 6;
+  uint32 token_id = 7;
+  uint32 sandbox_id = 8;
+}
+
+message db_player_sandbox_photo {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_get = 3;
+}
+
+message db_player_sandbox_save_data {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string name = 3;
+  uint32 sandbox_id = 4;
+  string summary = 5;
+  bytes data = 6;
+  uint32 updated_at = 7;
+  bool is_get_bonus = 8;
+}
+
+message db_player_sandbox_status {
+  uint64 iduser = 1;
+  string token_ids = 2;
+  bytes launch_status_pd = 3;
+  uint32 current_chapter = 4;
+  bool is_inited = 5;
+  string token_history_ids = 6;
+  sint32 ep = 7;
+  string tech_node_ids = 8;
+  bytes result_pd = 9;
+  bool is_resulting = 10;
+  sint32 game_count = 11;
+  uint32 tour_level = 12;
+  uint32 tour_exp = 13;
+  string tour_level_treasure_got = 14;
+  bytes tour_pd = 15;
+  string sandbox_storyline_chapter_ids = 16;
+  bool enable_fix = 17;
+  string update_log_ids_added = 18;
+  string update_log_ids_read = 19;
+  bool has_new_story = 20;
+  string game_count_data = 21;
+  string sandbox_route_ids = 22;
+}
+
+message db_player_sandbox_status_detail {
+  uint64 iduser = 1;
+  uint32 idplayer_sandbox_status = 2;
+  uint32 id = 3;
+  bytes data = 4;
+  bool has_consume_ticket = 5;
+  bool enable_fix = 6;
+}
+
+message db_player_sandbox_tour_behaviour {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 progress = 3;
+}
+
+message db_player_sandbox_trophy {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  uint32 value = 4;
+  bool is_finish = 5;
+  bool is_get = 6;
+  uint32 finish_at = 7;
+}
+
+message db_player_scenario_log {
+  enum SOURCE {
+    SOURCE_FIRST = 0;
+    Sandbox = 1;
+    Online = 2;
+    Sandbox2 = 3;
+  }
+
+  uint64 iduser = 1;
+  uint32 scenario_type = 2;
+  uint32 scenario_id = 3;
+  string data = 4;
+  sint32 count = 5;
+  sint32 source = 6;
+}
+
+message db_player_shop {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 next_refresh_at = 3;
+  bool is_expired = 4;
+  bytes data = 5;
+}
+
+message db_player_tactics_skill {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool is_equipped = 3;
+}
+
+message db_player_tech_category {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 grade = 3;
+  sint32 exp = 4;
+  uint32 unlock_group_id = 6;
+}
+
+message db_player_title {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 expired_at = 3;
+  string param = 4;
+}
+
+message db_player_top_arena {
+  uint64 iduser = 1;
+  uint32 score = 2;
+  uint32 win_count = 3;
+  uint32 fail_count = 4;
+  uint32 rank = 5;
+  uint32 season_id = 6;
+  uint32 next_refresh_at = 7;
+}
+
+message db_player_tower {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 buff_id = 3;
+  sint32 week_score = 4;
+  string got_week_treasure = 5;
+  sint32 challenge_count = 6;
+  uint32 next_refresh_at = 7;
+  sint32 floor_progress = 8;
+  sint32 quest_progress = 9;
+  sint32 top_floor_progress = 10;
+  sint32 top_quest_progress = 11;
+  sint32 year = 12;
+  sint32 week = 13;
+  sint32 top_floor_progress_at_reset = 14;
+}
+
+message db_player_tower_quest {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  bool unlocked = 4;
+  bool cleared = 5;
+  string debuff_ids = 6;
+}
+
+message db_player_treasure {
+  uint64 iduser = 1;
+  uint32 type = 2;
+  sint32 param0 = 3;
+  sint32 count = 4;
+  uint32 expired_at = 5;
+}
+
+message db_player_unique_id {
+  uint64 iduser = 1;
+  string unique_ids = 2;
+}
+
+message db_player_unit_skin {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bool active = 3;
+}
+
+message db_player_weapon {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 template_id = 3;
+  uint32 level = 4;
+  uint32 star = 5;
+  uint32 break_count = 6;
+  uint32 player_role_unit_id = 7;
+  bool is_locked = 8;
+  uint32 create_time = 10;
+}
+
+message db_player_world_boss {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 next_refresh_at = 3;
+  bool daily_liked = 4;
+  string quest_data = 5;
+  bool is_rewarded = 6;
+  sint32 like_count = 7;
+  bool is_shared = 8;
+}
+
+message db_server_version {
+  uint32 id = 1;
+  uint32 version = 2;
+}
+

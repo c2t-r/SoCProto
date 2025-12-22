@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsOnlineCommon.proto";
+import "PacketsMultipleCommon.proto";
+
+message SCTCPPing {
+  uint32 timestamp = 1;
+}
+
+message SCKCPPing {
+  uint32 timestamp = 1;
+}
+
+message SCOffline {
+  uint32 result = 1;
+}
+
+message SCMaintenance {
+  string message = 1;
+}
+
+message SCClientUpdated {
+  uint32 result = 1;
+}
+
+message SCReconnect {
+  uint32 result = 1;
+  uint32 udp_port = 2;
+  uint64 room_id = 3;
+  bool relogin = 4;
+}
+
+message SCOnlineAddPlayerRemindCount {
+  map<uint32, sint32> data = 1;
+}
+
+message SCOnlinePlayerRemind {
+  PlayerRemind remind = 1;
+}
+
+message SCOnlinePlayerRemindRead {
+}
+
+message SCMultipleJoinRoom {
+  Room room = 1;
+}
+
+message SCOnlineGuildRemind {
+  GuildRemind remind = 1;
+}
+
+message SCOnlinePlayerChatRemindRead {
+  PlayerChatRemind chat_remind = 1;
+}
+
+message SCServerTime {
+  uint32 server_timestamp = 1;
+  sint32 server_time_offset = 2;
+}
+
+message SCLogin {
+  uint32 result = 1;
+  uint32 udp_port = 2;
+}
+

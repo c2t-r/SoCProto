@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message CSMiniSandboxGet {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+}
+
+message CSMiniSandboxEventConditionsCheck {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+  uint32 scenario_type = 3;
+  uint32 scenario_id = 4;
+}
+
+message CSMiniSandboxSectionEventTrigger {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+  uint32 option_id = 3;
+  string scenario_data = 4;
+  string performance_data = 5;
+}
+
+message CSMiniSandboxCustomEventTrigger {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+  uint32 event_id = 3;
+  uint32 option_id = 4;
+  string scenario_data = 5;
+  string performance_data = 6;
+}
+
+message CSMiniSandboxEnd {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+}
+

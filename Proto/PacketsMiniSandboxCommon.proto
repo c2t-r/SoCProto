@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message MiniSandboxEvent {
+  message Option {
+    enum Status {
+      None = 0;
+      Visible = 1;
+      Selectable = 2;
+    }
+
+    uint32 id = 1;
+    Status status = 2;
+  }
+
+  uint32 id = 1;
+  repeated Option options = 2;
+  uint32 current_option_id = 3;
+  uint32 current_result_id = 4;
+  uint32 next_event_id = 5;
+  uint32 capital_event_id = 6;
+}
+
+message MiniSandboxCustomEventParams {
+  bool is_stop = 1;
+  bool is_refreshed = 2;
+  bool refresh_now = 3;
+}
+
+message MiniSandboxInfo {
+  uint32 section_id = 1;
+  uint32 change_to_section_id = 2;
+  MiniSandboxCustomEventParams custom_event_params = 3;
+  string performance_data = 4;
+  bool is_end = 99;
+}
+
+message MiniSandboxCapitalEvent {
+  uint32 id = 1;
+  uint32 sandbox_event = 2;
+  bool closed = 3;
+}
+
+message MiniSandboxEventTriggerResult {
+  MiniSandboxInfo info = 1;
+  MiniSandboxEvent event = 2;
+}
+
+message PlayerMiniSandbox {
+  uint32 id = 1;
+  MiniSandboxInfo info = 2;
+  MiniSandboxEvent event = 3;
+  repeated MiniSandboxCapitalEvent capital_events = 99;
+}
+

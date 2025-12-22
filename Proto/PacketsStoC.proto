@@ -1,0 +1,883 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsGame.proto";
+import "PacketsCommon.proto";
+import "PacketsOnlineCommon.proto";
+
+message SCAccountLoginError {
+}
+
+message SCXDLoginError {
+}
+
+message SCGuestLoginError {
+}
+
+message SCGameLogin {
+  db_player_sandbox_status_detail sandbox_status_detail = 1;
+}
+
+message SCDebugTreasureAdd {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugTreasureAll {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugUnitAdd {
+  DBUnit unit = 1;
+}
+
+message SCDebugMissionRand {
+  bytes mission = 1;
+}
+
+message SCDebugBattleStart {
+  db_character_battle_setting battle_setting = 1;
+}
+
+message SCDebugRecoverAll {
+  sint32 act_pt = 1;
+  repeated DBChangedUnit units = 2;
+}
+
+message SCDebugUnitAddWithSkills {
+  DBUnit unit = 1;
+}
+
+message SCDebugUnitsLevel {
+  repeated DBUnit units = 1;
+}
+
+message SCDebugSystemsUnlock {
+  DBTraining training = 1;
+  db_character_hospital hospital = 2;
+  DBSmithy smithy = 3;
+  db_character_tavern tavern = 4;
+  repeated db_character_capital_event capital_events = 5;
+  repeated db_character_shop shops = 6;
+  repeated uint32 system_unlocked_ids = 7;
+  DBWorkshop workshop = 8;
+  db_character character = 9;
+  DBBlessing blessing = 10;
+}
+
+message SCDebugUnitMoraleSet {
+  repeated DBChangedUnit units = 1;
+}
+
+message SCDebugCharacterWorldLevel {
+  uint32 world_level = 1;
+}
+
+message SCDebugCharacterLevel {
+  uint32 level = 1;
+}
+
+message SCDebugUnitStudySkill {
+  DBUnit unit = 1;
+}
+
+message SCDebugUnitRandomSkillByBuild {
+  message UnitBuildSkill {
+    uint32 id = 1;
+    uint32 idunit_build = 2;
+    uint32 skill_id = 3;
+    uint32 type = 4;
+    uint32 weight = 5;
+  }
+
+  repeated UnitBuildSkill unitskills = 1;
+}
+
+message SCDebugUnitRandomSkillByBonus {
+  message UnitBuildSkill {
+    uint32 id = 1;
+    uint32 idunit_build = 2;
+    uint32 skill_id = 3;
+    uint32 type = 4;
+    uint32 weight = 5;
+  }
+
+  repeated UnitBuildSkill unitskills = 1;
+}
+
+message SCDebugTacticsSkillRemove {
+  uint32 id = 1;
+}
+
+message SCDebugCapitalEventRefresh {
+  repeated db_character_capital_event events = 1;
+}
+
+message SCDebugGetSaveDatas {
+  repeated db_character_save_data datas = 1;
+}
+
+message SCDebugSaveData {
+  db_character_save_data data = 1;
+}
+
+message SCDebugLoadData {
+}
+
+message SCDebugGenDataSecret {
+  string secret = 1;
+}
+
+message SCDebugLoadDataSecret {
+  string secret = 1;
+}
+
+message SCDebugBattlePremake {
+  db_character_battle_setting battle_setting = 1;
+}
+
+message SCDebugMissionEditorBattleStart {
+  db_character_battle_setting battle_setting = 1;
+  bytes mission_data = 2;
+  string message = 3;
+}
+
+message SCDebugAddSandboxEffect {
+  db_character_sandbox_effect sandbox_effect = 1;
+}
+
+message SCDebugRemoveSandboxEffect {
+  uint32 sandbox_effect_id = 1;
+}
+
+message SCDebugGameEnd {
+  db_player_sandbox_status sandbox_status = 1;
+  db_player_sandbox_status_detail sandbox_status_detail = 2;
+}
+
+message SCDebugAddEntrustBattleByTemplate {
+}
+
+message SCDebugSandboxLauncher {
+  db_player_sandbox_status status = 1;
+}
+
+message SCDebugSandboxLauncherWithSpeciality {
+  db_player_sandbox_status status = 1;
+  db_player_sandbox_status_detail status_detail = 2;
+}
+
+message SCDebugGetTreasurePackage {
+  DBTreasurePackage treasure_package = 1;
+  bool is_online = 2;
+}
+
+message SCDebugNextRound {
+}
+
+message SCDebugBattleReportCheck {
+  uint32 result = 1;
+  uint32 run_time = 2;
+  string err_msg = 3;
+}
+
+message SCDebugFinishWorkshopBattleQuestImm {
+}
+
+message SCDebugBlessing {
+  db_character_unit unit = 1;
+}
+
+message SCDebugCommerceOrderAdd {
+}
+
+message SCDebugCommerceTradePointAdd {
+}
+
+message SCDebugRegion {
+}
+
+message SCCharacterInfo {
+  db_character character = 1;
+  repeated db_character_treasure treasures = 2;
+  repeated db_character_weapon weapons = 4;
+  repeated DBUnit units = 5;
+  db_character_battle_setting battle_setting = 6;
+  repeated db_character_capital_event capital_events = 7;
+  repeated db_character_faction factions = 8;
+  repeated db_player_intelligence intelligences = 9;
+  DBTraining training = 11;
+  repeated db_character_sandbox_effect sandbox_effects = 12;
+  db_character_hospital hospital = 14;
+  db_character_entrust entrust = 15;
+  DBSmithy smithy = 16;
+  repeated db_character_shop shops = 17;
+  repeated db_character_blueprint blueprints = 18;
+  repeated db_character_tactics_skill tactics_skills = 19;
+  db_character_milestone milestone = 21;
+  repeated uint32 system_ids = 22;
+  repeated uint32 system_tech_ids = 23;
+  DBWorkshop workshop = 24;
+  DBBlessing blessing = 26;
+  DBCommerce commerce = 27;
+  repeated db_character_commerce_prop commerce_props = 28;
+  DBRegion region = 29;
+  SCCharacterPostData post_data = 99;
+}
+
+message SCEventTrigger {
+  SandboxEvent event = 1;
+  uint32 phase = 2;
+  bool is_change_phase = 3;
+  bool is_end = 4;
+  uint32 ending_id = 5;
+  DBTreasurePackage event_treasure = 6;
+  repeated db_character_capital_event capital_events = 7;
+  uint32 system = 8;
+  db_character character = 10;
+  repeated DBUnit units = 12;
+  repeated SandboxConsume consumes = 13;
+  repeated db_character_shop shops = 14;
+  db_player player = 15;
+  repeated uint32 remove_unit_ids = 16;
+  bool is_stop_custom = 17;
+  bool is_capital_event_refreshed = 19;
+  bool refresh_capital_event_now = 20;
+  repeated db_character_sandbox_effect effects = 21;
+  SandboxMilestoneAction milestone_action = 23;
+  uint32 encounter_count = 24;
+  SandboxChangeValues change_values = 25;
+  bool is_chapter_end = 26;
+  uint32 chapter_id = 27;
+  db_player_sandbox_status player_sandbox_status = 28;
+  db_player_sandbox_status_detail player_sandbox_status_detail = 29;
+  bool is_force_change_phase = 30;
+  PlayerSetting setting = 99;
+}
+
+message SCRoundReport {
+  SandboxRoundReport report = 1;
+}
+
+message SCCustomEventTrigger {
+  SCEventTrigger sandbox = 1;
+}
+
+message SCEventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+  repeated SandboxEvent.Option options = 3;
+  db_player_scenario_log log = 4;
+}
+
+message SCUnitSync {
+  repeated DBUnit units = 1;
+  repeated DBPlayerRoleUnit role_units = 2;
+}
+
+message SCMilestoneParamStatus {
+  db_character_milestone milestone = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCCharacterPostData {
+  db_character_battle_setting battle_setting = 1;
+  SCEventTrigger sandbox = 2;
+  repeated DBTreasurePackage treasure_packages = 3;
+  DBEntrustBattle entrust_battle = 5;
+  SCEntrustBattleFinish entrust_battle_finish = 6;
+  SCCommerceOrderEncounterFinished order_encounter_finish = 7;
+  SCRegionEntrustBattleFinish region_entrust_battle_finish = 8;
+}
+
+message SCPostDataSync {
+  repeated uint32 types = 1;
+  DBTraining training = 2;
+  db_character_hospital hospital = 3;
+  db_character_entrust entrust = 4;
+  DBSmithy smithy = 5;
+  DBWorkshop workshop = 6;
+  DBBlessing blessing = 7;
+  DBCommerce commerce = 8;
+  DBRegion region = 9;
+}
+
+message SCSandboxResult {
+  db_player_sandbox_status status = 1;
+  SandboxStatistic statistic = 2;
+  repeated DBUnit units = 3;
+  uint32 sandbox_id = 4;
+  db_player_sandbox_status_detail sandbox_status_detail = 5;
+}
+
+message SCCharacterSimpleInfo {
+  repeated db_character_sandbox_effect sandbox_effects = 1;
+  repeated db_character_tactics_skill tactics_skills = 2;
+  SandboxStatistic statistic = 3;
+  uint32 commerce_order_count = 4;
+}
+
+message SCSmithyEnter {
+  DBSmithy smithy = 1;
+  repeated db_character_blueprint blueprints = 2;
+}
+
+message SCSmithyForge {
+  db_character_smithy_seat seat = 1;
+  DBConsumes consumes = 2;
+  DBConsume extra_consume = 3;
+  db_character_blueprint blueprint = 4;
+}
+
+message SCSmithyForgeCancel {
+  db_character_smithy_seat seat = 1;
+  db_character_blueprint blueprint = 2;
+  DBConsumes consumes_return = 3;
+}
+
+message SCSmithyForgeResult {
+  DBSmithyForgeResult result = 1;
+  db_character_smithy_seat seat = 2;
+  db_character_weapon weapon = 3;
+}
+
+message SCSmithyForgeSelect {
+  db_character_weapon weapon = 1;
+  db_character_smithy_seat seat = 2;
+  db_character_blueprint blueprint = 3;
+  DBConsume consume_return = 4;
+}
+
+message SCSmithyProcess {
+  uint32 seat_id = 1;
+  DBConsumes consumes = 2;
+  DBSmithy smithy = 3;
+}
+
+message SCSmithyProcessCancel {
+  db_character_smithy_seat seat = 1;
+  DBConsumes consumes_return = 2;
+}
+
+message SCSmithyProcessResult {
+  DBTreasurePackage treasure = 1;
+  db_character_smithy_seat seat = 2;
+}
+
+message SCShopGet {
+  uint32 capital_event_id = 1;
+  ShopData shop_data = 2;
+}
+
+message SCShopBuy {
+  uint32 capital_event_id = 1;
+  uint32 id = 2;
+  ShopData shop_data = 3;
+  DBTreasurePackage treasure_package = 4;
+  DBConsume consume = 5;
+}
+
+message SCShopSell {
+  uint32 capital_event_id = 1;
+  ShopData shop_data = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated DBConsume consumes = 4;
+}
+
+message SCHospitalEnter {
+  db_character_hospital hospital = 1;
+}
+
+message SCHospitalSetUnits {
+  db_character_hospital hospital = 1;
+  repeated DBUnit units = 2;
+}
+
+message SCHospitalSetUnit {
+  db_character_hospital hospital = 1;
+  DBUnit unit = 2;
+}
+
+message SCTavernEnter {
+  db_character_tavern tavern = 1;
+  repeated db_character_tavern_unit units = 2;
+}
+
+message SCTavernRecruit {
+  uint32 id = 1;
+  sint32 price = 2;
+  db_character_tavern tavern = 3;
+  DBUnit unit = 4;
+  DBTreasurePackage treasure_package = 5;
+}
+
+message SCTavernEnterUI {
+}
+
+message SCSandboxNoteEnter {
+  repeated db_character_sandbox_note notes = 1;
+}
+
+message SCSandboxEventLogEnter {
+  repeated db_character_sandbox_event_log logs = 1;
+}
+
+message SCUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCEntrustBattleStart {
+}
+
+message SCEntrustPracticeStart {
+  uint32 id = 1;
+  repeated uint32 unit_ids = 2;
+  DBEntrustPractice practice = 3;
+  uint32 practice_count = 4;
+  repeated DBUnit units = 5;
+  db_character_entrust entrust = 6;
+}
+
+message SCEntrustPracticeEnd {
+  uint32 id = 1;
+  DBEntrustPractice practice = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated DBChangedUnit changed_units = 4;
+  uint32 changed_character_exp = 5;
+  db_character_entrust entrust = 6;
+  bool republish = 7;
+}
+
+message SCEntrustBattleFinish {
+  uint32 id = 1;
+  DBEntrustBattle battle = 2;
+  DBTreasurePackage treasure_package = 4;
+  SandboxChangeValues faction_change_values = 5;
+  SandboxChangeValues enemy_faction_change_values = 6;
+  int32 act_pt = 8;
+  SCEventTrigger sandbox = 9;
+  bool is_win = 10;
+}
+
+message SCEntrustEventFinish {
+  uint32 id = 1;
+}
+
+message SCEntrustPracticeGiveUp {
+  uint32 id = 1;
+  repeated DBChangedUnit changed_units = 2;
+  db_character_entrust entrust = 3;
+}
+
+message SCBattleStart {
+  db_character_battle_setting battle_setting = 1;
+  repeated uint32 units = 2;
+}
+
+message SCBattleEnd {
+  bool is_win = 1;
+  db_character_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  int32 fate_power = 4;
+  bool unmarshal_report_error = 5;
+}
+
+message SCBattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCBattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCBattlePremake {
+  db_character_battle_setting battle_setting = 1;
+}
+
+message SCBattleFinish {
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+
+  message sandbox_event {
+    bool win = 1;
+    uint32 mission_battle_param_id = 2;
+    SCEventTrigger event_trigger = 3;
+  }
+
+  uint32 id = 1;
+  repeated DBChangedUnit changed_units = 2;
+  changed_character_exp changed_exp = 3;
+  sandbox_event event = 4;
+  DBWorkshop workshop = 5;
+}
+
+message SCBattleServerLogin {
+  uint32 server_id = 1;
+}
+
+message SCBattleServerCheck {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes setting = 3;
+  bytes report = 4;
+  bool is_pvp = 5;
+}
+
+message SCBattleServerInit {
+  repeated uint64 user_ids = 1;
+  bytes setting = 2;
+  bytes report = 3;
+  bytes message = 4;
+  bool isOnline = 5;
+  uint32 battle_type = 6;
+}
+
+message SCBattleServerMessage {
+  uint32 type = 1;
+  uint64 user_id = 2;
+  uint32 unit_index = 3;
+  bytes command = 4;
+  uint32 back_index = 5;
+  uint32 command_index = 6;
+}
+
+message SCBattleServerCheckDamage {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  bytes setting = 3;
+  bytes report = 4;
+  bool is_pvp = 5;
+}
+
+message SCBattleServerStatus {
+}
+
+message SCTrainingEnter {
+  DBTraining training = 1;
+  db_character character = 2;
+}
+
+message SCTrainingSetUnit {
+  DBTraining training = 1;
+  DBUnit unit = 2;
+  sint32 price = 3;
+}
+
+message SCTrainingCancelTrain {
+  DBTraining training = 1;
+  DBUnit unit = 2;
+  sint32 price = 3;
+}
+
+message SCTrainingFinish {
+  message result_data {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+  }
+
+  message Result {
+    uint32 type = 1;
+    repeated result_data datas = 2;
+  }
+
+  DBTraining training = 1;
+  DBUnit unit = 2;
+  Result result = 3;
+  DBChangedUnit changed_unit = 4;
+}
+
+message SCTrainingStudyProfessionSkill {
+  DBTraining training = 1;
+  DBUnit unit = 2;
+  uint32 skill_id = 3;
+  DBChangedUnit changed_unit = 4;
+}
+
+message SCTrainingResetSeat {
+  DBTraining training = 1;
+  DBUnit unit = 2;
+}
+
+message SCTacticsSkillEquip {
+  repeated db_character_tactics_skill tactics_skills = 1;
+}
+
+message SCTacticsSkillEnter {
+  repeated db_character_tactics_skill tactics_skills = 1;
+}
+
+message SCTreasureChestSelect {
+  DBTreasure treasure = 1;
+  db_character character = 2;
+}
+
+message SCTreasureSkillGet {
+  DBTreasure treasure = 1;
+}
+
+message SCTreasureSkip {
+  DBTreasure treasure = 1;
+}
+
+message SCWorldMapEnter {
+  repeated db_character_faction factions = 1;
+  repeated DBEntrustBattle battle = 3;
+  repeated DBEntrustPractice practice = 4;
+  uint32 practice_count = 5;
+  repeated db_character_tactics_skill tactics_skills = 6;
+  repeated db_character_map_pin map_pins = 7;
+  DBRegion region = 8;
+  db_character character = 9;
+}
+
+message SCWarehouseEnter {
+  repeated db_character_blueprint blueprints = 1;
+  repeated db_character_treasure treasures = 2;
+  repeated db_character_weapon weapons = 3;
+}
+
+message SCCapitalAreaSystemEventRefresh {
+  repeated db_character_capital_event events = 1;
+}
+
+message SCCapitalSandboxEventTrigger {
+  SCEventTrigger sandbox = 1;
+  uint32 capital_event_id = 2;
+}
+
+message SCCapitalEventSecondaryPerformPlay {
+  db_character_capital_event event = 1;
+}
+
+message SCMilestoneResetCache {
+}
+
+message SCWorkshopEnter {
+  DBWorkshop workshop = 1;
+}
+
+message SCWorkshopQuestResult {
+  message QuestResult {
+    uint32 bonus_id = 1;
+    DBTreasurePackage treasure_package = 2;
+  }
+
+  DBWorkshop workshop = 1;
+  DBConsumes consumes = 2;
+  DBUnit unit = 3;
+  repeated QuestResult results = 4;
+}
+
+message SCWorkshopNodeLevelUp {
+  DBWorkshop workshop = 1;
+  DBConsumes consumes = 2;
+  db_character_tactics_skill tactics_skill = 3;
+  uint32 replace_tactics_skill_id = 4;
+  db_character character = 5;
+  uint32 system_tech_id = 6;
+  uint32 replace_system_tech_id = 7;
+}
+
+message SCWorkshopChooseOneOfThree {
+  DBWorkshop workshop = 1;
+}
+
+message SCBlessingPrayer {
+  db_character_blessing_seat seat = 1;
+}
+
+message SCBlessingBaptism {
+  db_character_blessing_seat seat = 1;
+}
+
+message SCBlessingEffectChoose {
+  repeated db_character_unit units = 1;
+  repeated DBBlessingRevelationData revelation_datas = 2;
+  db_character_blessing_seat seat = 3;
+}
+
+message SCBlessingHalidomUpgrade {
+  db_character_blessing_halidom halidom = 1;
+  repeated db_character_blessing_seat seats = 2;
+  db_character_blessing blessing = 3;
+  DBConsumes consumes = 4;
+}
+
+message SCBlessingEnter {
+  DBBlessing blessing = 1;
+}
+
+message SCCommerceEnter {
+  DBCommerce commerce = 1;
+}
+
+message SCCommerceOrderStart {
+  db_character_commerce_order order = 1;
+  repeated DBUnit units = 2;
+  DBConsumes consumes = 3;
+}
+
+message SCCommerceOrderCancel {
+  db_character_commerce_order order = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCCommerceOrderFinish {
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+
+  message propensity_for_war_level_up {
+    uint32 id = 1;
+    int32 value = 2;
+  }
+
+  db_character_commerce_order order = 1;
+  DBTreasurePackage treasure_package = 2;
+  repeated DBChangedUnit changed_units = 3;
+  changed_character_exp changed_exp = 4;
+  SCEventTrigger sandbox = 5;
+  uint32 new_bonus_id = 6;
+  bool trade_point_is_level_up = 7;
+  uint32 opportunity_id = 8;
+  propensity_for_war_level_up propensity_for_war = 11;
+}
+
+message SCCommerceOrderEncounterStart {
+  uint32 id = 1;
+  DBEntrustBattle battle = 2;
+}
+
+message SCCommerceOrderEncounterGiveUp {
+}
+
+message SCCommerceOrderEncounterFinished {
+  uint32 id = 1;
+  DBEntrustBattle battle = 2;
+  SandboxChangeValues faction_change_values = 3;
+  SandboxChangeValues enemy_faction_change_values = 4;
+  bool is_win = 5;
+  SCCommerceOrderFinish orderData = 6;
+}
+
+message SCRegionEnter {
+  DBRegion data = 1;
+}
+
+message SCRegionBattleStart {
+}
+
+message SCRegionBattleFinish {
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+
+  DBRegionBattle data = 1;
+  DBTreasurePackage treasure_package = 2;
+  db_character_region region = 3;
+  SCEventTrigger sandbox = 4;
+  SCWorldMapEnter world_map_enter = 5;
+  repeated DBChangedUnit changed_units = 6;
+  changed_character_exp changed_exp = 7;
+}
+
+message SCRegionPracticeStart {
+  DBRegionPractice data = 1;
+}
+
+message SCRegionPracticeCancel {
+  DBRegionPractice data = 1;
+  repeated uint32 unitIds = 2;
+}
+
+message SCRegionConsumeStart {
+  db_character_region_consume data = 1;
+  repeated SandboxConsume consume = 2;
+}
+
+message SCRegionConsumeCancel {
+  db_character_region_consume data = 1;
+  db_character character = 2;
+  repeated db_character_weapon weapons = 3;
+  repeated db_character_blueprint blueprints = 4;
+  repeated db_character_treasure treasures = 5;
+}
+
+message SCRegionPracticeFinish {
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+
+  DBRegionPractice data = 1;
+  DBTreasurePackage treasure_package = 2;
+  repeated DBChangedUnit changed_units = 3;
+  changed_character_exp changed_exp = 4;
+  db_character_region region = 5;
+  SCEventTrigger sandbox = 6;
+  SCWorldMapEnter world_map_enter = 7;
+}
+
+message SCRegionConsumeFinish {
+  message changed_character_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 exp = 3;
+    uint32 level = 4;
+    sint32 changed_exp = 5;
+  }
+
+  db_character_region_consume data = 1;
+  DBTreasurePackage treasure_package = 2;
+  changed_character_exp changed_exp = 4;
+  db_character_region region = 5;
+  SCEventTrigger sandbox = 6;
+  SCWorldMapEnter world_map_enter = 7;
+}
+
+message SCRegionEntrustBattleFinish {
+  uint32 id = 1;
+  DBEntrustBattle battle = 2;
+  SandboxChangeValues faction_change_values = 3;
+  SandboxChangeValues enemy_faction_change_values = 4;
+  SCEventTrigger sandbox = 5;
+  bool is_win = 6;
+  db_character_region_battle data = 7;
+}
+
+message SCRegionProgressFinish {
+  DBRegion region = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+

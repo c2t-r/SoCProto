@@ -1,0 +1,229 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsCommon.proto";
+import "PacketsBattle.proto";
+import "PacketsSandbox2Common.proto";
+import "PacketsSandbox2.gen.proto";
+
+message CSDebugClueWallAdd {
+  uint32 template_id = 1;
+}
+
+message CSDebugFoodAdd {
+  uint32 template_id = 1;
+}
+
+message CSDebugAddAccessoryItem {
+  uint32 template_id = 1;
+}
+
+message CSDebugAddChapterGoal {
+  uint32 template_id = 1;
+}
+
+message CSDebugAddChapterGoalProgress {
+  uint32 add_value = 1;
+}
+
+message CSDebugSetChapterGoalStatus {
+  db_sandbox2_chapter_goal.STATUS status = 1;
+}
+
+message CSDebugResetChapterGoalData {
+  uint32 template_id = 1;
+}
+
+message CSDebugAddSandbox2EntrustBattle {
+  uint32 template_id = 1;
+}
+
+message CSDebugSandbox2Treasure {
+  enum Type {
+    All = 0;
+    Treasure = 1;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugSandbox2SaveData {
+  enum Type {
+    CustomSave = 0;
+    QueryNamespace = 1;
+    QueryList = 2;
+    Load = 3;
+  }
+
+  message Request {
+    uint32 sandbox_id = 1;
+    string namespace = 2;
+    string name = 3;
+    bool is_auto = 4;
+    sint32 round = 5;
+    uint64 player_id = 6;
+  }
+
+  Type type = 1;
+  Request request = 2;
+}
+
+message CSDebugSandbox2Unit {
+  string data = 1;
+}
+
+message CSDebugSandbox2Flow {
+  enum Type {
+    UnlockSystem = 0;
+  }
+
+  Type type = 1;
+  repeated uint32 ids = 2;
+}
+
+message CSSandbox2Login {
+}
+
+message CSSandbox2CharacterInfo {
+}
+
+message CSSandbox2GetChapterGoalReward {
+}
+
+message CSSandbox2EventTrigger {
+  NewSandboxEventTriggerParams params = 1;
+}
+
+message CSSandbox2EventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+}
+
+message CSSandbox2CustomEventTrigger {
+  NewSandboxCustomEventTriggerParams custom_params = 1;
+  NewSandboxEventTriggerParams params = 2;
+}
+
+message CSSandbox2TreasureChestSelect {
+  uint32 package_id = 1;
+  uint32 id = 2;
+  uint32 index = 3;
+}
+
+message CSGetSandbox2Statistic {
+}
+
+message CSSandbox2InferenceClue {
+  uint32 template_id1 = 1;
+  uint32 template_id2 = 2;
+}
+
+message CSSandbox2BattlePremake {
+  sint32 type = 1;
+}
+
+message CSSandbox2BattleStart {
+  sint32 type = 1;
+  uint32 mission_id = 2;
+  repeated battle.BattleUnit units = 3;
+  uint32 entrust_battle_id = 4;
+  bool use_fate_power = 5;
+}
+
+message CSSandbox2BattleEnd {
+  uint32 battle_index = 1;
+  bytes battle_report = 2;
+  bool debug_end = 3;
+  bool give_up = 4;
+  sint32 tactic_point = 5;
+}
+
+message CSSandbox2BattleCommand {
+  uint32 command_start = 1;
+  bytes commands = 2;
+}
+
+message CSSandbox2BattleBack {
+  uint32 back_count = 1;
+  uint32 back_command = 2;
+  bool back_clear = 3;
+  bytes report = 4;
+}
+
+message CSSandbox2BattleFinish {
+  uint32 id = 1;
+}
+
+message CSSandbox2EntrustBattleStart {
+  uint32 id = 1;
+}
+
+message CSSandbox2EntrustBattleFinish {
+}
+
+message CSSandbox2ShopGet {
+  uint32 capital_event_group_id = 1;
+}
+
+message CSSandbox2ShopBuy {
+  uint32 capital_event_group_id = 1;
+  uint32 id = 2;
+  sint32 quantity = 3;
+  DBConsume consume = 4;
+}
+
+message CSSandbox2UnitWeaponReplace {
+  uint32 weapon_new_id = 1;
+  uint32 weapon_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message CSSandbox2UnitStudySkill {
+  uint32 node_id = 1;
+  uint32 unit_id = 2;
+  uint32 skill_id = 3;
+  DBConsume consume = 4;
+}
+
+message CSSandbox2TacticsSkillEquip {
+  uint32 tactics_skill_id = 1;
+  bool is_remove = 2;
+}
+
+message CSSandbox2TrainingEnter {
+}
+
+message CSSandbox2TrainingNodeLevelUp {
+  uint32 node_id = 1;
+  DBConsumes consumes = 2;
+}
+
+message CSSandbox2UnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSSandbox2TacticsSkillEnter {
+}
+
+message CSSandbox2AccessoryItemReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message CSSandbox2GetAccessoryItemList {
+}
+
+message CSSandbox2CapitalEventSecondaryPerformPlay {
+  uint32 capital_event_id = 1;
+}
+

@@ -1,0 +1,2936 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsGame.proto";
+import "PacketsGuild.proto";
+import "PacketsOnlineCommon.proto";
+import "PacketsCommon.proto";
+import "PacketsSandbox2.gen.proto";
+import "PacketsBattle.proto";
+
+message SCOnlineLogin {
+  uint32 result = 1;
+}
+
+message SCOnlineLogout {
+}
+
+message SCOnlineCheckMails {
+  repeated uint64 player_ids = 1;
+}
+
+message SCGatewayLogin {
+  message Client {
+    message CacheData {
+      sint32 index = 1;
+      bytes data = 2;
+    }
+
+    sint64 last_packet_time = 1;
+    sint64 login_time = 2;
+    sint32 client_index = 3;
+    sint32 server_index = 4;
+    repeated CacheData cache_data = 5;
+  }
+
+  Client client = 1;
+}
+
+message SCGatewayQuestionnaireFinish {
+  bool is_online = 1;
+}
+
+message SCGatewayOnlineCount {
+  string server = 1;
+  sint32 online = 2;
+  int64 timestamp = 3;
+}
+
+message SCOnlineReconnect {
+  bool relogin = 1;
+}
+
+message SCGatewayPurchase {
+  bool is_online = 1;
+}
+
+message SCGatewayOperationActivityGetTreasure {
+  bool is_online = 1;
+  sint32 result = 2;
+}
+
+message SCTreasureConsume {
+  DBConsumes consumes = 1;
+}
+
+message SCGatewayWorldBossSync {
+}
+
+message SCOnlinePlayerInfo {
+  db_player player = 1;
+  repeated DBPlayerRole roles = 2;
+  repeated DBPlayerRoleUnit units = 3;
+  repeated db_player_treasure treasures = 4;
+  repeated uint32 system_ids = 5;
+  repeated DBPlayerWeapon weapons = 6;
+  DBAchievementQuestStatus daily_quest_status = 7;
+  repeated db_player_achievement achievements = 9;
+  DBPlayerSandboxStatus sandbox_status = 10;
+  PlayerRemind remind = 11;
+  repeated DBPlayerActivity activities = 12;
+  repeated DBPlayerMainQuest main_quests = 13;
+  repeated DBPlayerCharm charms = 14;
+  repeated DBPlayerOperationActivity operation_activities = 16;
+  repeated DBPlayerTechCategory tech_categories = 17;
+  repeated db_player_tactics_skill tactics_skills = 18;
+  DBPlayerTower tower = 19;
+  repeated DBPlayerTowerQuest tower_quest = 21;
+  db_player_role_friendship role_friendship = 22;
+  db_player_monthly_login monthly_login = 23;
+  db_player_card card = 24;
+  repeated DBBattlePassStatus battle_pass_statuses = 25;
+  repeated DBPlayerRoleStory role_friendship_stories = 26;
+  repeated db_player_elysium_placement_furniture elysium_placement_furnitures = 27;
+  db_player_revelation revelation = 28;
+  DBGuild guild = 29;
+  GuildRemind guild_remind = 30;
+  db_player_friend_status friend_status = 31;
+  repeated PlayerFriend friends = 32;
+  repeated DBSimplePlayer block_players = 33;
+  repeated db_player_shop shops = 34;
+  db_player_battle_guidebook battle_guidebook = 35;
+  repeated DBPlayerCareer careers = 36;
+  PlayerSetting setting = 97;
+  SCOnlinePlayerPostData post_data = 98;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+  repeated PlayerContractActivitySimpleInfo contract_activity_simple_infos = 101;
+  uint32 arena_season_id = 102;
+  PlayerAbyssSimpleInfo abyss_simple_info = 103;
+  repeated db_player_unit_skin player_unit_skins = 104;
+  PlayerChatRemind chat_remind = 37;
+  repeated DBPlayerAdventure adventure = 38;
+  repeated BattleUnitSnapshotDisplay bp_mode_snapshots = 39;
+  repeated DBPlayerTechCategory afk_tech_categories = 40;
+  AfkInfo afk_info = 41;
+  repeated db_player_sandbox_photo photos = 42;
+  repeated PlayerCommerce commerce_infos = 43;
+  PlayerHeadData head_data = 44;
+  repeated db_player_recover_count recover_counts = 45;
+}
+
+message SCOnlinePlayerSetName {
+  db_player player = 1;
+}
+
+message SCOnlinePlayerAddStamina {
+  db_player player = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlinePlayerSetGender {
+  db_player player = 1;
+}
+
+message SCOnlinePlayerSetAvatar {
+  uint32 avatar_id = 1;
+}
+
+message SCOnlinePlayerChangeAvatar {
+  uint32 avatar_id = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlinePlayerSetPartnerName {
+  db_player player = 1;
+}
+
+message SCOnlinePlayerChangeName {
+  db_player player = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlinePlayerChangePartnerName {
+  db_player player = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineMailEnter {
+  repeated DBPlayerMail mails = 1;
+}
+
+message SCOnlineMailRead {
+}
+
+message SCOnlineMailDelete {
+  repeated uint32 mail_ids = 1;
+}
+
+message SCOnlineMailGetTreasure {
+  repeated uint32 mail_ids = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineLoginCheck {
+  db_player_monthly_login monthly_login = 1;
+  db_player_sandbox_status sandbox_status = 2;
+  db_player player = 3;
+}
+
+message SCOnlineQuestionnaireFinish {
+  repeated uint32 operation_activity_ids = 1;
+}
+
+message SCOnlineMonthlyLoginGetTreasure {
+  db_player_monthly_login monthly_login = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineGiftCodeExchange {
+}
+
+message SCOnlineSettingSetDefaultVoice {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingSetUnitVoice {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingSetParam {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineUseTreasure {
+  db_player player = 1;
+  DBConsumes consumes = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated PlayerRecoverCount recover_counts = 4;
+}
+
+message SCOnlineGetRankingData {
+  repeated PlayerRankingScore ranking_data = 1;
+  PlayerRankingScore my_ranking_data = 2;
+}
+
+message SCOnlineMobileBindVerificationCodeGet {
+}
+
+message SCOnlineMobileBind {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineMobileUnbindVerificationCodeGet {
+}
+
+message SCOnlineMobileUnbind {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineEmailBindVerificationCodeGet {
+}
+
+message SCOnlineEmailBind {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineEmailUnbindVerificationCodeGet {
+}
+
+message SCOnlineEmailUnbind {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineSettingResetUnitVoice {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineQuestionnaireUrlGet {
+  string url = 1;
+}
+
+message SCOnlineGetChatMessageList {
+  repeated ChatMessage messages = 1;
+  PlayerChatRemind chat_remind = 2;
+}
+
+message SCOnlineSendChatMessage {
+  uint32 type = 1;
+  uint64 id = 2;
+  ChatMessage message = 3;
+  PlayerChatRemind chat_remind = 4;
+}
+
+message SCMarqueeNoticeUpdate {
+  string version = 1;
+}
+
+message SCOnlinePlayerPostData {
+  message BattleRequirement {
+    PlayerMatch match = 1;
+    PlayerContractActivity contract_activity = 2;
+    PlayerAutoChess auto_chess = 3;
+  }
+
+  db_player_battle_setting battle_setting = 1;
+  repeated DBTreasurePackage treasure_packages = 2;
+  uint64 roomid = 3;
+  BattleRequirement battle_requirement = 4;
+}
+
+message SCOnlinePlayerLevelChangePostData {
+  DBPlayerLevelChange player_level_change = 1;
+}
+
+message SCOnlinePostDataSync {
+  repeated uint32 types = 1;
+  repeated uint32 system_ids = 2;
+  repeated DBPlayerActivity activities = 3;
+  repeated DBPlayerOperationActivity operation_activities = 4;
+  repeated DBPlayerTechCategory tech_categories = 5;
+  DBPlayerTower tower = 6;
+  db_player_role_friendship role_friendship = 7;
+  repeated DBPlayerRoleStory role_friendship_stories = 8;
+  db_player_revelation revelation = 9;
+  DBPlayerCareer career = 10;
+  db_player_sandbox_status sandbox_status = 11;
+  db_player_sandbox_status_detail sandbox_status_detail = 12;
+  repeated db_player_achievement achievements = 13;
+  repeated db_player_sandbox_trophy trophies = 14;
+  repeated db_player_sandbox_photo photos = 15;
+  DBAchievementQuestStatus arena_quest_status = 16;
+  repeated db_player_contract_activity_quest contract_activity_quests = 17;
+  repeated db_player_abyss_guide_quest abyss_guide_quests = 18;
+  repeated DBBattlePassStatus battle_pass_statuses = 19;
+  db_player player = 20;
+  repeated DBPlayerTechCategory afk_tech_categories = 21;
+  repeated DBPlayerMainQuest main_quests = 22;
+  AfkInfo afk_info = 23;
+  db_player_dreamworld dreamworld = 24;
+  repeated db_player_commerce_career_quest commerce_career_quests = 26;
+  repeated db_player_recover_count recover_counts = 27;
+  PlayerMatch match = 28;
+  repeated PlayerContractActivitySimpleInfo contract_activities = 29;
+  repeated db_player_artifact_collection artifact_collections = 30;
+}
+
+message SCDebugReloadGameServer {
+}
+
+message SCDebugReloadDBServer {
+}
+
+message SCDebugServerTimeLock {
+  message Operator {
+    uint64 id = 1;
+    string name = 2;
+    sint64 expired_at = 3;
+    bool is_local = 4;
+  }
+
+  Operator operator = 1;
+  string message = 99;
+}
+
+message SCDebugSetServerTime {
+  uint32 timestamp = 1;
+  string message = 2;
+}
+
+message SCDebugRemoveAccountLink {
+}
+
+message SCDebugLog {
+  message Log {
+    string tab = 1;
+    string log = 2;
+  }
+
+  repeated Log logs = 1;
+}
+
+message SCDebugServerTime {
+  uint32 timestamp = 1;
+}
+
+message SCDebugOnlineBattleStart {
+  db_player_battle_setting battle_setting = 1;
+}
+
+message SCDebugOnlineMissionRand {
+  bytes mission = 1;
+}
+
+message SCDebugOnlineBattlePremake {
+  db_player_battle_setting battle_setting = 1;
+  repeated uint32 forbid_role_ids = 2;
+}
+
+message SCDebugSetPlayerLevel {
+  uint32 level = 1;
+}
+
+message SCDebugOnlineMainQuestUnlock {
+  repeated DBPlayerMainQuest main_quests = 1;
+  db_player player = 2;
+}
+
+message SCDebugMisc {
+}
+
+message SCDebugChangeGameStartProcedureChecked {
+}
+
+message SCDebugOnlineActivityQuestAllStar {
+}
+
+message SCDebugOnlineSandboxLauncherDivinationOpen {
+  db_player_sandbox_status status = 1;
+}
+
+message SCDebugOnlineUnit {
+  repeated DBPlayerRole roles = 1;
+  repeated DBPlayerRoleUnit units = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated db_player_unit_skin unit_skins = 4;
+}
+
+message SCDebugOnlineWeapon {
+  repeated DBPlayerWeapon weapons = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugOnlineCharm {
+  repeated DBPlayerCharm charms = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugOnlineAchievementQuest {
+  DBAchievementQuestStatus daily_quest_status = 1;
+  repeated db_player_achievement achievements = 2;
+}
+
+message SCDebugOnlineTech {
+  repeated DBPlayerTechCategory tech_categories = 1;
+  repeated db_player_tactics_skill tactics_skills = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCDebugOnlineTreasure {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugOnlineOperationActivity {
+  repeated DBPlayerOperationActivity operation_activities = 1;
+}
+
+message SCDebugOnlineSaveData {
+  message Namespace {
+    string name = 1;
+  }
+
+  message SaveData {
+    string name = 1;
+    string player_id = 2;
+    string player_level = 3;
+    repeated string scopes = 4;
+    uint32 updated_at = 5;
+  }
+
+  repeated Namespace namespaces = 1;
+  repeated SaveData save_datas = 2;
+}
+
+message SCDebugOnlineEvent {
+  bool result = 1;
+}
+
+message SCDebugOnlineFlow {
+  db_player player = 1;
+}
+
+message SCDebugOnlineSandbox {
+  repeated db_player_sandbox_trophy trophies = 1;
+  repeated db_player_sandbox_photo photos = 2;
+  db_player_sandbox_status sandbox_status = 3;
+}
+
+message SCDebugOnlineArena {
+  DBPlayerArena arena = 1;
+  DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCDebugOnlineFriendship {
+  db_player_role_friendship role_friendship = 1;
+  repeated DBPlayerRole roles = 2;
+  repeated DBPlayerRoleStory stories = 3;
+  DBTreasurePackage treasure_package = 4;
+}
+
+message SCDebugOnlineBattlePass {
+  DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCDebugOnlineActivity {
+}
+
+message SCDebugOnlineGuildChallenge {
+}
+
+message SCDebugOnlineReset {
+}
+
+message SCDebugOnlineTower {
+}
+
+message SCDebugOnlineGuildActivityGetKey {
+  uint64 key = 1;
+}
+
+message SCDebugOnlineLotteryActivity {
+  message DrawData {
+    int32 num = 1;
+    float prob = 2;
+  }
+
+  repeated DrawData data = 1;
+}
+
+message SCDebugMultipleSetBattleSetting {
+  uint64 roomid = 1;
+}
+
+message SCDebugAbyssCalQuestPoint {
+  int32 point = 1;
+  int32 base_score = 2;
+  int32 damage_score = 3;
+  int32 round_score = 4;
+  int32 turn_score = 5;
+  int32 survive_score = 6;
+  int32 hp_score = 7;
+  int32 goal_score = 8;
+}
+
+message SCDebugSingleBattleStart {
+  SCOnlineSingleBattleStart sub = 2;
+}
+
+message SCDebugAbyssUnlock {
+  repeated PlayerAbyssGuide guides = 1;
+  PlayerAbyssRank rank = 2;
+}
+
+message SCDebugAbyssChangeRank {
+  repeated PlayerAbyssGuide guides = 1;
+  PlayerAbyssRank rank = 2;
+}
+
+message SCDebugAbyssChangeRankingPoint {
+  repeated PlayerAbyssGuide guides = 1;
+  PlayerAbyssRank rank = 2;
+}
+
+message SCDebugCareerFinishQuest {
+}
+
+message SCDebugMultipleTopArenaApply {
+  bool apply = 1;
+  uint32 real_pvp_id = 2;
+}
+
+message SCDebugGuildBuildActivityChangeGuildBeacon {
+}
+
+message SCDebugMultipleModifyTopArenaScore {
+  uint32 score = 1;
+  uint32 rank = 2;
+  uint32 group_id = 3;
+  uint32 real_pvp_id = 4;
+  uint32 win_count = 5;
+  uint32 fail_count = 6;
+}
+
+message SCDebugAdventureLevelFinish {
+}
+
+message SCDebugClearGlobalQuest {
+}
+
+message SCDebugSetContractActivityRankPoint {
+}
+
+message SCDebugAbyssCalEnlargedRank {
+  message rank_info {
+    int64 true_rank_no = 1;
+    int64 rank_no = 2;
+    float rank_percent = 3;
+  }
+
+  repeated rank_info enlarged_rank = 1;
+  int64 total_rank_count = 2;
+}
+
+message SCDebugAfk {
+  uint32 tower_quest_id = 1;
+  repeated uint32 buff_id = 2;
+  AfkInfo afk_info = 3;
+  DBTreasurePackage treasure_package = 4;
+}
+
+message SCDebugOnlineGuildGrant {
+}
+
+message SCDebugRichMan {
+  uint32 activity_id = 1;
+  db_player_richman data = 2;
+  db_player_treasure money = 3;
+}
+
+message SCDebugOnlineArtifact {
+  PlayerArtifact artifact = 1;
+}
+
+message SCDebugSkipBPMode {
+}
+
+message SCDebugExpedition {
+  db_player_expedition expedition = 1;
+}
+
+message SCDebugOnlineDreamworld {
+  db_player_dreamworld dreamworld = 2;
+}
+
+message SCDebugOnlineContractActivity {
+  PlayerContractActivity player_contract_activity = 1;
+}
+
+message SCDebugOnlineAbyssChallenge {
+  PlayerAbyssChallenge abyss_challenge = 1;
+}
+
+message SCDebugOnlineRoyri {
+  db_player_ryori_cook cook = 1;
+}
+
+message SCDebugOnlineCommerce {
+  PlayerCommerce commerce = 1;
+}
+
+message SCDebugOnlineInfiniteChallenge {
+  repeated PlayerInfiniteChallengeArea areas = 1;
+}
+
+message SCDebugOnlineWorldBoss {
+  PlayerWorldBoss world_boss = 1;
+}
+
+message SCDebugOnlineMatch {
+  PlayerMatch match = 1;
+}
+
+message SCDebugOnlineAutoChess {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCDebugOnlineAdventureSetExp {
+  DBPlayerAdventure adventure = 1;
+}
+
+message SCOnlineMainQuestEnter {
+  repeated DBPlayerMainQuest main_quests = 1;
+  repeated uint32 unlocked_system_ids = 2;
+}
+
+message SCOnlineMainQuestStart {
+}
+
+message SCOnlineMainQuestChapterGetTreasure {
+  DBTreasurePackage treasure = 1;
+}
+
+message SCOnlineMainQuestGetBonus {
+  DBTreasurePackage treasure_package = 1;
+  DBPlayerMainQuest main_quest = 2;
+  repeated uint32 unlocked_system_ids = 3;
+  bool unlock_next_chapter = 4;
+  bool newChallenge = 5;
+  uint64 main_quest_not_play_finished_scenario_id = 6;
+  repeated uint32 meet_role_ids = 7;
+  string str_meet_role_ids = 8;
+  db_player player = 9;
+  repeated DBPlayerActivity unlocked_activity_datas = 10;
+  repeated uint32 unlocked_intelligence_ids = 11;
+  repeated uint32 unlocked_sandbox_route_ids = 12;
+}
+
+message SCOnlineMainQuestFinishedScenarioPlayEnd {
+}
+
+message SCOnlineMainQuestChapterGetPerfectTreasure {
+  DBTreasurePackage treasure_package = 1;
+  uint32 chapter_id = 2;
+}
+
+message SCOnlineMainQuestVote {
+  DBTreasurePackage treasure_package = 1;
+  DBPlayerMainQuest main_quest = 2;
+  repeated uint32 unlocked_system_ids = 3;
+  bool unlock_next_chapter = 4;
+  OnlineGlobalVote vote_result = 5;
+  db_player player = 6;
+  repeated uint32 unlocked_sandbox_route_ids = 7;
+}
+
+message SCOnlineMainQuestSyncVote {
+  OnlineGlobalVote vote_result = 1;
+}
+
+message SCOnlineMainQuestChapterBuy {
+  DBPlayerMainQuest main_quest = 1;
+  DBConsumes ticket_consumes = 2;
+}
+
+message SCOnlineMainQuestChooseContract {
+  DBPlayerMainQuest main_quest = 1;
+}
+
+message SCOnlineMainQuestGetChapterQuestTreasure {
+  DBTreasurePackage treasure_package = 1;
+  DBPlayerMainQuest main_quest = 2;
+}
+
+message SCOnlineMainQuestGetAllChapterQuestTreasures {
+  DBTreasurePackage treasure_package = 1;
+  DBPlayerMainQuest main_quest = 2;
+}
+
+message SCOnlineBattleStart {
+  db_player_battle_setting battle_setting = 1;
+}
+
+message SCOnlineBattleEnd {
+  message changed_player_exp {
+    sint32 old_exp = 1;
+    uint32 old_level = 2;
+    sint32 changed_exp = 3;
+  }
+
+  message main_quest_data {
+    DBTreasurePackage treasure_package = 1;
+    DBPlayerMainQuest main_quest = 2;
+    repeated uint32 unlocked_system_ids = 4;
+    bool unlock_next_chapter = 5;
+    bool newChallenge = 6;
+    bool unlock_hard = 7;
+    repeated uint32 meet_role_ids = 8;
+    string str_meet_role_ids = 9;
+    repeated DBPlayerActivity unlocked_activity_datas = 10;
+    repeated uint32 unlocked_intelligence_ids = 11;
+    repeated uint32 unlocked_sandbox_route_ids = 12;
+  }
+
+  message activityData {
+    DBTreasurePackage treasure_package = 1;
+    DBPlayerActivity data = 2;
+    DBPlayerMainQuest unlocked_main_quest = 3;
+    repeated DBPlayerActivity unlocked_activities = 4;
+    bool is_first = 5;
+  }
+
+  message ArenaData {
+    DBTreasurePackage treasure_package = 1;
+    repeated db_player_arena_record records = 2;
+    DBPlayerArena data = 3;
+    int32 destroy_base = 4;
+    int32 destroy_building = 5;
+    int32 destroy_unit = 6;
+    int32 offence_coefficient = 7;
+    int32 all_building = 8;
+    int32 all_unit = 9;
+    int32 building_score = 10;
+    int32 score = 11;
+    int32 coin = 12;
+    repeated ArenaEnemy enemies = 13;
+    int32 old_score = 14;
+  }
+
+  message towerData {
+    DBPlayerTower tower = 1;
+    DBPlayerTowerQuest tower_quest = 2;
+    DBTreasurePackage treasure_package = 3;
+    bool cleared_disable_buff_floor = 4;
+    repeated DBPlayerTowerQuest unlock_tower_quest = 5;
+    repeated uint32 unlocked_system_ids = 6;
+  }
+
+  message roleFriendshipStoryData {
+    db_player_role_story story = 1;
+    DBTreasurePackage treasure_package = 2;
+    repeated DBPlayerRoleStory stories = 3;
+    bool isFirstClear = 4;
+    bool isClear = 5;
+    uint32 friendshipLevelChanged = 6;
+    DBTreasurePackage Level_up_treasure_package = 7;
+    db_player_role role = 8;
+  }
+
+  message guildChallengeBossData {
+    uint32 leftBossBattlePower = 1;
+    uint32 trueBattlePower = 2;
+    uint32 score = 3;
+    bool isChallengeEnd = 4;
+    bool notInGuild = 5;
+    DBTreasurePackage treasure_package = 6;
+  }
+
+  message contractActivityData {
+    uint32 contract_activity_id = 1;
+    uint32 old_max_hard = 2;
+    uint32 max_hard = 3;
+    int32 quest_old_max_score = 4;
+    int32 score = 5;
+    int32 base_score = 6;
+    int32 damage_score = 7;
+    int32 round_score = 8;
+    int32 turn_score = 9;
+    int32 survival_score = 10;
+    int32 hp_score = 11;
+    bool is_battle_time_out = 12;
+    bool is_first_pass = 13;
+    repeated uint32 unlocked_quest_ids = 14;
+    int32 history_score = 15;
+  }
+
+  message abyssData {
+    uint32 last_quest_passed_count = 1;
+    uint32 cur_quest_passed_count = 2;
+    int32 quest_old_max_score = 3;
+    int32 score = 4;
+    PlayerAbyssRank abyss_rank = 5;
+    repeated PlayerAbyssGuide changed_guides = 6;
+    int32 base_score = 7;
+    int32 damage_score = 8;
+    int32 round_score = 9;
+    int32 turn_score = 10;
+    int32 survival_score = 11;
+    int32 hp_score = 12;
+    bool is_battle_time_out = 13;
+    bool is_first_pass = 14;
+    uint32 unlocked_quest_id = 15;
+    int32 history_score = 16;
+    int32 goal_score = 17;
+    PlayerAbyssChallenge challenge = 18;
+  }
+
+  message gachaData {
+    DBTreasurePackage treasure_package = 1;
+    DBPlayerGachaStatus gacha_status = 2;
+  }
+
+  message afkTowerData {
+    AfkInfo afk_info = 1;
+    DBTreasurePackage treasure_package = 2;
+  }
+
+  message expeditionData {
+    db_player_expedition expedition = 1;
+    bool is_pass = 2;
+    DBTreasurePackage treasure_package = 3;
+  }
+
+  message infinite_challenge_data {
+    DBTreasurePackage treasure_package = 1;
+    repeated PlayerInfiniteChallengeArea areas = 2;
+    bool unlock_next_license = 3;
+    bool unlock_next_area = 4;
+    bool is_first_clear = 5;
+  }
+
+  message worldBossData {
+    int64 score = 1;
+    bool is_battle_time_out = 2;
+    PlayerWorldBoss world_boss = 3;
+    uint32 grade_id = 4;
+  }
+
+  message matchData {
+    PlayerMatch match = 1;
+    DBTreasurePackage treasure_package = 2;
+  }
+
+  message autoChessData {
+    PlayerAutoChess auto_chess = 1;
+    DBTreasurePackage treasure_package = 2;
+  }
+
+  bool is_win = 1;
+  db_player_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  repeated DBPlayerChangedRole changed_roles = 4;
+  changed_player_exp changed_exp = 5;
+  main_quest_data main_quest = 6;
+  activityData activity_data = 7;
+  db_player player = 8;
+  uint32 quest_template_id = 9;
+  ArenaData arena_data = 10;
+  towerData tower_data = 11;
+  roleFriendshipStoryData role_friendship_story_data = 12;
+  sint32 changed_friendship_exp = 13;
+  guildChallengeBossData guild_challenge_boss_data = 14;
+  contractActivityData contract_activity_data = 15;
+  abyssData abyss_data = 16;
+  gachaData gacha_data = 17;
+  DBPlayerAdventure adventure_data = 18;
+  afkTowerData afk_data = 19;
+  expeditionData expedition_data = 20;
+  infinite_challenge_data infinite_challenge = 21;
+  worldBossData world_boss_data = 22;
+  matchData match_data = 23;
+  autoChessData auto_chess_data = 25;
+  bytes report = 97;
+  bool unmarshal_report_error = 98;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+}
+
+message SCOnlineBattlePremake {
+  message SpawnUnit {
+    uint32 spawn_index = 1;
+    uint32 unit_id = 2;
+    battle.BattleUnit.Type type = 3;
+  }
+
+  db_player_battle_setting battle_setting = 1;
+  repeated uint32 forbid_role_ids = 2;
+  bytes defence_formation = 3;
+  repeated SpawnUnit units = 4;
+  repeated uint32 forbid_weapon_ids = 5;
+  repeated uint32 forbid_charm_ids = 6;
+}
+
+message SCOnlineBattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCOnlineBattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCOnlineBattleBackErr {
+}
+
+message SCOnlineSingleBattlePremake {
+  SCOnlineBattlePremake sub = 1;
+}
+
+message SCOnlineSingleBattleStart {
+  SCOnlineBattleStart sub = 1;
+  bytes report = 2;
+  BattleServerReturn battle_return = 3;
+}
+
+message SCOnlineSingleBattleEnd {
+  SCOnlineBattleEnd sub = 1;
+}
+
+message SCOnlineSingleBattleMessage {
+  uint32 command_start = 1;
+  uint32 result = 2;
+  SingleBattle.Type type = 3;
+  bytes commands = 4;
+  bytes report = 5;
+  bool is_end = 6;
+  BattleResultType battle_result = 7;
+  BattleServerReturn battle_return = 8;
+}
+
+message SCOnlineSingleBattleBack {
+  SCOnlineBattleBack sub = 1;
+  BattleServerReturn battle_return = 3;
+}
+
+message SCOnlineSandboxLaunch {
+  db_player_sandbox_status status = 1;
+  db_player_sandbox_status_detail status_detail = 2;
+  DBConsumes ticket_consumes = 3;
+  uint32 result_chapter_times = 4;
+  uint32 sandbox_id = 5;
+  PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Mode sandbox2_mode = 6;
+}
+
+message SCOnlineSandboxStatusProcessing {
+  db_player_sandbox_status status = 1;
+  db_player_sandbox_status_detail status_detail = 2;
+  uint32 sandbox_id = 3;
+}
+
+message SCOnlineSandboxEntryEnter {
+  db_character character = 1;
+  db_sandbox2_character sandbox2_character = 2;
+  DBPlayerSandboxStatus sandbox_status = 3;
+  bool has_give_up_unlocked = 4;
+  repeated uint32 history_sandbox_ending_ids = 5;
+  bool is_sandbox2_free_unlocked = 6;
+}
+
+message SCOnlineSandboxTechNodeUnlock {
+  db_player_sandbox_status sandbox_status = 1;
+}
+
+message SCOnlineSandboxResulted {
+  db_player_sandbox_status sandbox_status = 1;
+  uint32 sandbox_id = 2;
+  db_player_sandbox_status_detail sandbox_status_detail = 3;
+}
+
+message SCOnlineSandboxMemoirLock {
+  db_player_sandbox_memoir sandbox_memoir = 1;
+}
+
+message SCOnlineSandboxMemoirEnter {
+  repeated db_player_sandbox_memoir sandbox_memoirs = 1;
+}
+
+message SCOnlineSandboxMemoirPlay {
+  PlayerSandboxStatusDetailData.Sandbox1.ResultData record = 1;
+}
+
+message SCOnlineSandboxMemoirDelete {
+  uint32 id = 1;
+}
+
+message SCOnlineSandboxTourLevelTreasureGet {
+  repeated uint32 level_ids = 1;
+  DBTreasurePackage tp = 2;
+  db_player_sandbox_status sandbox_status = 3;
+}
+
+message SCOnlineSandboxFix {
+  uint32 sandbox_id = 1;
+}
+
+message SCOnlineSandboxUpdateLogEnter {
+}
+
+message SCOnlineSandboxUpdateLogRead {
+  db_player_sandbox_status sandbox_status = 1;
+}
+
+message SCOnlineSandboxChapterSaveDataListGet {
+  repeated db_player_sandbox_save_data save_data_list = 1;
+}
+
+message SCOnlineSandboxChapterSaveDataSetName {
+  db_player_sandbox_save_data save_data = 1;
+}
+
+message SCOnlineSandboxChapterSaveDataGetBonus {
+  db_player_sandbox_save_data save_data = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCOnlineUnitSkinChange {
+  OnlineUnitSkinChange.Type type = 1;
+  uint32 skin_id = 2;
+  uint32 unit_id = 3;
+  DBPlayerRoleUnit unit = 4;
+}
+
+message SCOnlineUnitSkinActive {
+  db_player_unit_skin unit_skin = 1;
+}
+
+message SCOnlineUpgradeRoleStar {
+  DBPlayerRoleUnit unit = 1;
+  DBConsumes consumes = 2;
+  repeated db_player_unit_skin unit_skins = 3;
+}
+
+message SCOnlineUpgradeRoleRank {
+  repeated DBPlayerRoleUnit units = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineChooseRankSkill {
+  DBPlayerRoleUnit unit = 1;
+  repeated DBPlayerRoleUnit units = 3;
+}
+
+message SCOnlineUseRoleUnitExp {
+  DBPlayerRole role = 1;
+  repeated DBPlayerRoleUnit units = 2;
+  DBConsume consume = 3;
+}
+
+message SCOnlineUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCOnlineStudyRankSkill {
+  DBPlayerRoleUnit unit = 1;
+  DBConsume consume = 2;
+  repeated DBPlayerRoleUnit units = 3;
+}
+
+message SCOnlineUnitCharmReplace {
+  uint32 charm_new_id = 1;
+  uint32 charm_old_id = 2;
+  uint32 unit_id = 3;
+}
+
+message SCOnlineUnitPieceRecycle {
+  DBTreasurePackage treasure_package = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineUnitChangeCurrentUnit {
+  DBPlayerRole role = 1;
+  uint32 weapon_main_id = 2;
+  uint32 weapon_offhand_id = 3;
+  uint32 charm_id = 4;
+  uint32 unit_id = 5;
+}
+
+message SCOnlineUnitEquipmentAutoEquip {
+  uint32 unit_id = 1;
+  repeated DBPlayerWeapon weapons = 2;
+  DBPlayerCharm charm = 3;
+}
+
+message SCOnlineUnitActivateModuleSkill {
+  DBPlayerRoleUnit unit = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineUnitBoost {
+  DBPlayerRole role = 1;
+  repeated DBPlayerRoleUnit units = 2;
+  DBConsume consume = 3;
+  repeated db_player_unit_skin unit_skins = 4;
+}
+
+message SCOnlineUnitRolesCustomTagsSet {
+  repeated DBPlayerRole roles = 1;
+}
+
+message SCOnlineUnitPresetEquipmentSet {
+  db_player_role_unit_preset_equipment preset_equipment = 1;
+}
+
+message SCOnlineUnitPresetEquipmentApply {
+  repeated DBPlayerWeapon weapons = 1;
+  repeated DBPlayerCharm charms = 2;
+}
+
+message SCOnlineUnitPresetSkillSet {
+  db_player_role_unit_preset_skill preset_skill = 1;
+}
+
+message SCOnlineUnitPresetSkillApply {
+  DBPlayerRoleUnit unit = 1;
+}
+
+message SCOnlineUnitPresetClear {
+  DBPlayerRoleUnit unit = 1;
+}
+
+message SCOnlineUnitPieceExchange {
+  DBConsumes consumes = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineUnitPreview {
+  DBPlayerCard.RoleUnitDisplayed role_unit = 1;
+}
+
+message SCOnlineUnitRankSet {
+  db_player player = 1;
+  map<uint32, uint32> rank_role_units_rankings = 2;
+}
+
+message SCOnlineUnitUIEnter {
+  db_player player = 1;
+  map<uint32, uint32> rank_role_units_rankings = 2;
+}
+
+message SCOnlineUnitRankPreviewUnpublic {
+  db_player player = 1;
+}
+
+message SCOnlineActivityUIEnter {
+  repeated DBPlayerActivity activities = 1;
+}
+
+message SCOnlineActivityEnter {
+}
+
+message SCOnlineActivityQuestStart {
+  db_player_activity_quest activity_quest = 1;
+}
+
+message SCOnlineActivityQuestRefresh {
+  db_player_activity_quest activity_quest = 1;
+}
+
+message SCOnlineActivityQuestGiveUp {
+  db_player_activity activity = 1;
+}
+
+message SCOnlinePracticeStart {
+  db_player_activity activity = 1;
+  db_player player = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated DBPlayerChangedRole changed_roles = 4;
+  SCOnlineBattleEnd.changed_player_exp changed_exp = 5;
+  sint32 changed_friendship_exp = 6;
+  repeated db_player_activity_quest activity_quests = 7;
+}
+
+message SCOnlinePracticeLogListGet {
+  repeated db_player_practice_log logs = 1;
+}
+
+message SCOnlinePracticeFinishUseTicket {
+  db_player_activity activity = 1;
+  db_player player = 2;
+  DBTreasurePackage treasure_package = 3;
+  repeated DBPlayerChangedRole changed_roles = 4;
+  SCOnlineBattleEnd.changed_player_exp changed_exp = 5;
+  DBConsume ticket_consume = 6;
+  repeated db_player_activity_quest activity_quests = 7;
+}
+
+message SCOnlineActivityGetAdaptiveQuest {
+  db_player_activity_quest activity_quest = 1;
+}
+
+message SCOnlineActivityGetMultipleReward {
+  db_player_activity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineShopEnter {
+  repeated db_player_shop shops = 1;
+}
+
+message SCOnlineShopBuy {
+  db_player_shop shop = 1;
+  DBTreasurePackage treasure_package = 2;
+  DBConsume consume = 3;
+  string order_id = 4;
+  bool is_refresh = 5;
+}
+
+message SCOnlineShopGet {
+  db_player_shop shop = 1;
+}
+
+message SCOnlineShopPurchase {
+  DBTreasurePackage treasure_package = 1;
+  repeated db_player_shop shops = 2;
+}
+
+message SCOnlineShopMultipleBuy {
+  db_player_shop shop = 1;
+  repeated DBTreasurePackage treasure_packages = 2;
+  repeated DBConsume consumes = 3;
+  bool is_refresh = 4;
+}
+
+message SCOnlineGachaEnter {
+  DBPlayerGachaStatus status = 1;
+}
+
+message SCOnlineGacha {
+  uint32 id = 1;
+  DBPlayerGachaStatus status = 2;
+  repeated DBSimpleTreasure result = 3;
+  DBTreasurePackage treasure_package = 4;
+  DBConsumes consumes = 5;
+  DBTreasurePackage extra_treasure_package = 6;
+}
+
+message SCOnlineGachaLogGet {
+  uint32 gacha_times = 1;
+  uint32 gacha_ssr_count = 2;
+  repeated db_player_gacha_log logs = 3;
+  sint32 type = 4;
+}
+
+message SCOnlineGachaSelectUp {
+  db_player_gacha_pool pool = 1;
+}
+
+message SCOnlineGachaSelectPackage {
+  db_player_gacha_pool pool = 1;
+}
+
+message SCOnlineWarehouseEnter {
+  repeated db_player_treasure treasures = 1;
+  repeated DBConsume expired_treasures = 2;
+  sint32 recover_stamina = 3;
+  repeated PlayerRecoverCount recover_counts = 4;
+}
+
+message SCOnlineGameStartProcedureChangePostData {
+  uint32 game_start_procedure_checked = 1;
+}
+
+message SCOnlineGameStartProcedureChecked {
+}
+
+message SCOnlineGameStartProcedureGacha {
+  DBTreasurePackage treasure_package = 1;
+  DBConsume ticket_consume = 2;
+}
+
+message SCOnlineTutorialUpdatePostData {
+  uint32 tutorial = 1;
+}
+
+message SCOnlineTutorialUpdate {
+  uint32 tutorial = 1;
+}
+
+message SCOnlineStamina {
+  sint32 stamina = 1;
+  uint32 stamina_recover_at = 2;
+  uint32 server_timestamp = 99;
+  sint32 server_time_offset = 100;
+}
+
+message SCOnlineTacticsSkillEnter {
+  repeated db_player_tactics_skill tactics_skills = 1;
+}
+
+message SCOnlineTacticsSkillEquip {
+  repeated db_player_tactics_skill tactics_skills = 1;
+}
+
+message SCOnlineTutorialBitUpdate {
+  string tutorial_ids = 1;
+}
+
+message SCOnlineScenarioPlay {
+}
+
+message SCOnlineNavigationKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message SCOnlineGoodReviewGuideUpdateTimes {
+  PlayerSetting setting = 1;
+}
+
+message SCOnlineGetBannerIds {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineBattleGuidebookTrigger {
+  db_player_battle_guidebook battle_guidebook = 1;
+}
+
+message SCOnlineBattleGuidebookEnter {
+  db_player_battle_guidebook battle_guidebook = 1;
+}
+
+message SCOnlinePlayerMessageLike {
+}
+
+message SCOnlinePlayerMessageGetList {
+  message msg {
+    string id = 1;
+    uint64 owner_id = 2;
+    int64 liked_count = 3;
+    bool liked = 4;
+  }
+
+  repeated msg message_infos = 1;
+}
+
+message SCOnlinePlayerMessageUnlike {
+}
+
+message SCOnlinePlayerMessageGetLikeNotifyList {
+  message notify {
+    string msg_id = 1;
+    uint64 iduser = 2;
+    uint32 timestamp = 3;
+    string nick_name = 4;
+    uint32 msg_type = 5;
+    uint32 battle_type = 6;
+    uint32 template_id = 7;
+    uint32 quest_id = 8;
+  }
+
+  repeated notify notify_list = 1;
+}
+
+message SCOnlineShare {
+}
+
+message SCOnlineBehaviourDo {
+}
+
+message SCOnlineConditionCheck {
+  repeated uint32 ids = 3;
+}
+
+message SCOnlineWeaponLevelUp {
+  DBPlayerWeapon weapon = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponUpgradeStar {
+  DBPlayerWeapon weapon = 1;
+  repeated uint32 consume_weapon_ids = 2;
+  DBConsumes consumes = 3;
+}
+
+message SCOnlineWeaponBreak {
+  DBPlayerWeapon weapon = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponLock {
+  DBPlayerWeapon weapon = 1;
+}
+
+message SCOnlineWeaponsRecycle {
+  DBTreasurePackage treasure_package = 1;
+  repeated uint32 weapon_ids = 2;
+}
+
+message SCOnlineWeaponEnchanting {
+  DBPlayerWeapon weapon = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineWeaponEnchantingSelect {
+  DBPlayerWeapon weapon = 1;
+}
+
+message SCOnlineWeaponBoost {
+  DBPlayerWeapon weapon = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineAchievementQuestEnter {
+  DBAchievementQuestStatus daily_quest_status = 1;
+  repeated db_player_achievement achievements = 2;
+}
+
+message SCOnlineGetAchievementTreasure {
+  DBTreasurePackage treasure_package = 1;
+  repeated db_player_achievement achievements = 2;
+}
+
+message SCOnlineGetAchievementQuestTreasure {
+  DBTreasurePackage treasure_package = 1;
+  DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineGetAchievementQuestPointTreasure {
+  DBTreasurePackage treasure_package = 1;
+  DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineGetAchievementQuestAllTreasure {
+  DBTreasurePackage treasure_package = 1;
+  DBAchievementQuestStatus quest_status = 2;
+}
+
+message SCOnlineSandboxCollectionEnter {
+  repeated db_player_sandbox_trophy trophies = 1;
+  repeated db_player_sandbox_photo photos = 2;
+  repeated db_character_achievement achievements = 3;
+  DBSandboxStatistics sandbox_statistics = 4;
+}
+
+message SCOnlineGetSandboxTrophyTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_sandbox_trophy trophy = 2;
+}
+
+message SCOnlineGetSandboxPhotoTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_sandbox_photo photo = 2;
+}
+
+message SCOnlineIntelligenceEnter {
+  repeated db_player_intelligence intelligences = 1;
+}
+
+message SCOnlineBattlePassEnter {
+  DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetBattlePassQuestExp {
+  DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetAllBattlePassQuestExp {
+  DBBattlePassStatus battle_pass_status = 1;
+}
+
+message SCOnlineGetBattlePassLevelTreasure {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineGetAllBattlePassLevelTreasure {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineBuyBattlePassLevel {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineGetBattlePassLoopTreasure {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineBuyBattlePassExp {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineBattlePassDraw {
+  DBBattlePassStatus battle_pass_status = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message ArenaEnemy {
+  uint32 idx = 1;
+  sint32 score = 2;
+  DBSimplePlayer player = 3;
+}
+
+message SCOnlineArenaEnter {
+  DBPlayerArena arena = 1;
+  DBAchievementQuestStatus quest_status = 2;
+  repeated ArenaEnemy enemies = 3;
+  repeated db_player_arena_record records = 4;
+  OnlineArenaSeasonResult season_result = 5;
+  uint32 latest_defence_count = 6;
+}
+
+message SCOnlineArenaRefresh {
+  DBPlayerArena arena = 1;
+  repeated ArenaEnemy enemies = 2;
+  repeated db_player_arena_record records = 3;
+  DBConsume consume = 4;
+}
+
+message SCOnlineArenaSaveDefence {
+  DBPlayerArena arena = 1;
+}
+
+message SCOnlineArenaUpgradeBuilding {
+  DBPlayerArena arena = 1;
+  int32 cost = 2;
+}
+
+message SCOnlineArenaLevelReset {
+  DBPlayerArena arena = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineArenaDowngradeBuilding {
+  DBPlayerArena arena = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineArenaGetRecordList {
+  uint32 latest_defence_count = 1;
+  repeated db_player_arena_record records = 2;
+}
+
+message SCOnlineCharmLevelUp {
+  DBPlayerCharm charm = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineCharmLock {
+  DBPlayerCharm charm = 1;
+}
+
+message SCOnlineCharmsRecycle {
+  DBTreasurePackage treasure_package = 1;
+  repeated uint32 charm_ids = 2;
+}
+
+message SCOnlineCharmDiscard {
+  DBPlayerCharm charm = 1;
+}
+
+message SCOnlineCharmBatchLevelUp {
+  repeated DBPlayerCharm charms = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineCharmEntryReforge {
+  DBPlayerCharm charm = 1;
+  repeated DBConsume consumes = 2;
+}
+
+message SCOnlineCharmEntryReforgeSelect {
+  DBPlayerCharm charm = 1;
+}
+
+message SCOnlineCharmExchange {
+  DBPlayerCharm charm = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineTowerEnter {
+  DBPlayerTower tower = 1;
+  repeated DBPlayerTowerQuest tower_quest = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTowerQuestStart {
+  bool is_changed = 1;
+}
+
+message SCOnlineTowerFloorTreasure {
+  DBPlayerTower tower = 1;
+  DBTreasurePackage treasure_package = 2;
+  repeated DBPlayerTowerQuest tower_quest = 3;
+  bool is_changed = 4;
+  repeated uint32 unlocked_system_ids = 5;
+}
+
+message SCOnlineTowerWeekTreasure {
+  DBTreasurePackage treasure_package = 1;
+  string got_week_treasure = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTowerWeekTreasureAll {
+  DBTreasurePackage treasure_package = 1;
+  string got_week_treasure = 2;
+  bool is_changed = 3;
+}
+
+message SCOnlineTechEnter {
+  repeated DBPlayerTechCategory tech_categories = 1;
+  repeated db_player_tactics_skill tactics_skills = 2;
+}
+
+message SCOnlineTechNodeLevelUp {
+  DBPlayerTechCategory tech_category = 1;
+  DBConsumes consumes = 3;
+  db_player_tactics_skill tactics_skill = 4;
+  uint32 prev_tactics_skill_id = 5;
+}
+
+message SCOnlineAFKTechEnter {
+  repeated DBPlayerTechCategory tech_categories = 1;
+  repeated db_player_tactics_skill tactics_skills = 2;
+}
+
+message SCOnlineAFKTechNodeLevelUp {
+  DBPlayerTechCategory tech_category = 1;
+  DBConsumes consumes = 3;
+  db_player_tactics_skill tactics_skill = 4;
+  uint32 prev_tactics_skill_id = 5;
+}
+
+message SCOnlineOperationActivityGet {
+  DBPlayerOperationActivity activity = 1;
+}
+
+message SCOnlineOperationActivityGetQuestTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetDayTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetDayTreasures {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityEnter {
+  repeated DBPlayerOperationActivity activities = 1;
+}
+
+message SCOnlineOperationActivityUrlGet {
+  string url = 1;
+}
+
+message SCOnlineOperationActivityGetTreasureCallback {
+  sint32 result = 1;
+}
+
+message SCOnlineOperationActivityGetSpecialDayTreasure {
+  DBPlayerOperationActivity activity = 1;
+}
+
+message SCOnlineOperationActivitySaveExtraData {
+  uint32 id = 1;
+  string extra_data = 2;
+}
+
+message SCOnlineOperationActivityGetQuestAllTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetGroupTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetPointTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineOperationActivityGetAllPointTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineElysiumEnter {
+  OnlineEvent event = 1;
+  repeated db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineEventTrigger {
+  OnlineEvent event = 1;
+  repeated db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineCustomEventTrigger {
+  OnlineEvent event = 1;
+  repeated db_player_elysium_perform elysium_performs = 2;
+}
+
+message SCOnlineEventForceTrigger {
+}
+
+message SCOnlineRoleFriendshipUIEnter {
+  db_player_role role = 1;
+  uint32 friendshipLevelChanged = 2;
+  DBTreasurePackage treasure_package = 3;
+  DBPlayerChangedRoleFriendship friendshipChanged = 4;
+  db_player_role_friendship role_friendship = 5;
+}
+
+message SCOnlineRoleFriendshipStoryUIEnter {
+  repeated DBPlayerRoleStory stories = 1;
+}
+
+message SCOnlineRoleNicknameChange {
+  db_player_role role = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineRoleNicknameReset {
+  db_player_role role = 1;
+}
+
+message SCOnlineRoleFriendshipInteract {
+  db_player_role role = 1;
+  db_player_role_friendship role_friendship = 2;
+  uint32 friendshipLevelChanged = 3;
+  DBTreasurePackage treasure_package = 4;
+}
+
+message SCOnlineRoleFriendshipStoryStart {
+  db_player_role_story story = 1;
+}
+
+message SCOnlineRoleFriendshipStoryNext {
+  db_player_role_story story = 1;
+  DBTreasurePackage treasure_package = 2;
+  repeated DBPlayerRoleStory stories = 3;
+  bool isClear = 4;
+  bool isFirstClear = 5;
+  uint32 friendshipLevelChanged = 6;
+  DBTreasurePackage Level_up_treasure_package = 7;
+  db_player_role role = 8;
+}
+
+message SCOnlineCardEnter {
+  uint64 iduser = 1;
+  DBPlayerCard player_card = 2;
+  repeated db_player_sandbox_trophy sandbox_trophies = 3;
+  repeated db_player_head_portrait head_portraits = 4;
+  repeated db_player_head_portrait_bg head_portrait_bgs = 5;
+  repeated db_player_head_portrait_frame head_portrait_frames = 6;
+  repeated db_player_title titles = 7;
+  db_player player = 8;
+  repeated db_player_card_bg bgs = 9;
+}
+
+message SCOnlineCardHeadPortraitChange {
+  OnlineCardHeadPortraitChange.Type type = 1;
+  uint32 id = 2;
+}
+
+message SCOnlineCardSandboxTrophiesModify {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineCardRoleUnitsModify {
+  repeated uint32 ids = 1;
+}
+
+message SCOnlineCardKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message SCOnlineFriendEnter {
+  db_player_friend_status status = 1;
+  repeated PlayerFriend friends = 2;
+  repeated DBSimplePlayer block_players = 3;
+}
+
+message SCOnlineFriendRecommendedGet {
+  repeated DBSimplePlayer players = 1;
+}
+
+message SCOnlineFriendApplyListGet {
+  repeated PlayerFriendApply applies = 1;
+}
+
+message SCOnlineFriendApply {
+  db_player_friend_status status = 1;
+}
+
+message SCOnlineFriendApplyPass {
+  repeated PlayerFriend friends = 1;
+  repeated PlayerFriendApply applies = 2;
+  bool is_all = 3;
+}
+
+message SCOnlineFriendApplyDecline {
+  bool is_all = 1;
+}
+
+message SCOnlineFriendBlock {
+  DBSimplePlayer block_player = 1;
+}
+
+message SCOnlineFriendUnblock {
+}
+
+message SCOnlineFriendPointOperate {
+  db_player_friend_status status = 1;
+  PlayerFriend friend = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineFriendPointAllSend {
+  repeated PlayerFriend friends = 1;
+}
+
+message SCOnlineFriendPointAllReceive {
+  db_player_friend_status status = 1;
+  repeated PlayerFriend friends = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineFriendSearch {
+  DBSimplePlayer player = 1;
+}
+
+message SCOnlineFriendDelete {
+}
+
+message SCOnlineFriendPostData {
+  sint32 apply_count = 1;
+  PlayerFriend friend = 2;
+  uint64 blocked_player_id = 3;
+  uint64 unblock_player_id = 4;
+  uint64 delete_player_id = 5;
+}
+
+message SCOnlineFriendBattleApply {
+  db_player_friend_status self_status = 2;
+  bool bpModel = 3;
+}
+
+message SCOnlineFriendBattleApplyCancel {
+  db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleApplyReply {
+  FriendBattleApplyReplyType.Type reply = 1;
+  db_player_friend_status self_status = 3;
+  bool bpModel = 4;
+}
+
+message SCOnlineFriendBattleStartPostData {
+  db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleEndPostData {
+  db_player_friend_status self_status = 2;
+}
+
+message SCOnlineFriendBattleSelfInfoPostData {
+  db_player_friend_status status = 1;
+  bool bpModel = 2;
+}
+
+message SCOnlineGuildCreate {
+  DBGuild guild = 1;
+  db_player player = 2;
+}
+
+message SCOnlineGuildJoin {
+  DBGuild guild = 1;
+}
+
+message SCOnlineGuildLeave {
+  db_player player = 1;
+}
+
+message SCOnlineGuildSearch {
+  repeated DBSimpleGuild guilds = 1;
+}
+
+message SCOnlineGuildRecommendedGet {
+  repeated DBSimpleGuild guilds = 1;
+}
+
+message SCOnlineGuildChangeName {
+  db_guild guild = 1;
+  DBConsume consume = 2;
+}
+
+message SCOnlineGuildInfoChange {
+  db_guild guild = 1;
+}
+
+message SCOnlineGuildApplyPass {
+  db_guild guild = 1;
+  repeated DBGuild.Member members = 2;
+}
+
+message SCOnlineGuildApplyDecline {
+}
+
+message SCOnlineGuildMemberRoleGive {
+  repeated DBGuild.Member members = 1;
+}
+
+message SCOnlineGuildMemberKick {
+  db_guild guild = 1;
+  DBGuild.Member member = 2;
+}
+
+message SCOnlineGuildEnter {
+  DBGuild guild = 1;
+  db_player player = 2;
+}
+
+message SCOnlineGuildApplyListGet {
+  repeated DBGuild.Apply applies = 1;
+}
+
+message SCOnlineGuildLogListGet {
+  repeated db_guild_log logs = 1;
+}
+
+message SCOnlineGuildPostData {
+  uint32 guild_id = 1;
+  repeated DBGuild.Member members = 2;
+  uint64 leave_player_id = 3;
+  uint64 impeach_player_id = 4;
+  uint32 inspect_end_at = 5;
+  uint64 guild_grant_receive_piece_player_id = 6;
+}
+
+message SCOnlineGuildImpeach {
+  uint64 impeach_player_id = 1;
+  uint32 inspect_end_at = 2;
+}
+
+message SCOnlineGuildChallengeStart {
+  DBGuildChallenge guild_challenge = 1;
+  DBGuild guild = 2;
+}
+
+message SCOnlineGuildChallengeEnter {
+  DBGuildChallenge guild_challenge = 1;
+}
+
+message SCOnlineGuildChallengeStartNormalBattle {
+  bool pass = 1;
+  DBTreasurePackage treasure_package = 2;
+  uint32 score = 3;
+  uint32 logic_battle_power = 4;
+  uint32 true_battle_power = 5;
+  DBGuildChallenge guild_challenge = 6;
+}
+
+message SCOnlineGuildChallengeEnd {
+  DBGuild guild = 1;
+}
+
+message SCOnlineGuildChallengeGetAllMember {
+  repeated DBGuild.Member members = 1;
+}
+
+message SCOnlineGuildGetPointTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player player = 2;
+}
+
+message SCOnlineGuildGetAllPointTreasures {
+  DBTreasurePackage treasure_package = 1;
+  db_player player = 2;
+}
+
+message SCOnlineGuildRemindRead {
+}
+
+message SCOnlineGuildBuildActivityEnter {
+  message DayBeacon {
+    uint32 day = 1;
+    bool is_get = 2;
+    string first_unlock_player = 3;
+  }
+
+  repeated DayBeacon beacon_record = 1;
+  uint32 guild_beacon_count = 2;
+  uint32 cur_day = 3;
+}
+
+message SCOnlineGuildBuildActivityTryUnlockBeacon {
+  bool unlocked = 1;
+  bool is_first = 2;
+  DBTreasurePackage treasure_package = 3;
+  int32 guild_beacon_count = 4;
+  uint32 err_num = 5;
+  string first_unlock_player = 6;
+}
+
+message SCOnlineGuildBuildActivityGetBeaconTreasureRecord {
+  DBTreasurePackage treasure_package = 1;
+  bool is_shared = 2;
+}
+
+message SCOnlineGuildBuildActivityGetShareTreasure {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message SCOnlineRevelationEnter {
+  db_player_revelation data = 1;
+  repeated db_player_scenario_log scenario_log = 2;
+}
+
+message SCOnlineRevelationGetTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_revelation data = 2;
+}
+
+message SCOnlineRevelationPutTarot {
+  db_player_revelation data = 2;
+}
+
+message SCOnlineElysiumPlacementSave {
+  repeated db_player_elysium_placement_furniture furnitures = 1;
+  repeated DBPlayerRole roles = 2;
+}
+
+message SCOnlineContractActivityEnter {
+  repeated PlayerContractActivitySimpleInfo infos = 1;
+}
+
+message SCOnlineContractActivityGetQuestTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_contract_activity_quest quest = 2;
+  repeated uint32 unlock_contracts = 3;
+  db_player_contract_activity_achievement achievement = 4;
+}
+
+message SCOnlineContractActivityGetQuestPointTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerContractActivityPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineContractActivityGetQuestAllPointTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerContractActivityPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineContractActivityGetQuestAllTreasure {
+  DBTreasurePackage treasure_package = 1;
+  repeated db_player_contract_activity_quest quests = 2;
+  repeated uint32 unlock_contracts = 3;
+  repeated db_player_contract_activity_achievement achievements = 4;
+}
+
+message SCOnlineContractActivityGetData {
+  PlayerContractActivity player_contract_activity = 1;
+}
+
+message SCOnlineContractActivityChooseContract {
+  message chosen_contract {
+    uint32 contract_activity_type = 1;
+    uint32 contract_activity_param = 2;
+    repeated uint32 contract_ids = 3;
+  }
+
+  repeated chosen_contract activity_chosen_contracts = 1;
+}
+
+message SCOnlineContractActivityGetChosenContract {
+  repeated uint32 contract_ids = 1;
+  uint32 quest_max_hard = 2;
+  uint32 contract_hard = 3;
+}
+
+message SCOnlineContractActivityTechEnter {
+  message tech_slot {
+    uint32 slot_id = 1;
+    uint32 slot_tech_id = 2;
+  }
+
+  repeated uint32 tech_ids = 1;
+  repeated tech_slot tech_slots = 2;
+  repeated db_player_contract_activity_treasure treasure_list = 3;
+}
+
+message SCOnlineContractActivityUnlockTech {
+  repeated uint32 tech_ids = 1;
+  repeated db_player_contract_activity_treasure treasure_list = 2;
+}
+
+message SCOnlineContractActivityChooseTech {
+  message tech_slot {
+    uint32 slot_id = 1;
+    uint32 slot_tech_id = 2;
+  }
+
+  repeated tech_slot tech_slots = 1;
+}
+
+message SCOnlineContractActivityGetRank {
+  message ContractActivityRankingScore {
+    PlayerRankingScore ranking_data = 1;
+    repeated uint32 units = 2;
+  }
+
+  repeated ContractActivityRankingScore ranking_data = 1;
+  ContractActivityRankingScore my_ranking_data = 2;
+}
+
+message SCOnlineContractActivitySyncGlobalQuest {
+  repeated PlayerContractActivity.GlobalQuest global_quest_group = 1;
+}
+
+message SCOnlineContractActivityGetGlobalQuestTreasure {
+  DBTreasurePackage treasure_package = 1;
+  OnlineGlobalQuest quest = 2;
+}
+
+message SCOnlineContractActivitySyncGlobalVote {
+  OnlineGlobalVote vote_result = 1;
+  repeated db_player_contract_activity_treasure treasure_list = 2;
+}
+
+message SCOnlineContractActivityVote {
+  OnlineGlobalVote vote_result = 1;
+  repeated db_player_contract_activity_treasure treasure_list = 2;
+}
+
+message SCOnlineContractActivityGetProcessTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_contract_activity contract_activity = 2;
+}
+
+message SCOnlineContractActivityGetDayTreasure {
+  repeated uint32 day_treasure_got_ids = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineAbyssUIEnter {
+  repeated PlayerAbyssGuide guide = 1;
+  PlayerAbyssRank rank = 2;
+  bool is_new_rank = 3;
+}
+
+message SCOnlineAbyssSwitch {
+  repeated PlayerAbyssGuide changed_guides = 1;
+  repeated PlayerAbyssRankDetail changed_rank_details = 2;
+  repeated PlayerAbyssDisplaySnapshot snapshots = 3;
+}
+
+message SCOnlineAbyssRankGetQuestPointTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerAbyssRankPointTreasureStatus point_treasure_status = 2;
+}
+
+message SCOnlineAbyssGuideGetQuestTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_abyss_guide_quest quest = 2;
+}
+
+message SCOnlineAbyssGuideGetQuestAllTreasure {
+  DBTreasurePackage treasure_package = 1;
+  repeated db_player_abyss_guide_quest quests = 2;
+}
+
+message SCOnlineAbyssRankGetRank {
+  int32 rank_percent = 1;
+  int64 rank_no = 2;
+}
+
+message SCOnlineAbyssRankGetProcessTreasure {
+  DBTreasurePackage treasure_package = 1;
+  int32 rank_percent = 2;
+  int32 max_point = 3;
+  int64 rank_no = 4;
+}
+
+message SCOnlineAbyssGetBattleUnitSnapshot {
+  repeated PlayerAbyssDisplaySnapshot snapshots = 1;
+}
+
+message SCOnlineAbyssModifyBattleUnitSnapshot {
+  repeated PlayerAbyssDisplaySnapshot snapshots = 1;
+  repeated PlayerAbyssGuide changed_guides = 2;
+  repeated PlayerAbyssRankDetail changed_rank_details = 3;
+  db_player_abyss_rank rank = 4;
+}
+
+message SCOnlineAbyssResetData {
+  repeated PlayerAbyssGuide changed_guides = 1;
+  repeated PlayerAbyssRankDetail changed_rank_details = 2;
+  PlayerAbyssChallenge challenge = 3;
+}
+
+message SCOnlineAbyssUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCOnlineAbyssSetFirstPassShowed {
+  repeated PlayerAbyssGuide changed_guides = 1;
+  repeated PlayerAbyssRankDetail changed_rank_details = 2;
+  repeated PlayerAbyssChallengeDetail changed_challenge_details = 3;
+}
+
+message SCOnlineAbyssRankGetPowerfulUnit {
+  message unitRateList {
+    message unit {
+      uint32 unit_id = 1;
+      float rate = 2;
+    }
+
+    repeated unit units = 1;
+  }
+
+  repeated unitRateList powerfulUnitRates = 1;
+}
+
+message SCOnlineAbyssChallengeSwitch {
+  PlayerAbyssChallenge challenge = 1;
+}
+
+message SCOnlineAbyssChallengeGetRank {
+  int32 rank_percent = 1;
+  int64 rank_no = 2;
+  uint32 process_treasure_template = 3;
+  int32 true_rank_percent = 4;
+}
+
+message SCOnlineAbyssChallengeGetPowerfulUnit {
+  message unitRateList {
+    message unit {
+      uint32 unit_id = 1;
+      float rate = 2;
+    }
+
+    uint32 battle_field_id = 1;
+    repeated unit units = 2;
+  }
+
+  repeated unitRateList powerfulUnitRates = 1;
+}
+
+message SCOnlineAbyssChallengeGetProcessTreasure {
+  DBTreasurePackage treasure_package = 1;
+  int32 rank_percent = 2;
+  int32 max_point = 3;
+  int64 rank_no = 4;
+}
+
+message SCOnlineAbyssChallengeGetDetailTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerAbyssChallenge challenge = 2;
+}
+
+message SCOnlineAbyssChallengeUploadQuestReport {
+  PlayerAbyssChallenge challenge = 1;
+}
+
+message SCOnlineLotteryActivityEnter {
+  LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineLotteryActivitySelectTreasureOption {
+  LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineLotteryActivityDraw {
+  LotteryActivity lottery_activity = 1;
+  DBTreasurePackage treasure_package = 2;
+  repeated uint32 already_have_slot_ids = 3;
+}
+
+message SCOnlineLotteryActivityResetRound {
+  LotteryActivity lottery_activity = 1;
+}
+
+message SCOnlineExchangeShopBuy {
+  db_player_exchange_shop shop = 1;
+  DBTreasurePackage treasure_package = 2;
+  uint32 consume_type = 3;
+  uint32 consume_instance_id = 4;
+  DBConsume consume = 5;
+}
+
+message SCOnlineAlchemyItemBuy {
+  uint32 item_id = 1;
+  uint32 alchemy_formula_id = 2;
+  uint32 alchemy_count = 3;
+  DBTreasurePackage treasure_package = 4;
+  DBConsumes consumes = 5;
+}
+
+message SCOnlineAlchemyRecycle {
+  DBConsumes consumes = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerEnter {
+  repeated DBPlayerCareer careers = 1;
+}
+
+message SCOnlineCareerQuestGetTreasure {
+  DBPlayerCareer career = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerChallengeGetTreasure {
+  DBPlayerCareer career = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetTreasure {
+  repeated DBPlayerCareer careers = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetAllTreasure {
+  DBPlayerCareer career = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineTopArenaApply {
+  bool apply = 1;
+  uint32 real_pvp_id = 2;
+}
+
+message SCOnlineTopArenaModifyBattleUnitSnapshot {
+  repeated BattleUnitSnapshotDisplay displays = 1;
+}
+
+message SCOnlineTopArenaGetInfo {
+  uint32 real_pvp_id = 1;
+  uint32 score = 2;
+  uint32 rank = 3;
+  uint32 group_id = 4;
+  uint32 win_count = 5;
+  uint32 fail_count = 6;
+}
+
+message SCOnlineTopArenaUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCOnlineScheduleGet {
+}
+
+message SCOnlineAdventureEnter {
+  repeated DBPlayerAdventure adventure = 1;
+}
+
+message SCOnlineAdventureSelectLevel {
+  DBPlayerAdventure adventure = 1;
+}
+
+message SCOnlineAdventureSelectBuff {
+  DBPlayerAdventure adventure = 1;
+}
+
+message SCOnlineAdventureQuestStart {
+}
+
+message SCOnlineAdventureLevelFinish {
+  message ExpData {
+    uint32 old_exp = 1;
+    uint32 new_exp = 2;
+    uint32 old_level = 3;
+    uint32 new_level = 4;
+  }
+
+  DBPlayerAdventure adventure = 1;
+  DBTreasurePackage treasure_package = 2;
+  db_player player = 3;
+  ExpData exp_data = 4;
+  string report = 5;
+}
+
+message SCOnlineAdventureLevelGiveUp {
+  DBPlayerAdventure adventure = 1;
+}
+
+message SCOnlineAdventureGetExpTreasure {
+  DBPlayerAdventure adventure = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineAfkEnter {
+  AfkInfo afk_info = 1;
+}
+
+message SCOnlineAfkResult {
+  AfkInfo afk_info = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineAfkPayResult {
+  DBConsumes consumes = 1;
+  AfkInfo afk_info = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineAfkTowerQuestStart {
+  uint32 tower_quest_id = 1;
+}
+
+message SCOnlineAfkTowerSkipBattle {
+  uint32 tower_quest_id = 1;
+  AfkInfo afk_info = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineExpeditionReset {
+  db_player_expedition expedition = 1;
+}
+
+message SCOnlineExpeditionGetLevelTreasure {
+  db_player_expedition expedition = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineExpeditionRestart {
+  db_player_expedition expedition = 1;
+}
+
+message SCOnlineGuildGrantSendPiece {
+  uint32 activity_id = 1;
+  GuildGrantData.RecordData send_record = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineGuildGrantReply {
+  uint32 activity_id = 1;
+  string message = 2;
+  uint32 record_index = 3;
+  uint32 created_at = 4;
+}
+
+message SCOnlineGuildGrantGetGuildMembers {
+  message OneData {
+    DBSimplePlayer player = 1;
+    repeated GuildGrantPiece pieces = 2;
+    uint32 today_receive_count = 3;
+    uint32 cur_star_milestone_id = 4;
+  }
+
+  uint32 activity_id = 1;
+  repeated OneData list = 2;
+  bool altar_open = 3;
+}
+
+message SCOnlineGuildGrantGetReceiveTreasure {
+  uint32 activity_id = 1;
+  uint32 id = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineGuildGrantSendToAltar {
+  uint32 activity_id = 1;
+  repeated GuildGrantPiece pieces = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineGuildGrantGetGuildOneMember {
+  uint32 activity_id = 1;
+  SCOnlineGuildGrantGetGuildMembers.OneData data = 2;
+}
+
+message SCOnlineRichManEnter {
+  uint32 activity_id = 1;
+  db_player_richman data = 2;
+  db_player_treasure money = 3;
+}
+
+message SCOnlineRichManThrow {
+  bool magic = 1;
+  uint32 cur_circle = 2;
+  uint32 cur_pos_id = 3;
+  uint32 old_pos_id = 4;
+  DBTreasurePackage treasure_package = 5;
+  uint32 dice_count = 6;
+  uint32 magic_dice_count = 7;
+  uint32 point = 8;
+  uint32 event_id = 9;
+  uint32 game_id = 10;
+  uint32 circle_earning = 11;
+  db_player_treasure money = 12;
+  uint32 activity_id = 13;
+}
+
+message SCOnlineRichManBuy {
+  uint32 pos_id = 1;
+  DBConsume consume = 2;
+  uint32 activity_id = 3;
+}
+
+message SCOnlineRichManBuild {
+  uint32 pos_id = 1;
+  DBConsume consume = 2;
+  uint32 activity_id = 3;
+}
+
+message SCOnlineRichManFinishGuide {
+  uint32 activity_id = 1;
+}
+
+message SCOnlineRichManGameSelect {
+  uint32 activity_id = 1;
+  uint32 game_id = 2;
+  RichMan.GameSelectType select_result = 3;
+  repeated uint32 all_select_result = 4;
+  DBTreasurePackage treasure_package = 5;
+}
+
+message SCOnlineRichManCasino {
+  uint32 activity_id = 1;
+  DBConsume consume = 2;
+  RichMan.GameCasinoType type = 3;
+  DBTreasurePackage treasure_package = 4;
+  bool win = 5;
+}
+
+message SCOnlineRichManRefreshDayDice {
+  uint32 activity_id = 1;
+  uint32 dice_count = 2;
+  uint32 magic_dice_count = 3;
+  uint32 next_refresh_at = 4;
+}
+
+message SCOnlineDreamworldEnter {
+  message ChangedCards {
+    repeated uint32 card_ids = 1;
+    uint32 add_score = 2;
+    uint32 old_score = 3;
+  }
+
+  db_player_dreamworld dreamworld = 1;
+  ChangedCards changed_cards = 2;
+}
+
+message SCOnlineDreamworldCardEquip {
+  db_player_dreamworld dreamworld = 1;
+  uint32 card_id = 2;
+  uint32 slot_id = 3;
+}
+
+message SCOnlineDreamworldCardGuaranteedExchange {
+  db_player_dreamworld dreamworld = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineRyoriCook {
+  db_player_ryori_cook cook = 1;
+  uint32 ryori_id = 2;
+  uint32 from_level = 3;
+  uint32 to_level = 4;
+}
+
+message SCOnlineRyoriEnter {
+  db_player_ryori_cook cook = 1;
+}
+
+message SCOnlineRyoriChoose {
+  db_player_ryori_cook cook = 1;
+}
+
+message SCOnlineDreamlandPlacementSave {
+  repeated db_player_dreamland_placement_area areas = 1;
+  repeated DBPlayerRole roles = 2;
+}
+
+message SCOnlineDreamlandPlacementEnter {
+  repeated db_player_dreamland_placement_area areas = 1;
+}
+
+message SCOnlineDreamlandArchiveDecode {
+  string name = 1;
+  string player_name = 2;
+  repeated db_player_dreamland_placement_area areas = 3;
+}
+
+message SCOnlineDreamlandArchiveSave {
+  db_player_dreamland_archive archive = 1;
+}
+
+message SCOnlineDreamlandArchiveDelete {
+  db_player_dreamland_archive archive = 1;
+}
+
+message SCOnlineDreamlandArchiveChangeName {
+  db_player_dreamland_archive archive = 1;
+}
+
+message SCOnlineDreamlandArchiveGet {
+  repeated db_player_dreamland_archive archives = 1;
+}
+
+message SCOnlineCommerceEnter {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCommerceUpgrade {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommerceTeamSend {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommerceTeamCancel {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCommerceTeamFinish {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+  uint32 order_id = 3;
+}
+
+message SCOnlineCommerceTeamEventSelect {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommerceCareerQuestGetTreasure {
+  DBTreasurePackage treasure_package = 1;
+  db_player_commerce_career_quest quest = 2;
+  PlayerCommerce commerce = 3;
+}
+
+message SCOnlineCommerceCareerGetTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerCommerce commerce = 2;
+}
+
+message SCOnlineCommerceCareerGetAllTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerCommerce commerce = 2;
+}
+
+message SCOnlineCommerceSeatTake {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommerceMarketTrade {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+  DBConsumes consumes = 3;
+}
+
+message SCOnlineCommerceDailyQuestGetTreasure {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCommerceTeamSpeedUp {
+  PlayerCommerce commerce = 1;
+  DBConsume ticket_consume = 2;
+}
+
+message SCOnlineCommerceTeamAllFinish {
+  PlayerCommerce commerce = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCommercePremakeTeamCreate {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommercePremakeTeamEdit {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommercePremakeTeamDelete {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineCommerceTeamRefresh {
+  PlayerCommerceTeam team = 1;
+}
+
+message SCOnlineCommerceAutoSelectSwitch {
+  PlayerCommerce commerce = 1;
+}
+
+message SCOnlineInfiniteChallengeEnter {
+  repeated PlayerInfiniteChallengeArea areas = 1;
+}
+
+message SCOnlineInfiniteChallengeLicenseGetTreasure {
+  DBTreasurePackage treasure_package = 1;
+  PlayerInfiniteChallengeArea area = 2;
+}
+
+message SCOnlineReportGetList {
+  repeated BattleRecord records = 1;
+}
+
+message SCOnlineReportUpload {
+  uint32 battle_index = 1;
+}
+
+message SCOnlineReportFavoriteGetList {
+  repeated BattleRecord records = 1;
+}
+
+message SCOnlineReportFavoriteAdd {
+  uint32 battle_index = 1;
+  uint64 attacker_id = 2;
+  uint32 id = 3;
+}
+
+message SCOnlineReportFavoriteDelete {
+  uint32 id = 1;
+}
+
+message SCOnlineReportLike {
+}
+
+message SCOnlineReportUnlike {
+}
+
+message SCOnlineReportDataGet {
+  bytes battle_setting = 1;
+  bytes battle_report = 2;
+}
+
+message SCOnlineWorldBossSync {
+  PlayerWorldBoss world_boss = 1;
+  repeated PlayerWorldBossAttackInfo attack_infos = 2;
+  repeated PlayerWorldBossAttacker attackers = 3;
+  bool need_refresh = 4;
+}
+
+message SCOnlineWorldBossLike {
+  PlayerWorldBoss world_boss = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineWorldBossGetQuestTreasure {
+  PlayerWorldBoss world_boss = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineWorldBossGetRank {
+  PlayerRankingScore my_ranking_data = 1;
+  uint32 rank_treasure_template = 2;
+}
+
+message SCOnlineWorldBossGetShareTreasure {
+  PlayerWorldBoss world_boss = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineMatchEnter {
+  PlayerMatch match = 1;
+}
+
+message SCOnlineMatchOpen {
+  PlayerMatch match = 1;
+}
+
+message SCOnlineMatchGiveUp {
+  PlayerMatch match = 1;
+}
+
+message SCOnlineMatchBet {
+  PlayerMatch match = 1;
+  DBConsume bet_consume = 2;
+}
+
+message SCOnlineMatchBetReset {
+  PlayerMatch match = 1;
+}
+
+message SCOnlineMatchScheduleBet {
+  PlayerMatch match = 1;
+  DBConsume bet_consume = 2;
+  SCOnlineBattleStart battle_start = 3;
+}
+
+message SCOnlineMatchScheduleBetReset {
+  PlayerMatch match = 1;
+}
+
+message SCOnlineMatchMaterialExchange {
+  PlayerMatch match = 1;
+  DBTreasurePackage treasure_package = 2;
+  DBConsume consume = 3;
+}
+
+message SCOnlineMatchResult {
+  PlayerMatch match = 1;
+  DBTreasurePackage treasure_package = 2;
+  PlayerMatch.Result result = 3;
+}
+
+message SCOnlineAutoChessEnter {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessPreOpen {
+  PlayerAutoChess auto_chess = 1;
+  DBConsume ticket_consume = 2;
+}
+
+message SCOnlineAutoChessOpen {
+  PlayerAutoChess auto_chess = 1;
+  DBConsume carry_consume = 2;
+}
+
+message SCOnlineAutoChessResult {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessContinue {
+  PlayerAutoChess auto_chess = 1;
+  DBConsume carry_consume = 2;
+}
+
+message SCOnlineAutoChessShopBuyAndEquip {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessShopBuyAndRecycle {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessShopRefresh {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessCrafting {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessCraftingWeaponEquip {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessCraftingWeaponRecycle {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessBattleBuffRefresh {
+  PlayerAutoChess auto_chess = 1;
+  repeated uint32 buff_ids = 2;
+}
+
+message SCOnlineAutoChessTreasureGet {
+  PlayerAutoChess auto_chess = 1;
+  DBTreasurePackage treasure_package = 2;
+  CommonExpChange exp_change = 3;
+  db_player_auto_chess_prove prove = 4;
+}
+
+message SCOnlineAutoChessFavoriteProveAdd {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineAutoChessFavoriteProveDelete {
+  PlayerAutoChess auto_chess = 1;
+}
+
+message SCOnlineArtifactEnter {
+  PlayerArtifact artifact = 1;
+  repeated uint32 artifact_ids = 2;
+  uint32 level_before = 3;
+  uint32 level_after = 4;
+}
+
+message SCOnlineArtifactCollectionGet {
+  PlayerArtifact artifact = 1;
+}
+
+message SCOnlineArtifactCollectionActive {
+  PlayerArtifact artifact = 1;
+}
+
+message SCOnlineArtifactGetLevelTreasure {
+  PlayerArtifact artifact = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+

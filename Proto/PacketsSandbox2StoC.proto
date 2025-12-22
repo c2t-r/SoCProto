@@ -1,0 +1,269 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsSandbox2Common.proto";
+import "PacketsSandbox2.gen.proto";
+import "PacketsCommon.proto";
+import "PacketsGame.proto";
+import "PacketsBattle.proto";
+
+message SCDebugClueWallAdd {
+  uint32 template_id = 1;
+}
+
+message SCDebugFoodAdd {
+}
+
+message SCDebugAddAccessoryItem {
+  db_sandbox2_accessory_item accessory_item = 1;
+}
+
+message SCDebugAddChapterGoal {
+  db_sandbox2_chapter_goal chapter_goal = 1;
+}
+
+message SCDebugAddChapterGoalProgress {
+  uint32 progress = 1;
+}
+
+message SCDebugSetChapterGoalStatus {
+  db_sandbox2_chapter_goal.STATUS status = 1;
+}
+
+message SCDebugResetChapterGoalData {
+}
+
+message SCDebugAddSandbox2EntrustBattle {
+}
+
+message SCDebugSandbox2Treasure {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message SCDebugSandbox2SaveData {
+  message Namespace {
+    string name = 1;
+  }
+
+  repeated Namespace namespaces = 1;
+  repeated NewSandboxSaveData save_datas = 2;
+}
+
+message SCDebugSandbox2Unit {
+  repeated db_sandbox2_unit units = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCDebugSandbox2Flow {
+  db_sandbox2_character character = 1;
+}
+
+message SCSandbox2Login {
+  db_player_sandbox_status_detail sandbox_status_detail = 1;
+}
+
+message SCSandbox2CharacterInfo {
+  db_sandbox2_character character = 1;
+  repeated db_sandbox2_accessory_item accessory_item_list = 2;
+  db_sandbox2_entrust entrust = 3;
+  db_sandbox2_capital capital = 4;
+  repeated uint32 system_ids = 5;
+  repeated uint32 system_tech_ids = 6;
+  repeated db_sandbox2_unit units = 7;
+  repeated db_sandbox2_shop shops = 8;
+  repeated db_sandbox2_weapon weapons = 9;
+  db_sandbox2_training training = 10;
+  Sandbox2PostData post_data = 99;
+}
+
+message Sandbox2PostData {
+  NewSandboxEventTriggerResult result = 1;
+  db_sandbox2_battle_setting battle_setting = 2;
+  repeated DBTreasurePackage treasure_packages = 3;
+  db_sandbox2_entrust_battle entrust_battle = 4;
+  SCSandbox2EntrustBattleFinish entrust_battle_finish = 5;
+}
+
+message SCSandbox2GetChapterGoalReward {
+  uint32 template_id = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCSandbox2EventTrigger {
+  NewSandboxEventTriggerResult result = 1;
+  db_sandbox2_character character = 2;
+  Sandbox2NewRoundDataSync data_sync = 3;
+}
+
+message SCSandbox2EventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+  repeated NewSandboxEvent.Option options = 3;
+  db_player_scenario_log log = 4;
+}
+
+message SCSandbox2CustomEventTrigger {
+  NewSandboxEventTriggerResult result = 1;
+  NewSandboxCustomEventTriggerParams custom_params = 2;
+  db_sandbox2_character character = 3;
+}
+
+message SCSandbox2TreasureChestSelect {
+  DBTreasure treasure = 1;
+  db_sandbox2_character character = 2;
+}
+
+message SCGetSandbox2Statistic {
+  Sandbox2Statistic statistic = 1;
+}
+
+message SCSandbox2PostDataSync {
+  repeated uint32 types = 1;
+  db_sandbox2_chapter_goal chapter_goal = 2;
+  db_sandbox2_capital capital = 3;
+  repeated uint32 food_ids = 4;
+  repeated db_sandbox2_shop shops = 5;
+  db_sandbox2_entrust entrust = 6;
+  repeated uint32 system_ids = 7;
+  DBTreasurePackage treasure_package = 8;
+  repeated db_sandbox2_weapon weapons = 9;
+  repeated db_sandbox2_accessory_item accessory_items = 10;
+  repeated db_sandbox2_unit remove_units = 11;
+  db_sandbox2_training training = 12;
+}
+
+message SCSandbox2InferenceClue {
+  uint32 template_id = 1;
+  NewSandboxEventTriggerResult event_trigger = 2;
+}
+
+message SCSandbox2BattlePremake {
+  db_sandbox2_battle_setting battle_setting = 1;
+}
+
+message SCSandbox2BattleStart {
+  db_sandbox2_battle_setting battle_setting = 1;
+}
+
+message SCSandbox2BattleEnd {
+  bool is_win = 1;
+  db_sandbox2_battle_setting battle_setting = 2;
+  bool give_up = 3;
+  bool unmarshal_report_error = 4;
+  int32 fate_power = 5;
+}
+
+message SCSandbox2BattleCommand {
+  uint32 command_start = 1;
+}
+
+message SCSandbox2BattleBack {
+  bool back_clear = 1;
+  uint32 back_count = 2;
+}
+
+message SCSandbox2BattleFinish {
+  message sandbox_event {
+    bool win = 1;
+    uint32 mission_battle_param_id = 2;
+    NewSandboxEventTriggerResult event_trigger = 3;
+  }
+
+  uint32 id = 1;
+  repeated Sandbox2ChangedUnit changed_units = 2;
+  sandbox_event event = 3;
+}
+
+message SCSandbox2EntrustBattleStart {
+  db_sandbox2_entrust_battle data = 1;
+}
+
+message SCSandbox2EntrustBattleFinish {
+  uint32 id = 1;
+  db_sandbox2_entrust_battle battle = 2;
+  DBTreasurePackage treasure_package = 3;
+  bool is_win = 4;
+  NewSandboxEventTriggerResult sandbox_result = 5;
+  db_sandbox2_character character = 6;
+}
+
+message SCSandbox2ShopGet {
+  db_sandbox2_shop shop = 1;
+}
+
+message SCSandbox2ShopBuy {
+  uint32 id = 1;
+  db_sandbox2_shop shop = 2;
+  DBTreasurePackage treasure_package = 3;
+  DBConsume consume = 4;
+}
+
+message SCSandbox2UnitWeaponReplace {
+  uint32 weapon_new_id = 1;
+  uint32 weapon_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message SCSandbox2UnitStudySkill {
+  db_sandbox2_unit unit = 1;
+  DBConsume consume = 2;
+}
+
+message SCSandbox2TacticsSkillEquip {
+  repeated db_sandbox2_tactics_skill tactics_skills = 1;
+}
+
+message SCSandbox2TrainingEnter {
+  db_sandbox2_training training = 1;
+  repeated db_sandbox2_tactics_skill tactics_skills = 2;
+  repeated db_sandbox2_surprise_skill surprise_skills = 3;
+  battle.TacticPoint tactic_point_param = 4;
+  battle.SurpriseCount surprise_count_param = 5;
+}
+
+message SCSandbox2TrainingNodeLevelUp {
+  db_sandbox2_training training = 1;
+  DBConsumes consumes = 2;
+  db_sandbox2_tactics_skill tactics_skill = 3;
+  uint32 replace_tactics_skill_id = 4;
+  db_sandbox2_surprise_skill surprise_skill = 5;
+  uint32 replace_surprise_skill_id = 6;
+  uint32 system_tech_id = 7;
+  uint32 replace_system_tech_id = 8;
+  battle.TacticPoint tactic_point_param = 9;
+  battle.SurpriseCount surprise_count_param = 10;
+  db_sandbox2_character character = 99;
+}
+
+message SCSandbox2UnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+  uint32 slot_id_swapped = 4;
+}
+
+message SCSandbox2TacticsSkillEnter {
+  repeated db_sandbox2_tactics_skill tactics_skills = 1;
+  battle.TacticPoint tactic_point_param = 2;
+}
+
+message SCSandbox2AccessoryItemReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  repeated db_sandbox2_accessory_item accessory_item_list = 4;
+}
+
+message SCSandbox2GetAccessoryItemList {
+  repeated db_sandbox2_accessory_item accessory_item_list = 1;
+}
+
+message SCSandbox2CapitalEventSecondaryPerformPlay {
+  db_sandbox2_capital_event event = 1;
+}
+

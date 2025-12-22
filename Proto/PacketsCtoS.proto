@@ -1,0 +1,665 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsCommon.proto";
+import "PacketsOnlineCommon.proto";
+import "PacketsBattle.proto";
+
+message CSGameLogin {
+}
+
+message CSDebugTreasureAdd {
+  uint32 type = 1;
+  sint32 param0 = 2;
+  sint32 param1 = 3;
+}
+
+message CSDebugTreasureAll {
+}
+
+message CSDebugUnitAdd {
+  uint32 unit_id = 1;
+  uint32 rarity = 2;
+}
+
+message CSDebugMissionRand {
+  uint32 mission_type = 1;
+  uint32 mission_id = 2;
+  uint32 level = 3;
+  uint32 complexity = 4;
+  uint32 world_level = 5;
+  uint32 difficulty = 6;
+  uint32 faction = 7;
+  uint32 protect_faction = 8;
+}
+
+message CSDebugBattleStart {
+  uint32 mission_id = 1;
+  repeated battle.BattleUnit units = 2;
+  uint32 character_mission_id = 3;
+  bytes mission = 5;
+  uint32 level = 6;
+}
+
+message CSDebugRecoverAll {
+}
+
+message CSDebugUnitAddWithSkills {
+  uint32 unit_id = 1;
+  uint32 rarity = 2;
+  repeated uint32 skills = 3;
+}
+
+message CSDebugUnitsLevel {
+  uint32 level = 1;
+  int32 morale = 2;
+}
+
+message CSDebugSystemsUnlock {
+}
+
+message CSDebugUnitMoraleSet {
+  sint32 morale = 1;
+}
+
+message CSDebugCharacterWorldLevel {
+  uint32 world_level = 1;
+}
+
+message CSDebugCharacterLevel {
+  uint32 level = 1;
+}
+
+message CSDebugUnitStudySkill {
+  uint32 unit_id = 1;
+  uint32 skill_id = 2;
+}
+
+message CSDebugUnitRandomSkillByBuild {
+  uint32 unit_id = 1;
+  uint32 randomCount = 2;
+}
+
+message CSDebugUnitRandomSkillByBonus {
+  uint32 unit_id = 1;
+  uint32 randomCount = 2;
+  uint32 unit_build_skill_type = 3;
+  uint32 rarity = 4;
+  bool isProfession = 5;
+}
+
+message CSDebugTacticsSkillRemove {
+  uint32 id = 1;
+}
+
+message CSDebugCapitalEventRefresh {
+}
+
+message CSDebugGetSaveDatas {
+  uint64 iduser = 1;
+}
+
+message CSDebugSaveData {
+  uint32 id = 1;
+  string name = 2;
+}
+
+message CSDebugLoadData {
+  uint32 id = 1;
+  uint64 iduser = 2;
+}
+
+message CSDebugGenDataSecret {
+  uint32 id = 1;
+  uint64 iduser = 2;
+}
+
+message CSDebugLoadDataSecret {
+  string secret = 1;
+}
+
+message CSDebugBattlePremake {
+  repeated battle.BattleUnit units = 1;
+  uint32 character_mission_id = 2;
+  bytes mission_data = 4;
+}
+
+message CSDebugMissionEditorBattleStart {
+  bytes mission = 1;
+  uint32 mission_type = 2;
+  uint32 level = 3;
+  uint32 difficulty = 4;
+  uint32 faction = 5;
+  bool is_random = 6;
+  string nick_name = 7;
+  string qq_code = 8;
+  repeated uint32 special_effect_ids = 9;
+  uint32 props_level_limit = 10;
+}
+
+message CSDebugAddSandboxEffect {
+  uint32 sandbox_effect_id = 1;
+}
+
+message CSDebugRemoveSandboxEffect {
+  uint32 sandbox_effect_id = 1;
+}
+
+message CSDebugGameEnd {
+  uint32 ending_id = 1;
+  uint32 sandbox_id = 2;
+}
+
+message CSDebugAddEntrustBattleByTemplate {
+  uint32 id = 1;
+}
+
+message CSDebugSandboxLauncher {
+  uint32 group_id = 1;
+  repeated uint32 role_unit_ids = 2;
+}
+
+message CSDebugSandboxLauncherWithSpeciality {
+  uint32 token_id = 1;
+  repeated uint32 speciality_ids = 2;
+  repeated uint32 role_unit_ids = 3;
+  sint32 game_count = 4;
+  uint32 sandbox_id = 5;
+}
+
+message CSDebugGetTreasurePackage {
+  uint32 package_id = 1;
+  bool is_online = 2;
+  uint32 group_id = 3;
+}
+
+message CSDebugNextRound {
+}
+
+message CSDebugBattleReportCheck {
+  bytes setting = 1;
+  bytes report = 2;
+}
+
+message CSDebugFinishWorkshopBattleQuestImm {
+}
+
+message CSDebugBlessing {
+  enum Type {
+    AddEffect = 0;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugCommerceOrderAdd {
+  uint32 id = 1;
+}
+
+message CSDebugCommerceTradePointAdd {
+  uint32 id = 1;
+}
+
+message CSDebugRegion {
+  enum Type {
+    Battle = 0;
+    Practice = 1;
+    Consume = 2;
+  }
+
+  uint32 id = 1;
+  Type type = 2;
+}
+
+message CSCharacterInfo {
+}
+
+message CSEventTrigger {
+  uint32 option_id = 1;
+  repeated SandboxConsume consumes = 2;
+  string scenario_data = 3;
+}
+
+message CSRoundReport {
+}
+
+message CSCustomEventTrigger {
+  uint32 option_id = 1;
+  repeated SandboxConsume consumes = 2;
+  string scenario_data = 3;
+}
+
+message CSEventConditionsCheck {
+  uint32 type = 1;
+  uint32 id = 2;
+}
+
+message CSSandboxResult {
+  bool is_give_up = 1;
+  uint32 sandbox_id = 2;
+}
+
+message CSCharacterSimpleInfo {
+}
+
+message CSSmithyEnter {
+}
+
+message CSSmithyForge {
+  enum ForgeType {
+    Permanent = 0;
+    Blueprint = 1;
+    Plan = 2;
+  }
+
+  ForgeType type = 1;
+  uint32 forge_id = 2;
+  uint32 blueprint_id = 3;
+  uint32 seat_id = 4;
+  DBConsumes consumes = 5;
+  DBConsume extra_consume = 6;
+}
+
+message CSSmithyForgeCancel {
+  uint32 seat_id = 1;
+}
+
+message CSSmithyForgeResult {
+  uint32 seat_id = 1;
+}
+
+message CSSmithyForgeSelect {
+  uint32 seat_id = 1;
+  uint32 index = 2;
+}
+
+message CSSmithyProcess {
+  uint32 seat_id = 1;
+  uint32 process_id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSSmithyProcessCancel {
+  uint32 seat_id = 1;
+}
+
+message CSSmithyProcessResult {
+  uint32 seat_id = 1;
+}
+
+message CSShopGet {
+  uint32 capital_event_id = 1;
+}
+
+message CSShopBuy {
+  uint32 capital_event_id = 1;
+  uint32 id = 2;
+  sint32 quantity = 3;
+  DBConsume consume = 4;
+}
+
+message CSShopSell {
+  uint32 capital_event_id = 1;
+  repeated DBConsume items = 2;
+}
+
+message CSHospitalEnter {
+}
+
+message CSHospitalSetUnits {
+  repeated uint32 unit_ids = 1;
+}
+
+message CSHospitalSetUnit {
+  uint32 unit_id = 1;
+  uint32 seat_id = 2;
+}
+
+message CSTavernEnter {
+}
+
+message CSTavernRecruit {
+  uint32 id = 1;
+  sint32 price = 2;
+}
+
+message CSTavernEnterUI {
+}
+
+message CSSandboxNoteEnter {
+}
+
+message CSSandboxEventLogEnter {
+}
+
+message CSUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message CSUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSEntrustBattleStart {
+  uint32 id = 1;
+}
+
+message CSEntrustPracticeStart {
+  uint32 id = 1;
+  repeated uint32 unit_ids = 2;
+}
+
+message CSEntrustPracticeEnd {
+  uint32 id = 1;
+}
+
+message CSEntrustBattleFinish {
+  uint32 option_id = 1;
+}
+
+message CSEntrustEventFinish {
+  uint32 id = 1;
+  int32 type = 2;
+}
+
+message CSEntrustPracticeGiveUp {
+  uint32 id = 1;
+}
+
+message CSBattleStart {
+  sint32 type = 1;
+  uint32 mission_id = 2;
+  repeated battle.BattleUnit units = 4;
+  uint32 entrust_battle_id = 5;
+  bool use_fate_power = 6;
+}
+
+message CSBattleEnd {
+  uint32 battle_index = 1;
+  bytes battle_report = 2;
+  bool debug_end = 3;
+  bool give_up = 4;
+  sint32 tactic_point = 5;
+}
+
+message CSBattleCommand {
+  uint32 command_start = 1;
+  bytes commands = 2;
+}
+
+message CSBattleBack {
+  uint32 back_count = 1;
+  uint32 back_command = 2;
+  bool back_clear = 3;
+  bytes report = 4;
+}
+
+message CSBattlePremake {
+  sint32 type = 1;
+  bool use_fate_power = 2;
+}
+
+message CSBattleFinish {
+  uint32 id = 1;
+}
+
+message CSBattleServerLogin {
+  uint32 result = 1;
+}
+
+message CSBattleServerCheck {
+  uint32 result = 1;
+  uint64 iduser = 2;
+  uint32 id = 3;
+  uint32 run_time = 4;
+  string err_msg = 5;
+}
+
+message CSBattleServerInit {
+  uint32 result = 1;
+  string err_msg = 2;
+  bytes commands = 3;
+  bytes report = 4;
+  uint32 type = 5;
+  uint32 round_count = 6;
+  uint32 unit_index = 8;
+  uint64 player_id = 9;
+}
+
+message CSBattleServerMessage {
+  uint32 result = 1;
+  string err_msg = 2;
+  uint32 type = 3;
+  bytes commands = 4;
+  bytes report = 5;
+  BattleResultType battle_result = 6;
+  uint32 round_count = 7;
+  uint32 unit_index = 8;
+  uint64 player_id = 9;
+}
+
+message CSBattleServerCheckDamage {
+  uint32 result = 1;
+  uint64 iduser = 2;
+  uint32 id = 3;
+  uint32 run_time = 4;
+  string err_msg = 5;
+}
+
+message CSBattleServerStatus {
+  string ip = 1;
+  uint32 battle_count = 2;
+  uint32 command_count = 3;
+  sint32 command_time = 4;
+}
+
+message CSTrainingEnter {
+}
+
+message CSTrainingSetUnit {
+  uint32 unit_id = 1;
+  uint32 seat_id = 2;
+  uint32 type = 3;
+  uint32 faction_skill_id = 4;
+  sint32 price = 5;
+}
+
+message CSTrainingCancelTrain {
+  uint32 seat_id = 1;
+  uint32 unit_id = 2;
+}
+
+message CSTrainingFinish {
+  uint32 seat_id = 1;
+  uint32 unit_id = 2;
+}
+
+message CSTrainingStudyProfessionSkill {
+  uint32 seat_id = 1;
+  uint32 unit_id = 2;
+  uint32 skill_id = 3;
+}
+
+message CSTrainingResetSeat {
+  uint32 seat_id = 1;
+}
+
+message CSTacticsSkillEquip {
+  uint32 tactics_skill_id = 1;
+  bool is_remove = 2;
+}
+
+message CSTacticsSkillEnter {
+}
+
+message CSTreasureChestSelect {
+  uint32 package_id = 1;
+  uint32 id = 2;
+  uint32 index = 3;
+  uint32 unit_id = 4;
+}
+
+message CSTreasureSkillGet {
+  uint32 package_id = 1;
+  uint32 id = 2;
+  uint32 unit_id = 3;
+}
+
+message CSTreasureSkip {
+  uint32 package_id = 1;
+  uint32 id = 2;
+}
+
+message CSWorldMapEnter {
+}
+
+message CSWarehouseEnter {
+}
+
+message CSCapitalAreaSystemEventRefresh {
+  uint32 area_id = 1;
+}
+
+message CSCapitalSandboxEventTrigger {
+  uint32 capital_event_id = 1;
+  uint32 option_id = 2;
+  repeated SandboxConsume consumes = 3;
+  string scenario_data = 4;
+}
+
+message CSCapitalEventSecondaryPerformPlay {
+  uint32 event_id = 1;
+}
+
+message CSMilestoneResetCache {
+}
+
+message CSWorkshopEnter {
+}
+
+message CSWorkshopQuestResult {
+  bool is_battle = 1;
+  uint32 quest_id = 2;
+  uint32 unit_id = 3;
+  DBConsumes consumes = 4;
+}
+
+message CSWorkshopNodeLevelUp {
+  uint32 node_id = 1;
+  uint32 extra_id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSWorkshopChooseOneOfThree {
+  uint32 id = 1;
+}
+
+message CSBlessingPrayer {
+  repeated uint32 unit_ids = 1;
+  uint32 seat_id = 2;
+}
+
+message CSBlessingBaptism {
+  repeated uint32 unit_ids = 1;
+  uint32 seat_id = 2;
+  uint32 type = 3;
+}
+
+message CSBlessingEffectChoose {
+  uint32 seat_id = 1;
+  uint32 effect_id = 2;
+}
+
+message CSBlessingHalidomUpgrade {
+  uint32 halidom_id = 1;
+  DBConsumes consumes = 2;
+}
+
+message CSBlessingEnter {
+}
+
+message CSCommerceEnter {
+}
+
+message CSCommerceOrderStart {
+  uint32 id = 1;
+  DBConsumes mandatory_consumes = 2;
+  DBConsumes optional_consume = 3;
+  string unit_ids = 4;
+  double grading_value = 5;
+}
+
+message CSCommerceOrderCancel {
+  uint32 id = 1;
+}
+
+message CSCommerceOrderFinish {
+  uint32 id = 1;
+}
+
+message CSCommerceOrderEncounterStart {
+  uint32 id = 1;
+}
+
+message CSCommerceOrderEncounterGiveUp {
+  uint32 id = 1;
+}
+
+message CSCommerceOrderEncounterFinished {
+  uint32 id = 1;
+}
+
+message CSRegionEnter {
+}
+
+message CSRegionBattleStart {
+  uint32 id = 1;
+}
+
+message CSRegionBattleFinish {
+  uint32 id = 1;
+}
+
+message CSRegionPracticeStart {
+  uint32 id = 1;
+  repeated uint32 unit_ids = 2;
+}
+
+message CSRegionPracticeCancel {
+  uint32 id = 1;
+}
+
+message CSRegionConsumeStart {
+  uint32 id = 1;
+  repeated SandboxConsume consumes = 2;
+}
+
+message CSRegionConsumeCancel {
+  uint32 id = 1;
+}
+
+message CSRegionPracticeFinish {
+  uint32 id = 1;
+}
+
+message CSRegionConsumeFinish {
+  uint32 id = 1;
+}
+
+message CSRegionEntrustBattleFinish {
+}
+
+message CSRegionProgressFinish {
+  uint32 id = 1;
+}
+

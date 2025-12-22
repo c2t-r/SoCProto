@@ -1,0 +1,109 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsOnlineCommon.proto";
+import "PacketsBattle.proto";
+
+message Room {
+  enum Status {
+    None = 0;
+    MapSelect = 1;
+    Premake = 2;
+    Battle = 3;
+    Finish = 4;
+    BPMode = 5;
+  }
+
+  message Player {
+    uint64 id = 1;
+    bool is_creator = 2;
+    string name = 3;
+    sint32 team = 4;
+    bool ready = 5;
+    DBSimplePlayer simplePlayer = 6;
+    bool disconnect = 7;
+    bool open_ai = 8;
+    bool bot = 9;
+    uint32 standby_time = 10;
+  }
+
+  uint64 id = 1;
+  Status status = 2;
+  repeated Player players = 3;
+  uint32 quest_id = 4;
+  uint32 end_at = 7;
+  RoomType.Type typ = 8;
+  uint32 real_pvp_id = 9;
+}
+
+message RoomType {
+  enum Type {
+    None = 0;
+    FriendBattle = 1;
+    SingleBattle = 2;
+    TopArenaBattle = 3;
+    FriendTopArenaBattle = 4;
+    OtherBattle = 5;
+  }
+
+}
+
+message MultiplePremake {
+  enum Type {
+    None = 0;
+    In = 1;
+    Out = 2;
+    Move = 3;
+    CancelReady = 4;
+  }
+
+  message Unit {
+    uint64 player_id = 1;
+    uint32 unit_id = 2;
+    sint32 x = 3;
+    sint32 z = 4;
+    uint32 facing = 5;
+  }
+
+}
+
+message MultipleBattle {
+  enum Type {
+    None = 0;
+    Command = 1;
+    ReplayEnd = 2;
+    Overtime = 3;
+    RoundStart = 4;
+    RoundEnd = 5;
+    AFKBegin = 6;
+    AFKEnd = 7;
+    Disconnect = 8;
+    Reconnect = 9;
+    GiveUp = 10;
+    OpenAi = 11;
+    CloseAi = 12;
+    Back = 13;
+    RecoveryCommand = 14;
+    ErrCommand = 15;
+  }
+
+}
+
+message TopArenaData {
+  message Units {
+    repeated uint32 select_units = 1;
+    repeated uint32 disable_units = 2;
+  }
+
+  uint32 cur_round = 1;
+  Units units_create = 2;
+  Units units_join = 3;
+  repeated battle.SnapshotUnit snapshot_create = 4;
+  repeated battle.SnapshotUnit snapshot_join = 5;
+  uint32 real_pvp_id = 6;
+}
+

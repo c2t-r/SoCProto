@@ -1,0 +1,2827 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsCommon.proto";
+import "PacketsOnlineCommon.proto";
+import "PacketsBattle.proto";
+
+message CSOnlineLogin {
+  string token = 1;
+  string device = 2;
+  string ip = 3;
+  string os = 4;
+}
+
+message CSOnlineLogout {
+  uint32 duration = 1;
+  string os = 2;
+  bool cancel_top_arena = 3;
+}
+
+message CSOnlineCheckMails {
+  repeated uint64 player_ids = 1;
+}
+
+message CSGatewayLogin {
+  uint64 player_id = 1;
+  bool is_reconnect = 2;
+}
+
+message CSGatewayQuestionnaireFinish {
+  uint64 player_id = 1;
+  uint32 id = 2;
+  string token = 3;
+  string randomKey = 4;
+  bool offline = 5;
+  CSOnlineQuestionnaireFinish.Type type = 6;
+}
+
+message CSGatewayOnlineCount {
+}
+
+message CSOnlineReconnect {
+  string ip = 1;
+}
+
+message CSGatewayPurchase {
+  uint64 trx_no = 1;
+  uint64 player_id = 2;
+}
+
+message CSGatewayOperationActivityGetTreasure {
+  uint64 player_id = 1;
+  uint32 id = 2;
+  string token = 3;
+  string randomKey = 4;
+  uint32 bonus_id = 5;
+  bool offline = 6;
+}
+
+message CSGatewayWorldBossSync {
+}
+
+message CSOnlinePlayerInfo {
+}
+
+message CSOnlinePlayerSetName {
+  string nickname = 1;
+}
+
+message CSOnlinePlayerAddStamina {
+  DBConsume consume = 1;
+}
+
+message CSOnlinePlayerSetGender {
+  sint32 gender = 1;
+}
+
+message CSOnlinePlayerSetAvatar {
+  uint32 avatar_id = 1;
+}
+
+message CSOnlinePlayerChangeAvatar {
+  uint32 avatar_id = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlinePlayerSetPartnerName {
+  string nickname = 1;
+}
+
+message CSOnlinePlayerChangeName {
+  string nickname = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlinePlayerChangePartnerName {
+  string nickname = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlineMailEnter {
+}
+
+message CSOnlineMailRead {
+  uint32 mail_id = 1;
+}
+
+message CSOnlineMailDelete {
+  uint32 mail_id = 1;
+}
+
+message CSOnlineMailGetTreasure {
+  uint32 mail_id = 1;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 2;
+}
+
+message CSOnlineLoginCheck {
+}
+
+message CSOnlineQuestionnaireFinish {
+  enum Type {
+    OperationActivity = 0;
+    Mail = 1;
+  }
+
+  uint64 player_id = 1;
+  uint32 id = 2;
+  string token = 3;
+  string random_key = 4;
+  Type type = 5;
+}
+
+message CSOnlineMonthlyLoginGetTreasure {
+}
+
+message CSOnlineGiftCodeExchange {
+  string gift_code = 1;
+}
+
+message CSOnlineSettingSetDefaultVoice {
+  enum Type {
+    Global = 0;
+    Unit = 1;
+    Both = 2;
+  }
+
+  Type type = 1;
+  uint32 lang = 2;
+}
+
+message CSOnlineSettingSetUnitVoice {
+  uint32 lang = 1;
+  repeated uint32 unit_ids = 2;
+}
+
+message CSOnlineSettingSetParam {
+  string key = 1;
+  string value = 2;
+}
+
+message CSOnlineUseTreasure {
+  DBConsumes consumes = 1;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 2;
+}
+
+message CSOnlineGetRankingData {
+  uint32 ranking_id = 1;
+  uint32 extra_id = 2;
+  int64 start = 3;
+  int64 stop = 4;
+}
+
+message CSOnlineMobileBindVerificationCodeGet {
+  string mobile = 1;
+}
+
+message CSOnlineMobileBind {
+  string mobile = 1;
+  string code = 2;
+  string origin_mobile = 3;
+}
+
+message CSOnlineMobileUnbindVerificationCodeGet {
+}
+
+message CSOnlineMobileUnbind {
+  string code = 1;
+}
+
+message CSOnlineEmailBindVerificationCodeGet {
+  string email = 1;
+}
+
+message CSOnlineEmailBind {
+  string email = 1;
+  string code = 2;
+}
+
+message CSOnlineEmailUnbindVerificationCodeGet {
+}
+
+message CSOnlineEmailUnbind {
+  string code = 1;
+}
+
+message CSOnlineSettingResetUnitVoice {
+}
+
+message CSOnlineQuestionnaireUrlGet {
+  string key = 1;
+}
+
+message CSOnlineGetChatMessageList {
+  uint32 type = 1;
+  uint64 id = 2;
+}
+
+message CSOnlineSendChatMessage {
+  uint32 type = 1;
+  uint64 id = 2;
+  ChatMessage message = 3;
+}
+
+message CSOnlinePostDataSync {
+  message SyncData {
+    uint32 type = 1;
+    repeated uint32 ids = 2;
+  }
+
+  repeated SyncData sync_data = 1;
+}
+
+message CSDebugReloadGameServer {
+}
+
+message CSDebugReloadDBServer {
+}
+
+message CSDebugServerTimeLock {
+  enum Type {
+    Get = 0;
+    Lock = 1;
+    Release = 2;
+  }
+
+  Type type = 1;
+  string name = 2;
+  uint32 lock_duration = 3;
+}
+
+message CSDebugSetServerTime {
+  enum Type {
+    Set = 0;
+    Reset = 1;
+  }
+
+  Type type = 1;
+  string time = 2;
+}
+
+message CSDebugRemoveAccountLink {
+}
+
+message CSDebugServerTime {
+}
+
+message CSDebugOnlineBattleStart {
+  uint32 mission_id = 1;
+  repeated battle.BattleUnit units = 2;
+  bytes mission = 3;
+  uint32 level = 4;
+  uint32 online_quest_id = 5;
+}
+
+message CSDebugOnlineMissionRand {
+  uint32 mission_type = 1;
+  uint32 mission_id = 2;
+  uint32 level = 3;
+  uint32 difficulty = 4;
+  uint32 faction = 5;
+  uint32 protect_faction = 6;
+}
+
+message CSDebugOnlineBattlePremake {
+  repeated battle.BattleUnit units = 1;
+  uint32 character_mission_id = 2;
+  bytes mission_data = 3;
+  uint32 online_quest_id = 4;
+}
+
+message CSDebugSetPlayerLevel {
+  uint32 level = 1;
+}
+
+message CSDebugOnlineMainQuestUnlock {
+  uint32 chapter_id = 1;
+  uint32 quest_template_id = 2;
+  uint32 main_quest_id = 3;
+}
+
+message CSDebugMisc {
+  enum Type {
+    GenerateServerData = 0;
+    ClearRoleUnitRanking = 1;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugChangeGameStartProcedureChecked {
+  uint32 check_point = 1;
+}
+
+message CSDebugOnlineActivityQuestAllStar {
+  uint32 activity_id = 1;
+  uint32 activity_quest_id = 2;
+}
+
+message CSDebugOnlineSandboxLauncherDivinationOpen {
+}
+
+message CSDebugOnlineUnit {
+  string data = 1;
+}
+
+message CSDebugOnlineWeapon {
+  string data = 1;
+}
+
+message CSDebugOnlineCharm {
+  string data = 1;
+}
+
+message CSDebugOnlineAchievementQuest {
+  enum Type {
+    AllAchievement = 0;
+    AllDailyQuest = 1;
+    Achievement = 2;
+    DailyQuest = 3;
+    DailyQuestPoint = 5;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineTech {
+  string data = 1;
+}
+
+message CSDebugOnlineTreasure {
+  enum Type {
+    Treasure = 0;
+    TreasurePackage = 1;
+    TreasurePackageGroup = 2;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineOperationActivity {
+  enum Type {
+    Open = 0;
+    ModifyQuest = 1;
+    FinishQuest = 2;
+    Finish = 3;
+    GetAnnualReview = 4;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineSaveData {
+  enum Type {
+    QueryNamespace = 0;
+    Query = 1;
+    Save = 2;
+    Load = 3;
+  }
+
+  Type type = 1;
+  string namespace = 2;
+  string name = 3;
+  string player_id = 4;
+  string player_level = 5;
+  repeated string scopes = 6;
+}
+
+message CSDebugOnlineEvent {
+  enum Type {
+    Trigger = 0;
+    QueryCondition = 1;
+    Clear = 2;
+  }
+
+  Type type = 1;
+  uint32 id = 2;
+}
+
+message CSDebugOnlineFlow {
+  enum Type {
+    Free = 0;
+    Skip = 1;
+    Tutorial = 2;
+    UnlockSystem = 3;
+    CloseTutorial = 4;
+    LockSystem = 5;
+    TutorialTest = 6;
+  }
+
+  Type type = 1;
+  repeated uint32 ids = 2;
+}
+
+message CSDebugOnlineSandbox {
+  enum Type {
+    AllTrophy = 0;
+    AllPhoto = 1;
+    Trophy = 2;
+    Photo = 3;
+    TourLevel = 5;
+    SandboxRoute = 6;
+    AllSandboxRoute = 7;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineArena {
+  enum Type {
+    AllDailyQuest = 0;
+    AllSeasonQuest = 1;
+    Quest = 2;
+    Point = 3;
+    Score = 4;
+    Match = 5;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineFriendship {
+  enum Type {
+    Treasure = 0;
+    Modify = 1;
+    UnlockStory = 2;
+    ModifyStoryQuest = 3;
+    FinishStoryQuest = 4;
+    LockStory = 5;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineBattlePass {
+  enum Type {
+    AllQuest = 0;
+    Quest = 1;
+    Level = 2;
+    Exp = 3;
+    ReOpen = 4;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineActivity {
+}
+
+message CSDebugOnlineGuildChallenge {
+}
+
+message CSDebugOnlineReset {
+  enum Type {
+    FriendBattle = 0;
+    SelectableGachaPool = 1;
+    Battle = 2;
+    Activity = 3;
+    Shop = 4;
+    BossChallenge = 5;
+    EndGachaPool = 6;
+    AllGachaPool = 7;
+    BattleReport = 8;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineTower {
+  enum Type {
+    Reset = 0;
+    Set = 1;
+    SetWeekScore = 2;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineGuildActivityGetKey {
+}
+
+message CSDebugOnlineLotteryActivity {
+  enum Type {
+    SimulationDrawToEnd = 0;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugMultipleSetBattleSetting {
+  uint64 roomid = 1;
+  string setting = 2;
+}
+
+message CSDebugAbyssCalQuestPoint {
+  uint32 quest_id = 1;
+  uint32 boss_over_flow_damage = 2;
+  uint32 boss_total_hp = 3;
+  uint32 soldier_over_flow_damage = 4;
+  uint32 soldier_total_hp = 5;
+  uint32 turn_count = 6;
+  uint32 last_turn_round_start_count = 7;
+  uint32 unit_dead_count = 8;
+  uint32 total_hp = 9;
+  uint32 total_damage_taken = 10;
+  AbyssInfo info = 11;
+}
+
+message CSDebugSingleBattleStart {
+  string setting = 1;
+  CSOnlineSingleBattleStart sub = 2;
+}
+
+message CSDebugAbyssUnlock {
+  AbyssInfo info = 11;
+}
+
+message CSDebugAbyssChangeRank {
+  uint64 iduser = 1;
+  uint32 abyss_rank_id = 2;
+  int32 rank_percent = 3;
+  int64 rank_no = 4;
+  int32 point = 5;
+}
+
+message CSDebugAbyssChangeRankingPoint {
+  int32 point = 1;
+}
+
+message CSDebugCareerFinishQuest {
+  enum Type {
+    One = 0;
+    All = 1;
+    Until = 2;
+    Clear = 3;
+  }
+
+  enum QuestType {
+    None = 0;
+    Breed = 1;
+    Material = 2;
+    Strike = 3;
+    Challenge = 4;
+  }
+
+  uint32 career_id = 1;
+  uint32 quest_id = 2;
+  Type type = 3;
+  QuestType quest_type = 4;
+}
+
+message CSDebugMultipleTopArenaApply {
+  bool apply = 1;
+  uint32 real_pvp_id = 2;
+}
+
+message CSDebugGuildBuildActivityChangeGuildBeacon {
+  uint32 guild_build_activity_id = 1;
+  int32 beacon_count = 2;
+}
+
+message CSDebugMultipleModifyTopArenaScore {
+  uint32 score = 1;
+  uint32 real_pvp_id = 2;
+  uint32 win_count = 3;
+  uint32 fail_count = 4;
+}
+
+message CSDebugAdventureLevelFinish {
+  uint32 level_id = 1;
+}
+
+message CSDebugClearGlobalQuest {
+  uint32 quest_id = 1;
+}
+
+message CSDebugSetContractActivityRankPoint {
+  uint32 contract_activity_id = 1;
+  int32 point = 2;
+}
+
+message CSDebugAbyssCalEnlargedRank {
+  uint32 abyss_rank_id = 1;
+  int64 rank_no_start = 2;
+  int64 rank_no_end = 3;
+}
+
+message CSDebugAfk {
+  enum Type {
+    QueryBuffIds = 0;
+    ClearAfkData = 1;
+    SetTowerQuestId = 2;
+  }
+
+  Type type = 1;
+  uint32 tower_quest_id = 2;
+}
+
+message CSDebugRichMan {
+  enum Type {
+    ClearRichManData = 0;
+    SetDiceCount = 1;
+    SetMagicDiceCount = 2;
+  }
+
+  Type type = 1;
+  uint32 activity_id = 2;
+  uint32 count = 3;
+}
+
+message CSDebugOnlineGuildGrant {
+  enum Type {
+    ClearMyData = 0;
+    ClearAllGuildData = 1;
+    UnlockAlter = 2;
+  }
+
+  Type type = 1;
+  uint32 activity_id = 2;
+}
+
+message CSDebugOnlineArtifact {
+  enum Type {
+    ClearAll = 0;
+    UnlockAll = 1;
+    Unlock = 2;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugSkipBPMode {
+}
+
+message CSDebugExpedition {
+  string data = 1;
+}
+
+message CSDebugOnlineDreamworld {
+  enum Type {
+    Modify = 0;
+    Reset = 1;
+    ClearCards = 2;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineContractActivity {
+  enum Type {
+    Clear = 0;
+    UnlockChallengeQuest = 1;
+    UnlockActivityQuest = 2;
+    ModifyQuest = 3;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineAbyssChallenge {
+  enum Type {
+    Unlock = 0;
+    ChangeRank = 1;
+    ChangePoint = 2;
+    ChangeTotalCount = 3;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineRoyri {
+  enum Type {
+    SetCookLevel = 0;
+    UnlockAllCookBook = 1;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineCommerce {
+  enum Type {
+    Reset = 0;
+    ResetDailyTeam = 1;
+    Upgrade = 2;
+    FinishCareerQuest = 3;
+    FinishCareerQuests = 4;
+    UnlockCareer = 5;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineInfiniteChallenge {
+  enum Type {
+    UnlockLicense = 0;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineWorldBoss {
+  enum Type {
+    DecrHp = 0;
+    ChangePoint = 1;
+    Reset = 2;
+    SetBotStatus = 3;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineMatch {
+  enum Type {
+    Reset = 0;
+    Upgrade = 1;
+    ResetBattleCount = 2;
+    Treasure = 3;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineAutoChess {
+  enum Type {
+    Unlock = 0;
+    UnlockDifficulties = 1;
+    SetUnitWeapon = 2;
+    SetRecyclePoint = 3;
+    ResetStamina = 4;
+    Reset = 5;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineAdventureSetExp {
+  uint32 adventure_id = 1;
+  int32 exp = 2;
+}
+
+message CSOnlineMainQuestEnter {
+}
+
+message CSOnlineMainQuestStart {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineMainQuestChapterGetTreasure {
+  uint32 chapter_id = 1;
+  uint32 star_param = 2;
+}
+
+message CSOnlineMainQuestGetBonus {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineMainQuestFinishedScenarioPlayEnd {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineMainQuestChapterGetPerfectTreasure {
+  uint32 chapter_id = 1;
+}
+
+message CSOnlineMainQuestVote {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+  uint32 vote_option_id = 3;
+  int64 vote_count = 4;
+}
+
+message CSOnlineMainQuestSyncVote {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineMainQuestChapterBuy {
+  uint32 chapter_id = 1;
+  DBConsumes ticket_consumes = 2;
+}
+
+message CSOnlineMainQuestChooseContract {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+  repeated uint32 chosen_contract_ids = 3;
+}
+
+message CSOnlineMainQuestGetChapterQuestTreasure {
+  uint32 chapter_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineMainQuestGetAllChapterQuestTreasures {
+  uint32 chapter_id = 1;
+}
+
+message CSOnlineBattleStart {
+  sint32 type = 1;
+  repeated uint32 params = 2;
+  repeated battle.BattleUnit units = 3;
+  BattleUseEffects effects = 4;
+}
+
+message CSOnlineBattleEnd {
+  uint32 battle_index = 1;
+  bytes battle_report = 2;
+  bool debug_end = 3;
+  bool give_up = 4;
+  sint32 tactic_point = 5;
+}
+
+message CSOnlineBattlePremake {
+  sint32 type = 1;
+  repeated uint32 params = 2;
+  BattleUseEffects effects = 3;
+}
+
+message CSOnlineBattleCommand {
+  uint32 command_start = 1;
+  bytes commands = 2;
+}
+
+message CSOnlineBattleBack {
+  uint32 back_count = 1;
+  uint32 back_command = 2;
+  bool back_clear = 3;
+  bytes report = 4;
+}
+
+message CSOnlineBattleBackErr {
+  string err_msg = 1;
+}
+
+message CSOnlineSingleBattlePremake {
+  CSOnlineBattlePremake sub = 1;
+}
+
+message CSOnlineSingleBattleStart {
+  CSOnlineBattleStart sub = 1;
+}
+
+message CSOnlineSingleBattleEnd {
+  CSOnlineBattleEnd sub = 1;
+}
+
+message CSOnlineSingleBattleMessage {
+  SingleBattle.Type type = 1;
+  uint32 unit_index = 2;
+  bytes command = 3;
+  uint32 command_index = 4;
+}
+
+message CSOnlineSingleBattleBack {
+  CSOnlineBattleBack sub = 1;
+}
+
+message CSOnlineSandboxLaunch {
+  message Sandbox1 {
+  }
+
+  message Sandbox2 {
+    PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Mode sandbox2_mode = 3;
+  }
+
+  DBConsumes ticket_consumes = 1;
+  uint32 sandbox_id = 2;
+  Sandbox1 sandbox1_launch_data = 3;
+  Sandbox2 sandbox2_launch_data = 4;
+  uint32 save_data_chapter_id = 5;
+}
+
+message CSOnlineSandboxStatusProcessing {
+  message Sandbox1 {
+    uint32 token_id = 1;
+    repeated uint32 minor_arcana_ids = 2;
+    repeated uint32 role_unit_ids = 3;
+    uint32 major_arcana_id = 4;
+    PlayerSandboxStatusDetailData.Sandbox1.LaunchData.Phase phase = 5;
+  }
+
+  message Sandbox2 {
+    repeated uint32 role_unit_ids = 1;
+    PlayerSandboxStatusDetailData.Sandbox2.LaunchData.Phase phase = 2;
+  }
+
+  Sandbox1 sandbox1 = 1;
+  Sandbox2 sandbox2 = 2;
+  uint32 sandbox_id = 3;
+}
+
+message CSOnlineSandboxEntryEnter {
+}
+
+message CSOnlineSandboxTechNodeUnlock {
+  uint32 id = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlineSandboxResulted {
+  uint32 sandbox_id = 1;
+}
+
+message CSOnlineSandboxMemoirLock {
+  uint32 id = 1;
+}
+
+message CSOnlineSandboxMemoirEnter {
+}
+
+message CSOnlineSandboxMemoirPlay {
+  uint32 id = 1;
+}
+
+message CSOnlineSandboxMemoirDelete {
+  uint32 id = 1;
+}
+
+message CSOnlineSandboxTourLevelTreasureGet {
+  repeated uint32 level_ids = 1;
+}
+
+message CSOnlineSandboxFix {
+  uint32 sandbox_id = 1;
+}
+
+message CSOnlineSandboxUpdateLogEnter {
+}
+
+message CSOnlineSandboxUpdateLogRead {
+  uint32 id = 1;
+}
+
+message CSOnlineSandboxChapterSaveDataListGet {
+  uint32 sandbox_id = 1;
+}
+
+message CSOnlineSandboxChapterSaveDataSetName {
+  uint32 id = 1;
+  string name = 2;
+}
+
+message CSOnlineSandboxChapterSaveDataGetBonus {
+  uint32 id = 1;
+}
+
+message CSOnlineUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSOnlineUnitSkinChange {
+  OnlineUnitSkinChange.Type type = 1;
+  uint32 skin_id = 2;
+  uint32 unit_id = 3;
+}
+
+message CSOnlineUnitSkinActive {
+  uint32 id = 1;
+}
+
+message CSOnlineUpgradeRoleStar {
+  uint32 unit_id = 1;
+  uint32 target_star = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineUpgradeRoleRank {
+  uint32 unit_id = 1;
+  uint32 target_rank = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineChooseRankSkill {
+  uint32 unit_id = 1;
+  uint32 rank_id = 2;
+  uint32 skill_id = 3;
+}
+
+message CSOnlineUseRoleUnitExp {
+  uint32 role_id = 1;
+  uint32 target_level = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineUnitEquipmentReplace {
+  uint32 equipment_new_id = 1;
+  uint32 equipment_old_id = 2;
+  uint32 unit_id = 3;
+  uint32 slot_id = 4;
+}
+
+message CSOnlineStudyRankSkill {
+  uint32 unit_id = 1;
+  uint32 rank_id = 2;
+  uint32 skill_id = 3;
+  DBConsume consume = 4;
+}
+
+message CSOnlineUnitCharmReplace {
+  uint32 charm_new_id = 1;
+  uint32 charm_old_id = 2;
+  uint32 unit_id = 3;
+}
+
+message CSOnlineUnitPieceRecycle {
+  DBConsumes consumes = 1;
+}
+
+message CSOnlineUnitChangeCurrentUnit {
+  uint32 role_id = 1;
+  uint32 unit_id = 2;
+}
+
+message CSOnlineUnitEquipmentAutoEquip {
+  enum Type {
+    Equip = 0;
+    UnEquip = 1;
+  }
+
+  Type type = 1;
+  uint32 unit_id = 2;
+  repeated uint32 exclude_weapon_ids = 3;
+  repeated uint32 exclude_charm_ids = 4;
+}
+
+message CSOnlineUnitActivateModuleSkill {
+  uint32 unit_id = 1;
+  uint32 rank_id = 2;
+  uint32 module_skill_id = 3;
+  bool is_upgrade = 4;
+  DBConsumes consumes = 5;
+}
+
+message CSOnlineUnitBoost {
+  uint32 unit_id = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlineUnitRolesCustomTagsSet {
+  repeated uint32 role_ids = 1;
+  repeated uint32 custom_tag_ids = 2;
+}
+
+message CSOnlineUnitPresetEquipmentSet {
+  enum Type {
+    MainWeapon = 0;
+    OffhandWeapon = 1;
+    Charm = 2;
+    CopyCurrent = 99;
+  }
+
+  uint32 unit_id = 1;
+  uint32 preset_id = 2;
+  Type type = 3;
+  uint32 equipment_id = 4;
+}
+
+message CSOnlineUnitPresetEquipmentApply {
+  uint32 unit_id = 1;
+  uint32 preset_id = 2;
+}
+
+message CSOnlineUnitPresetSkillSet {
+  enum Type {
+    MeleeSkill = 0;
+    ReactiveSkill = 1;
+    Skill1 = 2;
+    Skill2 = 3;
+    Skill3 = 4;
+    ModuleSkill = 5;
+    CopyCurrent = 99;
+  }
+
+  uint32 unit_id = 1;
+  uint32 preset_id = 2;
+  Type type = 3;
+  uint32 skill_id = 4;
+}
+
+message CSOnlineUnitPresetSkillApply {
+  uint32 unit_id = 1;
+  uint32 preset_id = 2;
+}
+
+message CSOnlineUnitPresetClear {
+  enum Type {
+    Equipment = 0;
+    Skill = 1;
+  }
+
+  Type type = 1;
+  uint32 unit_id = 2;
+}
+
+message CSOnlineUnitPieceExchange {
+  message ExchangePiece {
+    uint32 id = 1;
+    sint32 count = 2;
+  }
+
+  uint32 exchange_id = 1;
+  repeated ExchangePiece exchange_pieces = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineUnitPreview {
+  uint64 player_id = 1;
+  uint32 unit_id = 2;
+}
+
+message CSOnlineUnitRankSet {
+  repeated uint32 unit_ids = 2;
+}
+
+message CSOnlineUnitUIEnter {
+}
+
+message CSOnlineUnitRankPreviewUnpublic {
+  bool unpublic = 1;
+}
+
+message CSOnlineActivityUIEnter {
+}
+
+message CSOnlineActivityEnter {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineActivityQuestStart {
+  uint32 activity_id = 1;
+  uint32 activity_quest_id = 2;
+}
+
+message CSOnlineActivityQuestRefresh {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineActivityQuestGiveUp {
+  uint32 activity_id = 1;
+}
+
+message CSOnlinePracticeStart {
+  uint32 activity_id = 1;
+  uint32 activity_quest_id = 2;
+  repeated uint32 unit_ids = 3;
+  uint32 contract_activity_id = 4;
+}
+
+message CSOnlinePracticeLogListGet {
+}
+
+message CSOnlinePracticeFinishUseTicket {
+  uint32 activity_id = 1;
+  uint32 activity_quest_id = 2;
+  DBConsume ticket_consume = 3;
+  bool skip = 4;
+}
+
+message CSOnlineActivityGetAdaptiveQuest {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineActivityGetMultipleReward {
+  uint32 activity_id = 1;
+  uint32 count = 2;
+}
+
+message CSOnlineShopEnter {
+}
+
+message CSOnlineShopBuy {
+  uint32 shop_id = 1;
+  uint32 id = 2;
+  int32 count = 3;
+  DBConsume consume = 4;
+  string order_id = 5;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 6;
+}
+
+message CSOnlineShopGet {
+  uint32 shop_id = 1;
+}
+
+message CSOnlineShopPurchase {
+  uint64 trx_no = 1;
+}
+
+message CSOnlineShopMultipleBuy {
+  repeated CSOnlineShopBuy subs = 1;
+}
+
+message CSOnlineGachaEnter {
+}
+
+message CSOnlineGacha {
+  uint32 id = 1;
+  uint32 times = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineGachaLogGet {
+  sint32 type = 1;
+  uint32 rule_id = 2;
+  int32 page = 3;
+}
+
+message CSOnlineGachaSelectUp {
+  uint32 id = 1;
+  repeated uint32 select_up_ids = 2;
+}
+
+message CSOnlineGachaSelectPackage {
+  uint32 id = 1;
+  uint32 package_id = 2;
+}
+
+message CSOnlineWarehouseEnter {
+}
+
+message CSOnlineGameStartProcedureChecked {
+  uint32 game_start_procedure_checked = 1;
+}
+
+message CSOnlineGameStartProcedureGacha {
+}
+
+message CSOnlineTutorialUpdate {
+  uint32 tutorial = 1;
+}
+
+message CSOnlineTacticsSkillEnter {
+}
+
+message CSOnlineTacticsSkillEquip {
+  uint32 tactics_skill_id = 1;
+  bool is_remove = 2;
+}
+
+message CSOnlineTutorialBitUpdate {
+  uint32 tutorial_id = 1;
+}
+
+message CSOnlineScenarioPlay {
+  uint32 type = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineNavigationKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message CSOnlineGoodReviewGuideUpdateTimes {
+  uint32 times = 1;
+}
+
+message CSOnlineGetBannerIds {
+}
+
+message CSOnlineBattleGuidebookTrigger {
+  message TriggerParam {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+    string sparam = 4;
+  }
+
+  repeated TriggerParam trigger_params = 1;
+}
+
+message CSOnlineBattleGuidebookEnter {
+}
+
+message CSOnlinePlayerMessageLike {
+  string msg_id = 1;
+  uint64 msg_owner_id = 2;
+  uint32 msg_type = 3;
+  uint32 battle_type = 4;
+  uint32 template_id = 5;
+  uint32 quest_id = 6;
+  uint32 c_type = 7;
+}
+
+message CSOnlinePlayerMessageGetList {
+  message msg {
+    string id = 1;
+    uint64 owner_id = 2;
+  }
+
+  repeated msg message_infos = 1;
+}
+
+message CSOnlinePlayerMessageUnlike {
+  string msg_id = 1;
+  uint64 msg_owner_id = 2;
+}
+
+message CSOnlinePlayerMessageGetLikeNotifyList {
+  uint64 iduser = 1;
+}
+
+message CSOnlineShare {
+  enum ShareType {
+    OperationActivity = 0;
+    Dreamland = 1;
+  }
+
+  uint32 type = 1;
+  uint32 c_type = 2;
+  uint32 id = 3;
+  ShareType share_type = 4;
+}
+
+message CSOnlineBehaviourDo {
+  enum DoType {
+    AnnualReview = 0;
+  }
+
+  DoType type = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineConditionCheck {
+  enum Type {
+    OnlineContractActivity = 0;
+  }
+
+  Type type = 1;
+  repeated uint32 ids = 2;
+}
+
+message CSOnlineWeaponLevelUp {
+  uint32 weapon_id = 1;
+  uint32 target_level = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineWeaponUpgradeStar {
+  uint32 weapon_id = 1;
+  repeated uint32 consume_weapon_ids = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineWeaponBreak {
+  uint32 weapon_id = 1;
+  DBConsumes consumes = 2;
+}
+
+message CSOnlineWeaponLock {
+  uint32 weapon_id = 1;
+}
+
+message CSOnlineWeaponsRecycle {
+  repeated uint32 weapon_ids = 1;
+}
+
+message CSOnlineWeaponEnchanting {
+  uint32 weapon_id = 1;
+  DBConsumes consumes = 2;
+}
+
+message CSOnlineWeaponEnchantingSelect {
+  uint32 weapon_id = 1;
+  uint32 index = 2;
+}
+
+message CSOnlineWeaponBoost {
+  uint32 weapon_id = 1;
+  DBConsume consume = 2;
+  uint32 enchanting_element = 3;
+  repeated uint32 enchanting_entry_ids = 4;
+}
+
+message CSOnlineAchievementQuestEnter {
+}
+
+message CSOnlineGetAchievementTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineGetAchievementQuestTreasure {
+  DBAchievementQuestStatus.Type type = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineGetAchievementQuestPointTreasure {
+  DBAchievementQuestStatus.Type type = 1;
+  uint32 point = 2;
+}
+
+message CSOnlineGetAchievementQuestAllTreasure {
+  DBAchievementQuestStatus.Type type = 1;
+}
+
+message CSOnlineSandboxCollectionEnter {
+}
+
+message CSOnlineGetSandboxTrophyTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineGetSandboxPhotoTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineIntelligenceEnter {
+}
+
+message CSOnlineBattlePassEnter {
+  uint32 type = 1;
+  bool is_sync_data = 2;
+}
+
+message CSOnlineGetBattlePassQuestExp {
+  uint32 type = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineGetAllBattlePassQuestExp {
+  uint32 type = 1;
+  sint32 category = 2;
+}
+
+message CSOnlineGetBattlePassLevelTreasure {
+  uint32 type = 1;
+  uint32 level = 2;
+  DBBattlePassStatus.BonusType bonus_type = 3;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 4;
+}
+
+message CSOnlineGetAllBattlePassLevelTreasure {
+  uint32 type = 1;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 2;
+}
+
+message CSOnlineBuyBattlePassLevel {
+  uint32 type = 1;
+  uint32 target_level = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineGetBattlePassLoopTreasure {
+  uint32 type = 1;
+  OnlineTreasureSelectableChestSelectData chest_select_data = 2;
+}
+
+message CSOnlineBuyBattlePassExp {
+  uint32 type = 1;
+  sint32 exp = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineBattlePassDraw {
+  uint32 type = 1;
+  uint32 count = 2;
+}
+
+message CSOnlineArenaEnter {
+}
+
+message CSOnlineArenaRefresh {
+  DBConsume consume = 1;
+}
+
+message CSOnlineArenaSaveDefence {
+  message OnlineArenaFormationBuilding {
+    uint32 building_id = 1;
+    sint32 x = 2;
+    sint32 z = 3;
+    uint32 facing = 4;
+  }
+
+  repeated battle.BattleUnit units = 1;
+  repeated OnlineArenaFormationBuilding buildings = 2;
+}
+
+message CSOnlineArenaUpgradeBuilding {
+  uint32 building_id = 1;
+}
+
+message CSOnlineArenaLevelReset {
+}
+
+message CSOnlineArenaDowngradeBuilding {
+  uint32 building_id = 1;
+}
+
+message CSOnlineArenaGetRecordList {
+}
+
+message CSOnlineCharmLevelUp {
+  uint32 charm_id = 1;
+  uint32 target_level = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineCharmLock {
+  uint32 charm_id = 1;
+}
+
+message CSOnlineCharmsRecycle {
+  repeated uint32 charm_ids = 1;
+}
+
+message CSOnlineCharmDiscard {
+  uint32 charm_id = 1;
+}
+
+message CSOnlineCharmBatchLevelUp {
+  repeated uint32 charm_ids = 1;
+  uint32 target_level = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineCharmEntryReforge {
+  uint32 charm_id = 1;
+  repeated uint32 lock_entry_indexes = 2;
+  uint32 count = 3;
+  repeated DBConsume consumes = 4;
+}
+
+message CSOnlineCharmEntryReforgeSelect {
+  uint32 charm_id = 1;
+  bool replace = 2;
+}
+
+message CSOnlineCharmExchange {
+  uint32 charm_template_id = 1;
+  repeated uint32 charm_entry_attribute_types = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineTowerEnter {
+}
+
+message CSOnlineTowerQuestStart {
+  uint32 id = 1;
+}
+
+message CSOnlineTowerFloorTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineTowerWeekTreasure {
+  enum Type {
+    Base = 0;
+    Floor = 1;
+    All = 2;
+  }
+
+  uint32 index = 1;
+  Type type = 2;
+}
+
+message CSOnlineTowerWeekTreasureAll {
+  enum Type {
+    Base = 0;
+    Floor = 1;
+  }
+
+  Type type = 1;
+}
+
+message CSOnlineTechEnter {
+}
+
+message CSOnlineTechNodeLevelUp {
+  uint32 category = 1;
+  uint32 node_id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineAFKTechEnter {
+}
+
+message CSOnlineAFKTechNodeLevelUp {
+  uint32 category = 1;
+  uint32 node_id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineOperationActivityGet {
+  uint32 id = 1;
+}
+
+message CSOnlineOperationActivityGetQuestTreasure {
+  uint32 id = 1;
+  uint32 quest_id = 2;
+}
+
+message CSOnlineOperationActivityGetDayTreasure {
+  uint32 id = 1;
+  uint32 day_id = 2;
+}
+
+message CSOnlineOperationActivityGetTreasure {
+  uint32 id = 1;
+  uint32 treasure_id = 2;
+  string extra_data = 3;
+}
+
+message CSOnlineOperationActivityGetDayTreasures {
+  uint32 id = 1;
+  uint32 day_id = 2;
+}
+
+message CSOnlineOperationActivityEnter {
+}
+
+message CSOnlineOperationActivityUrlGet {
+  uint32 id = 1;
+  uint32 quest_id = 2;
+}
+
+message CSOnlineOperationActivityGetTreasureCallback {
+  uint64 player_id = 1;
+  uint32 id = 2;
+  string token = 3;
+  string random_key = 4;
+  uint32 bonus_id = 5;
+}
+
+message CSOnlineOperationActivityGetSpecialDayTreasure {
+  uint32 id = 1;
+  uint32 day_id = 2;
+}
+
+message CSOnlineOperationActivitySaveExtraData {
+  uint32 id = 1;
+  string extra_data = 2;
+}
+
+message CSOnlineOperationActivityGetQuestAllTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineOperationActivityGetGroupTreasure {
+  uint32 id = 1;
+  uint32 group_id = 2;
+}
+
+message CSOnlineOperationActivityGetPointTreasure {
+  uint32 id = 1;
+  uint32 point = 2;
+}
+
+message CSOnlineOperationActivityGetAllPointTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineElysiumEnter {
+  uint32 area_id = 1;
+}
+
+message CSOnlineEventTrigger {
+}
+
+message CSOnlineCustomEventTrigger {
+  uint32 elysium_perform_id = 1;
+}
+
+message CSOnlineRoleFriendshipUIEnter {
+  uint32 role_id = 1;
+}
+
+message CSOnlineRoleFriendshipStoryUIEnter {
+  uint32 role_id = 1;
+}
+
+message CSOnlineRoleNicknameChange {
+  uint32 role_id = 1;
+  DBConsume consume = 2;
+  string nickname = 3;
+}
+
+message CSOnlineRoleNicknameReset {
+  uint32 role_id = 1;
+}
+
+message CSOnlineRoleFriendshipInteract {
+  uint32 role_id = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlineRoleFriendshipStoryStart {
+  uint32 story_id = 1;
+}
+
+message CSOnlineRoleFriendshipStoryNext {
+  uint32 story_id = 1;
+}
+
+message CSOnlineCardEnter {
+  uint64 iduser = 1;
+}
+
+message CSOnlineCardHeadPortraitChange {
+  uint32 id = 1;
+  OnlineCardHeadPortraitChange.Type type = 2;
+}
+
+message CSOnlineCardSandboxTrophiesModify {
+  repeated uint32 ids = 1;
+}
+
+message CSOnlineCardRoleUnitsModify {
+  repeated uint32 ids = 1;
+}
+
+message CSOnlineCardKanbanModify {
+  uint32 type = 1;
+  uint32 id = 2;
+  uint32 unit_skin_id = 3;
+}
+
+message CSOnlineFriendEnter {
+}
+
+message CSOnlineFriendRecommendedGet {
+}
+
+message CSOnlineFriendApplyListGet {
+}
+
+message CSOnlineFriendApply {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendApplyPass {
+  uint64 player_id = 1;
+  bool is_all = 2;
+}
+
+message CSOnlineFriendApplyDecline {
+  uint64 player_id = 1;
+  bool is_all = 2;
+}
+
+message CSOnlineFriendBlock {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendUnblock {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendPointOperate {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendPointAllSend {
+}
+
+message CSOnlineFriendPointAllReceive {
+}
+
+message CSOnlineFriendSearch {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendDelete {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendBattleApply {
+  uint64 player_id = 1;
+  bool bpModel = 2;
+}
+
+message CSOnlineFriendBattleApplyCancel {
+  uint64 player_id = 1;
+}
+
+message CSOnlineFriendBattleApplyReply {
+  FriendBattleApplyReplyType.Type reply = 1;
+  bool bpModel = 2;
+}
+
+message CSOnlineGuildCreate {
+  string name = 1;
+  string introduction = 2;
+  bool need_approve = 3;
+  uint32 emblem_id = 4;
+  DBConsume consume = 5;
+}
+
+message CSOnlineGuildJoin {
+  uint32 guild_id = 1;
+}
+
+message CSOnlineGuildLeave {
+}
+
+message CSOnlineGuildSearch {
+  string key = 1;
+  sint32 limit = 2;
+}
+
+message CSOnlineGuildRecommendedGet {
+}
+
+message CSOnlineGuildChangeName {
+  string name = 1;
+  DBConsume consume = 2;
+}
+
+message CSOnlineGuildInfoChange {
+  string introduction = 1;
+  bool need_approve = 2;
+  uint32 emblem_id = 3;
+}
+
+message CSOnlineGuildApplyPass {
+  uint64 player_id = 1;
+  bool is_all = 2;
+}
+
+message CSOnlineGuildApplyDecline {
+  uint64 player_id = 1;
+  bool is_all = 2;
+}
+
+message CSOnlineGuildMemberRoleGive {
+  uint64 player_id = 1;
+  uint32 role_id = 2;
+}
+
+message CSOnlineGuildMemberKick {
+  uint64 player_id = 1;
+}
+
+message CSOnlineGuildEnter {
+}
+
+message CSOnlineGuildApplyListGet {
+}
+
+message CSOnlineGuildLogListGet {
+}
+
+message CSOnlineGuildImpeach {
+}
+
+message CSOnlineGuildChallengeStart {
+  uint32 id = 1;
+}
+
+message CSOnlineGuildChallengeEnter {
+  uint32 id = 1;
+}
+
+message CSOnlineGuildChallengeStartNormalBattle {
+  uint32 challenge_id = 1;
+  uint32 quest_id = 2;
+  repeated uint32 unit_ids = 3;
+}
+
+message CSOnlineGuildChallengeEnd {
+  uint32 id = 1;
+}
+
+message CSOnlineGuildChallengeGetAllMember {
+}
+
+message CSOnlineGuildGetPointTreasure {
+  uint32 point = 1;
+}
+
+message CSOnlineGuildGetAllPointTreasures {
+}
+
+message CSOnlineGuildRemindRead {
+  enum ClearType {
+    Id = 0;
+    Count = 2;
+  }
+
+  message Data {
+    uint32 id = 1;
+  }
+
+  ClearType clear_type = 1;
+  uint32 remind_type = 2;
+  Data data = 3;
+}
+
+message CSOnlineGuildBuildActivityEnter {
+  uint32 guild_build_activity_id = 1;
+}
+
+message CSOnlineGuildBuildActivityTryUnlockBeacon {
+  uint32 guild_build_activity_id = 1;
+  uint32 day = 2;
+  uint64 key = 3;
+}
+
+message CSOnlineGuildBuildActivityGetBeaconTreasureRecord {
+  uint32 guild_build_activity_id = 1;
+}
+
+message CSOnlineGuildBuildActivityGetShareTreasure {
+  uint32 guild_build_activity_id = 1;
+}
+
+message CSOnlineRevelationEnter {
+}
+
+message CSOnlineRevelationGetTreasure {
+  uint32 id = 1;
+}
+
+message CSOnlineRevelationPutTarot {
+  uint32 id = 1;
+}
+
+message CSOnlineElysiumPlacementSave {
+  message Furniture {
+    uint32 id = 1;
+    uint32 area_id = 2;
+    sint32 pos_x = 3;
+    sint32 pos_z = 4;
+    uint32 facing = 5;
+    uint32 anchor_id = 6;
+  }
+
+  message Role {
+    uint32 id = 1;
+    uint32 area_id = 2;
+    uint32 anchor_id = 3;
+  }
+
+  repeated Furniture furnitures = 1;
+  repeated Role roles = 2;
+}
+
+message CSOnlineContractActivityEnter {
+}
+
+message CSOnlineContractActivityGetQuestTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 quest_id = 2;
+  bool is_achievement = 3;
+}
+
+message CSOnlineContractActivityGetQuestPointTreasure {
+  uint32 contract_activity_id = 1;
+  sint32 point = 2;
+}
+
+message CSOnlineContractActivityGetQuestAllPointTreasure {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineContractActivityGetQuestAllTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 contract_activity_quest_category = 2;
+  bool include_achievements = 3;
+  uint32 extra_id = 4;
+}
+
+message CSOnlineContractActivityGetData {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineContractActivityChooseContract {
+  message contract_activity_type {
+    uint32 type = 1;
+    uint32 param = 2;
+  }
+
+  uint32 contract_activity_id = 1;
+  contract_activity_type type = 2;
+  uint32 online_quest_id = 3;
+  repeated uint32 chosen_contract_ids = 4;
+}
+
+message CSOnlineContractActivityGetChosenContract {
+  message contract_activity_type {
+    uint32 type = 1;
+    uint32 param = 2;
+  }
+
+  uint32 contract_activity_id = 1;
+  contract_activity_type type = 2;
+  uint32 quest_id = 3;
+}
+
+message CSOnlineContractActivityTechEnter {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineContractActivityUnlockTech {
+  uint32 contract_activity_id = 1;
+  uint32 tech_id = 2;
+}
+
+message CSOnlineContractActivityChooseTech {
+  uint32 contract_activity_id = 1;
+  uint32 tech_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSOnlineContractActivityGetRank {
+  uint32 contract_activity_id = 1;
+  int64 start = 2;
+  int64 stop = 3;
+}
+
+message CSOnlineContractActivitySyncGlobalQuest {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineContractActivityGetGlobalQuestTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 global_quest_id = 2;
+}
+
+message CSOnlineContractActivitySyncGlobalVote {
+  uint32 contract_activity_id = 1;
+  uint32 vote_id = 2;
+}
+
+message CSOnlineContractActivityVote {
+  uint32 contract_activity_id = 1;
+  uint32 vote_id = 2;
+  uint32 vote_option_id = 3;
+  int64 vote_count = 4;
+  DBConsume consume = 5;
+}
+
+message CSOnlineContractActivityGetProcessTreasure {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineContractActivityGetDayTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 day_id = 2;
+}
+
+message CSOnlineAbyssUIEnter {
+}
+
+message CSOnlineAbyssSwitch {
+  AbyssInfo info = 1;
+}
+
+message CSOnlineAbyssRankGetQuestPointTreasure {
+  uint32 abyss_rank_id = 1;
+  sint32 point = 2;
+}
+
+message CSOnlineAbyssGuideGetQuestTreasure {
+  uint32 abyss_guide_id = 1;
+  uint32 quest_id = 2;
+}
+
+message CSOnlineAbyssGuideGetQuestAllTreasure {
+  uint32 abyss_guide_id = 1;
+}
+
+message CSOnlineAbyssRankGetRank {
+  uint32 rank_id = 1;
+}
+
+message CSOnlineAbyssRankGetProcessTreasure {
+  uint32 rank_id = 1;
+}
+
+message CSOnlineAbyssGetBattleUnitSnapshot {
+}
+
+message CSOnlineAbyssModifyBattleUnitSnapshot {
+  message snapshot_req {
+    uint32 id = 1;
+    repeated uint32 unit_ids = 2;
+  }
+
+  repeated snapshot_req snapshots = 1;
+}
+
+message CSOnlineAbyssResetData {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineAbyssUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSOnlineAbyssSetFirstPassShowed {
+  uint32 contract_activity_id = 1;
+}
+
+message CSOnlineAbyssRankGetPowerfulUnit {
+}
+
+message CSOnlineAbyssChallengeSwitch {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+  uint32 challenge_detail_id = 3;
+}
+
+message CSOnlineAbyssChallengeGetRank {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+}
+
+message CSOnlineAbyssChallengeGetPowerfulUnit {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+  uint32 challenge_detail_id = 3;
+}
+
+message CSOnlineAbyssChallengeGetProcessTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+}
+
+message CSOnlineAbyssChallengeGetDetailTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+  uint32 challenge_detail_id = 3;
+}
+
+message CSOnlineAbyssChallengeUploadQuestReport {
+  uint32 contract_activity_id = 1;
+  uint32 challenge_id = 2;
+  uint32 challenge_detail_id = 3;
+  uint32 battle_field_id = 4;
+  uint32 battle_field_quest_id = 5;
+  uint32 battle_index = 6;
+}
+
+message CSOnlineLotteryActivityEnter {
+  uint32 lottery_activity_id = 1;
+}
+
+message CSOnlineLotteryActivitySelectTreasureOption {
+  uint32 lottery_activity_id = 1;
+  uint32 slot_id = 2;
+  uint32 lottery_treasure_option_id = 3;
+}
+
+message CSOnlineLotteryActivityDraw {
+  uint32 lottery_activity_id = 1;
+}
+
+message CSOnlineLotteryActivityResetRound {
+  uint32 lottery_activity_id = 1;
+}
+
+message CSOnlineExchangeShopBuy {
+  uint32 shop_id = 1;
+  uint32 id = 2;
+  uint32 consume_type = 3;
+  uint32 consume_instance_id = 4;
+  DBConsume consume = 5;
+}
+
+message CSOnlineAlchemyItemBuy {
+  uint32 item_id = 1;
+  uint32 alchemy_formula_id = 2;
+  uint32 alchemy_count = 3;
+  DBConsumes consumes = 4;
+}
+
+message CSOnlineAlchemyRecycle {
+  DBConsumes consumes = 1;
+}
+
+message CSOnlineCareerEnter {
+}
+
+message CSOnlineCareerQuestGetTreasure {
+  uint32 career_id = 1;
+  uint32 quest_id = 2;
+}
+
+message CSOnlineCareerChallengeGetTreasure {
+  uint32 career_id = 1;
+}
+
+message CSOnlineCareerGetTreasure {
+  uint32 career_id = 1;
+}
+
+message CSOnlineCareerGetAllTreasure {
+  uint32 career_id = 1;
+}
+
+message CSOnlineTopArenaApply {
+  bool apply = 1;
+  uint32 real_pvp_id = 2;
+}
+
+message CSOnlineTopArenaModifyBattleUnitSnapshot {
+  repeated uint32 unit_ids = 2;
+}
+
+message CSOnlineTopArenaGetInfo {
+  uint32 real_pvp_id = 1;
+}
+
+message CSOnlineTopArenaUnitSkillReplace {
+  uint32 skill_id = 1;
+  uint32 unit_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSOnlineScheduleGet {
+  uint32 schedule_id = 1;
+}
+
+message CSOnlineAdventureEnter {
+}
+
+message CSOnlineAdventureSelectLevel {
+  uint32 level_id = 1;
+  uint32 style_id = 2;
+}
+
+message CSOnlineAdventureSelectBuff {
+  uint32 level_id = 1;
+  uint32 quest_id = 2;
+  uint32 mission_buff_id = 3;
+}
+
+message CSOnlineAdventureQuestStart {
+  uint32 level_id = 1;
+  uint32 quest_id = 2;
+}
+
+message CSOnlineAdventureLevelFinish {
+  uint32 level_id = 1;
+  bool is_stamina = 2;
+  bool is_consume_high = 3;
+  bool is_disruption = 4;
+}
+
+message CSOnlineAdventureLevelGiveUp {
+  uint32 level_id = 1;
+}
+
+message CSOnlineAdventureGetExpTreasure {
+  uint32 adventure_id = 1;
+  uint32 exp_treasure_id = 2;
+  bool is_get_all = 3;
+}
+
+message CSOnlineAfkEnter {
+}
+
+message CSOnlineAfkResult {
+}
+
+message CSOnlineAfkPayResult {
+  DBConsumes consumes = 1;
+}
+
+message CSOnlineAfkTowerQuestStart {
+  uint32 tower_quest_id = 1;
+}
+
+message CSOnlineAfkTowerSkipBattle {
+  uint32 tower_quest_id = 1;
+}
+
+message CSOnlineExpeditionReset {
+  uint32 contract_activity_id = 1;
+  uint32 expedition_id = 2;
+}
+
+message CSOnlineExpeditionGetLevelTreasure {
+  uint32 contract_activity_id = 1;
+  uint32 expedition_id = 2;
+}
+
+message CSOnlineExpeditionRestart {
+  uint32 contract_activity_id = 1;
+  uint32 expedition_id = 2;
+}
+
+message CSOnlineGuildGrantSendPiece {
+  uint32 activity_id = 1;
+  uint64 player_id = 2;
+  repeated GuildGrantPiece pieces = 3;
+  string message = 4;
+  GuildGrantData.RecordData.From from = 5;
+}
+
+message CSOnlineGuildGrantReply {
+  uint32 activity_id = 1;
+  string message = 2;
+  uint32 record_index = 3;
+}
+
+message CSOnlineGuildGrantGetGuildMembers {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineGuildGrantGetReceiveTreasure {
+  uint32 activity_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineGuildGrantSendToAltar {
+  uint32 activity_id = 1;
+  repeated GuildGrantPiece pieces = 3;
+}
+
+message CSOnlineGuildGrantGetGuildOneMember {
+  uint32 activity_id = 1;
+  uint64 player_id = 2;
+}
+
+message CSOnlineRichManEnter {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineRichManThrow {
+  uint32 activity_id = 1;
+  bool magic = 2;
+  uint32 magic_point = 3;
+}
+
+message CSOnlineRichManBuy {
+  uint32 activity_id = 1;
+  uint32 pos_id = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineRichManBuild {
+  uint32 activity_id = 1;
+  uint32 pos_id = 2;
+  DBConsume consume = 3;
+}
+
+message CSOnlineRichManFinishGuide {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineRichManGameSelect {
+  uint32 activity_id = 1;
+  uint32 game_id = 2;
+  RichMan.GameSelectType select_result = 3;
+}
+
+message CSOnlineRichManCasino {
+  uint32 activity_id = 1;
+  DBConsume consume = 2;
+  RichMan.GameCasinoType type = 3;
+}
+
+message CSOnlineRichManRefreshDayDice {
+  uint32 activity_id = 1;
+}
+
+message CSOnlineDreamworldEnter {
+  uint32 id = 1;
+}
+
+message CSOnlineDreamworldCardEquip {
+  uint32 id = 1;
+  uint32 card_id = 2;
+  uint32 slot_id = 3;
+}
+
+message CSOnlineDreamworldCardGuaranteedExchange {
+  uint32 id = 1;
+}
+
+message CSOnlineRyoriCook {
+  DBConsumes consumes = 1;
+  uint32 contract_activity_id = 2;
+  uint32 cook_id = 3;
+  uint32 cookbook_id = 4;
+  uint32 star = 5;
+  bool success = 6;
+}
+
+message CSOnlineRyoriEnter {
+  uint32 contract_activity_id = 1;
+  uint32 cook_id = 2;
+}
+
+message CSOnlineRyoriChoose {
+  uint32 contract_activity_id = 1;
+  uint32 cook_id = 2;
+  uint32 slot_id = 3;
+  uint32 ryori_id = 4;
+}
+
+message CSOnlineDreamlandPlacementSave {
+  uint32 area_id = 1;
+  string data = 2;
+}
+
+message CSOnlineDreamlandPlacementEnter {
+}
+
+message CSOnlineDreamlandArchiveDecode {
+  string code = 1;
+}
+
+message CSOnlineDreamlandArchiveSave {
+  message AreaData {
+    uint32 area_id = 1;
+    string data = 2;
+  }
+
+  uint32 id = 1;
+  repeated AreaData areas = 2;
+}
+
+message CSOnlineDreamlandArchiveDelete {
+  uint32 id = 1;
+}
+
+message CSOnlineDreamlandArchiveChangeName {
+  uint32 id = 1;
+  string name = 2;
+}
+
+message CSOnlineDreamlandArchiveGet {
+  repeated uint32 ids = 1;
+}
+
+message CSOnlineCommerceEnter {
+  uint32 commerce_id = 1;
+}
+
+message CSOnlineCommerceUpgrade {
+  uint32 commerce_id = 1;
+  DBConsumes consumes = 2;
+}
+
+message CSOnlineCommerceTeamSend {
+  uint32 commerce_id = 1;
+  DBConsumes consumes = 2;
+  uint32 trade_point = 3;
+  uint32 captain_unit_id = 4;
+  repeated uint32 unit_ids = 5;
+}
+
+message CSOnlineCommerceTeamCancel {
+  uint32 commerce_id = 1;
+  uint32 team_id = 2;
+}
+
+message CSOnlineCommerceTeamFinish {
+  uint32 commerce_id = 1;
+  uint32 team_id = 2;
+}
+
+message CSOnlineCommerceTeamEventSelect {
+  enum StrategyType {
+    None = 0;
+    Upper = 1;
+    Middle = 2;
+    Low = 3;
+  }
+
+  uint32 commerce_id = 1;
+  uint32 team_id = 2;
+  uint32 event_id = 3;
+  StrategyType strategy = 4;
+}
+
+message CSOnlineCommerceCareerQuestGetTreasure {
+  uint32 commerce_id = 1;
+  uint32 career_id = 2;
+  uint32 quest_id = 3;
+}
+
+message CSOnlineCommerceCareerGetTreasure {
+  uint32 commerce_id = 1;
+  uint32 career_id = 2;
+}
+
+message CSOnlineCommerceCareerGetAllTreasure {
+  uint32 commerce_id = 1;
+  uint32 career_id = 2;
+}
+
+message CSOnlineCommerceSeatTake {
+  uint32 commerce_id = 1;
+  uint32 seat_id = 2;
+  uint32 unit_id = 3;
+}
+
+message CSOnlineCommerceMarketTrade {
+  uint32 commerce_id = 1;
+  uint32 id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineCommerceDailyQuestGetTreasure {
+  uint32 commerce_id = 1;
+}
+
+message CSOnlineCommerceTeamSpeedUp {
+  uint32 commerce_id = 1;
+  uint32 team_id = 2;
+  DBConsume ticket_consume = 3;
+}
+
+message CSOnlineCommerceTeamAllFinish {
+  uint32 commerce_id = 1;
+  bool enable_auto_select_event = 2;
+}
+
+message CSOnlineCommercePremakeTeamCreate {
+  uint32 commerce_id = 1;
+  string name = 2;
+  uint32 captain_unit_id = 3;
+  repeated uint32 unit_ids = 4;
+}
+
+message CSOnlineCommercePremakeTeamEdit {
+  uint32 commerce_id = 1;
+  uint32 premake_team_id = 2;
+  string name = 3;
+  uint32 captain_unit_id = 4;
+  repeated uint32 unit_ids = 5;
+}
+
+message CSOnlineCommercePremakeTeamDelete {
+  uint32 commerce_id = 1;
+  uint32 premake_team_id = 2;
+}
+
+message CSOnlineCommerceTeamRefresh {
+  uint32 commerce_id = 1;
+  uint32 team_id = 2;
+}
+
+message CSOnlineCommerceAutoSelectSwitch {
+  uint32 commerce_id = 1;
+  bool auto_select_status = 2;
+}
+
+message CSOnlineInfiniteChallengeEnter {
+}
+
+message CSOnlineInfiniteChallengeLicenseGetTreasure {
+  uint32 license_id = 1;
+}
+
+message CSOnlineReportGetList {
+  sint32 battle_type = 1;
+  repeated uint32 battle_params = 2;
+  uint32 sort_rule_id = 3;
+  repeated uint64 player_ids = 4;
+  uint32 count = 5;
+  repeated BattleRecord.PlayerExtraDataType player_extra_data_types = 7;
+  uint32 limit = 8;
+}
+
+message CSOnlineReportUpload {
+  uint32 battle_index = 1;
+  battle.Setting battle_setting = 2;
+  battle.Report battle_report = 3;
+}
+
+message CSOnlineReportFavoriteGetList {
+}
+
+message CSOnlineReportFavoriteAdd {
+  BattleRecord record = 1;
+  battle.Setting battle_setting = 2;
+  battle.Report battle_report = 3;
+}
+
+message CSOnlineReportFavoriteDelete {
+  uint32 id = 1;
+}
+
+message CSOnlineReportLike {
+  uint32 report_id = 1;
+  uint64 report_owner_id = 2;
+  uint32 battle_type = 3;
+  uint32 template_id = 4;
+  uint32 quest_id = 5;
+}
+
+message CSOnlineReportUnlike {
+  uint32 report_id = 1;
+  uint64 report_owner_id = 2;
+}
+
+message CSOnlineReportDataGet {
+  uint64 player_id = 1;
+  uint32 report_id = 2;
+}
+
+message CSOnlineWorldBossSync {
+  uint32 world_boss_id = 1;
+}
+
+message CSOnlineWorldBossLike {
+  uint32 world_boss_id = 1;
+  uint32 battle_type = 2;
+  uint32 template_id = 3;
+  uint32 quest_id = 4;
+}
+
+message CSOnlineWorldBossGetQuestTreasure {
+  uint32 world_boss_id = 1;
+  uint32 legion_id = 2;
+  uint32 quest_id = 3;
+}
+
+message CSOnlineWorldBossGetRank {
+  uint32 world_boss_id = 1;
+}
+
+message CSOnlineWorldBossGetShareTreasure {
+  uint32 world_boss_id = 1;
+}
+
+message CSOnlineMatchEnter {
+  uint32 match_id = 1;
+}
+
+message CSOnlineMatchOpen {
+  uint32 match_id = 1;
+  uint32 mode_id = 2;
+}
+
+message CSOnlineMatchGiveUp {
+  uint32 match_id = 1;
+}
+
+message CSOnlineMatchBet {
+  uint32 match_id = 1;
+  PlayerMatch.Bet bet = 2;
+}
+
+message CSOnlineMatchBetReset {
+  uint32 match_id = 1;
+  uint32 bet_id = 2;
+}
+
+message CSOnlineMatchScheduleBet {
+  uint32 match_id = 1;
+  PlayerMatch.ScheduleBet bet = 2;
+}
+
+message CSOnlineMatchScheduleBetReset {
+  uint32 match_id = 1;
+}
+
+message CSOnlineMatchMaterialExchange {
+  uint32 match_id = 1;
+  uint32 material_id = 2;
+  sint32 count = 3;
+  DBConsume consume = 4;
+}
+
+message CSOnlineMatchResult {
+  uint32 match_id = 1;
+}
+
+message CSOnlineAutoChessEnter {
+  uint32 auto_chess_id = 1;
+}
+
+message CSOnlineAutoChessPreOpen {
+  uint32 auto_chess_id = 1;
+  uint32 difficulty = 2;
+  DBConsume ticket_consume = 3;
+}
+
+message CSOnlineAutoChessOpen {
+  message CarryUnit {
+    enum Type {
+      RoleUnit = 0;
+      AssistUnit = 1;
+    }
+
+    Type type = 1;
+    uint32 id = 2;
+  }
+
+  uint32 auto_chess_id = 1;
+  repeated CarryUnit carry_units = 2;
+  uint32 carry_option_id = 3;
+  DBConsume carry_consume = 4;
+}
+
+message CSOnlineAutoChessResult {
+  uint32 auto_chess_id = 1;
+  bool is_give_up = 2;
+}
+
+message CSOnlineAutoChessContinue {
+  uint32 auto_chess_id = 1;
+  repeated CSOnlineAutoChessOpen.CarryUnit carry_units = 2;
+  uint32 carry_option_id = 3;
+  DBConsume carry_consume = 4;
+}
+
+message CSOnlineAutoChessShopBuyAndEquip {
+  uint32 auto_chess_id = 1;
+  uint32 shop_id = 2;
+  uint32 item_id = 3;
+  uint32 unit_id = 4;
+  sint32 consume_money = 5;
+}
+
+message CSOnlineAutoChessShopBuyAndRecycle {
+  uint32 auto_chess_id = 1;
+  uint32 shop_id = 2;
+  repeated uint32 item_ids = 3;
+  sint32 consume_money = 4;
+}
+
+message CSOnlineAutoChessShopRefresh {
+  uint32 auto_chess_id = 1;
+  uint32 shop_id = 2;
+  sint32 consume_money = 3;
+}
+
+message CSOnlineAutoChessCrafting {
+  uint32 auto_chess_id = 1;
+}
+
+message CSOnlineAutoChessCraftingWeaponEquip {
+  uint32 auto_chess_id = 1;
+  uint32 unit_id = 2;
+  uint32 weapon_id = 3;
+}
+
+message CSOnlineAutoChessCraftingWeaponRecycle {
+  uint32 auto_chess_id = 1;
+  uint32 weapon_id = 2;
+}
+
+message CSOnlineAutoChessBattleBuffRefresh {
+  uint32 auto_chess_id = 1;
+  sint32 consume_money = 2;
+}
+
+message CSOnlineAutoChessTreasureGet {
+  uint32 auto_chess_id = 1;
+  bool get_treasure = 2;
+}
+
+message CSOnlineAutoChessFavoriteProveAdd {
+  uint32 auto_chess_id = 1;
+}
+
+message CSOnlineAutoChessFavoriteProveDelete {
+  uint32 auto_chess_id = 1;
+  uint32 id = 2;
+}
+
+message CSOnlineArtifactEnter {
+  uint32 artifact_id = 1;
+}
+
+message CSOnlineArtifactCollectionGet {
+  uint32 artifact_id = 1;
+  uint32 collection_id = 2;
+}
+
+message CSOnlineArtifactCollectionActive {
+  uint32 artifact_id = 1;
+  uint32 collection_id = 2;
+  bool inactive = 3;
+}
+
+message CSOnlineArtifactGetLevelTreasure {
+  uint32 artifact_id = 1;
+  uint32 level_treasure_id = 2;
+}
+

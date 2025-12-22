@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsMiniSandboxCommon.proto";
+
+message SCMiniSandboxGet {
+  PlayerMiniSandbox mini_sandbox = 1;
+}
+
+message SCMiniSandboxEventConditionsCheck {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+  uint32 scenario_type = 3;
+  uint32 scenario_id = 4;
+  repeated MiniSandboxEvent.Option options = 5;
+}
+
+message SCMiniSandboxSectionEventTrigger {
+  PlayerMiniSandbox mini_sandbox = 1;
+}
+
+message SCMiniSandboxCustomEventTrigger {
+  PlayerMiniSandbox mini_sandbox = 1;
+}
+
+message SCMiniSandboxEnd {
+  uint32 sandbox_id = 1;
+  uint32 id = 2;
+}
+

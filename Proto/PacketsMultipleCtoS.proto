@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsMultipleCommon.proto";
+
+message CSMultipleCreateRoom {
+  uint32 mission_id = 1;
+}
+
+message CSMultipleLobbyJoinRoom {
+}
+
+message CSMultipleSendMessage {
+  string message = 1;
+}
+
+message CSMultipleLeaveRoom {
+}
+
+message CSMultiplePremakeStart {
+}
+
+message CSMultiplePremakeMessage {
+  MultiplePremake.Type type = 1;
+  MultiplePremake.Unit unit = 2;
+  sint32 x = 3;
+  sint32 z = 4;
+}
+
+message CSMultipleBattleMapSelectStart {
+}
+
+message CSMultipleBattleMapSelectMessage {
+  uint32 quest_id = 1;
+  bool is_ready = 2;
+}
+
+message CSMultipleMapSelectReady {
+  bool ready = 1;
+}
+
+message CSMultipleBattleStart {
+  uint32 battle_type = 1;
+}
+
+message CSMultipleBattleMessage {
+  MultipleBattle.Type type = 1;
+  uint32 unit_index = 2;
+  bytes command = 3;
+  uint32 command_index = 4;
+}
+
+message CSMultipleOnlineCheckRoom {
+  bool is_reconnect = 1;
+}
+
+message CSMultipleOnlineLogout {
+}
+
+message CSMultipleOnlineLogin {
+  uint64 roomid = 1;
+  uint32 battle_type = 2;
+}
+
+message CSMultipleTCPPing {
+  uint64 roomid = 1;
+}
+
+message CSMultipleResetRoomId {
+  uint64 roomIdOld = 1;
+}
+
+message CSMultipleKickPlayer {
+  uint64 roomId = 1;
+}
+
+message CSMultipleOnlineReLogin {
+  uint64 roomid = 1;
+}
+
+message CSMultipleTopArenaDisableEnemyUnit {
+  repeated uint32 unit_id = 1;
+}
+
+message CSMultipleTopArenaSelectMyUnit {
+  repeated uint32 unit_id = 2;
+}
+

@@ -1,0 +1,530 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsGame.proto";
+
+message DBConsume {
+  uint32 type = 1;
+  sint32 param0 = 2;
+  sint32 param1 = 3;
+  uint32 expired_at = 4;
+}
+
+message DBConsumes {
+  repeated DBConsume consumes = 1;
+}
+
+message DBSimpleTreasure {
+  uint32 type = 1;
+  sint32 param0 = 2;
+  sint32 param1 = 3;
+}
+
+message DBTreasure {
+  message Chest {
+    repeated DBTreasure treasures = 1;
+  }
+
+  message Data {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+    string sparam = 4;
+    bool disabled = 5;
+    repeated uint32 unit_ids = 7;
+    bytes pd_data = 8;
+    uint32 unit_id = 9;
+    sint32 from = 10;
+    sint32 to = 11;
+  }
+
+  uint32 id = 1;
+  Data data = 2;
+  bool is_get = 3;
+  bool is_chest = 4;
+  Chest chest = 5;
+  bytes result_data = 6;
+  uint32 tag = 8;
+  DBTreasure origin_treasure = 9;
+}
+
+message DBTreasurePackage {
+  uint32 id = 1;
+  repeated DBTreasure treasures = 2;
+}
+
+message DBUnit {
+  db_character_unit data = 1;
+  repeated uint32 new_skill_ids = 2;
+}
+
+message DBSmithy {
+  db_character_smithy data = 1;
+  repeated db_character_smithy_seat seats = 2;
+  repeated uint32 permanent_ids = 3;
+  repeated uint32 process_ids = 4;
+  repeated uint32 plan_ids = 5;
+}
+
+message DBSmithyForgeResult {
+  bool is_upgrade = 1;
+  bool is_no_cost = 2;
+  repeated db_character_weapon weapons = 3;
+  DBConsume consume_return = 4;
+}
+
+message DBEntrustBattle {
+  db_character_entrust_battle data = 1;
+}
+
+message DBEntrustPractice {
+  db_character_entrust_practice data = 1;
+}
+
+message DBChangedUnit {
+  uint32 id = 1;
+  sint32 changed_exp = 2;
+  sint32 changed_morale = 3;
+  sint32 old_exp = 4;
+  sint32 old_morale = 5;
+  uint32 old_level = 6;
+  sint32 exp = 7;
+  sint32 morale = 8;
+  uint32 level = 9;
+  db_character_unit unit = 10;
+  uint32 add_unit_skill_id = 11;
+}
+
+message SandboxSimpleUnit {
+  uint32 id = 1;
+  db_character_unit.STATUS status = 2;
+  sint32 morale = 3;
+  string blessing_effect_ids = 4;
+}
+
+message SandboxChangeValues {
+  message ChangeValue {
+    uint32 type = 1;
+    uint32 id = 2;
+    int32 from = 3;
+    int32 to = 4;
+    repeated uint32 ids = 5;
+  }
+
+  repeated ChangeValue data = 1;
+}
+
+message DBTraining {
+  db_character_training data = 1;
+  repeated db_character_training_seat seats = 2;
+  repeated uint32 faction_skill_ids = 3;
+}
+
+message SandboxMilestoneAction {
+  enum Status {
+    Open = 0;
+    Finished = 1;
+    Failure = 2;
+    Stop = 3;
+    Change = 4;
+  }
+
+  uint32 id = 1;
+  Status status = 2;
+  int32 old_value = 3;
+  int32 value = 4;
+  DBTreasurePackage treasure_package = 5;
+}
+
+message SandboxMilestoneActionQueue {
+  repeated SandboxMilestoneAction queue = 1;
+}
+
+message SandboxEvent {
+  message Option {
+    enum Status {
+      None = 0;
+      Visible = 1;
+      Selectable = 2;
+    }
+
+    uint32 id = 1;
+    Status status = 2;
+  }
+
+  message Battle {
+    uint32 mission_battle_param_id = 1;
+    uint32 result_id = 2;
+  }
+
+  message MapParams {
+    uint32 block_id = 1;
+    uint32 position_id = 2;
+    repeated uint32 block_ids = 3;
+  }
+
+  uint32 id = 1;
+  repeated Option options = 2;
+  uint32 current_option_id = 3;
+  uint32 current_result_id = 4;
+  Battle battle = 7;
+  uint32 next_event_id = 8;
+  MapParams map_params = 9;
+  uint32 note_id = 10;
+}
+
+message SandboxCustomEventParam {
+  bool is_stop = 1;
+  bool is_refreshed = 2;
+  bool refresh_now = 3;
+}
+
+message SandboxConsume {
+  uint32 treasure_type = 1;
+  uint32 id = 2;
+  sint32 quantity = 3;
+}
+
+message SandboxRoundReport {
+  message Entry {
+    uint32 id = 1;
+    repeated string params = 2;
+  }
+
+  message Type {
+    uint32 id = 1;
+    repeated Entry entries = 2;
+  }
+
+  sint32 round = 1;
+  repeated Type types = 2;
+}
+
+message SandboxEventBattleParam {
+  uint32 battle_param_id = 1;
+}
+
+message SandboxStatistic {
+  uint32 battle_count = 1;
+  uint32 battle_kill_count = 2;
+  uint32 battle_death_count = 3;
+  uint32 fate_power_used_count = 4;
+  uint32 commerce_order_count = 5;
+  uint32 commerce_money_count = 6;
+}
+
+message Elysium {
+  repeated CapitalSpawn spawns = 1;
+}
+
+message Capital {
+  repeated CapitalSpawn spawns = 1;
+}
+
+message CapitalEvent {
+  enum Type {
+    Resident = 0;
+    Order = 1;
+    SecondaryPerform = 2;
+    SettingGroup = 3;
+    OrderBubble = 4;
+  }
+
+  enum EndPerformType {
+    FadeOut = 0;
+    Disappear = 1;
+  }
+
+  message Npc {
+    message Position {
+      float x = 1;
+      float y = 2;
+      float z = 3;
+    }
+
+    uint32 template_id = 1;
+    uint32 form = 2;
+    uint32 spawn_index = 3;
+    string spawn_anim = 4;
+    uint32 spawn_facing = 5;
+    repeated CapitalNpcBehavioralSequence behavioral_sequences = 6;
+    Position talk_position = 7;
+  }
+
+  uint32 index = 1;
+  string name = 2;
+  uint32 area_id = 3;
+  Type type = 4;
+  repeated Npc npcs = 5;
+  CapitalSecondaryPerform secondary_perform = 6;
+  uint32 setting_group_id = 7;
+  uint32 trigger_npc_id = 8;
+  uint32 bubble_id = 9;
+  uint32 bubble_spawn_index = 10;
+  uint32 system_redirect_id = 11;
+  EndPerformType end_perform_type = 12;
+}
+
+message CapitalSpawn {
+  enum Type {
+    Resident = 0;
+    Order = 1;
+    OrderRandom = 2;
+    Normal = 3;
+    ElysiumPerform = 4;
+    ElysiumPerformRandom = 5;
+    ElysiumPutPoint = 6;
+  }
+
+  message Position {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+  }
+
+  uint32 index = 1;
+  string name = 2;
+  uint32 area_id = 3;
+  Position position = 4;
+  uint32 facing = 5;
+  Position talk_position = 6;
+  Type type = 7;
+  uint32 bubble_facing = 8;
+  Position gamepad_collision = 9;
+}
+
+message CapitalSecondaryPerform {
+  enum TriggerLimitType {
+    OnceInArea = 0;
+    OncePerRound = 1;
+  }
+
+  message Size {
+    float x = 1;
+    float z = 2;
+  }
+
+  uint32 trigger_npc_id = 1;
+  Size trigger_size = 2;
+  repeated SecondaryPerformAction actions = 3;
+  TriggerLimitType trigger_limit_type = 4;
+}
+
+message SecondaryPerformAction {
+  enum Type {
+    Dialogue = 0;
+    Act = 1;
+    Move = 2;
+  }
+
+  Type type = 1;
+  string sparam = 2;
+  uint32 index = 3;
+}
+
+message CapitalNpcBehavior {
+  enum Type {
+    Idle = 0;
+    Move = 1;
+    Disappear = 2;
+  }
+
+  uint32 index = 1;
+  Type type = 2;
+  sint32 go_to = 3;
+  uint32 go_to_limit = 4;
+  string sparam = 5;
+}
+
+message CapitalNpcBehavioralSequence {
+  enum TriggerType {
+    SameArea = 0;
+    Cube = 1;
+  }
+
+  message Size {
+    float x = 1;
+    float z = 2;
+  }
+
+  TriggerType trigger_type = 1;
+  Size trigger_size = 2;
+  repeated CapitalNpcBehavior behaviors = 3;
+  uint32 delay = 4;
+  uint32 index = 5;
+  string name = 6;
+  uint32 form = 7;
+}
+
+message CharacterRoundInfo {
+  message HospitalSeat {
+    uint32 seat_id = 1;
+    DBChangedUnit changed_unit = 2;
+  }
+
+  message TrainingSeat {
+    db_character_training_seat seat = 1;
+    DBChangedUnit changed_unit = 2;
+  }
+
+  message SmithySeat {
+    db_character_smithy_seat seat = 1;
+    DBTreasurePackage treasure = 2;
+    db_character_weapon weapon = 3;
+  }
+
+  message EntrustPractice {
+    message changed_character_exp {
+      sint32 old_exp = 1;
+      uint32 old_level = 2;
+      sint32 exp = 3;
+      uint32 level = 4;
+      sint32 changed_exp = 5;
+    }
+
+    db_character_entrust_practice practice = 1;
+    DBTreasurePackage treasure_package = 2;
+    repeated DBChangedUnit changed_units = 3;
+    changed_character_exp changed_exp = 4;
+    bool republish = 5;
+  }
+
+  SandboxRoundReport report = 1;
+  repeated HospitalSeat hospital_seats = 2;
+  repeated TrainingSeat training_seats = 3;
+  repeated SmithySeat smithy_seats = 4;
+  repeated EntrustPractice entrust_practices = 5;
+  repeated SandboxSimpleUnit simple_units = 6;
+  repeated db_character_tactics_skill tactics_skills = 7;
+  repeated db_character_blessing_seat blessing_seats = 8;
+  repeated db_character_commerce_order orders = 9;
+  DBRegion region = 10;
+}
+
+message ShopData {
+  message Treasure {
+    uint32 type = 1;
+    sint32 param0 = 2;
+    sint32 param1 = 3;
+  }
+
+  message SaleItem {
+    uint32 id = 1;
+    Treasure item = 2;
+    DBConsume consume = 3;
+    sint32 quantity = 4;
+    bool is_get = 5;
+  }
+
+  repeated SaleItem sale_items = 1;
+  sint32 carry_money = 2;
+}
+
+message DBWorkshop {
+  db_character_workshop workshop = 1;
+  repeated db_character_workshop_node nodes = 2;
+  repeated db_character_workshop_quest quests = 3;
+  repeated uint32 new_node_ids = 4;
+}
+
+message DBBlessingRevelationData {
+  uint32 unit_id = 1;
+  uint32 effect_id = 2;
+}
+
+message DBBlessing {
+  db_character_blessing blessing = 1;
+  repeated db_character_blessing_seat seats = 2;
+  repeated db_character_blessing_halidom halidoms = 3;
+}
+
+message DBCommerce {
+  db_character_commerce commerce = 1;
+  repeated db_character_commerce_order orders = 2;
+  repeated db_character_commerce_trade_point trade_point = 3;
+}
+
+message DBRegion {
+  db_character_region region = 1;
+  repeated DBRegionBattle battle = 2;
+  repeated DBRegionPractice practice = 3;
+  repeated db_character_region_consume consume = 4;
+}
+
+message DBRegionBattle {
+  db_character_region_battle data = 1;
+  DBEntrustBattle battle = 2;
+}
+
+message DBRegionPractice {
+  db_character_region_practice data = 1;
+  DBEntrustPractice practice = 2;
+}
+
+message PlayerSandboxLaunchStatus {
+  enum Phase {
+    None = 0;
+    PlayPreface = 1;
+    SelectToken = 2;
+    BringMinorArcanas = 3;
+    BringUnits = 4;
+    Divination = 5;
+    SandboxStart = 6;
+  }
+
+  Phase phase = 1;
+  uint32 sandbox_preface_id = 2;
+  uint32 token_id = 3;
+  repeated uint32 role_unit_ids = 4;
+  repeated uint32 minor_arcana_ids = 5;
+  repeated uint32 chapter_history_ids = 6;
+  repeated uint32 debug_speciality_ids = 8;
+  uint32 ep = 9;
+  bool has_consume_ticket = 11;
+  repeated uint32 random_major_arcana_ids = 12;
+  uint32 selected_major_arcana_id = 13;
+  DBTreasurePackage result_tp = 14;
+  bool is_givp_up = 15;
+  DBTreasurePackage init_tp = 16;
+}
+
+message DBPlayerSandboxRecord {
+  message UnitDisplayed {
+    uint32 role_id = 1;
+    uint32 unit_id = 2;
+  }
+
+  message UnitDisplayedWithScore {
+    UnitDisplayed unit_info = 1;
+    int32 score = 2;
+  }
+
+  message SandboxAchievement {
+    uint32 achievement_id = 1;
+    bool is_new = 2;
+  }
+
+  uint32 sandbox_ending_id = 1;
+  uint32 sandbox_ending_quote_id = 2;
+  repeated uint32 minor_arcana_ids = 3;
+  repeated uint32 role_unit_ids = 4;
+  uint32 token_id = 5;
+  repeated UnitDisplayed units_displayed = 6;
+  repeated uint32 chapter_history_ids = 7;
+  repeated SandboxAchievement achievements = 8;
+  DBTreasurePackage tp = 9;
+  bool is_give_up = 10;
+  SandboxStatistic statistic = 11;
+  uint32 round_count = 12;
+  uint32 tactics_skill_count = 13;
+  uint32 character_title = 14;
+  uint32 level = 15;
+  uint32 chapter_result_count = 16;
+  uint32 commerce_grading_id = 17;
+  bool character_reputation_use_commerce_grading_value = 18;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+message db_account {
+  uint64 id = 1;
+  string username = 2;
+  bool is_internet = 4;
+}
+

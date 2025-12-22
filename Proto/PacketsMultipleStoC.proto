@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsOnlineCommon.proto";
+import "PacketsBattle.proto";
+import "PacketsMultipleCommon.proto";
+import "PacketsGame.proto";
+
+message SCMultipleCreateRoom {
+  Room room = 1;
+}
+
+message SCMultipleSendMessage {
+  string message = 1;
+  uint64 player_id = 2;
+}
+
+message SCMultipleLeaveRoom {
+  Room room = 1;
+  uint64 leave_player_id = 2;
+  bool finish = 3;
+}
+
+message SCMultiplePremakeStart {
+  bytes setting = 1;
+  uint32 end_at = 2;
+}
+
+message SCMultiplePremakeMessage {
+  uint32 result = 1;
+  MultiplePremake.Type type = 2;
+  MultiplePremake.Unit unit = 3;
+  sint32 x = 4;
+  sint32 z = 5;
+  uint32 facing = 6;
+  bytes setting_diff = 7;
+  uint64 player_id = 8;
+}
+
+message SCMultipleBattleMapSelectStart {
+  Room room = 1;
+}
+
+message SCMultipleBattleMapSelectMessage {
+  Room room = 1;
+  bool is_leave = 2;
+  DBSimplePlayer player_leave = 3;
+}
+
+message SCMultipleMapSelectReady {
+  uint64 player_id = 1;
+  bool ready = 2;
+}
+
+message SCMultipleBattleStart {
+  uint64 player_id = 1;
+  bytes setting = 2;
+  bytes report = 3;
+  bool is_end = 4;
+  bool is_ready = 5;
+  uint32 battle_index = 6;
+  BattleServerReturn battle_return = 7;
+}
+
+message SCMultipleBattleMessage {
+  uint32 result = 1;
+  MultipleBattle.Type type = 2;
+  bytes commands = 3;
+  bytes report = 4;
+  BattleResultType battle_result = 6;
+  uint64 player_id = 7;
+  uint32 end_at = 8;
+  BattleServerReturn battle_return = 9;
+  uint32 command_index = 10;
+}
+
+message SCMultipleOnlineCheckRoom {
+  Room room = 1;
+  db_player_battle_setting player_battle_setting = 2;
+  TopArenaData top_arena_data = 3;
+  bool is_reconnect = 4;
+}
+
+message SCMultipleOnlineLogout {
+}
+
+message SCMultipleConnectNotice {
+  enum Type {
+    None = 0;
+    Disconnect = 1;
+    Reconnect = 2;
+  }
+
+  Type type = 1;
+  uint64 player_id = 2;
+  Room.Status room_status = 3;
+  uint32 battle_status = 4;
+  uint32 end_at = 5;
+}
+
+message SCMultipleOnlineLogin {
+  uint64 roomid = 1;
+}
+
+message SCMultipleTCPPing {
+  uint64 roomid = 1;
+}
+
+message SCMultipleResetRoomId {
+  uint64 roomIdNew = 1;
+}
+
+message SCMultipleKickPlayer {
+  bool ok = 1;
+}
+
+message SCMultipleOnlineReLogin {
+  uint64 roomid = 1;
+}
+
+message SCMultipleTopArenaDisableEnemyUnit {
+  uint64 player_id = 1;
+  repeated uint32 unit_id = 2;
+  uint32 cur_round = 3;
+  uint32 standby_time_create = 4;
+  uint32 standby_time_join = 5;
+}
+
+message SCMultipleTopArenaSelectMyUnit {
+  uint64 player_id = 1;
+  repeated uint32 unit_id = 2;
+  uint32 cur_round = 3;
+  uint32 standby_time_create = 4;
+  uint32 standby_time_join = 5;
+}
+
+message SCMultipleBPModeStart {
+  Room room = 1;
+  repeated battle.SnapshotUnit snapshot_create = 2;
+  repeated battle.SnapshotUnit snapshot_join = 3;
+  uint32 real_pvp_id = 4;
+}
+
+message SCMultipleTopArenaMatchOverTime {
+  uint32 real_pvp_id = 1;
+}
+

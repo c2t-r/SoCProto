@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "network/protos";
+option optimize_for = LITE_RUNTIME;
+
+import "PacketsOnlineCommon.proto";
+
+message CSTCPPing {
+  uint32 timestamp = 1;
+}
+
+message CSKCPPing {
+  uint32 timestamp = 1;
+}
+
+message CSReconnect {
+  string token = 1;
+}
+
+message CSOnlinePlayerRemind {
+}
+
+message CSOnlinePlayerRemindRead {
+  enum ClearType {
+    Id = 0;
+    IdMap = 1;
+    IdMapKey = 2;
+    System = 3;
+    Count = 4;
+  }
+
+  message Data {
+    uint32 id = 1;
+    map<uint32, PlayerRemind.Data.List> id_map = 2;
+    uint32 id_map_key = 3;
+    uint32 system = 4;
+    repeated uint32 ids = 5;
+  }
+
+  ClearType clear_type = 1;
+  uint32 remind_type = 2;
+  Data data = 3;
+}
+
+message CSMultipleJoinRoom {
+  uint64 room_id = 1;
+}
+
+message CSOnlinePlayerChatRemindRead {
+  enum ClearType {
+    Id = 0;
+  }
+
+  message Data {
+    uint64 id = 1;
+  }
+
+  ClearType clear_type = 1;
+  uint32 remind_type = 2;
+  Data data = 3;
+}
+
+message CSServerTime {
+}
+
+message CSLogin {
+  string token = 1;
+  string device = 2;
+  string device_sn = 3;
+  string os = 4;
+}
+
