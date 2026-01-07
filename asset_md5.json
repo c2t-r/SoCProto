@@ -36,8 +36,8 @@
     "size": 852013
   },
   "db_template": {
-    "md5": "a478cfe874620e6a",
-    "size": 2133731
+    "md5": "eee28a2ca925b544",
+    "size": 2133743
   },
   "deviceprofile": {
     "md5": "bdad7f1120046658",
@@ -56,7 +56,7 @@
     "size": 8973
   },
   "resource_version": {
-    "md5": "6d02b0b3a6cdd0d2",
+    "md5": "a30cfcecf09afc97",
     "size": 1237
   },
   "shaders": {
@@ -72,7 +72,7 @@
     "size": 185725
   },
   "XDFeatureSettings": {
-    "md5": "15a241bdc8d38ee7",
+    "md5": "1238b9bb70d9fd03",
     "size": 709
   },
   "atlas/abyss_atlas": {
@@ -124,7 +124,7 @@
     "size": 192727
   },
   "atlas/activitybigrogue_atlas": {
-    "md5": "f9fdd5703505ec1a",
+    "md5": "1f4b34f9114239e7",
     "size": 16712
   },
   "atlas/activitybigstage1_atlas": {
@@ -348,44 +348,44 @@
     "size": 1880
   },
   "atlas/headframe_momo01_atlas": {
-    "md5": "d7d15c6ebbb2e572",
-    "size": 62907
+    "md5": "34df86a5424ac977",
+    "size": 62908
   },
   "atlas/headframe_operation16_atlas": {
     "md5": "0efbdb872e2b91f1",
     "size": 81026
   },
   "atlas/head_frame_agata01_atlas": {
-    "md5": "57c8e26e01fba5f8",
+    "md5": "65fc41806e7b7d0e",
     "size": 72405
   },
   "atlas/head_frame_blackhair01_atlas": {
-    "md5": "67d9a691e2d7cb11",
-    "size": 62194
+    "md5": "2b4b6389c500ef44",
+    "size": 62198
   },
   "atlas/head_frame_cocoanawal01_atlas": {
-    "md5": "d1f990ef4083e1a9",
-    "size": 87153
+    "md5": "81eca49d7e56a65c",
+    "size": 87139
   },
   "atlas/head_frame_hunter01_atlas": {
-    "md5": "86efe4a183aa8ba8",
+    "md5": "8e9312cdea38a1c7",
     "size": 48716
   },
   "atlas/head_frame_lukamar01_atlas": {
-    "md5": "1fbbe7103bcc47df",
-    "size": 61056
+    "md5": "66bd20946a334dca",
+    "size": 61010
   },
   "atlas/head_frame_redhair01_atlas": {
-    "md5": "0cb71c81b9b0a1b7",
-    "size": 57072
+    "md5": "e5c2ba4614c455e1",
+    "size": 57071
   },
   "atlas/head_frame_spinanna01_atlas": {
-    "md5": "479e5eb923fd67f5",
-    "size": 92910
+    "md5": "d89dbd14205bf943",
+    "size": 92900
   },
   "atlas/head_frame_spmaitha01_atlas": {
-    "md5": "7b34f16ebd5c2148",
-    "size": 110293
+    "md5": "7669691e589d4bde",
+    "size": 110253
   },
   "atlas/infinitechallenge_atlas": {
     "md5": "9085b270e7fa0320",
@@ -444,8 +444,8 @@
     "size": 21387
   },
   "atlas/missiondetail_atlas": {
-    "md5": "a29916918c49233b",
-    "size": 307469
+    "md5": "879e7ad192e4f57a",
+    "size": 307468
   },
   "atlas/moduleafk_atlas": {
     "md5": "833d03f5d62b226c",
@@ -736,32 +736,32 @@
     "size": 417996
   },
   "atlas/richman_animation_atlas": {
-    "md5": "c82ca88d1caa8a9b",
-    "size": 58360
+    "md5": "d485003b7bc5ef67",
+    "size": 58378
   },
   "atlas/richman_background_atlas": {
-    "md5": "44b3ac4ab4c54a9b",
-    "size": 167976
+    "md5": "4383261a49dcdce2",
+    "size": 167966
   },
   "atlas/richman_bridge_atlas": {
-    "md5": "b8f1fc52fe34bca3",
-    "size": 13006
+    "md5": "2e6f77e66ac49fb6",
+    "size": 13008
   },
   "atlas/richman_characters_atlas": {
-    "md5": "7066226cfe99ede6",
-    "size": 92229
+    "md5": "2168e6ab27041d45",
+    "size": 92220
   },
   "atlas/richman_grid_atlas": {
-    "md5": "cb7580310ed3d53c",
-    "size": 19248
+    "md5": "d38fae742c9f972c",
+    "size": 19236
   },
   "atlas/richman_mission_atlas": {
-    "md5": "886d09a324563c8a",
-    "size": 514443
+    "md5": "389454e657135565",
+    "size": 514342
   },
   "atlas/richman_ui_atlas": {
-    "md5": "dca5d86793646881",
-    "size": 56328
+    "md5": "8656a680d362bb8d",
+    "size": 56315
   },
   "atlas/rolecard_atlas": {
     "md5": "c1a87782bf10e35e",
@@ -840,23 +840,23 @@
     "size": 42374
   },
   "atlas/tmpdesignationflow08_atlas": {
-    "md5": "7af09e4e3c7ee480",
-    "size": 42359
+    "md5": "aa3d00db9e5c6798",
+    "size": 42339
   },
   "atlas/tmpdesignationflow09_atlas": {
-    "md5": "30135b26a2a3abd9",
-    "size": 24514
+    "md5": "dd9b3577b0b888a1",
+    "size": 24519
   },
   "atlas/tmpdesignationflow11_atlas": {
-    "md5": "9ea9ec55f867c9f6",
-    "size": 24152
+    "md5": "f9f58afd57457e40",
+    "size": 24180
   },
   "atlas/tmpdesignationflow12_atlas": {
-    "md5": "316183868e1fc676",
-    "size": 28026
+    "md5": "8b0aeb279122ee3b",
+    "size": 28027
   },
   "atlas/tmpdesignationflow19_atlas": {
-    "md5": "705d65f90082359d",
+    "md5": "ab4b590f6a021516",
     "size": 34051
   },
   "atlas/towerreverse_atlas": {
@@ -4516,8 +4516,8 @@
     "size": 1697626
   },
   "font/font": {
-    "md5": "0cac6e466451c8e9",
-    "size": 29678857
+    "md5": "7366c65e1efbcfff",
+    "size": 29679115
   },
   "font/font_battle": {
     "md5": "7485bbc1a03e8674",
@@ -10468,19 +10468,19 @@
     "size": 47912
   },
   "localization/en/atlas/en-activitybig07_atlas": {
-    "md5": "d4f95949d1ef7143",
+    "md5": "5221f1702bead46a",
     "size": 53832
   },
   "localization/en/atlas/en-activitybig08_atlas": {
-    "md5": "5ad854af1b8f086e",
-    "size": 50754
+    "md5": "08f1d4051f629219",
+    "size": 50737
   },
   "localization/en/atlas/en-activitybigstage1_atlas": {
     "md5": "c916dbc7f7f780fc",
     "size": 52742
   },
   "localization/en/atlas/en-activityelaman_atlas": {
-    "md5": "22253aa774ed7f8a",
+    "md5": "64ab6ed5e87684d6",
     "size": 69682
   },
   "localization/en/atlas/en-activitymiddle01_atlas": {
@@ -10824,20 +10824,20 @@
     "size": 61192
   },
   "localization/ja/atlas/ja-activitybig07_atlas": {
-    "md5": "0dc395c4c8fad464",
-    "size": 48361
+    "md5": "d51e4e9cfbb5e5a9",
+    "size": 48360
   },
   "localization/ja/atlas/ja-activitybig08_atlas": {
-    "md5": "c6f58cf508527142",
-    "size": 52724
+    "md5": "422e6487c8f23226",
+    "size": 52746
   },
   "localization/ja/atlas/ja-activitybigstage1_atlas": {
     "md5": "0c2e58fc0901a607",
     "size": 57380
   },
   "localization/ja/atlas/ja-activityelaman_atlas": {
-    "md5": "de2b0465f295799a",
-    "size": 70973
+    "md5": "70fef12c03591ad5",
+    "size": 70972
   },
   "localization/ja/atlas/ja-activitymiddle01_atlas": {
     "md5": "7eee78a1f47fdada",
@@ -11168,20 +11168,20 @@
     "size": 47464
   },
   "localization/ko/atlas/ko-activitybig07_atlas": {
-    "md5": "54f4464b4ffa345e",
-    "size": 51593
+    "md5": "db1b1e4b5d82de50",
+    "size": 51605
   },
   "localization/ko/atlas/ko-activitybig08_atlas": {
-    "md5": "78db05780371c1b9",
-    "size": 48222
+    "md5": "bdd9c7d635837048",
+    "size": 48225
   },
   "localization/ko/atlas/ko-activitybigstage1_atlas": {
     "md5": "a09aa5a2c20b5625",
     "size": 64149
   },
   "localization/ko/atlas/ko-activityelaman_atlas": {
-    "md5": "c63181f9163c82aa",
-    "size": 78562
+    "md5": "07d3a1a6148cceea",
+    "size": 78550
   },
   "localization/ko/atlas/ko-activitymiddle01_atlas": {
     "md5": "8fbfb4524bc3896e",
@@ -11536,19 +11536,19 @@
     "size": 58994
   },
   "localization/zh-tw/atlas/zh-tw-activitybig07_atlas": {
-    "md5": "affab6797097340d",
-    "size": 48722
+    "md5": "68a16c465a25ef0f",
+    "size": 48728
   },
   "localization/zh-tw/atlas/zh-tw-activitybig08_atlas": {
-    "md5": "bbcc5b68e3ee4b21",
-    "size": 50506
+    "md5": "5407e94e9d6bd702",
+    "size": 50498
   },
   "localization/zh-tw/atlas/zh-tw-activitybigstage1_atlas": {
     "md5": "119922f918b6cddb",
     "size": 53578
   },
   "localization/zh-tw/atlas/zh-tw-activityelaman_atlas": {
-    "md5": "20a4236f91c6abb5",
+    "md5": "06ed69bf8f248041",
     "size": 78919
   },
   "localization/zh-tw/atlas/zh-tw-activitymiddle01_atlas": {
@@ -11776,60 +11776,60 @@
     "size": 70094
   },
   "lua/lua_battle": {
-    "md5": "dd72cc302d566b3b",
-    "size": 4679743
+    "md5": "0678ba7654d7dfc5",
+    "size": 4680147
   },
   "lua/lua_common": {
     "md5": "3d02474dbe75e16c",
     "size": 678905
   },
   "lua/lua_db": {
-    "md5": "6e7c7bdfdee21407",
-    "size": 4138041
+    "md5": "d61988d11da32bc6",
+    "size": 4138545
   },
   "lua/lua_dblang_en": {
-    "md5": "2f5ad1dd8204dd7a",
-    "size": 23440812
+    "md5": "bcdfeaebb79c7b5d",
+    "size": 23441525
   },
   "lua/lua_dblang_es": {
-    "md5": "67e40f55caad8c38",
-    "size": 24477029
+    "md5": "7b21c8242bf7893d",
+    "size": 24477247
   },
   "lua/lua_dblang_fr": {
-    "md5": "a27434341e8ea85b",
-    "size": 24943623
+    "md5": "1ecaded22bebedb0",
+    "size": 24943871
   },
   "lua/lua_dblang_it": {
-    "md5": "ddae1b13693080f5",
-    "size": 24447598
+    "md5": "5333dff13dfc9d90",
+    "size": 24447836
   },
   "lua/lua_dblang_ja": {
-    "md5": "104a50a7c5d9b6f2",
-    "size": 25472753
+    "md5": "33c5cee9fa91eb81",
+    "size": 25474189
   },
   "lua/lua_dblang_ko": {
-    "md5": "55fdbcb3b60f6bee",
-    "size": 24826332
+    "md5": "7bd31febd17cee4a",
+    "size": 24826996
   },
   "lua/lua_dblang_pt": {
-    "md5": "0811de6d4f824935",
-    "size": 24150697
+    "md5": "bae11e7568449a97",
+    "size": 24150941
   },
   "lua/lua_dblang_zh-cn": {
     "md5": "78c28639d7a71ace",
     "size": 11117329
   },
   "lua/lua_dblang_zh-tw": {
-    "md5": "7d2fbd2806d0a3f3",
-    "size": 22620066
+    "md5": "745a77757899e632",
+    "size": 22620511
   },
   "lua/lua_dbtemplate": {
-    "md5": "cbe11966c9916b9f",
-    "size": 29200298
+    "md5": "71dc7170e9feddc5",
+    "size": 29200872
   },
   "lua/lua_dbtemplateonline": {
-    "md5": "bf4f08142a6261ab",
-    "size": 15903924
+    "md5": "4627fb181f35f5d9",
+    "size": 15904218
   },
   "lua/lua_dbtemplateperformance": {
     "md5": "d4be673f808ad61c",
@@ -11840,16 +11840,16 @@
     "size": 2240755
   },
   "lua/lua_dbtemplateskill": {
-    "md5": "085ce0f692c3ee1c",
-    "size": 13466730
+    "md5": "4b1bfd19b473f8aa",
+    "size": 13467697
   },
   "lua/lua_dbtemplatespeciality": {
-    "md5": "c0637221e2ca1ea7",
-    "size": 12844446
+    "md5": "b96a3b1739cb599f",
+    "size": 12899362
   },
   "lua/lua_dbtemplatetranslation": {
-    "md5": "9b37658ad1c87bcd",
-    "size": 11625413
+    "md5": "0c8930a797db61a9",
+    "size": 11625501
   },
   "lua/lua_debug": {
     "md5": "a00edc085be41066",
@@ -11884,12 +11884,12 @@
     "size": 158427
   },
   "lua/lua_online": {
-    "md5": "bd28451ff2a31948",
-    "size": 13535454
+    "md5": "595614438bfa0367",
+    "size": 13535922
   },
   "lua/lua_pb": {
-    "md5": "6c3c1b32b6651d02",
-    "size": 1340049
+    "md5": "df19166d0fff519f",
+    "size": 1340715
   },
   "lua/lua_sandbox2": {
     "md5": "cecb3571dfde9572",

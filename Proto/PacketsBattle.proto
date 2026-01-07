@@ -192,10 +192,16 @@ message Entity {
 
 }
 
-message UnitMetrics {
+message UnitMetrics32 {
   sint32 damage = 1;
   sint32 heal = 2;
   sint32 damage_taken = 3;
+}
+
+message UnitMetrics {
+  sint64 damage = 1;
+  sint64 heal = 2;
+  sint64 damage_taken = 3;
 }
 
 message Unit {
@@ -1171,7 +1177,8 @@ message Report {
     bool alive = 2;
     uint64 player_id = 3;
     BattleUnit.Type type = 4;
-    UnitMetrics metrics = 5;
+    UnitMetrics32 metrics32 = 5;
+    UnitMetrics metrics = 6;
   }
 
   message Statistics {
@@ -1227,7 +1234,12 @@ message Report {
   repeated EventSectionIndexData waiting_event_sections = 25;
   repeated Unit enemy_units = 26;
   uint32 kill_count = 27;
-  uint32 boss_damage_taken = 28;
+  uint32 boss_damage_taken32 = 28;
+  sint32 team_hp = 29;
+  uint32 player_total_damage32 = 30;
+  repeated Unit enemy_props = 31;
+  uint64 boss_damage_taken = 32;
+  uint64 player_total_damage = 33;
 }
 
 message BattleReport {
