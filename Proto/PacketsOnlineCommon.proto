@@ -723,6 +723,7 @@ message PlayerContractActivity {
   sint32 challenge_max_contract_point = 32;
   db_player_contract_activity contract_activity = 33;
   db_player_artifact artifact = 34;
+  PlayerRogue rogue = 35;
   PlayerAutoChess auto_chess = 36;
 }
 
@@ -1519,5 +1520,205 @@ message CommonExpChange {
   uint32 cur_level = 4;
   sint32 old_exp = 5;
   sint32 cur_exp = 6;
+}
+
+message PlayerRogueScriptRun {
+  uint32 script_run_id = 1;
+  bool is_passed = 2;
+  bool is_rewarded = 3;
+  int32 max_score = 4;
+  bool is_unlocked = 5;
+}
+
+message PlayerRogueFreeRun {
+  uint32 free_run_id = 1;
+  bool is_passed = 2;
+  bool is_unlocked = 3;
+  uint32 level = 4;
+  int32 max_score = 5;
+  uint32 buff_level = 6;
+}
+
+message PlayerRogueTechGroup {
+  uint32 group_id = 1;
+  int32 index = 2;
+}
+
+message PlayerRogueRunData {
+  int32 total_money = 1;
+  int32 total_damage = 2;
+  int32 score_rate = 3;
+  int32 buff_level = 4;
+  uint32 free_run_buff_id = 5;
+  repeated uint32 last_seen_unit_ids = 6;
+  repeated uint32 last_seen_buff_ids = 7;
+}
+
+message PlayerRogueRun {
+  db_player_rogue_run run = 1;
+  PlayerRogueRunData data = 2;
+  repeated PlayerRogueRunNode nodes = 3;
+  bool ack = 4;
+}
+
+message PlayerRogueRunFinish {
+  DBTreasurePackage treasure_package = 1;
+}
+
+message PlayerRogueRunNode {
+  db_player_rogue_run_node node = 1;
+  PlayerRogueRunEvent event = 2;
+}
+
+message RogueConsume {
+  int32 money = 1;
+  DBConsumes consumes = 2;
+  int32 hp = 3;
+  int32 tactical_point = 4;
+}
+
+message PlayerRogueEventSolve {
+  uint32 event_id = 1;
+  RogueConsume consume = 2;
+  repeated uint32 recruit_online_unit_ids = 3;
+  uint32 buff_id = 4;
+  repeated uint32 option_ids = 5;
+  repeated uint32 recruit_online_assist_unit_ids = 6;
+  bool refresh = 7;
+  bool continue = 8;
+}
+
+message PlayerRogueRecord {
+  int32 total_damage = 1;
+  int32 total_turn = 2;
+  int32 total_money = 3;
+  int32 total_point = 4;
+}
+
+message PlayerRogueRunEvent {
+  message RecruitUnit {
+    uint32 online_role_unit_id = 1;
+    uint32 assist_unit_id = 2;
+    int32 money_price = 3;
+    bool discount = 4;
+  }
+
+  message None {
+  }
+
+  message Battle {
+    uint32 quest_id = 1;
+    repeated uint32 buff_ids = 2;
+  }
+
+  message RandomRecruit {
+    repeated RecruitUnit units = 1;
+  }
+
+  message Finish {
+  }
+
+  message Bonfire {
+    int32 add_hp = 1;
+  }
+
+  message TacticPoint {
+    int32 add_tactic_point = 1;
+  }
+
+  message Money {
+    int32 add_money = 1;
+  }
+
+  message Buff {
+    repeated uint32 buff_ids = 1;
+  }
+
+  message RandomEvent {
+    uint32 event_id = 1;
+  }
+
+  message MapChangeEvent {
+    message BuffBg {
+      uint32 option_id = 1;
+      uint32 buff_id = 2;
+      uint32 bg_id = 3;
+    }
+
+    repeated BuffBg buff_bgs = 1;
+  }
+
+  message Shop {
+    int32 left_refresh_count = 1;
+  }
+
+  message Option {
+    enum Status {
+      None = 0;
+      Visible = 1;
+      Selectable = 2;
+    }
+
+    uint32 id = 1;
+    Status status = 2;
+    uint32 online_role_unit_id = 3;
+    uint32 assist_unit_id = 4;
+    uint32 buff_id = 5;
+    int32 replacement_money_consume = 6;
+    bool is_sell_out = 7;
+  }
+
+  uint32 eventId = 1;
+  bool can_trigger = 2;
+  bool is_passed = 3;
+  repeated Option options = 4;
+  None none = 10;
+  Battle battle = 11;
+  RandomRecruit random_recruit = 12;
+  Finish finish = 13;
+  Bonfire bonfire = 14;
+  TacticPoint tactic_point = 15;
+  Buff buff = 16;
+  RandomEvent random_event = 17;
+  MapChangeEvent map_change_event = 18;
+  Money money = 19;
+  Shop shop = 20;
+  bool is_viewed = 21;
+}
+
+message PlayerRogueEventBonus {
+  int32 add_hp = 1;
+  int32 add_tactic_point = 2;
+  int32 add_money = 3;
+  DBTreasurePackage treasure_package = 6;
+}
+
+message PlayerRogueRunEventResult {
+  message Recruit {
+    repeated uint32 add_role_unit_ids = 1;
+    repeated uint32 add_assist_unit_ids = 2;
+  }
+
+  message MapChange {
+    uint32 old_map_id = 1;
+    uint32 new_map_id = 2;
+    uint32 new_buff_id = 3;
+  }
+
+  Recruit recruit = 1;
+  repeated uint32 buff_ids = 2;
+  MapChange map_change = 3;
+  PlayerRogueEventBonus bonus = 4;
+  uint32 event_id = 5;
+  uint32 next_event_id = 6;
+  bool continue = 7;
+}
+
+message PlayerRogue {
+  repeated PlayerRogueScriptRun script_runs = 1;
+  repeated PlayerRogueFreeRun free_runs = 2;
+  db_player_rogue rogue = 3;
+  repeated PlayerRogueRun runs = 4;
+  repeated PlayerRogueTechGroup tech_groups = 5;
 }
 

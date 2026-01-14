@@ -777,6 +777,21 @@ message CSDebugOnlineAutoChess {
   string data = 2;
 }
 
+message CSDebugOnlineRogue {
+  enum Type {
+    UnlockAll = 0;
+    AddTreasure = 1;
+    GoNextMap = 2;
+    SetEvent = 3;
+    Start = 4;
+    Enter = 5;
+    GiveUp = 6;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
 message CSDebugOnlineAdventureSetExp {
   uint32 adventure_id = 1;
   int32 exp = 2;
@@ -1376,6 +1391,10 @@ message CSOnlineConditionCheck {
 
   Type type = 1;
   repeated uint32 ids = 2;
+}
+
+message CSOnlineBuffTreasureGet {
+  uint32 buff_id = 1;
 }
 
 message CSOnlineWeaponLevelUp {
@@ -2002,7 +2021,7 @@ message CSOnlineContractActivityGetQuestAllPointTreasure {
 
 message CSOnlineContractActivityGetQuestAllTreasure {
   uint32 contract_activity_id = 1;
-  uint32 contract_activity_quest_category = 2;
+  repeated uint32 contract_activity_quest_categories = 2;
   bool include_achievements = 3;
   uint32 extra_id = 4;
 }
@@ -2709,6 +2728,52 @@ message CSOnlineMatchMaterialExchange {
 
 message CSOnlineMatchResult {
   uint32 match_id = 1;
+}
+
+message CSOnlineRogueEnter {
+  uint32 rogue_id = 1;
+}
+
+message CSOnlineRogueRunStart {
+  uint32 rogue_id = 1;
+  uint32 mode_id = 2;
+  uint32 id = 3;
+  uint32 extra_id = 4;
+}
+
+message CSOnlineRogueRunFinish {
+  uint32 rogue_id = 1;
+  uint32 mode_id = 2;
+  int32 stamina_consume = 3;
+}
+
+message CSOnlineRogueEventTrigger {
+  uint32 rogue_id = 1;
+  uint32 mode_id = 2;
+  uint32 node_id = 3;
+  bool ack = 4;
+  PlayerRogueEventSolve event_solve = 5;
+  bool is_give_up = 6;
+}
+
+message CSOnlineRogueTechUnlock {
+  uint32 rogue_id = 1;
+  uint32 tech_group_id = 3;
+  uint32 tech_id = 4;
+  int32 tech_point_consume = 5;
+}
+
+message CSOnlineRogueShopBuy {
+  uint32 rogue_id = 1;
+  uint32 mode_id = 2;
+  RogueConsume consume = 3;
+  uint32 option_id = 4;
+}
+
+message CSOnlineRogueShopRefresh {
+  uint32 rogue_id = 1;
+  uint32 mode_id = 2;
+  RogueConsume consume = 3;
 }
 
 message CSOnlineAutoChessEnter {

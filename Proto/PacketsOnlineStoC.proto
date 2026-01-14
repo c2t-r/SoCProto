@@ -316,6 +316,7 @@ message SCOnlinePostDataSync {
   PlayerMatch match = 28;
   repeated PlayerContractActivitySimpleInfo contract_activities = 29;
   repeated db_player_artifact_collection artifact_collections = 30;
+  repeated PlayerInfiniteChallengeArea infinite_challenge_areas = 31;
 }
 
 message SCDebugReloadGameServer {
@@ -637,6 +638,10 @@ message SCDebugOnlineAutoChess {
   PlayerAutoChess auto_chess = 1;
 }
 
+message SCDebugOnlineRogue {
+  PlayerRogue rogue = 1;
+}
+
 message SCDebugOnlineAdventureSetExp {
   DBPlayerAdventure adventure = 1;
 }
@@ -868,6 +873,13 @@ message SCOnlineBattleEnd {
     DBTreasurePackage treasure_package = 2;
   }
 
+  message rogueData {
+    PlayerRogue rogue = 1;
+    PlayerRogueRunEvent event = 2;
+    DBTreasurePackage treasure_package = 3;
+    bool is_time_out = 4;
+  }
+
   bool is_win = 1;
   db_player_battle_setting battle_setting = 2;
   bool give_up = 3;
@@ -892,6 +904,7 @@ message SCOnlineBattleEnd {
   worldBossData world_boss_data = 22;
   matchData match_data = 23;
   autoChessData auto_chess_data = 25;
+  rogueData rogue_data = 24;
   bytes report = 97;
   bool unmarshal_report_error = 98;
   uint32 server_timestamp = 99;
@@ -911,6 +924,7 @@ message SCOnlineBattlePremake {
   repeated SpawnUnit units = 4;
   repeated uint32 forbid_weapon_ids = 5;
   repeated uint32 forbid_charm_ids = 6;
+  repeated uint32 optional_online_role_unit_ids = 7;
 }
 
 message SCOnlineBattleCommand {
@@ -1286,6 +1300,7 @@ message SCOnlineWarehouseEnter {
   repeated DBConsume expired_treasures = 2;
   sint32 recover_stamina = 3;
   repeated PlayerRecoverCount recover_counts = 4;
+  repeated DBConsume recycle_treasures = 5;
 }
 
 message SCOnlineGameStartProcedureChangePostData {
@@ -1392,6 +1407,10 @@ message SCOnlineBehaviourDo {
 
 message SCOnlineConditionCheck {
   repeated uint32 ids = 3;
+}
+
+message SCOnlineBuffTreasureGet {
+  DBTreasurePackage treasure_package = 1;
 }
 
 message SCOnlineWeaponLevelUp {
@@ -2845,6 +2864,44 @@ message SCOnlineMatchResult {
   PlayerMatch match = 1;
   DBTreasurePackage treasure_package = 2;
   PlayerMatch.Result result = 3;
+}
+
+message SCOnlineRogueEnter {
+  PlayerRogue rogue = 1;
+}
+
+message SCOnlineRogueRunStart {
+  PlayerRogue rogue = 1;
+}
+
+message SCOnlineRogueRunFinish {
+  PlayerRogue rogue = 1;
+  db_player player = 2;
+  DBTreasurePackage treasure_package = 3;
+}
+
+message SCOnlineRogueEventTrigger {
+  PlayerRogue rogue = 1;
+  PlayerRogueRunEvent event = 2;
+  PlayerRogueRunEventResult last_event_result = 4;
+  PlayerRogueRunFinish finish = 5;
+  uint32 from_aim_node_id = 6;
+}
+
+message SCOnlineRogueTechUnlock {
+  PlayerRogue rogue = 1;
+}
+
+message SCOnlineRogueShopBuy {
+  PlayerRogue rogue = 1;
+  PlayerRogueRunEvent event = 2;
+  PlayerRogueRunEventResult last_event_result = 3;
+}
+
+message SCOnlineRogueShopRefresh {
+  PlayerRogue rogue = 1;
+  PlayerRogueRunEvent event = 2;
+  PlayerRogueRunEventResult last_event_result = 3;
 }
 
 message SCOnlineAutoChessEnter {

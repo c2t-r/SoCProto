@@ -330,7 +330,8 @@ message db_sandbox2_unit {
   uint32 role_unit_id = 24;
   uint32 skin_id = 25;
   uint32 model_skin_id = 26;
-  repeated db_sandbox2_unit_skill_node skill_nodes = 28;
+  uint32 module_skill_id = 27;
+  repeated db_sandbox2_unit_skill_node skill_nodes = 29;
 }
 
 message db_sandbox2_unit_skill_node {

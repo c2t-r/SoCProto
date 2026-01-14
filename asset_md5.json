@@ -4,24 +4,24 @@
     "size": 4102
   },
   "area_setting2": {
-    "md5": "a874f71d1f277c43",
-    "size": 1439
+    "md5": "9baf7979bf9a1faa",
+    "size": 1471
   },
   "asset_bundle": {
-    "md5": "96155896b53efbc2",
-    "size": 176218
+    "md5": "b97a7eb6fee73c3c",
+    "size": 178601
   },
   "asset_dep": {
-    "md5": "30ff5ce7a5fe80ec",
-    "size": 80683
+    "md5": "bd46850b758968e1",
+    "size": 81696
   },
   "asset_icon": {
-    "md5": "7aa4477dd3aaf45a",
-    "size": 71749
+    "md5": "ba114e00c6a3249e",
+    "size": 73136
   },
   "asset_loc": {
-    "md5": "2127766ba345095d",
-    "size": 4826
+    "md5": "4f6aacfd696c79b0",
+    "size": 4868
   },
   "asset_not_bundle": {
     "md5": "20a1224ba8b68669",
@@ -32,12 +32,12 @@
     "size": 1196
   },
   "bnk_events": {
-    "md5": "23edebc154e5f46a",
-    "size": 852013
+    "md5": "d726132c356d5193",
+    "size": 856447
   },
   "db_template": {
-    "md5": "eee28a2ca925b544",
-    "size": 2133743
+    "md5": "3e4029d415dcd2d2",
+    "size": 2321614
   },
   "deviceprofile": {
     "md5": "bdad7f1120046658",
@@ -48,15 +48,15 @@
     "size": 28
   },
   "game_conf": {
-    "md5": "a8b87b693cd37527",
-    "size": 3352
+    "md5": "a16e3fa1d4d5306c",
+    "size": 3373
   },
   "input_actions": {
     "md5": "9c85ac4326b13198",
     "size": 8973
   },
   "resource_version": {
-    "md5": "1d3f5c1fd2f0821e",
+    "md5": "0213ee46753e6f96",
     "size": 1237
   },
   "shaders": {
@@ -64,8 +64,8 @@
     "size": 4129
   },
   "shared": {
-    "md5": "9a4f38ec3c942b26",
-    "size": 4330605
+    "md5": "c17f804d09f1f924",
+    "size": 4329588
   },
   "tmp_sprite_asset": {
     "md5": "1c3fc7ace59c1d56",
@@ -124,8 +124,12 @@
     "size": 192727
   },
   "atlas/activitybigrogue_atlas": {
-    "md5": "1f4b34f9114239e7",
-    "size": 16712
+    "md5": "9bb6795b8b9e5062",
+    "size": 148769
+  },
+  "atlas/activitybigrogue_ponit_atlas": {
+    "md5": "037fa502ff1bf709",
+    "size": 152267
   },
   "atlas/activitybigstage1_atlas": {
     "md5": "094fd390bffe6b9b",
@@ -136,12 +140,12 @@
     "size": 213055
   },
   "atlas/activitycommon_atlas": {
-    "md5": "aee789bd23fb8b6b",
-    "size": 339362
+    "md5": "b9410068b7145cc7",
+    "size": 340088
   },
   "atlas/activitylittle01_atlas": {
-    "md5": "1892fb4f9b956b8b",
-    "size": 212936
+    "md5": "d72045e63ef60394",
+    "size": 211268
   },
   "atlas/activitymiddle01_atlas": {
     "md5": "292c6efe6096e144",
@@ -252,8 +256,8 @@
     "size": 894598
   },
   "atlas/common3_atlas": {
-    "md5": "cefc0673990e1693",
-    "size": 62739
+    "md5": "a9749c6183d8ded7",
+    "size": 68756
   },
   "atlas/common_atlas": {
     "md5": "64aac3b9db038934",
@@ -284,8 +288,8 @@
     "size": 70426
   },
   "atlas/energybar_atlas": {
-    "md5": "16dd0e7c37838cbc",
-    "size": 20294
+    "md5": "771b61604e426037",
+    "size": 46887
   },
   "atlas/envelopeconcept_atlas": {
     "md5": "40a29a89b5057051",
@@ -348,48 +352,48 @@
     "size": 1880
   },
   "atlas/headframe_momo01_atlas": {
-    "md5": "34df86a5424ac977",
-    "size": 62908
+    "md5": "b0c299915ef7e38b",
+    "size": 62929
   },
   "atlas/headframe_operation16_atlas": {
     "md5": "0efbdb872e2b91f1",
     "size": 81026
   },
   "atlas/head_frame_agata01_atlas": {
-    "md5": "65fc41806e7b7d0e",
+    "md5": "720aaabba2462346",
     "size": 72405
   },
   "atlas/head_frame_blackhair01_atlas": {
-    "md5": "2b4b6389c500ef44",
+    "md5": "6f53d824747a1968",
     "size": 62198
   },
   "atlas/head_frame_cocoanawal01_atlas": {
-    "md5": "81eca49d7e56a65c",
-    "size": 87139
+    "md5": "341eeb88218d63c9",
+    "size": 87118
   },
   "atlas/head_frame_hunter01_atlas": {
-    "md5": "8e9312cdea38a1c7",
-    "size": 48716
+    "md5": "f0f8f717829fd2f6",
+    "size": 48718
   },
   "atlas/head_frame_lukamar01_atlas": {
-    "md5": "66bd20946a334dca",
-    "size": 61010
+    "md5": "35508484065586bb",
+    "size": 61060
   },
   "atlas/head_frame_redhair01_atlas": {
-    "md5": "e5c2ba4614c455e1",
-    "size": 57071
+    "md5": "ed5f3c3878344323",
+    "size": 57072
   },
   "atlas/head_frame_spinanna01_atlas": {
-    "md5": "d89dbd14205bf943",
+    "md5": "04ba9187bb45d851",
     "size": 92900
   },
   "atlas/head_frame_spmaitha01_atlas": {
-    "md5": "7669691e589d4bde",
-    "size": 110253
+    "md5": "b81bdfc475beec9a",
+    "size": 110283
   },
   "atlas/infinitechallenge_atlas": {
-    "md5": "9085b270e7fa0320",
-    "size": 121235
+    "md5": "b77b3015eeea1ed9",
+    "size": 130730
   },
   "atlas/instruction_atlas": {
     "md5": "0879e787702c5ac8",
@@ -428,8 +432,8 @@
     "size": 41895
   },
   "atlas/material_atlas": {
-    "md5": "8449baecb96ad855",
-    "size": 441128
+    "md5": "1a3073aa75eb55b8",
+    "size": 456615
   },
   "atlas/mercenary_atlas": {
     "md5": "373e00b12165b914",
@@ -444,8 +448,8 @@
     "size": 21387
   },
   "atlas/missiondetail_atlas": {
-    "md5": "879e7ad192e4f57a",
-    "size": 307468
+    "md5": "6af2757b583cd64a",
+    "size": 307463
   },
   "atlas/moduleafk_atlas": {
     "md5": "833d03f5d62b226c",
@@ -512,8 +516,8 @@
     "size": 178104
   },
   "atlas/operationactivity_append_schedule_04_atlas": {
-    "md5": "1ea69424a6b59b50",
-    "size": 854424
+    "md5": "d50f3217b90289d3",
+    "size": 951593
   },
   "atlas/operationactivity_append_schedule_05_atlas": {
     "md5": "51a4871e1d0e72d2",
@@ -616,8 +620,8 @@
     "size": 44749
   },
   "atlas/operationactivity_sandboxresult_01_atlas": {
-    "md5": "8492906a1c8909b8",
-    "size": 264597
+    "md5": "e935b86f1c559b72",
+    "size": 347579
   },
   "atlas/operationactivity_schedule_atlas": {
     "md5": "09f73c5bf8ecf3e4",
@@ -736,32 +740,32 @@
     "size": 417996
   },
   "atlas/richman_animation_atlas": {
-    "md5": "d485003b7bc5ef67",
-    "size": 58378
+    "md5": "c0bfa1961b36fcc9",
+    "size": 58373
   },
   "atlas/richman_background_atlas": {
-    "md5": "4383261a49dcdce2",
-    "size": 167966
+    "md5": "3903a3b633866922",
+    "size": 168013
   },
   "atlas/richman_bridge_atlas": {
-    "md5": "2e6f77e66ac49fb6",
-    "size": 13008
+    "md5": "b4ecd9bc2ffc786f",
+    "size": 13007
   },
   "atlas/richman_characters_atlas": {
-    "md5": "2168e6ab27041d45",
-    "size": 92220
+    "md5": "e0454cc394cd8e7a",
+    "size": 92229
   },
   "atlas/richman_grid_atlas": {
-    "md5": "d38fae742c9f972c",
-    "size": 19236
+    "md5": "1bd130c445af0d6b",
+    "size": 19227
   },
   "atlas/richman_mission_atlas": {
-    "md5": "389454e657135565",
-    "size": 514342
+    "md5": "aacdfd2e82cd9899",
+    "size": 514484
   },
   "atlas/richman_ui_atlas": {
-    "md5": "8656a680d362bb8d",
-    "size": 56315
+    "md5": "4cd60d8d2e24f4b5",
+    "size": 56390
   },
   "atlas/rolecard_atlas": {
     "md5": "c1a87782bf10e35e",
@@ -840,24 +844,24 @@
     "size": 42374
   },
   "atlas/tmpdesignationflow08_atlas": {
-    "md5": "aa3d00db9e5c6798",
-    "size": 42339
+    "md5": "e32f3ef7199dc328",
+    "size": 42338
   },
   "atlas/tmpdesignationflow09_atlas": {
-    "md5": "dd9b3577b0b888a1",
+    "md5": "7cbcebdd46ac4eaf",
     "size": 24519
   },
   "atlas/tmpdesignationflow11_atlas": {
-    "md5": "f9f58afd57457e40",
-    "size": 24180
+    "md5": "f22db2b7509de155",
+    "size": 24156
   },
   "atlas/tmpdesignationflow12_atlas": {
-    "md5": "8b0aeb279122ee3b",
+    "md5": "762a98533820d03d",
     "size": 28027
   },
   "atlas/tmpdesignationflow19_atlas": {
-    "md5": "ab4b590f6a021516",
-    "size": 34051
+    "md5": "1035802f4c513431",
+    "size": 34047
   },
   "atlas/towerreverse_atlas": {
     "md5": "d3ad168a6ecbb2f8",
@@ -940,23 +944,23 @@
     "size": 18229145
   },
   "audio/compress/audio19.bin": {
-    "md5": "7997b856df5863ac",
-    "size": 24535186
+    "md5": "761a8398c26916aa",
+    "size": 24535227
   },
   "audio/compress/audio2.bin": {
     "md5": "24ef7198a43a1e0b",
     "size": 21644141
   },
   "audio/compress/audio20.bin": {
-    "md5": "4269064a5f13747e",
+    "md5": "c57ac014d9d50133",
     "size": 16121587
   },
   "audio/compress/audio21.bin": {
-    "md5": "bdda234eb88de39a",
+    "md5": "ac10bcc9d93f91ca",
     "size": 18500354
   },
   "audio/compress/audio22.bin": {
-    "md5": "737bcf346178a1da",
+    "md5": "dd2f95a2dc5140f1",
     "size": 16765417
   },
   "audio/compress/audio23.bin": {
@@ -968,7 +972,7 @@
     "size": 17114544
   },
   "audio/compress/audio25.bin": {
-    "md5": "235e1a2761b4fb23",
+    "md5": "3d5b250b0811bcb1",
     "size": 19179333
   },
   "audio/compress/audio26.bin": {
@@ -980,31 +984,31 @@
     "size": 34127225
   },
   "audio/compress/audio28.bin": {
-    "md5": "02d80ece4528773d",
+    "md5": "ff2a25b0bddd86c4",
     "size": 31803970
   },
   "audio/compress/audio29.bin": {
-    "md5": "6f75b16ea19b955a",
-    "size": 24509291
+    "md5": "92f085fcf526f90f",
+    "size": 24509316
   },
   "audio/compress/audio3.bin": {
     "md5": "a0e48ae2bf9c2a84",
     "size": 11493682
   },
   "audio/compress/audio30.bin": {
-    "md5": "a9bd776bede26cc2",
-    "size": 23727965
+    "md5": "7418c6b3c2492b18",
+    "size": 23727970
   },
   "audio/compress/audio31.bin": {
-    "md5": "f37e2d97deb28a8e",
+    "md5": "9d65fbe93fa93220",
     "size": 21848202
   },
   "audio/compress/audio32.bin": {
-    "md5": "462678d2a27eb9bc",
+    "md5": "f083bf01a09e3699",
     "size": 23633644
   },
   "audio/compress/audio33.bin": {
-    "md5": "873979b7410ae1e8",
+    "md5": "32914ee529685dbc",
     "size": 5429062
   },
   "audio/compress/audio34.bin": {
@@ -1044,24 +1048,24 @@
     "size": 10570577
   },
   "audio/compress/audio42.bin": {
-    "md5": "1aeb60ceb7beffc8",
-    "size": 10585559
+    "md5": "4c661fae8db58437",
+    "size": 10595647
   },
   "audio/compress/audio43.bin": {
-    "md5": "9a8c9442c81cd03e",
-    "size": 10520283
+    "md5": "26448d74a909f979",
+    "size": 10555488
   },
   "audio/compress/audio44.bin": {
-    "md5": "7aeb70b0ab3371d5",
-    "size": 10496398
+    "md5": "a51e272bed0ef467",
+    "size": 10522697
   },
   "audio/compress/audio45.bin": {
-    "md5": "1fd96b1d8566e5c4",
-    "size": 10509362
+    "md5": "7cb0992020a3c1a9",
+    "size": 10500350
   },
   "audio/compress/audio46.bin": {
-    "md5": "5f103314ce357fe5",
-    "size": 2044394
+    "md5": "a56442a134471693",
+    "size": 2374047
   },
   "audio/compress/audio5.bin": {
     "md5": "d9b755ac7866f990",
@@ -1076,7 +1080,7 @@
     "size": 10961149
   },
   "audio/compress/audio8.bin": {
-    "md5": "77df9ba176e945e8",
+    "md5": "df6c5aafd88e4f6b",
     "size": 12689450
   },
   "audio/compress/audio9.bin": {
@@ -1564,7 +1568,7 @@
     "size": 14394729
   },
   "audio/compress/kraudio10.bin": {
-    "md5": "f4fe28df6c5c0249",
+    "md5": "b837d3b701cc8b3f",
     "size": 12933925
   },
   "audio/compress/kraudio11.bin": {
@@ -1572,11 +1576,11 @@
     "size": 11031087
   },
   "audio/compress/kraudio12.bin": {
-    "md5": "f073af89f12ab7dd",
+    "md5": "70c39cbe05e5f86b",
     "size": 11083330
   },
   "audio/compress/kraudio13.bin": {
-    "md5": "3c06b02414ad9baa",
+    "md5": "6a66d3fb9f45db9e",
     "size": 11316322
   },
   "audio/compress/kraudio14.bin": {
@@ -1584,23 +1588,23 @@
     "size": 10979646
   },
   "audio/compress/kraudio15.bin": {
-    "md5": "a4990b7026682621",
+    "md5": "64896fa45ef0f83e",
     "size": 11096971
   },
   "audio/compress/kraudio16.bin": {
-    "md5": "1e58fa9939574227",
+    "md5": "2b2ef3737eb2c03a",
     "size": 11210091
   },
   "audio/compress/kraudio17.bin": {
-    "md5": "580dd61ba5f9d647",
+    "md5": "1c20b2e7f8938806",
     "size": 11162557
   },
   "audio/compress/kraudio18.bin": {
-    "md5": "7e119b312d3fd520",
+    "md5": "67cef84ee3d4862d",
     "size": 11448467
   },
   "audio/compress/kraudio19.bin": {
-    "md5": "eb7d7dd583b0b109",
+    "md5": "e2e8e205c50c0184",
     "size": 33282059
   },
   "audio/compress/kraudio2.bin": {
@@ -1616,35 +1620,35 @@
     "size": 10588205
   },
   "audio/compress/kraudio22.bin": {
-    "md5": "2432057e73766158",
+    "md5": "2a50e547345d6ef4",
     "size": 10565554
   },
   "audio/compress/kraudio23.bin": {
-    "md5": "ecf51fc92b0af6a7",
+    "md5": "5f531b6a280426e2",
     "size": 12158641
   },
   "audio/compress/kraudio24.bin": {
-    "md5": "0037e6b1a3735f31",
+    "md5": "76a818a2c83e8de7",
     "size": 10678050
   },
   "audio/compress/kraudio25.bin": {
-    "md5": "d1ba791dc0f6e3fe",
+    "md5": "575001aa0ae841e7",
     "size": 10552719
   },
   "audio/compress/kraudio26.bin": {
-    "md5": "ddc8a7efe21127b9",
+    "md5": "2c4516b39611b163",
     "size": 10535244
   },
   "audio/compress/kraudio27.bin": {
-    "md5": "c51028476228c197",
+    "md5": "f519c2e9f1cea885",
     "size": 10558113
   },
   "audio/compress/kraudio28.bin": {
-    "md5": "7a2eb8ba67b9b823",
+    "md5": "34ff52b8198aadcf",
     "size": 10656904
   },
   "audio/compress/kraudio29.bin": {
-    "md5": "0aac1ba0257a6b37",
+    "md5": "69e44974b8b43295",
     "size": 10535638
   },
   "audio/compress/kraudio3.bin": {
@@ -1652,7 +1656,7 @@
     "size": 12457190
   },
   "audio/compress/kraudio30.bin": {
-    "md5": "fddd320646d46fc5",
+    "md5": "682ff01eba1f3785",
     "size": 23956321
   },
   "audio/compress/kraudio31.bin": {
@@ -1660,7 +1664,7 @@
     "size": 10562063
   },
   "audio/compress/kraudio32.bin": {
-    "md5": "905086057066f780",
+    "md5": "45ffa9060790d154",
     "size": 10530525
   },
   "audio/compress/kraudio33.bin": {
@@ -1668,96 +1672,128 @@
     "size": 10562475
   },
   "audio/compress/kraudio34.bin": {
-    "md5": "bbc1db11f8dbf080",
+    "md5": "f45ec8b4460894a9",
     "size": 10543254
   },
   "audio/compress/kraudio35.bin": {
-    "md5": "3c62b3b12969b760",
+    "md5": "b7e001c4b650507c",
     "size": 10550670
   },
   "audio/compress/kraudio36.bin": {
-    "md5": "25cd391fa2a7d456",
+    "md5": "cc8ff25b1344e282",
     "size": 10569463
   },
   "audio/compress/kraudio37.bin": {
-    "md5": "cf10a83b2685445b",
+    "md5": "7215a58cea531d84",
     "size": 10548712
   },
   "audio/compress/kraudio38.bin": {
-    "md5": "69defb0708f63d50",
+    "md5": "9ddcf6d74b1b5ef0",
     "size": 10544801
   },
   "audio/compress/kraudio39.bin": {
-    "md5": "3cda56ca270883e3",
+    "md5": "e522682dca616ef7",
     "size": 10534408
   },
   "audio/compress/kraudio4.bin": {
-    "md5": "103c6c43510dc57c",
+    "md5": "77cda2e02575d9b7",
     "size": 13763953
   },
   "audio/compress/kraudio40.bin": {
-    "md5": "b9903ee595b30c59",
+    "md5": "e46f0cdc069f6866",
     "size": 10540954
   },
   "audio/compress/kraudio41.bin": {
-    "md5": "8149ae43a0a7e0b0",
+    "md5": "0e959288f748fe22",
     "size": 10548470
   },
   "audio/compress/kraudio42.bin": {
-    "md5": "9bce15e53100d709",
-    "size": 21767718
+    "md5": "9803e10ae14875ae",
+    "size": 22310356
   },
   "audio/compress/kraudio43.bin": {
-    "md5": "b7fafbfc4fb4bca0",
-    "size": 10821165
+    "md5": "3f7b7908b9e832e9",
+    "size": 12372916
   },
   "audio/compress/kraudio44.bin": {
-    "md5": "7ec776afd97927c2",
-    "size": 10509367
+    "md5": "f49cbe1e7f3cf931",
+    "size": 12040496
   },
   "audio/compress/kraudio45.bin": {
-    "md5": "21ca8d89e288e515",
-    "size": 10495253
+    "md5": "727a5a07c69e0607",
+    "size": 10679104
   },
   "audio/compress/kraudio46.bin": {
-    "md5": "9373d7f193c4e336",
-    "size": 10515905
+    "md5": "828a146d2b3736db",
+    "size": 10537748
   },
   "audio/compress/kraudio47.bin": {
-    "md5": "795cb730279b9f86",
-    "size": 10508699
+    "md5": "1e2b3b7eab2aec96",
+    "size": 10559928
   },
   "audio/compress/kraudio48.bin": {
-    "md5": "941deee26ee6ba27",
-    "size": 10527935
+    "md5": "8ec871e78921177e",
+    "size": 10537116
   },
   "audio/compress/kraudio49.bin": {
-    "md5": "fa6e4e373e1f88ec",
-    "size": 10503561
+    "md5": "a24e45ba1ebe08bb",
+    "size": 10527308
   },
   "audio/compress/kraudio5.bin": {
     "md5": "7fa0627a44920b8c",
     "size": 14498476
   },
   "audio/compress/kraudio50.bin": {
-    "md5": "22998272ef1ef5f7",
-    "size": 10520852
+    "md5": "05d7ec1b52ef312b",
+    "size": 10510892
   },
   "audio/compress/kraudio51.bin": {
-    "md5": "d2747218aeb52fb7",
-    "size": 10510330
+    "md5": "016a6fea8ac9e8a5",
+    "size": 10531656
   },
   "audio/compress/kraudio52.bin": {
-    "md5": "afab7356b182f259",
-    "size": 10508533
+    "md5": "e144033827c1e639",
+    "size": 10500455
   },
   "audio/compress/kraudio53.bin": {
-    "md5": "5527f599e7a4403d",
-    "size": 6525229
+    "md5": "f08ddbed8eb0d456",
+    "size": 10521598
+  },
+  "audio/compress/kraudio54.bin": {
+    "md5": "13bfbf083f74da78",
+    "size": 10533862
+  },
+  "audio/compress/kraudio55.bin": {
+    "md5": "732f929b133f8262",
+    "size": 10517878
+  },
+  "audio/compress/kraudio56.bin": {
+    "md5": "b8da564c46d74b28",
+    "size": 10526978
+  },
+  "audio/compress/kraudio57.bin": {
+    "md5": "41b64499dccc3b0b",
+    "size": 10493738
+  },
+  "audio/compress/kraudio58.bin": {
+    "md5": "615dc9f02ff280bb",
+    "size": 10492383
+  },
+  "audio/compress/kraudio59.bin": {
+    "md5": "47c6dea23fb88966",
+    "size": 10503693
   },
   "audio/compress/kraudio6.bin": {
     "md5": "383ac3cbca557e4f",
     "size": 14916178
+  },
+  "audio/compress/kraudio60.bin": {
+    "md5": "a97990b9a46fad78",
+    "size": 10511170
+  },
+  "audio/compress/kraudio61.bin": {
+    "md5": "c64a0d66e1388d02",
+    "size": 6177844
   },
   "audio/compress/kraudio7.bin": {
     "md5": "4b0b8c83b67bcc0e",
@@ -1796,8 +1832,8 @@
     "size": 1447913
   },
   "battle/effect/battle_effect10": {
-    "md5": "e5f23064028b8d3c",
-    "size": 1902848
+    "md5": "064eea3d30d05ce0",
+    "size": 1901298
   },
   "battle/effect/battle_effect11": {
     "md5": "2fe6f7c48583debc",
@@ -1812,8 +1848,8 @@
     "size": 1733635
   },
   "battle/effect/battle_effect14": {
-    "md5": "d8998fba16cfaf50",
-    "size": 1255974
+    "md5": "2110b1912a029c47",
+    "size": 1252401
   },
   "battle/effect/battle_effect15": {
     "md5": "ac77e8b4951f62f8",
@@ -1824,104 +1860,108 @@
     "size": 866262
   },
   "battle/effect/battle_effect17": {
-    "md5": "db7042f1f15a70e1",
-    "size": 1202275
+    "md5": "5e17c5e5e7165b1a",
+    "size": 1202216
   },
   "battle/effect/battle_effect18": {
     "md5": "4dc68ee435a34abc",
     "size": 1083874
   },
   "battle/effect/battle_effect19": {
-    "md5": "7c976dc643d25dc3",
-    "size": 1451274
+    "md5": "2dd20cfb2b33118f",
+    "size": 1430976
   },
   "battle/effect/battle_effect2": {
     "md5": "64374a8b743019c7",
     "size": 1138295
   },
   "battle/effect/battle_effect20": {
-    "md5": "edbbc81a1d4a1c74",
-    "size": 1820147
+    "md5": "067a35d5c73958f7",
+    "size": 1800896
   },
   "battle/effect/battle_effect21": {
-    "md5": "023e17e3f29f9a71",
-    "size": 1485110
+    "md5": "37c341f8b8617e71",
+    "size": 1465767
   },
   "battle/effect/battle_effect22": {
-    "md5": "57248744d7e0aa96",
-    "size": 4516286
+    "md5": "e3e3009eb33f2133",
+    "size": 4516258
   },
   "battle/effect/battle_effect23": {
     "md5": "b7ea23391344e713",
     "size": 1480793
   },
   "battle/effect/battle_effect24": {
-    "md5": "0e79919a1777e710",
-    "size": 1665574
+    "md5": "c71c326ea79260f3",
+    "size": 1646210
   },
   "battle/effect/battle_effect25": {
-    "md5": "9cfa259bd7f56688",
-    "size": 3391473
+    "md5": "e9d862ba3ab9c86b",
+    "size": 3391470
   },
   "battle/effect/battle_effect26": {
-    "md5": "c26acfe793059859",
-    "size": 1225609
+    "md5": "a7f7bfc1964890c3",
+    "size": 1206512
   },
   "battle/effect/battle_effect27": {
-    "md5": "0022eee5e6884755",
-    "size": 1517023
+    "md5": "d582f9bf719eabdc",
+    "size": 1497060
   },
   "battle/effect/battle_effect28": {
-    "md5": "cc8ef4aa327fbb16",
-    "size": 2894018
+    "md5": "6463d09815c6bce8",
+    "size": 2894023
   },
   "battle/effect/battle_effect29": {
-    "md5": "7a70e17103f2e7ed",
-    "size": 2796852
+    "md5": "7f2b76b66b6ce6d3",
+    "size": 2796851
   },
   "battle/effect/battle_effect3": {
-    "md5": "8cff25b07028931b",
-    "size": 1125534
+    "md5": "81f4c307870a91cb",
+    "size": 1125539
   },
   "battle/effect/battle_effect30": {
     "md5": "543258e5134edafd",
     "size": 1518634
   },
   "battle/effect/battle_effect31": {
-    "md5": "7626802a60d71555",
-    "size": 1200695
+    "md5": "6611ec96b7181d8b",
+    "size": 1125798
   },
   "battle/effect/battle_effect32": {
-    "md5": "65546be40528782b",
-    "size": 2077704
+    "md5": "e12695a367c74b67",
+    "size": 2077706
   },
   "battle/effect/battle_effect33": {
-    "md5": "23c9ed110683c192",
-    "size": 1424062
+    "md5": "6c1982562f042605",
+    "size": 1479127
   },
   "battle/effect/battle_effect34": {
-    "md5": "f38df32d4e1cb6c7",
-    "size": 10180088
+    "md5": "dd3482e885196d7d",
+    "size": 2682104
   },
   "battle/effect/battle_effect35": {
-    "md5": "01eb8dd1348042a1",
-    "size": 4533529
+    "md5": "7619ba482e6e2aba",
+    "size": 10072218
   },
   "battle/effect/battle_effect36": {
-    "md5": "1d57a40c103d612e",
-    "size": 3441403
+    "md5": "44ef768fd1b33834",
+    "size": 4466748
   },
   "battle/effect/battle_effect37": {
-    "md5": "9c348e0740f3c71b",
-    "size": 1660909
+    "md5": "a548c8e71cd6a163",
+    "size": 4237369
+  },
+  "battle/effect/battle_effect38": {
+    "md5": "4675be0bd4968105",
+    "size": 235614
   },
   "battle/effect/battle_effect4": {
     "md5": "84d567405503506b",
     "size": 1894357
   },
   "battle/effect/battle_effect5": {
-    "md5": "c25df7356f2d063c",
-    "size": 3834233
+    "md5": "c0483ef50e14d290",
+    "size": 3814438
   },
   "battle/effect/battle_effect6": {
     "md5": "e20cd973f0b0d548",
@@ -3816,8 +3856,8 @@
     "size": 1326871
   },
   "battle/unit/battle_unit19": {
-    "md5": "9882cb0562b0ef95",
-    "size": 1498680
+    "md5": "5ada9fbfb2047d18",
+    "size": 1467660
   },
   "battle/unit/battle_unit2": {
     "md5": "9ad3706351047590",
@@ -3828,12 +3868,12 @@
     "size": 666001
   },
   "battle/unit/battle_unit21": {
-    "md5": "40d676fb3dda65de",
-    "size": 2227691
+    "md5": "3c9caf94c158e254",
+    "size": 2638495
   },
   "battle/unit/battle_unit22": {
-    "md5": "8ef62cbb27bf991a",
-    "size": 93672
+    "md5": "0d3974c5c4ae9595",
+    "size": 151054
   },
   "battle/unit/battle_unit3": {
     "md5": "4e296fa9258050a3",
@@ -3884,8 +3924,8 @@
     "size": 1726596
   },
   "battle/weapon/battle_weapon5": {
-    "md5": "540f9d3d85640b84",
-    "size": 1402250
+    "md5": "d78b1acaf0658849",
+    "size": 1387154
   },
   "battle/weapon/battle_weapon6": {
     "md5": "2ec15b7e5bdf6df0",
@@ -4292,24 +4332,24 @@
     "size": 3220
   },
   "dreamlands/map/dls_virtual-sky-da00101": {
-    "md5": "95a8408b6950c8ff",
-    "size": 1235337
+    "md5": "f0338f7c23f79e5a",
+    "size": 1235950
   },
   "dreamlands/map/dls_virtual-sky-da00101_cvr01": {
-    "md5": "47bee3dfefdb2c12",
-    "size": 1763030
+    "md5": "11504637514d4d9e",
+    "size": 1763226
   },
   "dreamlands/map/dls_virtual-sky-da00101_spr01": {
-    "md5": "dc682a545c9bb741",
-    "size": 1338044
+    "md5": "3d0d75166dd7bbc2",
+    "size": 1337282
   },
   "dreamlands/map/dls_virtual-sky-da00102": {
-    "md5": "2c5feeace4023569",
-    "size": 912807
+    "md5": "bea5c1a12a17abf1",
+    "size": 912383
   },
   "dreamlands/map/dls_virtual-sky-da00102_linkage02": {
-    "md5": "81b9883e31c763a8",
-    "size": 1149191
+    "md5": "792edc788582f2bb",
+    "size": 1150061
   },
   "dreamlands/map/dls_virtual-sky-da00201": {
     "md5": "96f0021bbeb15651",
@@ -4488,8 +4528,8 @@
     "size": 9376
   },
   "dreamlands/prefab/furniture/dreamlands_prefab_furniture1": {
-    "md5": "17802df448e5b8a2",
-    "size": 1167958
+    "md5": "05c1a2ed04dbfbe1",
+    "size": 1166670
   },
   "dreamlands/prefab/furniture/dreamlands_prefab_furniture2": {
     "md5": "e0786c225f7c9014",
@@ -4516,8 +4556,8 @@
     "size": 1697626
   },
   "font/font": {
-    "md5": "7366c65e1efbcfff",
-    "size": 29679115
+    "md5": "4c28dc718c426eb6",
+    "size": 29700437
   },
   "font/font_battle": {
     "md5": "7485bbc1a03e8674",
@@ -4646,6 +4686,114 @@
   "icon/activitybig08/activity_questbg_big08": {
     "md5": "9f9dedf96c404619",
     "size": 296684
+  },
+  "icon/activitybigrogue/activitybigrogue_bar01": {
+    "md5": "6d3b8102d3c52c54",
+    "size": 94942
+  },
+  "icon/activitybigrogue/activitybigrogue_bar02": {
+    "md5": "327d1af8189cc0c9",
+    "size": 97724
+  },
+  "icon/activitybigrogue/activitybigrogue_bar03": {
+    "md5": "491c77827cb9aaa6",
+    "size": 82169
+  },
+  "icon/activitybigrogue/activitybigrogue_bar04": {
+    "md5": "2ea1be402964a5e3",
+    "size": 99355
+  },
+  "icon/activitybigrogue/activitybigrogue_bar05": {
+    "md5": "ac87f86f224cc564",
+    "size": 98638
+  },
+  "icon/activitybigrogue/activitybigrogue_bar06": {
+    "md5": "6424d738c55e9f89",
+    "size": 96483
+  },
+  "icon/activitybigrogue/activitybigrogue_bg01": {
+    "md5": "45a1298664c9a83b",
+    "size": 1505464
+  },
+  "icon/activitybigrogue/activitybigrogue_bg02": {
+    "md5": "4dacfd96668b83f7",
+    "size": 1393406
+  },
+  "icon/activitybigrogue/activitybigrogue_bg03": {
+    "md5": "451701ba1623d789",
+    "size": 1115925
+  },
+  "icon/activitybigrogue/activitybigrogue_bg04": {
+    "md5": "cdbd7153ebab5f8f",
+    "size": 1296336
+  },
+  "icon/activitybigrogue/activitybigrogue_bg05": {
+    "md5": "2e0d0b6ce254679b",
+    "size": 1194246
+  },
+  "icon/activitybigrogue/activitybigrogue_bg06": {
+    "md5": "a04620d2bcbfa66c",
+    "size": 1111810
+  },
+  "icon/activitybigrogue/activitybigrogue_bossbuff_pic": {
+    "md5": "8fbe28ccc1e1ffd7",
+    "size": 82386
+  },
+  "icon/activitybigrogue/activitybigrogue_briefing_bg": {
+    "md5": "6bc0ea0770598a77",
+    "size": 1386590
+  },
+  "icon/activitybigrogue/activitybigrogue_briefing_shop": {
+    "md5": "3d9a369fc655cb0b",
+    "size": 664673
+  },
+  "icon/activitybigrogue/activitybigrogue_difficultyselect_bg01": {
+    "md5": "9c6b8ad256d7f770",
+    "size": 1113383
+  },
+  "icon/activitybigrogue/activitybigrogue_enterence_bg": {
+    "md5": "183c905193fc5ef0",
+    "size": 347562
+  },
+  "icon/activitybigrogue/activitybigrogue_homepage_bg01": {
+    "md5": "7fe7e7d07252354a",
+    "size": 1603662
+  },
+  "icon/activitybigrogue/activitybigrogue_shop_bar": {
+    "md5": "79d4704af5c9a627",
+    "size": 22647
+  },
+  "icon/activitybigrogue/activitybigrogue_shop_bg": {
+    "md5": "0c5721049d15d76f",
+    "size": 490142
+  },
+  "icon/activitybigrogue/activitybigrogue_shop_itembar": {
+    "md5": "9810c3f7e9b9fbc7",
+    "size": 25993
+  },
+  "icon/activitybigrogue/activitybigrogue_tech_bg": {
+    "md5": "71b62a0962af1e54",
+    "size": 1030686
+  },
+  "icon/activitybigrogue/activitybigrogue_tech_bg_topbar": {
+    "md5": "b8cb493afea94aa7",
+    "size": 334619
+  },
+  "icon/activitybigrogue/activitybigrogue_uniteselect_bg": {
+    "md5": "a6eaebd544bea05c",
+    "size": 558577
+  },
+  "icon/activitybigrogue/buff_flashcard": {
+    "md5": "597f3a77e857fa65",
+    "size": 120249
+  },
+  "icon/activitybigrogue/event_line": {
+    "md5": "c3bac30aecb81b41",
+    "size": 2143
+  },
+  "icon/activitybigrogue/title_activitybigrogue": {
+    "md5": "82c88a8f4ec738c0",
+    "size": 103286
   },
   "icon/activitybigstage1/icon_activitybigstage11": {
     "md5": "b69c1d5bce1f3781",
@@ -4924,12 +5072,12 @@
     "size": 376659
   },
   "icon/bannar/icon_bannar15": {
-    "md5": "ade5bd4911a587c9",
-    "size": 498466
+    "md5": "5e28c12333eb2653",
+    "size": 495592
   },
   "icon/bannar/icon_bannar16": {
-    "md5": "58b59251222499a8",
-    "size": 212483
+    "md5": "cdce22b0ef4ee084",
+    "size": 441776
   },
   "icon/bannar/icon_bannar2": {
     "md5": "fffb8702bf21e5b5",
@@ -5540,8 +5688,8 @@
     "size": 119144
   },
   "icon/bg/operationactivity_bigrogue_bg": {
-    "md5": "50c237c60227e905",
-    "size": 633155
+    "md5": "55dfb4c9c10d7756",
+    "size": 632857
   },
   "icon/bg/operationactivity_bigstage1_bg": {
     "md5": "bd98847abed47507",
@@ -5787,6 +5935,10 @@
     "md5": "e7d7eea7c29db15b",
     "size": 621563
   },
+  "icon/bg/operationactivity_infinitechallenge02_bg": {
+    "md5": "bfacebfcd2c5a227",
+    "size": 610525
+  },
   "icon/bg/operationactivity_infinitechallenge_bg": {
     "md5": "492b84d771c9e9c8",
     "size": 621631
@@ -6027,6 +6179,26 @@
     "md5": "e54686ef2b9923f8",
     "size": 606883
   },
+  "icon/bg/operationactivity_sandboxelamanresult": {
+    "md5": "32c335a653673dca",
+    "size": 663047
+  },
+  "icon/bg/operationactivity_sandboxelamanresult_letter01": {
+    "md5": "33e381c6c01d8772",
+    "size": 357659
+  },
+  "icon/bg/operationactivity_sandboxelamanresult_letter02": {
+    "md5": "f2dae8e9c8fafafb",
+    "size": 160132
+  },
+  "icon/bg/operationactivity_sandboxelamanresult_letter03": {
+    "md5": "c27870173ff84c62",
+    "size": 363722
+  },
+  "icon/bg/operationactivity_sandboxelamanresult_letter04": {
+    "md5": "9e5f346b9322ea47",
+    "size": 101499
+  },
   "icon/bg/operationactivity_sandboxinannaboost_bg": {
     "md5": "ba8b2d3304ac150e",
     "size": 632677
@@ -6178,6 +6350,34 @@
   "icon/bg/operationactivity_shopskinstage2rolet_bg": {
     "md5": "315015a591209cbb",
     "size": 635988
+  },
+  "icon/bg/operationactivity_skingiftmaitha_bg": {
+    "md5": "30a1b07738eb2f4e",
+    "size": 538553
+  },
+  "icon/bg/operationactivity_skingiftmaitha_button": {
+    "md5": "56d5557b1e32d0d5",
+    "size": 20390
+  },
+  "icon/bg/operationactivity_skingiftmaitha_role03": {
+    "md5": "94c3f2bd50d9bba5",
+    "size": 365060
+  },
+  "icon/bg/operationactivity_skingiftmaitha_role04": {
+    "md5": "b92eead498ae4f9a",
+    "size": 18818
+  },
+  "icon/bg/operationactivity_skingiftmaitha_role05": {
+    "md5": "8262cab491914e1f",
+    "size": 8943
+  },
+  "icon/bg/operationactivity_skingiftmaitha_role06": {
+    "md5": "aef92c5c44e030c7",
+    "size": 53565
+  },
+  "icon/bg/operationactivity_skingiftmaitha_role07": {
+    "md5": "13ee6dde4b53d1f7",
+    "size": 128722
   },
   "icon/bg/operationactivity_skin_bg": {
     "md5": "c21856662757aa1e",
@@ -6559,6 +6759,50 @@
     "md5": "8e9b58c5407c6ddc",
     "size": 234630
   },
+  "icon/bigrogue_target/event_briefing": {
+    "md5": "ae772055d8cfc4e5",
+    "size": 4087
+  },
+  "icon/bigrogue_target/event_information": {
+    "md5": "1e157dfcc9719529",
+    "size": 4033
+  },
+  "icon/bigrogue_target/event_next": {
+    "md5": "c693762e94ad13fd",
+    "size": 2987
+  },
+  "icon/bigrogue_target/event_opportunity": {
+    "md5": "8c1c3e62448f8e2f",
+    "size": 3572
+  },
+  "icon/bigrogue_target/event_recruitment": {
+    "md5": "3bdbfb8c58238ad9",
+    "size": 5124
+  },
+  "icon/bigrogue_target/event_rest": {
+    "md5": "ad6617bf2197079c",
+    "size": 3843
+  },
+  "icon/bigrogue_target/event_shop": {
+    "md5": "93aefc1619c1d408",
+    "size": 5078
+  },
+  "icon/bigrogue_target/event_tactic": {
+    "md5": "efa470646b9d10cd",
+    "size": 4534
+  },
+  "icon/bigrogue_target/event_trade": {
+    "md5": "7344d1cbd08fba42",
+    "size": 4372
+  },
+  "icon/bigrogue_target/event_treasure": {
+    "md5": "32396dbad175e282",
+    "size": 4344
+  },
+  "icon/bigrogue_target/event_wish": {
+    "md5": "747bfb6993becc3b",
+    "size": 4954
+  },
   "icon/blessing/icon_blessing1": {
     "md5": "8b67ef0c6b0f6d42",
     "size": 135135
@@ -6572,12 +6816,12 @@
     "size": 24873
   },
   "icon/buff/icon_buff1": {
-    "md5": "95308b99dd56b9be",
-    "size": 380367
+    "md5": "5d63f78035a3142b",
+    "size": 399392
   },
   "icon/buffactivity/icon_buffactivity1": {
-    "md5": "3050ec52762cadac",
-    "size": 192118
+    "md5": "6443e5e6180a5fc7",
+    "size": 336719
   },
   "icon/buff_global/icon_buff_global1": {
     "md5": "0e52ee3fa5c756a9",
@@ -7704,12 +7948,12 @@
     "size": 2362476
   },
   "icon/character/icon_character1": {
-    "md5": "3b0b42e8d8e032a3",
-    "size": 1765962
+    "md5": "75fca0e0985f88f2",
+    "size": 1776177
   },
   "icon/character_head/icon_character_head1": {
-    "md5": "4629eb9ff6ba6b65",
-    "size": 880227
+    "md5": "2f367279ed006d95",
+    "size": 883467
   },
   "icon/charm/icon_charm1": {
     "md5": "07d57c5045226d43",
@@ -7912,8 +8156,8 @@
     "size": 377266
   },
   "icon/common/icon_common1": {
-    "md5": "06616a71efb02f6f",
-    "size": 2656661
+    "md5": "19967ed58d6bfd22",
+    "size": 2659547
   },
   "icon/dls_virtual/dls_virtual_area01_model00": {
     "md5": "b8dadcbb55087383",
@@ -8224,12 +8468,12 @@
     "size": 4986157
   },
   "icon/face/icon_face8": {
-    "md5": "dbe15c4a51a21336",
-    "size": 5143502
+    "md5": "47d39482e0c43ee0",
+    "size": 5043349
   },
   "icon/face/icon_face9": {
-    "md5": "4cc0b5071c7375a6",
-    "size": 935082
+    "md5": "e57674bccc51d93c",
+    "size": 1230336
   },
   "icon/face_faction/icon_face_faction1": {
     "md5": "2e05ac3bf356dc7f",
@@ -8320,8 +8564,8 @@
     "size": 1032422
   },
   "icon/gachatitle/icon_gachatitle5": {
-    "md5": "d2fd16a88d652ff6",
-    "size": 773234
+    "md5": "e68a72bc625ad057",
+    "size": 893052
   },
   "icon/gift/icon_gift1": {
     "md5": "ae3bdcb7bc236a27",
@@ -8332,20 +8576,20 @@
     "size": 2733912
   },
   "icon/head_bg/icon_head_bg1": {
-    "md5": "462ef4cec4693205",
-    "size": 1222509
+    "md5": "8ec352f6d4994e43",
+    "size": 1307826
   },
   "icon/head_bg_animation/icon_head_bg_animation1": {
     "md5": "19a534f5193dc341",
     "size": 49950
   },
   "icon/head_bg_drop/icon_head_bg_drop1": {
-    "md5": "7d083566c6ea6eae",
-    "size": 809411
+    "md5": "7ef2ce77b0c15d94",
+    "size": 864896
   },
   "icon/head_frame/icon_head_frame1": {
-    "md5": "c825561db7869cd8",
-    "size": 1655526
+    "md5": "d92fe149cc1b614c",
+    "size": 1703304
   },
   "icon/head_frame_dynamic/icon_head_frame_dynamic1": {
     "md5": "9f2a510f6f253c00",
@@ -8374,6 +8618,22 @@
   "icon/infinitechallenge/infinitechallengeicon106": {
     "md5": "52f133a596c4b056",
     "size": 38580
+  },
+  "icon/infinitechallenge/infinitechallengeicon204": {
+    "md5": "982122442b923d79",
+    "size": 37209
+  },
+  "icon/infinitechallenge/infinitechallengeicon205": {
+    "md5": "c7a9ccb04d020f7c",
+    "size": 38663
+  },
+  "icon/infinitechallenge/infinitechallengeicon206": {
+    "md5": "1074261a5a184ef1",
+    "size": 40089
+  },
+  "icon/infinitechallenge/infinitechallengeview_areabg": {
+    "md5": "fdd10b890f71ab34",
+    "size": 1000284
   },
   "icon/infinitechallenge/infinitechallenge_areabg": {
     "md5": "ff7b2246679799d3",
@@ -8406,6 +8666,14 @@
   "icon/infinitechallenge/infinitechallenge_arealocked": {
     "md5": "17d2231aecf68884",
     "size": 138103
+  },
+  "icon/infinitechallenge/infinitechallenge_entrance01": {
+    "md5": "295eeae5645164ff",
+    "size": 164576
+  },
+  "icon/infinitechallenge/infinitechallenge_entrance02": {
+    "md5": "87de95909aad765c",
+    "size": 161907
   },
   "icon/kanban/icon_kanban1": {
     "md5": "99f27ec9008d4014",
@@ -8636,8 +8904,8 @@
     "size": 2307098
   },
   "icon/material/icon_material6": {
-    "md5": "f1519cb2ee435cea",
-    "size": 2013830
+    "md5": "be9645c18f326bd9",
+    "size": 2061064
   },
   "icon/material_full/icon_material_full1": {
     "md5": "788a86748db7177f",
@@ -8660,12 +8928,12 @@
     "size": 4142431
   },
   "icon/material_full/icon_material_full6": {
-    "md5": "d7f669df5d1537e9",
-    "size": 4391853
+    "md5": "074b0c1e4baede62",
+    "size": 4341887
   },
   "icon/material_full/icon_material_full7": {
-    "md5": "c861d25fb4e8bb5a",
-    "size": 1105306
+    "md5": "f5f653b70d0effaf",
+    "size": 1459979
   },
   "icon/material_onlineunitrank/icon_material_onlineunitrank1": {
     "md5": "e7baaaf42e9dd598",
@@ -8807,6 +9075,18 @@
     "md5": "c126844b0588442a",
     "size": 38344
   },
+  "icon/online_cardbg/online_cardbg_007": {
+    "md5": "e1a8f12937f7e23d",
+    "size": 38315
+  },
+  "icon/online_cardbg/online_cardbg_008": {
+    "md5": "88ddd42ff7c7615d",
+    "size": 38406
+  },
+  "icon/online_cardbg/online_cardbg_009": {
+    "md5": "cfbbc4ce4b9628ae",
+    "size": 38440
+  },
   "icon/online_cardbg/online_cardbg_c": {
     "md5": "0bbfa986214f7498",
     "size": 32388
@@ -8839,6 +9119,18 @@
     "md5": "4a1c295ac3898ab5",
     "size": 41614
   },
+  "icon/online_cardbg_bar/online_cardbg_007_bar": {
+    "md5": "b6891b4158f36adc",
+    "size": 42322
+  },
+  "icon/online_cardbg_bar/online_cardbg_008_bar": {
+    "md5": "eec3fbebf8faed50",
+    "size": 41928
+  },
+  "icon/online_cardbg_bar/online_cardbg_009_bar": {
+    "md5": "a39f5d0bfcd881dd",
+    "size": 42037
+  },
   "icon/online_cardbg_bar/online_cardbg_c_bar": {
     "md5": "a2dd0d7003896fcb",
     "size": 41231
@@ -8866,6 +9158,18 @@
   "icon/online_cardbg_drop/online_cardbg_006_drop": {
     "md5": "1f70139450021b07",
     "size": 11372
+  },
+  "icon/online_cardbg_drop/online_cardbg_007_drop": {
+    "md5": "656b22a7807f7860",
+    "size": 11351
+  },
+  "icon/online_cardbg_drop/online_cardbg_008_drop": {
+    "md5": "cd26b0e33219f31e",
+    "size": 11352
+  },
+  "icon/online_cardbg_drop/online_cardbg_009_drop": {
+    "md5": "5736b0014a2d1534",
+    "size": 11365
   },
   "icon/online_cardbg_drop/online_cardbg_c_drop": {
     "md5": "14caa8c23a0452a5",
@@ -8898,6 +9202,18 @@
   "icon/online_cardbg_full/online_cardbg_006_full": {
     "md5": "2629502d217c4fbf",
     "size": 144312
+  },
+  "icon/online_cardbg_full/online_cardbg_007_full": {
+    "md5": "d221b0d98e4d3ae3",
+    "size": 150424
+  },
+  "icon/online_cardbg_full/online_cardbg_008_full": {
+    "md5": "3d7985eeb90e8450",
+    "size": 150133
+  },
+  "icon/online_cardbg_full/online_cardbg_009_full": {
+    "md5": "76bac678e4ab0cd9",
+    "size": 149514
   },
   "icon/online_cardbg_full/online_cardbg_c_full": {
     "md5": "05710601f897b4ff",
@@ -9104,12 +9420,12 @@
     "size": 202631
   },
   "icon/online_schedule_letter/icon_online_schedule_letter1": {
-    "md5": "4b04712c2cdbc836",
-    "size": 20540
+    "md5": "8dcbaadd32721ec9",
+    "size": 27020
   },
   "icon/online_schedule_letter_full/icon_online_schedule_letter_full1": {
-    "md5": "20b99629c2bca885",
-    "size": 299774
+    "md5": "93d9b109fdd1acd6",
+    "size": 398605
   },
   "icon/online_shop_bg/online_shop_recommend_group01": {
     "md5": "d36e87ff40fb0e7e",
@@ -9128,8 +9444,8 @@
     "size": 251930
   },
   "icon/online_tech/icon_online_tech1": {
-    "md5": "b490e9fe33329c93",
-    "size": 17926
+    "md5": "7cb9f0368bba559c",
+    "size": 24202
   },
   "icon/operationactivity_append_shop_01/icon_operationactivity_append_shop_011": {
     "md5": "1adb80e0db225bb3",
@@ -9158,6 +9474,14 @@
   "icon/operationactivity_sandboxresult_01/figure_sandboxinannaresult": {
     "md5": "e0fd5823052c6513",
     "size": 56955
+  },
+  "icon/operationactivity_sandboxresult_01/letter_feather": {
+    "md5": "ac537ba1fb722555",
+    "size": 43883
+  },
+  "icon/operationactivity_sandboxresult_01/title_sandboxelamanresult": {
+    "md5": "ae87994933a4c1df",
+    "size": 64478
   },
   "icon/operationactivity_sandboxresult_01/title_sandboxinannaresult": {
     "md5": "d26e2c07ced3903a",
@@ -9524,8 +9848,8 @@
     "size": 2579749
   },
   "icon/skill/icon_skill7": {
-    "md5": "483a3d5a666d0328",
-    "size": 1497831
+    "md5": "0f1b476eae7c87c8",
+    "size": 1836189
   },
   "icon/skin_card/skin_card_hbanditthemaskmset01": {
     "md5": "b13e0090c5b872bf",
@@ -9755,6 +10079,10 @@
     "md5": "a824ddc4ce0e8121",
     "size": 1340245
   },
+  "icon/skin_card/skin_card_hplayermercenarygirlf5set01": {
+    "md5": "bd22d1c884ed7cb8",
+    "size": 587208
+  },
   "icon/skin_card/skin_card_hplayermercenarygirlfset01": {
     "md5": "8c5f700391495043",
     "size": 467448
@@ -9803,6 +10131,14 @@
     "md5": "c3886b712b76ceb1",
     "size": 1067414
   },
+  "icon/skin_card/skin_card_hsolomonladypresidentf2set01": {
+    "md5": "753273b9b80a4f5a",
+    "size": 1495411
+  },
+  "icon/skin_card/skin_card_hsolomonladypresidentfset01": {
+    "md5": "f5ca99a80cb81366",
+    "size": 1497672
+  },
   "icon/skin_card/skin_card_hsolomonmissyefset01": {
     "md5": "d9a25b1fb4fab962",
     "size": 1173589
@@ -9810,6 +10146,10 @@
   "icon/skin_card/skin_card_hsolomonparrotgirlfset01": {
     "md5": "2f913c11144a6b16",
     "size": 986862
+  },
+  "icon/skin_card/skin_card_hsolomonpremiermset01": {
+    "md5": "dd43c2e5d3d7864b",
+    "size": 1198226
   },
   "icon/skin_card/skin_card_hvilderdancerfset01": {
     "md5": "9584c18c7662a5a9",
@@ -10091,6 +10431,10 @@
     "md5": "0dc36b49c61761da",
     "size": 4588968
   },
+  "icon/skin_card_full/skin_card_hplayermercenarygirlf5set01": {
+    "md5": "7f8c8caab29552ed",
+    "size": 2354394
+  },
   "icon/skin_card_full/skin_card_hplayermercenarygirlfset01": {
     "md5": "d308f15337fe989b",
     "size": 2204046
@@ -10131,6 +10475,10 @@
     "md5": "b1395e2d41b1df1c",
     "size": 5748639
   },
+  "icon/skin_card_full/skin_card_hsolomonladypresidentfset01": {
+    "md5": "acbec764e06ec071",
+    "size": 11109820
+  },
   "icon/skin_card_full/skin_card_hsolomonmissyefset01": {
     "md5": "6b123113bc5a8cf7",
     "size": 3030734
@@ -10138,6 +10486,10 @@
   "icon/skin_card_full/skin_card_hsolomonparrotgirlfset01": {
     "md5": "bdef2fab75f18683",
     "size": 4947010
+  },
+  "icon/skin_card_full/skin_card_hsolomonpremiermset01": {
+    "md5": "1f754dce5665d7c7",
+    "size": 7864876
   },
   "icon/skin_card_full/skin_card_hvilderdancerfset01": {
     "md5": "97d4184778657c9d",
@@ -10259,13 +10611,17 @@
     "md5": "6d500a4eb309e126",
     "size": 13029
   },
+  "icon/unitenergybar/unitenergybar02": {
+    "md5": "d065a591bb8b9cf7",
+    "size": 13783
+  },
   "icon/unitpersonality/icon_unitpersonality1": {
     "md5": "3db8caf896e747aa",
     "size": 1284177
   },
   "icon/unitpersonality/icon_unitpersonality2": {
-    "md5": "2a958953e5f632b9",
-    "size": 987788
+    "md5": "9747ea792f9e674a",
+    "size": 1026059
   },
   "icon/unittag/icon_unittag1": {
     "md5": "fb321942e851fa79",
@@ -10323,6 +10679,18 @@
     "md5": "27fd3f77bf161eed",
     "size": 935537
   },
+  "infinitechallenge/map/challengestage_alm_01": {
+    "md5": "99ec331dd485c5e9",
+    "size": 1923918
+  },
+  "infinitechallenge/map/challengestage_alm_02": {
+    "md5": "395ff9aa0f1103a7",
+    "size": 1929384
+  },
+  "infinitechallenge/map/challengestage_alm_03": {
+    "md5": "b701abd66cce0642",
+    "size": 1933886
+  },
   "infinitechallenge/map/challengestage_bak": {
     "md5": "a217e3287ffb62d0",
     "size": 1007332
@@ -10347,6 +10715,10 @@
     "md5": "ddf6ba3bc330be03",
     "size": 1831752
   },
+  "localization/en/activitybigrogue": {
+    "md5": "24d0275b2fc754de",
+    "size": 124231
+  },
   "localization/en/activitybigstage1": {
     "md5": "8e0d233b47f7a985",
     "size": 77103
@@ -10360,8 +10732,8 @@
     "size": 100939
   },
   "localization/en/bannar": {
-    "md5": "4af76cb41462190d",
-    "size": 7572726
+    "md5": "c5b9574b5002e5d8",
+    "size": 7801321
   },
   "localization/en/card": {
     "md5": "97a1db6cbedfb9ac",
@@ -10388,8 +10760,8 @@
     "size": 35987179
   },
   "localization/en/gachatitle": {
-    "md5": "29717b14012f4509",
-    "size": 6453940
+    "md5": "754b14d96220a44a",
+    "size": 6585513
   },
   "localization/en/jigsaw": {
     "md5": "563660c9b616a947",
@@ -10412,8 +10784,8 @@
     "size": 87041
   },
   "localization/en/operationactivity_sandboxresult_01": {
-    "md5": "52281776944acd4c",
-    "size": 167859
+    "md5": "b590f80e4423f408",
+    "size": 229863
   },
   "localization/en/sandboxachievement": {
     "md5": "238aa03887f156fa",
@@ -10432,8 +10804,8 @@
     "size": 1262900
   },
   "localization/en/ui": {
-    "md5": "5d14e3ef57d2ac89",
-    "size": 62594
+    "md5": "9daa88012bd9a4e3",
+    "size": 62725
   },
   "localization/en/atlas/en-activitybig01_atlas": {
     "md5": "5d356cea2f96aae3",
@@ -10468,20 +10840,20 @@
     "size": 47912
   },
   "localization/en/atlas/en-activitybig07_atlas": {
-    "md5": "5221f1702bead46a",
+    "md5": "50eedac0c5db641f",
     "size": 53832
   },
   "localization/en/atlas/en-activitybig08_atlas": {
-    "md5": "08f1d4051f629219",
-    "size": 50737
+    "md5": "d32bf98cc399c919",
+    "size": 50739
   },
   "localization/en/atlas/en-activitybigstage1_atlas": {
     "md5": "c916dbc7f7f780fc",
     "size": 52742
   },
   "localization/en/atlas/en-activityelaman_atlas": {
-    "md5": "64ab6ed5e87684d6",
-    "size": 69682
+    "md5": "36e56e6e9d1b1f62",
+    "size": 69688
   },
   "localization/en/atlas/en-activitymiddle01_atlas": {
     "md5": "a8d7c856aa0765e6",
@@ -10692,16 +11064,20 @@
     "size": 26531235
   },
   "localization/es/ui": {
-    "md5": "2ad87dab520b94a5",
-    "size": 61804
+    "md5": "cc43124106df92ea",
+    "size": 62121
   },
   "localization/fr/ui": {
-    "md5": "29adc0b40023c5bd",
-    "size": 65828
+    "md5": "e09a6ee48a42744c",
+    "size": 66206
   },
   "localization/it/ui": {
-    "md5": "4f7d45195282b12e",
-    "size": 62238
+    "md5": "2a9c86c5ae167208",
+    "size": 62591
+  },
+  "localization/ja/activitybigrogue": {
+    "md5": "766a9f8f5ba1d00d",
+    "size": 111880
   },
   "localization/ja/activitybigstage1": {
     "md5": "84c742563f22f2cd",
@@ -10716,8 +11092,8 @@
     "size": 99813
   },
   "localization/ja/bannar": {
-    "md5": "400ebb3dcd9d59ef",
-    "size": 7528873
+    "md5": "494187ef3114c107",
+    "size": 7761957
   },
   "localization/ja/card": {
     "md5": "72b1caf6c00a8161",
@@ -10744,8 +11120,8 @@
     "size": 40565592
   },
   "localization/ja/gachatitle": {
-    "md5": "e36061e70c79095c",
-    "size": 6414919
+    "md5": "b8343ee56c2d7d0a",
+    "size": 6543608
   },
   "localization/ja/jigsaw": {
     "md5": "e6e234d8563ad1ae",
@@ -10768,8 +11144,8 @@
     "size": 105030
   },
   "localization/ja/operationactivity_sandboxresult_01": {
-    "md5": "c261a62ee9daab63",
-    "size": 153950
+    "md5": "75cfcfa34267f563",
+    "size": 216848
   },
   "localization/ja/sandboxachievement": {
     "md5": "0db9c015b5572a12",
@@ -10788,8 +11164,8 @@
     "size": 1264224
   },
   "localization/ja/ui": {
-    "md5": "90961eadf5fef9bb",
-    "size": 61574
+    "md5": "e371c8497fc1e6aa",
+    "size": 61930
   },
   "localization/ja/atlas/ja-activitybig01_atlas": {
     "md5": "9f2668fd090fc458",
@@ -10824,20 +11200,20 @@
     "size": 61192
   },
   "localization/ja/atlas/ja-activitybig07_atlas": {
-    "md5": "d51e4e9cfbb5e5a9",
-    "size": 48360
+    "md5": "7e19c7a3cffb6910",
+    "size": 48361
   },
   "localization/ja/atlas/ja-activitybig08_atlas": {
-    "md5": "422e6487c8f23226",
-    "size": 52746
+    "md5": "f7182990e9386b79",
+    "size": 52745
   },
   "localization/ja/atlas/ja-activitybigstage1_atlas": {
     "md5": "0c2e58fc0901a607",
     "size": 57380
   },
   "localization/ja/atlas/ja-activityelaman_atlas": {
-    "md5": "70fef12c03591ad5",
-    "size": 70972
+    "md5": "f7a6567cbb5ab7dc",
+    "size": 70973
   },
   "localization/ja/atlas/ja-activitymiddle01_atlas": {
     "md5": "7eee78a1f47fdada",
@@ -11047,6 +11423,10 @@
     "md5": "9fd16174d715c0f1",
     "size": 21991192
   },
+  "localization/ko/activitybigrogue": {
+    "md5": "3d488cf88999c03e",
+    "size": 111175
+  },
   "localization/ko/activitybigstage1": {
     "md5": "08300c74476004e4",
     "size": 60193
@@ -11060,8 +11440,8 @@
     "size": 100854
   },
   "localization/ko/bannar": {
-    "md5": "4a5616834a3fd6a6",
-    "size": 7510010
+    "md5": "72926bf25e824b00",
+    "size": 7728510
   },
   "localization/ko/card": {
     "md5": "7ace3c7de7d8cb95",
@@ -11088,8 +11468,8 @@
     "size": 35413573
   },
   "localization/ko/gachatitle": {
-    "md5": "5df5b4ffc83e178e",
-    "size": 6199454
+    "md5": "6be2d075235879c1",
+    "size": 6320359
   },
   "localization/ko/jigsaw": {
     "md5": "c341928346dde82f",
@@ -11112,8 +11492,8 @@
     "size": 61997
   },
   "localization/ko/operationactivity_sandboxresult_01": {
-    "md5": "8095edaa2582b8ac",
-    "size": 157459
+    "md5": "c0c8e66abe31ab9d",
+    "size": 220429
   },
   "localization/ko/sandboxachievement": {
     "md5": "5497c70ac6d470bb",
@@ -11132,8 +11512,8 @@
     "size": 1262553
   },
   "localization/ko/ui": {
-    "md5": "e8c2fa18108f79db",
-    "size": 62086
+    "md5": "c398d26857ce14f6",
+    "size": 62318
   },
   "localization/ko/atlas/ko-activitybig01_atlas": {
     "md5": "410fb17a15302146",
@@ -11168,20 +11548,20 @@
     "size": 47464
   },
   "localization/ko/atlas/ko-activitybig07_atlas": {
-    "md5": "db1b1e4b5d82de50",
-    "size": 51605
+    "md5": "0b069062f0177666",
+    "size": 51583
   },
   "localization/ko/atlas/ko-activitybig08_atlas": {
-    "md5": "bdd9c7d635837048",
-    "size": 48225
+    "md5": "f8dd35352725a866",
+    "size": 48222
   },
   "localization/ko/atlas/ko-activitybigstage1_atlas": {
     "md5": "a09aa5a2c20b5625",
     "size": 64149
   },
   "localization/ko/atlas/ko-activityelaman_atlas": {
-    "md5": "07d3a1a6148cceea",
-    "size": 78550
+    "md5": "11d4107477fa8562",
+    "size": 78562
   },
   "localization/ko/atlas/ko-activitymiddle01_atlas": {
     "md5": "8fbfb4524bc3896e",
@@ -11392,8 +11772,8 @@
     "size": 23694175
   },
   "localization/pt/ui": {
-    "md5": "7b75e1ac8b775898",
-    "size": 68873
+    "md5": "855835dec6eadc5a",
+    "size": 68850
   },
   "localization/zh-cn/card": {
     "md5": "1e9040db1ef2810a",
@@ -11404,8 +11784,8 @@
     "size": 1693152
   },
   "localization/zh-cn/ui": {
-    "md5": "f8c4aa870364a51e",
-    "size": 24731
+    "md5": "aa1aeda54bdef02a",
+    "size": 24758
   },
   "localization/zh-cn/atlas/zh-cn-bannar_atlas": {
     "md5": "29236d6116051f32",
@@ -11414,6 +11794,10 @@
   "localization/zh-cn/atlas/zh-cn-richman_atlas": {
     "md5": "7165ffd9a5d42071",
     "size": 25263
+  },
+  "localization/zh-tw/activitybigrogue": {
+    "md5": "5f268fb3936d35c7",
+    "size": 108408
   },
   "localization/zh-tw/activitybigstage1": {
     "md5": "5537fdbe7f766b96",
@@ -11428,8 +11812,8 @@
     "size": 99779
   },
   "localization/zh-tw/bannar": {
-    "md5": "032aa921d86260af",
-    "size": 7523108
+    "md5": "6d0c2cf72117a3a9",
+    "size": 7751797
   },
   "localization/zh-tw/card": {
     "md5": "c91778cb7f999d30",
@@ -11456,8 +11840,8 @@
     "size": 6159627
   },
   "localization/zh-tw/gachatitle": {
-    "md5": "50151cabbd944abc",
-    "size": 6571654
+    "md5": "738e2b639d164c9b",
+    "size": 6691844
   },
   "localization/zh-tw/jigsaw": {
     "md5": "6ff50988807f1526",
@@ -11480,8 +11864,8 @@
     "size": 67847
   },
   "localization/zh-tw/operationactivity_sandboxresult_01": {
-    "md5": "a9b88710ff05c6e6",
-    "size": 157284
+    "md5": "b398e14968075655",
+    "size": 219317
   },
   "localization/zh-tw/sandboxachievement": {
     "md5": "fb5ee8b9dbeb5810",
@@ -11500,8 +11884,8 @@
     "size": 1245990
   },
   "localization/zh-tw/ui": {
-    "md5": "afc0c124d1ddd60a",
-    "size": 62592
+    "md5": "c5659c13086a343d",
+    "size": 63173
   },
   "localization/zh-tw/atlas/zh-tw-activitybig01_atlas": {
     "md5": "a95ab68485206f8b",
@@ -11536,20 +11920,20 @@
     "size": 58994
   },
   "localization/zh-tw/atlas/zh-tw-activitybig07_atlas": {
-    "md5": "68a16c465a25ef0f",
-    "size": 48728
+    "md5": "6ba631e1c31f78b9",
+    "size": 48717
   },
   "localization/zh-tw/atlas/zh-tw-activitybig08_atlas": {
-    "md5": "5407e94e9d6bd702",
-    "size": 50498
+    "md5": "ad372b6cfe50bdf7",
+    "size": 50509
   },
   "localization/zh-tw/atlas/zh-tw-activitybigstage1_atlas": {
     "md5": "119922f918b6cddb",
     "size": 53578
   },
   "localization/zh-tw/atlas/zh-tw-activityelaman_atlas": {
-    "md5": "06ed69bf8f248041",
-    "size": 78919
+    "md5": "afc4b1862436da79",
+    "size": 78915
   },
   "localization/zh-tw/atlas/zh-tw-activitymiddle01_atlas": {
     "md5": "78e60565e7560aab",
@@ -11768,104 +12152,104 @@
     "size": 26662169
   },
   "lua/lua": {
-    "md5": "dfd2fbab7b404808",
-    "size": 18922
+    "md5": "4f4705ba8ec22114",
+    "size": 19095
   },
   "lua/lua_base": {
     "md5": "4860d0addecfb127",
     "size": 70094
   },
   "lua/lua_battle": {
-    "md5": "0678ba7654d7dfc5",
-    "size": 4680147
+    "md5": "dc10fd6be6a24b18",
+    "size": 4718185
   },
   "lua/lua_common": {
-    "md5": "3d02474dbe75e16c",
-    "size": 678905
+    "md5": "28c0473774d8705e",
+    "size": 682506
   },
   "lua/lua_db": {
-    "md5": "d61988d11da32bc6",
-    "size": 4138545
+    "md5": "467c59462493bff3",
+    "size": 4269952
   },
   "lua/lua_dblang_en": {
-    "md5": "bcdfeaebb79c7b5d",
-    "size": 23441525
+    "md5": "c79e36d4f20352dd",
+    "size": 23933988
   },
   "lua/lua_dblang_es": {
-    "md5": "7b21c8242bf7893d",
-    "size": 24477247
+    "md5": "b8932a29118f9a70",
+    "size": 25011046
   },
   "lua/lua_dblang_fr": {
-    "md5": "1ecaded22bebedb0",
-    "size": 24943871
+    "md5": "6371ac96a0df1750",
+    "size": 25482909
   },
   "lua/lua_dblang_it": {
-    "md5": "5333dff13dfc9d90",
-    "size": 24447836
+    "md5": "659b9a05d3046cd5",
+    "size": 24977147
   },
   "lua/lua_dblang_ja": {
-    "md5": "33c5cee9fa91eb81",
-    "size": 25474189
+    "md5": "79444aef7ee59bd5",
+    "size": 26017577
   },
   "lua/lua_dblang_ko": {
-    "md5": "7bd31febd17cee4a",
-    "size": 24826996
+    "md5": "e8bff9d0fb109ce2",
+    "size": 25363957
   },
   "lua/lua_dblang_pt": {
-    "md5": "bae11e7568449a97",
-    "size": 24150941
+    "md5": "cfa31c9529bb24ab",
+    "size": 24669189
   },
   "lua/lua_dblang_zh-cn": {
     "md5": "78c28639d7a71ace",
     "size": 11117329
   },
   "lua/lua_dblang_zh-tw": {
-    "md5": "745a77757899e632",
-    "size": 22620511
+    "md5": "8ec7c09f1df7e498",
+    "size": 23072194
   },
   "lua/lua_dbtemplate": {
-    "md5": "71dc7170e9feddc5",
-    "size": 29200872
+    "md5": "b4f7e8ccddb5adce",
+    "size": 29674224
   },
   "lua/lua_dbtemplateonline": {
-    "md5": "4627fb181f35f5d9",
-    "size": 15904218
+    "md5": "d05f7fc84bff9f27",
+    "size": 16799153
   },
   "lua/lua_dbtemplateperformance": {
-    "md5": "d4be673f808ad61c",
-    "size": 8443627
+    "md5": "788c8504d6039214",
+    "size": 8510232
   },
   "lua/lua_dbtemplatesandbox": {
     "md5": "6f44f49040ee67f4",
     "size": 2240755
   },
   "lua/lua_dbtemplateskill": {
-    "md5": "4b1bfd19b473f8aa",
-    "size": 13467697
+    "md5": "a550aa95a0a214f3",
+    "size": 13830781
   },
   "lua/lua_dbtemplatespeciality": {
-    "md5": "b96a3b1739cb599f",
-    "size": 12899362
+    "md5": "0aca7f99f24bf2b7",
+    "size": 13467705
   },
   "lua/lua_dbtemplatetranslation": {
-    "md5": "0c8930a797db61a9",
-    "size": 11625501
+    "md5": "68a54b13ad3f58d2",
+    "size": 11717698
   },
   "lua/lua_debug": {
-    "md5": "a00edc085be41066",
-    "size": 1148737
+    "md5": "9c8996992cb62118",
+    "size": 1180928
   },
   "lua/lua_editor": {
-    "md5": "f52c2f73fc09c86e",
-    "size": 3161889
+    "md5": "ab85b1010146011f",
+    "size": 3259477
   },
   "lua/lua_game": {
-    "md5": "3b80795150da1778",
-    "size": 5245723
+    "md5": "8116a213ba86502f",
+    "size": 5269749
   },
   "lua/lua_handler": {
-    "md5": "3a6cd1758d540be5",
-    "size": 1043924
+    "md5": "020f42c409c4269b",
+    "size": 1059923
   },
   "lua/lua_inputcontroller": {
     "md5": "bfb40fb6cc804bdc",
@@ -11876,32 +12260,32 @@
     "size": 193812
   },
   "lua/lua_model": {
-    "md5": "f875c558ee4d563f",
-    "size": 2956247
+    "md5": "756342755707c253",
+    "size": 3011708
   },
   "lua/lua_newsandbox": {
     "md5": "432cc808bcf7d0a6",
     "size": 158427
   },
   "lua/lua_online": {
-    "md5": "c63110753d6a0036",
-    "size": 13536190
+    "md5": "365df98df152012b",
+    "size": 13958519
   },
   "lua/lua_pb": {
-    "md5": "df19166d0fff519f",
-    "size": 1340715
+    "md5": "53537fa4da9b7845",
+    "size": 1375015
   },
   "lua/lua_sandbox2": {
-    "md5": "cecb3571dfde9572",
-    "size": 868251
+    "md5": "7010fe298c9eb58f",
+    "size": 871940
   },
   "lua/lua_util": {
-    "md5": "58270958346a141d",
-    "size": 1122356
+    "md5": "2b476b22a32b3e35",
+    "size": 1131213
   },
   "lua/lua___new": {
-    "md5": "0a2f374d6382f132",
-    "size": 2500802
+    "md5": "54f7a63ecd851edf",
+    "size": 2511962
   },
   "minisandbox/map/capital_alm-arena-da00101": {
     "md5": "1aaa9d86b2d125b8",
@@ -12247,6 +12631,10 @@
     "md5": "a6c340f1abe765e6",
     "size": 2488781
   },
+  "movie/cg_skill_kianshir.mp4": {
+    "md5": "a160763b37bafa57",
+    "size": 2637228
+  },
   "movie/cg_skill_kiya.mp4": {
     "md5": "0d19845fc2762eee",
     "size": 2342012
@@ -12346,6 +12734,10 @@
   "movie/cg_skill_selina.mp4": {
     "md5": "d9dc86297f3b2b92",
     "size": 2471160
+  },
+  "movie/cg_skill_shahnaz.mp4": {
+    "md5": "4151f23daa0ae23b",
+    "size": 2648368
   },
   "movie/cg_skill_shams.mp4": {
     "md5": "1ea40c66132287c0",
@@ -12467,9 +12859,17 @@
     "md5": "b3e68b331604a634",
     "size": 2581230
   },
+  "movie/cg_skin_shahnaz.mp4": {
+    "md5": "977f59212e093b13",
+    "size": 2522472
+  },
   "movie/cg_skin_spinanna.mp4": {
     "md5": "5c1afe14f7d2ad88",
     "size": 2187504
+  },
+  "movie/cg_skin_spmaitha.mp4": {
+    "md5": "ecb449edc55fe06a",
+    "size": 2572043
   },
   "movie/cg_skin_stage2role_g.mp4": {
     "md5": "5cd948ff0e1fed87",
@@ -12500,24 +12900,24 @@
     "size": 298729
   },
   "newui/infinitechallenge": {
-    "md5": "c1ebdbe854b5123a",
-    "size": 406446
+    "md5": "887215fa5b3768ac",
+    "size": 438090
   },
   "newui/messageboard": {
-    "md5": "554a06d8f2bfcf41",
-    "size": 91257
+    "md5": "afa49dfacf475ad9",
+    "size": 91294
   },
   "newui/moduleafk": {
-    "md5": "a657ddce232a381a",
-    "size": 832825
+    "md5": "e860a056c6701b29",
+    "size": 832804
   },
   "newui/modulebosschallenge": {
     "md5": "40c0eb688a6cde76",
     "size": 646035
   },
   "newui/obtbattlepass": {
-    "md5": "04275f354da08a02",
-    "size": 1329913
+    "md5": "0c45be50244c8d85",
+    "size": 1550456
   },
   "newui/onlineexpedition": {
     "md5": "ed723c02661d5e4e",
@@ -12532,8 +12932,8 @@
     "size": 122557
   },
   "scenario/dialogue": {
-    "md5": "0e173cfdf6200e48",
-    "size": 282177
+    "md5": "df9c42ff6855eca3",
+    "size": 277721
   },
   "scenario/scenario_alm-mk-da00101": {
     "md5": "0c211a5c6b48956d",
@@ -12804,8 +13204,8 @@
     "size": 365957
   },
   "scenario/scenario_desert-os-da01201": {
-    "md5": "2508e5a0f28bdc26",
-    "size": 305302
+    "md5": "ac78f4a43dc16251",
+    "size": 314262
   },
   "scenario/scenario_desert-spcl-da00101": {
     "md5": "d46ff7f253da1e4c",
@@ -13356,8 +13756,8 @@
     "size": 231888
   },
   "scenario/scenario_interior-in-ni01001": {
-    "md5": "02bfe0e710924515",
-    "size": 314935
+    "md5": "9c773da6a79127d2",
+    "size": 314939
   },
   "scenario/scenario_interior-pa-da00201": {
     "md5": "656a68ff920ce680",
@@ -13428,8 +13828,8 @@
     "size": 702656
   },
   "scenario/scenario_interior-spcl-ni00602-2": {
-    "md5": "9209f7ae03969830",
-    "size": 332657
+    "md5": "592089e0a75003cd",
+    "size": 332497
   },
   "scenario/scenario_interior-spcl-ni00602": {
     "md5": "a9d211e2e56ed510",
@@ -13464,12 +13864,12 @@
     "size": 419349
   },
   "scenario/scenario_ldw-cp-du00101": {
-    "md5": "b17044d9a9d454ac",
-    "size": 318079
+    "md5": "5400ecd81cb62b9c",
+    "size": 318080
   },
   "scenario/scenario_ldw-cp-ni00101": {
-    "md5": "823f0eeb0f275d97",
-    "size": 281338
+    "md5": "2591e14fc3b216d5",
+    "size": 281345
   },
   "scenario/scenario_lyc-arena-da00101": {
     "md5": "1526601683fc28d0",
@@ -13540,8 +13940,8 @@
     "size": 215192
   },
   "scenario/scenario_marsh-os-da00401": {
-    "md5": "2721bcb0ef021d1d",
-    "size": 308546
+    "md5": "a6e5bbcfb58dec22",
+    "size": 286692
   },
   "scenario/scenario_marsh-os-ni00101": {
     "md5": "610757cd57edba18",
@@ -13600,12 +14000,12 @@
     "size": 480902
   },
   "scenario/scenario_plain-spcl-da00301": {
-    "md5": "dab65fd255555b2d",
-    "size": 342885
+    "md5": "a0e35a5e56bfdba4",
+    "size": 342882
   },
   "scenario/scenario_plain-spcl-du00301": {
-    "md5": "07434a04a840c8d2",
-    "size": 314780
+    "md5": "10270e27d802fda5",
+    "size": 314774
   },
   "scenario/scenario_plain-spcl-nith00101": {
     "md5": "a58af65ede9c86ce",
@@ -13672,8 +14072,8 @@
     "size": 218900
   },
   "scenario/scenario_swn-cp-nico00301": {
-    "md5": "c43b36e50b82b814",
-    "size": 286821
+    "md5": "30a69a381e1f331c",
+    "size": 286819
   },
   "scenario/scenario_s_battle000_001": {
     "md5": "edf07fb07d161af4",
@@ -15448,7 +15848,7 @@
     "size": 14939
   },
   "share/anim/share_commonui": {
-    "md5": "6f290cd5f2faa85e",
+    "md5": "8cbe7e36f21ab5a1",
     "size": 11474
   },
   "share/anim/share_dreamlandplacement": {
@@ -15460,16 +15860,16 @@
     "size": 8581
   },
   "share/anim/share_eventui": {
-    "md5": "dec9154fbaa130e0",
-    "size": 8214
+    "md5": "8e4b1a2a89904e24",
+    "size": 13983
   },
   "share/anim/share_ewcommerce": {
     "md5": "f38b78be1d4cbcc3",
     "size": 8480
   },
   "share/anim/share_fail": {
-    "md5": "6122fd31bd20f894",
-    "size": 5970
+    "md5": "0efb3ab67da3d828",
+    "size": 12772
   },
   "share/anim/share_friend": {
     "md5": "393bedcd49e16b33",
@@ -15496,8 +15896,8 @@
     "size": 7462
   },
   "share/anim/share_legacy": {
-    "md5": "76242d9ecc13dee5",
-    "size": 118043
+    "md5": "c48d0227bccfa549",
+    "size": 119685
   },
   "share/anim/share_light": {
     "md5": "5546cbe1fd73a3cb",
@@ -15528,8 +15928,8 @@
     "size": 22372
   },
   "share/anim/share_new": {
-    "md5": "f3855cd68396c177",
-    "size": 17725
+    "md5": "3f3aa2b14afb56ef",
+    "size": 18276
   },
   "share/anim/share_newpracticereward": {
     "md5": "9cbd4b05861d1b97",
@@ -15672,8 +16072,8 @@
     "size": 7083
   },
   "share/anim/share_victory": {
-    "md5": "83468f8e5dd779da",
-    "size": 15238
+    "md5": "499ff65826433bb1",
+    "size": 15466
   },
   "share/anim/share_villager": {
     "md5": "615e7282e2f9474c",
@@ -15840,24 +16240,24 @@
     "size": 7282
   },
   "share/playable/share_darkwizzard": {
-    "md5": "9f8fe9339b9a0d5a",
-    "size": 9141
+    "md5": "c50098e1ea148c20",
+    "size": 9148
   },
   "share/playable/share_dreamlands": {
     "md5": "3b902ec978dd8fea",
     "size": 4616
   },
   "share/playable/share_effect": {
-    "md5": "a697da19e3c461ba",
-    "size": 1113665
+    "md5": "faa58fae76899cd4",
+    "size": 1126763
   },
   "share/playable/share_fail": {
-    "md5": "ee8714d81d28871e",
-    "size": 17888
+    "md5": "d0a32bba2e0e4480",
+    "size": 11906
   },
   "share/playable/share_firewizard": {
-    "md5": "73262d4bb4f890b4",
-    "size": 17436
+    "md5": "12a922d8e54f915b",
+    "size": 17437
   },
   "share/playable/share_fxtl": {
     "md5": "89647d4b57d66309",
@@ -15912,8 +16312,8 @@
     "size": 21180
   },
   "share/playable/share_new": {
-    "md5": "63bc400cfdd07a7c",
-    "size": 11677
+    "md5": "de39a5e2296ef4b6",
+    "size": 13040
   },
   "share/playable/share_newpracticereward": {
     "md5": "f144b8fc100862a0",
@@ -16196,8 +16596,8 @@
     "size": 61870
   },
   "share/playable/share_scenario_ldw-cp-ni00101": {
-    "md5": "394f1451f5ce844e",
-    "size": 19585
+    "md5": "aa6681a38834b950",
+    "size": 19536
   },
   "share/playable/share_scenario_lyc-dm-ni00101": {
     "md5": "1cbb044d0c1b5f6c",
@@ -16228,8 +16628,8 @@
     "size": 74504
   },
   "share/playable/share_scenario_plain-spcl-da00301": {
-    "md5": "18f75d4015dc722e",
-    "size": 28269
+    "md5": "dd8a9db7c57e8ae5",
+    "size": 28272
   },
   "share/playable/share_scenario_sisi": {
     "md5": "341ba5a03adc12ae",
@@ -16448,8 +16848,8 @@
     "size": 4840324
   },
   "share/tex/share_tex30": {
-    "md5": "5e3e427a984982e3",
-    "size": 11517138
+    "md5": "25807280453c0d0f",
+    "size": 11535636
   },
   "share/tex/share_tex31": {
     "md5": "a8531bd441344e88",
@@ -16500,8 +16900,8 @@
     "size": 3375219
   },
   "share/tex/share_tex42": {
-    "md5": "638ea2679467c569",
-    "size": 4356365
+    "md5": "136e37648ce2651a",
+    "size": 4356502
   },
   "share/tex/share_tex43": {
     "md5": "e630e103ae9cf60e",
@@ -16516,16 +16916,16 @@
     "size": 12914808
   },
   "share/tex/share_tex46": {
-    "md5": "a86d6af763d4de6a",
-    "size": 4708345
+    "md5": "da4f69b320c9c6dc",
+    "size": 4815218
   },
   "share/tex/share_tex47": {
-    "md5": "7852d531dcf26a2d",
-    "size": 1184140
+    "md5": "d4ff1f3d01dde4fa",
+    "size": 1153314
   },
   "share/tex/share_tex48": {
-    "md5": "250a480b9fe52b47",
-    "size": 7512100
+    "md5": "295c885964677a22",
+    "size": 7878376
   },
   "share/tex/share_tex5": {
     "md5": "f50d195fa0b445ac",
@@ -16560,76 +16960,76 @@
     "size": 380515
   },
   "ui/activitybig01": {
-    "md5": "9daacfb7d091dfdd",
-    "size": 1101685
+    "md5": "4c21929a7fdc09ed",
+    "size": 1104404
   },
   "ui/activitybig02": {
     "md5": "a89667dce4348d82",
     "size": 777969
   },
   "ui/activitybig03": {
-    "md5": "3eb157950c2f325f",
-    "size": 1118586
+    "md5": "5587451ad48f5973",
+    "size": 1118350
   },
   "ui/activitybig03_5": {
-    "md5": "469ced6bf10087b9",
-    "size": 1126585
+    "md5": "94d809121ec806a6",
+    "size": 1125405
   },
   "ui/activitybig04": {
-    "md5": "85c3f0b6abd57b99",
-    "size": 971111
+    "md5": "70f341fc0799670b",
+    "size": 970103
   },
   "ui/activitybig05": {
-    "md5": "1b07accf7bddbcac",
-    "size": 861694
+    "md5": "415f9227564fcde7",
+    "size": 860984
   },
   "ui/activitybig06": {
-    "md5": "290592324052b1b3",
-    "size": 1053736
+    "md5": "6ff3488ae5d11082",
+    "size": 1052730
   },
   "ui/activitybig06_5": {
-    "md5": "ed5496d6ef3464ed",
-    "size": 951703
+    "md5": "26ee14baacabaac8",
+    "size": 950765
   },
   "ui/activitybig07": {
-    "md5": "657b0821669f67b2",
-    "size": 1043181
+    "md5": "4cbd897b72535a38",
+    "size": 1042151
   },
   "ui/activitybig08": {
-    "md5": "833275ffb103ff12",
-    "size": 1001179
+    "md5": "4b85d25e112e4574",
+    "size": 1000728
   },
   "ui/activitybigrogue": {
-    "md5": "53d092afa8e7ca7d",
-    "size": 101401
+    "md5": "6595f5e3b9aa0c57",
+    "size": 3575974
   },
   "ui/activitybigstage1": {
-    "md5": "a776f29eb7a80507",
-    "size": 2475645
+    "md5": "1aa25ab3cf57fc8e",
+    "size": 2474264
   },
   "ui/activitybigstage2": {
     "md5": "06f2833059c1b31f",
     "size": 1248363
   },
   "ui/activityelaman": {
-    "md5": "478de6c1e8707297",
-    "size": 761485
+    "md5": "ba5e2ca8bcac53a1",
+    "size": 762020
   },
   "ui/activityentrance": {
-    "md5": "b24f77181f5de63b",
-    "size": 371448
+    "md5": "aeacfae1e0cbda3a",
+    "size": 381075
   },
   "ui/activitylittle01": {
-    "md5": "0a77a82eb06a021b",
-    "size": 900074
+    "md5": "31a89eaab0eb3183",
+    "size": 909202
   },
   "ui/activitylittleadventure": {
-    "md5": "729b97a4279e9f3c",
-    "size": 1399036
+    "md5": "3f2fce7e2fbe346e",
+    "size": 1399248
   },
   "ui/activitylittleadventurestage2": {
-    "md5": "3d13da74ca78b9f8",
-    "size": 741403
+    "md5": "632a6be2c3252b9d",
+    "size": 741426
   },
   "ui/activitylittledaily": {
     "md5": "c45cf1ed15f9989a",
@@ -16660,8 +17060,8 @@
     "size": 1605280
   },
   "ui/activitysandbox03": {
-    "md5": "505f45e36f55d82b",
-    "size": 893747
+    "md5": "507844e5612b6341",
+    "size": 893545
   },
   "ui/activityworldboss": {
     "md5": "cd8b06f70468afd1",
@@ -16692,8 +17092,8 @@
     "size": 26947
   },
   "ui/battle": {
-    "md5": "b1355120bca4335c",
-    "size": 4936236
+    "md5": "641b5b0287fcafcc",
+    "size": 4997232
   },
   "ui/battlebook": {
     "md5": "d42db4fa54135dd4",
@@ -16708,8 +17108,8 @@
     "size": 576764
   },
   "ui/battleresultnew": {
-    "md5": "e0caf3ee5cd13bb4",
-    "size": 906553
+    "md5": "f35f3549978bd54d",
+    "size": 902983
   },
   "ui/blessing": {
     "md5": "f8d0c8ed48e5407e",
@@ -16720,8 +17120,8 @@
     "size": 71762
   },
   "ui/briefing": {
-    "md5": "5e9cb8b65b5764c0",
-    "size": 147479
+    "md5": "615ba1faf358e7b4",
+    "size": 142287
   },
   "ui/buttonsystem": {
     "md5": "ca8838a4a1de9e2b",
@@ -16776,24 +17176,24 @@
     "size": 5060
   },
   "ui/debug": {
-    "md5": "cf22085bb5497d21",
-    "size": 1296389
+    "md5": "3450927860b1d404",
+    "size": 1321158
   },
   "ui/designation": {
     "md5": "a3dd8de9b03c05f3",
     "size": 295304
   },
   "ui/dialogue": {
-    "md5": "6dc9313af139b6c9",
-    "size": 571957
+    "md5": "c54f9c868d340ec4",
+    "size": 567456
   },
   "ui/dreamland": {
     "md5": "9eba7b460e871e34",
     "size": 60572
   },
   "ui/dreamlandplacement": {
-    "md5": "caf2f9b776d36ea7",
-    "size": 613165
+    "md5": "0c0fc45bfcd69647",
+    "size": 613169
   },
   "ui/elysium": {
     "md5": "32675ebe84f2e859",
@@ -16824,8 +17224,8 @@
     "size": 1806967
   },
   "ui/gacha": {
-    "md5": "2ad6a573a5214125",
-    "size": 974490
+    "md5": "d9918b382bf995e1",
+    "size": 974498
   },
   "ui/gamelobby": {
     "md5": "6a7d46d6c7eb7a6b",
@@ -16868,8 +17268,8 @@
     "size": 13933
   },
   "ui/infopreview": {
-    "md5": "dd391710de58f852",
-    "size": 593990
+    "md5": "704fb7a2c1026f44",
+    "size": 595254
   },
   "ui/intelligence": {
     "md5": "4aafd529eefff7de",
@@ -16920,12 +17320,12 @@
     "size": 160894
   },
   "ui/main": {
-    "md5": "d57183272252fc83",
-    "size": 725351
+    "md5": "52b63dbf8ac9c9c2",
+    "size": 728287
   },
   "ui/mercenary": {
-    "md5": "1a4687398cda2167",
-    "size": 239879
+    "md5": "fafafc067c2210ae",
+    "size": 241238
   },
   "ui/messagebox": {
     "md5": "023ae36d248cdc60",
@@ -16936,8 +17336,8 @@
     "size": 650339
   },
   "ui/missioneditor": {
-    "md5": "f1d694a4f88192b8",
-    "size": 4561521
+    "md5": "e8e197a7b29f2501",
+    "size": 4752579
   },
   "ui/multiple": {
     "md5": "829f76c7a9d30296",
@@ -17016,12 +17416,12 @@
     "size": 291625
   },
   "ui/popupcharacterinfo": {
-    "md5": "3cd995eebcf6207b",
-    "size": 164545
+    "md5": "7106fb4a5a45a322",
+    "size": 166092
   },
   "ui/popupcharacterinfonew": {
-    "md5": "7d688ccff5221fd3",
-    "size": 474498
+    "md5": "b77e9aad7e522bc2",
+    "size": 476271
   },
   "ui/popupcharminfo": {
     "md5": "446db7d3cb4aa7bd",
@@ -17103,6 +17503,10 @@
     "md5": "b282b4a960ccc8d8",
     "size": 69345
   },
+  "ui/popupmissionbuffpoolinfo": {
+    "md5": "6ecc569f8ea2a786",
+    "size": 20508
+  },
   "ui/popupmodifyname": {
     "md5": "8cc67d7014db9740",
     "size": 66873
@@ -17110,6 +17514,10 @@
   "ui/popupmonthcardexpire": {
     "md5": "fe06ed303d6a91c9",
     "size": 36693
+  },
+  "ui/popupnpcdetail": {
+    "md5": "c9e54326e29d874a",
+    "size": 787985
   },
   "ui/popuponlinetechforcefieldtips": {
     "md5": "85fe23a2bfe9e240",
@@ -17128,8 +17536,8 @@
     "size": 35435
   },
   "ui/popupprofessionskill": {
-    "md5": "8e2d50309366041b",
-    "size": 91141
+    "md5": "c1b8b541663de909",
+    "size": 92461
   },
   "ui/popupquickselectcharmview": {
     "md5": "44c4161c17393519",
@@ -17144,8 +17552,8 @@
     "size": 78232
   },
   "ui/popuproledetail": {
-    "md5": "a1263ddf39f0d04b",
-    "size": 794167
+    "md5": "151173e7a65a7fcf",
+    "size": 795471
   },
   "ui/popuproleinfo": {
     "md5": "8301d345ae828e2c",
@@ -17160,8 +17568,8 @@
     "size": 196707
   },
   "ui/popupskillinfo": {
-    "md5": "a958793a938055f7",
-    "size": 76641
+    "md5": "16d4c67d22ae32f7",
+    "size": 78095
   },
   "ui/popupspriteasset": {
     "md5": "d911ae1555b1adf7",
@@ -17180,16 +17588,16 @@
     "size": 54640
   },
   "ui/popuptacticsskill": {
-    "md5": "ea7b715a5d43af6d",
-    "size": 144081
+    "md5": "516f09540cb5e74b",
+    "size": 145335
   },
   "ui/popuptoastui": {
     "md5": "c6e784a9fc0e3ed4",
     "size": 1833
   },
   "ui/popuptokeninfo": {
-    "md5": "778caff62c25dfbc",
-    "size": 43804
+    "md5": "6336a45071beffb4",
+    "size": 43774
   },
   "ui/popuptrainpassive": {
     "md5": "e335f26cbafcb115",
@@ -17244,16 +17652,16 @@
     "size": 1093601
   },
   "ui/resultonline": {
-    "md5": "401d739105e5fd06",
-    "size": 1726323
+    "md5": "ca8ce304c56114b0",
+    "size": 1731613
   },
   "ui/revelation": {
     "md5": "3cab77faea88f283",
     "size": 318750
   },
   "ui/reward": {
-    "md5": "cf5b7cce942e4702",
-    "size": 6706532
+    "md5": "5b5c64ebe3af00f4",
+    "size": 6724868
   },
   "ui/rewardpreview": {
     "md5": "3a60b804539864b8",
@@ -17272,16 +17680,16 @@
     "size": 502639
   },
   "ui/sandboxelaman": {
-    "md5": "9c7b483f12bc6931",
-    "size": 4369389
+    "md5": "37f77a95fb896036",
+    "size": 4373018
   },
   "ui/sandboxeventlog": {
     "md5": "f285690e66ecebf3",
     "size": 88812
   },
   "ui/sandboxlauncher": {
-    "md5": "69a019ea8ed29835",
-    "size": 2345070
+    "md5": "3a743be97ebcced0",
+    "size": 2345486
   },
   "ui/sandboxlaunchreward": {
     "md5": "c5ba3b46ee1bbf7b",
@@ -17296,8 +17704,8 @@
     "size": 132867
   },
   "ui/scheduleletter": {
-    "md5": "54f3bbbbe4c0b1ba",
-    "size": 112458
+    "md5": "8fc51db93f6aa86b",
+    "size": 137850
   },
   "ui/screenshotblur": {
     "md5": "c5796c04fcbf20b6",
@@ -17348,8 +17756,8 @@
     "size": 60749
   },
   "ui/smithy": {
-    "md5": "058629a10a470a04",
-    "size": 1618586
+    "md5": "43ec99957a781e43",
+    "size": 1620774
   },
   "ui/soundpositionconverter": {
     "md5": "8e40a9f073b2eddb",
@@ -17388,12 +17796,12 @@
     "size": 532743
   },
   "ui/tavern": {
-    "md5": "80ea75b6e6601a0c",
-    "size": 688916
+    "md5": "3d0e26df8dca313e",
+    "size": 690220
   },
   "ui/techonline": {
-    "md5": "33751744caa266aa",
-    "size": 1188000
+    "md5": "2d11a03e34a5ab4b",
+    "size": 1191066
   },
   "ui/tipsbonusinfo": {
     "md5": "96428d133890adc7",
@@ -17448,8 +17856,8 @@
     "size": 773736
   },
   "ui/trainingground": {
-    "md5": "3a88601b5795d364",
-    "size": 1778709
+    "md5": "4cfa99bce4ef9aef",
+    "size": 1784487
   },
   "ui/tutorial": {
     "md5": "c3f84bbb3574bf8b",
@@ -17504,12 +17912,12 @@
     "size": 74829
   },
   "ui/unit": {
-    "md5": "300465264993a09b",
-    "size": 1141921
+    "md5": "ab64178ff1bbcaad",
+    "size": 1158668
   },
   "ui/unitenergybar": {
-    "md5": "51288ae7f5306395",
-    "size": 46524
+    "md5": "28683e1d3df7b749",
+    "size": 52063
   },
   "ui/unitselect": {
     "md5": "47162549dcb380da",
@@ -17540,8 +17948,8 @@
     "size": 512518
   },
   "ui/workshop": {
-    "md5": "358d770b6ad3418f",
-    "size": 1141951
+    "md5": "ae23fad2313751ad",
+    "size": 1144208
   },
   "ui/worldmap": {
     "md5": "7bbe20d850688330",
@@ -17608,8 +18016,8 @@
     "size": 127207
   },
   "ui/activity_nodes/activityuinew": {
-    "md5": "fe3b2dcf141bd5e9",
-    "size": 166472
+    "md5": "e58668f5c79e38ea",
+    "size": 166489
   },
   "ui/activity_nodes/activityunitpieceuinew": {
     "md5": "2febbaed4fd19453",
@@ -17728,8 +18136,8 @@
     "size": 146784
   },
   "ui/activity_nodes/popup_substitutereward": {
-    "md5": "ed70a420f4d666bd",
-    "size": 273615
+    "md5": "d6195c2774099cb9",
+    "size": 273607
   },
   "ui/activity_nodes/tabitem": {
     "md5": "15afd0c301769bdc",
@@ -17744,8 +18152,8 @@
     "size": 9036
   },
   "ui/activity_nodes/tmpactivity": {
-    "md5": "5aab07577a794322",
-    "size": 31849
+    "md5": "89d0e6e88fd6ea0f",
+    "size": 31808
   },
   "ui/activity_nodes/tmpexchange": {
     "md5": "cb81e4c79c7b4781",
@@ -17799,21 +18207,25 @@
     "md5": "6d36c778e33a336e",
     "size": 16532806
   },
+  "ui/dynamic_card_full/skin_card_hsolomonladypresidentf2set01": {
+    "md5": "b2882cb0b1a58611",
+    "size": 15995770
+  },
   "ui/dynamic_card_full/skin_card_hvilderwitchf2set01": {
     "md5": "b3d7d7f54f2e3200",
     "size": 19439349
   },
   "ui/dynamic_card_full/skin_card_uwhgm3set01": {
-    "md5": "49def2fbad41f01b",
-    "size": 23055454
+    "md5": "2168ef4a98a2201d",
+    "size": 23062350
   },
   "ui/dynamic_card_full/skin_card_uwhtf2set01": {
-    "md5": "a51a278114e25f3c",
-    "size": 12203591
+    "md5": "f0d8c97f499cc7c9",
+    "size": 12202990
   },
   "ui/dynamic_card_full/skin_card_uwhyf2set01": {
-    "md5": "53e7f64c5f6729af",
-    "size": 23595575
+    "md5": "8a3a5f804cf955c0",
+    "size": 23607008
   },
   "ui/gacha_ad/advertisement_0001": {
     "md5": "637e46f5250bd9a3",
@@ -18239,6 +18651,10 @@
     "md5": "d272f7953532fb40",
     "size": 33910
   },
+  "ui/gacha_ad/template1_1up_kianshir_id196": {
+    "md5": "fe421c5c764bef73",
+    "size": 32491
+  },
   "ui/gacha_ad/template1_1up_kiya_id145": {
     "md5": "846cce2dcf152c2a",
     "size": 32576
@@ -18330,6 +18746,10 @@
   "ui/gacha_ad/template1_1up_selina_id194": {
     "md5": "0a089cea2dc6c382",
     "size": 32535
+  },
+  "ui/gacha_ad/template1_1up_shahnaz_id197": {
+    "md5": "0d7307aed93dc3db",
+    "size": 45169
   },
   "ui/gacha_ad/template1_1up_simona_id59": {
     "md5": "5157ee2f564e41cf",
@@ -18615,9 +19035,13 @@
     "md5": "478692f00cb40eb4",
     "size": 26610
   },
+  "ui/gacha_ad/template1_role_196": {
+    "md5": "4b00479d36608610",
+    "size": 26647
+  },
   "ui/gacha_ad/template1_role_197": {
-    "md5": "a4ab5f3b8f47bb5a",
-    "size": 28010
+    "md5": "55f5994842981861",
+    "size": 28071
   },
   "ui/gacha_ad/template1_role_44": {
     "md5": "d6d26df675db519c",
@@ -19124,8 +19548,8 @@
     "size": 300888
   },
   "ui/operation_activity/operationactivity_bigrogue": {
-    "md5": "2bf9e4b6e6b2773e",
-    "size": 253580
+    "md5": "647e79763f9134eb",
+    "size": 1308135
   },
   "ui/operation_activity/operationactivity_bigstage1": {
     "md5": "3fac91a071ffb3d3",
@@ -19306,6 +19730,10 @@
   "ui/operation_activity/operationactivity_infinitechallenge": {
     "md5": "29491aa78d481eda",
     "size": 205437
+  },
+  "ui/operation_activity/operationactivity_infinitechallenge02": {
+    "md5": "ad6310b1b65f8af8",
+    "size": 250449
   },
   "ui/operation_activity/operationactivity_invitation": {
     "md5": "a99198ee89c1b2b0",
@@ -19503,6 +19931,10 @@
     "md5": "066f88b6b0332d5c",
     "size": 50353
   },
+  "ui/operation_activity/operationactivity_sandboxelamanresult": {
+    "md5": "ffc82a46251a221c",
+    "size": 75595
+  },
   "ui/operation_activity/operationactivity_sandboxinannaboost": {
     "md5": "d4005f03afb70110",
     "size": 148056
@@ -19556,8 +19988,8 @@
     "size": 168048
   },
   "ui/operation_activity/operationactivity_shopskinmomo": {
-    "md5": "87b710d704078cea",
-    "size": 166646
+    "md5": "afb5903e1d3a08d4",
+    "size": 169593
   },
   "ui/operation_activity/operationactivity_shopskinspinanna": {
     "md5": "9c7bb8f85d86afaa",
@@ -19586,6 +20018,10 @@
   "ui/operation_activity/operationactivity_skingachastage2roley": {
     "md5": "b5f560b440f88ade",
     "size": 720312
+  },
+  "ui/operation_activity/operationactivity_skingiftmaitha": {
+    "md5": "47b191e631f22ff2",
+    "size": 80069
   },
   "ui/operation_activity/operationactivity_sonataofseastar": {
     "md5": "93ee8a598426a198",
@@ -20064,8 +20500,8 @@
     "size": 190601
   },
   "ui/unitonline_nodes/info": {
-    "md5": "e8e30f81eb23fce5",
-    "size": 1637854
+    "md5": "ae1b8e4ed2806381",
+    "size": 1639090
   },
   "ui/unitonline_nodes/keyskill": {
     "md5": "07de4620d0e493d1",
@@ -20200,16 +20636,16 @@
     "size": 346808
   },
   "ui/unitonline_nodes/upgradestar": {
-    "md5": "0b418105d400ef41",
-    "size": 517704
+    "md5": "6acbe279ff75ddc4",
+    "size": 518668
   },
   "ui/unitonline_nodes/weaponequipnew": {
     "md5": "8daaf2bab6c2e2ea",
     "size": 266740
   },
   "ui/unitonline_nodes/weapontest": {
-    "md5": "37f54dff98d86fa4",
-    "size": 203628
+    "md5": "7cf87548ef6dc040",
+    "size": 205193
   },
   "ui/unitonline_nodes/weaponupgrade": {
     "md5": "546f16e3f2ed9a1d",
@@ -20252,8 +20688,8 @@
     "size": 153538
   },
   "uisandbox2/sandbox": {
-    "md5": "d2ca3d45506657e8",
-    "size": 765371
+    "md5": "ebb1ddfbb38c7a1e",
+    "size": 764992
   },
   "uisandbox2/shop": {
     "md5": "e9a956db864ede51",
@@ -20264,8 +20700,8 @@
     "size": 360200
   },
   "uisandbox2/training": {
-    "md5": "d4de2705019c7bf6",
-    "size": 1344275
+    "md5": "21f473385e9d68c3",
+    "size": 1348649
   },
   "uisandbox2/uiaccessoryitemtipsinfoview": {
     "md5": "6e2f66383179230e",
@@ -20280,8 +20716,8 @@
     "size": 22572
   },
   "uisandbox2/unit": {
-    "md5": "550be90a12ae937c",
-    "size": 875812
+    "md5": "7b1a18ef9ea01583",
+    "size": 894195
   },
   "uisandbox2/warehouse": {
     "md5": "75bfbe5f9bc10efe",
@@ -20296,8 +20732,8 @@
     "size": 347224
   },
   "worldboss/map/worldboss_002-ldw-2": {
-    "md5": "2cdbb2da7c513184",
-    "size": 547451
+    "md5": "3d1848fc4d3535d1",
+    "size": 547449
   },
   "worldboss/map/worldboss_002-ldw": {
     "md5": "6bb41083b2427ace",

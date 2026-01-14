@@ -961,6 +961,13 @@ message TacticPoint {
   sint32 point_recover_turn_max = 5;
 }
 
+message TeamHPParam {
+  sint32 initial_hp = 1;
+  sint32 dead_decr_hp = 2;
+  sint32 start_decr_turn = 3;
+  sint32 decr_hp_per_turn = 4;
+}
+
 message BackCount {
   sint32 count = 1;
   sint32 monthly_card_count = 2;
@@ -1022,6 +1029,7 @@ message Setting {
   uint32 main_conditions_desc_id = 38;
   uint32 lose_conditions_desc_id = 39;
   repeated MutatorGroup mutator_groups = 40;
+  TeamHPParam team_hp_param = 42;
   repeated AssistUnit assist_units = 41;
 }
 
@@ -1086,6 +1094,7 @@ message Action {
     PlayVFX = 56;
     RoundStart2 = 57;
     RoundEnd2 = 58;
+    RogueTeamHpChange = 59;
   }
 
   message PathPoint {
