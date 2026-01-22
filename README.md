@@ -14,7 +14,7 @@
   "ios_app": "https://apps.apple.com/jp/app/id6461049770",
   "ios_md5": "2eaf4983dd193d46",
   "ios_version": "",
-  "launcher_md5": "2.1.0.0",
+  "launcher_md5": "2.6.1.1",
   "nohash": false,
   "pc_md5": "2aa13488c7704035",
   "require_version": "2.1.0",
