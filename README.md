@@ -4,7 +4,7 @@
 {
   "android_app": "https://play.google.com/store/apps/details?id=com.xd.ssrpgjp#",
   "android_app_json": "",
-  "android_md5": "5834c6b8efd99213",
+  "android_md5": "25bdb90594834bb6",
   "android_version": "",
   "background_download": false,
   "compatibility_testing": false,
@@ -12,11 +12,11 @@
   "enable_voices": "cn,jp,kr",
   "gamepad": false,
   "ios_app": "https://apps.apple.com/jp/app/id6461049770",
-  "ios_md5": "b6ab642944bbf726",
+  "ios_md5": "8681cc43f3eabd3c",
   "ios_version": "",
   "launcher_md5": "2.6.1.1",
   "nohash": false,
-  "pc_md5": "3475f488679e1462",
+  "pc_md5": "2c31b45295e66012",
   "require_version": "2.1.0",
   "tag": "",
   "tcp": "ssrpg-jp-prod-gate.xdgtw.com:20000",
@@ -28,8 +28,8 @@
 }
 ```
 
-asset_md5: `http://ssrpg-static.xdcdn.com/review/WebAssets/asset_md5_3475f488679e1462.unity3d`  
-lua_pb: `http://ssrpg-static.xdcdn.com/review/WebAssets/lua/lua_pb_53537fa4da9b7845.unity3d`  
+asset_md5: `http://ssrpg-static.xdcdn.com/review/WebAssets/asset_md5_2c31b45295e66012.unity3d`  
+lua_pb: `http://ssrpg-static.xdcdn.com/review/WebAssets/lua/lua_pb_60b5417988e5ed6f.unity3d`  
 
 ## proto
 

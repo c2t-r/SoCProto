@@ -1748,15 +1748,6 @@ message db_player_intelligence {
   uint32 created_at = 3;
 }
 
-message db_player_kitchen {
-  uint64 iduser = 1;
-  uint32 id = 2;
-  uint32 next_refresh_at = 3;
-  uint32 today_recipe_id = 4;
-  uint32 today_rating_id = 5;
-  uint32 get_treasure_count = 6;
-}
-
 message db_player_lottery_activity {
   uint64 iduser = 1;
   uint32 id = 2;
