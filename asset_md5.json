@@ -36,23 +36,27 @@
     "size": 856447
   },
   "db_template": {
-    "md5": "29bc84743deac287",
-    "size": 2325129
+    "md5": "f8a4749e1cf4b9d8",
+    "size": 2324810
   },
   "deviceprofile": {
     "md5": "bdad7f1120046658",
     "size": 14266
   },
+  "GamepadConfig": {
+    "md5": "46bd0bed1fb08e46",
+    "size": 28
+  },
   "game_conf": {
-    "md5": "1370d439c2f89f81",
-    "size": 3313
+    "md5": "c14a723f765447be",
+    "size": 3377
   },
   "input_actions": {
     "md5": "9c85ac4326b13198",
     "size": 8973
   },
   "resource_version": {
-    "md5": "42c761cf116fe369",
+    "md5": "e8ddb1c9730df77d",
     "size": 1237
   },
   "shaders": {
@@ -66,6 +70,10 @@
   "tmp_sprite_asset": {
     "md5": "7f6dec98c6ac5e11",
     "size": 187183
+  },
+  "XDFeatureSettings": {
+    "md5": "1238b9bb70d9fd03",
+    "size": 709
   },
   "atlas/abyss_atlas": {
     "md5": "6361b3c7d79d0ee3",
@@ -332,8 +340,8 @@
     "size": 28436
   },
   "atlas/headframe_arenasafiyyah01_atlas": {
-    "md5": "d9bc5fbc0b97a5a6",
-    "size": 84941
+    "md5": "14b4689e138bd7e3",
+    "size": 84973
   },
   "atlas/headframe_arenasafiyyah_atlas": {
     "md5": "40047c8c96300691",
@@ -344,43 +352,43 @@
     "size": 1880
   },
   "atlas/headframe_momo01_atlas": {
-    "md5": "84a30633fee002ea",
-    "size": 62898
+    "md5": "362482c633db88b1",
+    "size": 62897
   },
   "atlas/headframe_operation16_atlas": {
     "md5": "0efbdb872e2b91f1",
     "size": 81026
   },
   "atlas/head_frame_agata01_atlas": {
-    "md5": "f54cdbf86e2aa1b6",
-    "size": 72445
+    "md5": "2764916a80627182",
+    "size": 72405
   },
   "atlas/head_frame_blackhair01_atlas": {
-    "md5": "25e966498751d63e",
-    "size": 62198
+    "md5": "ae63f39072b2e37c",
+    "size": 62204
   },
   "atlas/head_frame_cocoanawal01_atlas": {
-    "md5": "e08db40d027ef5e6",
+    "md5": "bd816b0287ddaa95",
     "size": 87131
   },
   "atlas/head_frame_hunter01_atlas": {
-    "md5": "f8c26293002d9c84",
-    "size": 48729
+    "md5": "83201aab9e115824",
+    "size": 48698
   },
   "atlas/head_frame_lukamar01_atlas": {
-    "md5": "9735cfcdbee7108e",
-    "size": 61033
+    "md5": "d5bbc930a1da75d7",
+    "size": 61055
   },
   "atlas/head_frame_redhair01_atlas": {
-    "md5": "3d6603a94b7f939c",
-    "size": 57058
+    "md5": "41e39691145d259b",
+    "size": 57049
   },
   "atlas/head_frame_spinanna01_atlas": {
-    "md5": "c3da2b93542e1544",
-    "size": 92940
+    "md5": "413288ee57115392",
+    "size": 92900
   },
   "atlas/head_frame_spmaitha01_atlas": {
-    "md5": "67703c541b127b27",
+    "md5": "8dc6d51711cee306",
     "size": 110263
   },
   "atlas/infinitechallenge_atlas": {
@@ -440,8 +448,8 @@
     "size": 21387
   },
   "atlas/missiondetail_atlas": {
-    "md5": "736dac5e754eae4a",
-    "size": 307469
+    "md5": "c3d59a7fb0390583",
+    "size": 307459
   },
   "atlas/moduleafk_atlas": {
     "md5": "833d03f5d62b226c",
@@ -484,7 +492,7 @@
     "size": 276598
   },
   "atlas/operationactivity_15_atlas": {
-    "md5": "6ca3e3d2cd22488d",
+    "md5": "535b7895ce1d1bd1",
     "size": 96283
   },
   "atlas/operationactivity_annualreviews_01_atlas": {
@@ -560,8 +568,8 @@
     "size": 448971
   },
   "atlas/operationactivity_crimsonnightday7_atlas": {
-    "md5": "7f9106ebe12b1008",
-    "size": 121327
+    "md5": "d3e2aecd034f9dea",
+    "size": 121335
   },
   "atlas/operationactivity_customize_guildconstruct_01_atlas": {
     "md5": "5f386b937e477de0",
@@ -584,8 +592,8 @@
     "size": 145270
   },
   "atlas/operationactivity_halfyearday7_atlas": {
-    "md5": "8282294d0968f199",
-    "size": 84612
+    "md5": "802400095454d704",
+    "size": 84611
   },
   "atlas/operationactivity_invitation_atlas": {
     "md5": "511af4a6b7a411f8",
@@ -600,12 +608,12 @@
     "size": 223141
   },
   "atlas/operationactivity_obtday14_atlas": {
-    "md5": "d9e7a9a0d0648324",
+    "md5": "d537ea9a42a675c0",
     "size": 57491
   },
   "atlas/operationactivity_obtday7_atlas": {
-    "md5": "b90b65da5bc9025c",
-    "size": 150136
+    "md5": "d2936f59f6fed9f1",
+    "size": 150135
   },
   "atlas/operationactivity_other_01_atlas": {
     "md5": "1a888c2ec6e89db0",
@@ -636,8 +644,8 @@
     "size": 87321
   },
   "atlas/operationactivity_tillingandharvest_atlas": {
-    "md5": "88e5f24ae3bbaf1f",
-    "size": 150881
+    "md5": "3478e72d5cef9d43",
+    "size": 150895
   },
   "atlas/operationactivity_tower_01_atlas": {
     "md5": "893987302cc0a783",
@@ -648,15 +656,15 @@
     "size": 251953
   },
   "atlas/operationactivity_warmingwinterday7_atlas": {
-    "md5": "0ade25b9dacff1b3",
-    "size": 140360
+    "md5": "e84a2f1101c9c95d",
+    "size": 140349
   },
   "atlas/operationactivity_watcherday14_atlas": {
-    "md5": "e2330c16b7d90a77",
-    "size": 56734
+    "md5": "c51094031844c8fb",
+    "size": 56733
   },
   "atlas/operationactivity_wishofspring_atlas": {
-    "md5": "eb7135e92230503b",
+    "md5": "e2f5e2e226f9d611",
     "size": 90393
   },
   "atlas/prequelcapital_atlas": {
@@ -744,32 +752,32 @@
     "size": 417996
   },
   "atlas/richman_animation_atlas": {
-    "md5": "1e1ef77df4aa1eb2",
+    "md5": "03fb6f816e69dd35",
     "size": 58360
   },
   "atlas/richman_background_atlas": {
-    "md5": "020b5ca09a6b9d77",
-    "size": 167952
+    "md5": "a1abdd9ef7fc85a0",
+    "size": 167966
   },
   "atlas/richman_bridge_atlas": {
-    "md5": "fd91b62380e367eb",
-    "size": 13007
+    "md5": "5616fc5871d05bc5",
+    "size": 13008
   },
   "atlas/richman_characters_atlas": {
-    "md5": "aa8abde4a520aacf",
-    "size": 92219
+    "md5": "8cfa98270b8d278c",
+    "size": 92235
   },
   "atlas/richman_grid_atlas": {
-    "md5": "8ac18d04d03e9c9e",
-    "size": 19237
+    "md5": "f30049beccc128f4",
+    "size": 19227
   },
   "atlas/richman_mission_atlas": {
-    "md5": "2f5e7299981b6c96",
-    "size": 514562
+    "md5": "696a14698c6671cc",
+    "size": 514422
   },
   "atlas/richman_ui_atlas": {
-    "md5": "5f6c2f4b6cac987c",
-    "size": 56405
+    "md5": "2fd9371d56396c4e",
+    "size": 56390
   },
   "atlas/rolecard_atlas": {
     "md5": "c1a87782bf10e35e",
@@ -848,24 +856,24 @@
     "size": 42374
   },
   "atlas/tmpdesignationflow08_atlas": {
-    "md5": "59d017d3289ce949",
-    "size": 42359
+    "md5": "b4b66a7d01b85d3a",
+    "size": 42354
   },
   "atlas/tmpdesignationflow09_atlas": {
-    "md5": "4195ba2da55ec5c4",
-    "size": 24518
+    "md5": "011eafe10fe7f52f",
+    "size": 24514
   },
   "atlas/tmpdesignationflow11_atlas": {
-    "md5": "64c99f6a3b8a4de6",
+    "md5": "befcd6a30b437210",
     "size": 24152
   },
   "atlas/tmpdesignationflow12_atlas": {
-    "md5": "91fc11b13b4c85bf",
-    "size": 28027
+    "md5": "ab7dd1875b33f8fe",
+    "size": 28026
   },
   "atlas/tmpdesignationflow19_atlas": {
-    "md5": "f0cece4663e6dc49",
-    "size": 34041
+    "md5": "fff004647a386cb9",
+    "size": 34051
   },
   "atlas/towerreverse_atlas": {
     "md5": "d3ad168a6ecbb2f8",
@@ -4560,8 +4568,8 @@
     "size": 1697626
   },
   "font/font": {
-    "md5": "149fcca05db66efc",
-    "size": 29729893
+    "md5": "6db37283eba0786b",
+    "size": 29731236
   },
   "font/font_battle": {
     "md5": "7485bbc1a03e8674",
@@ -10932,11 +10940,11 @@
     "size": 47912
   },
   "localization/en/atlas/en-activitybig07_atlas": {
-    "md5": "f9624a4b774e488e",
-    "size": 53821
+    "md5": "efbd253809a373e5",
+    "size": 53832
   },
   "localization/en/atlas/en-activitybig08_atlas": {
-    "md5": "381fd74fe489ffaa",
+    "md5": "452a2be2c52130a4",
     "size": 50737
   },
   "localization/en/atlas/en-activitybigstage1_atlas": {
@@ -10944,8 +10952,8 @@
     "size": 52742
   },
   "localization/en/atlas/en-activityelaman_atlas": {
-    "md5": "cc51ae47eba0c5db",
-    "size": 69681
+    "md5": "19542327ba164199",
+    "size": 69689
   },
   "localization/en/atlas/en-activitymiddle01_atlas": {
     "md5": "a8d7c856aa0765e6",
@@ -11292,20 +11300,20 @@
     "size": 61192
   },
   "localization/ja/atlas/ja-activitybig07_atlas": {
-    "md5": "cf11a080af878ddc",
-    "size": 48361
+    "md5": "af061692615b93ce",
+    "size": 48344
   },
   "localization/ja/atlas/ja-activitybig08_atlas": {
-    "md5": "50495ac41cba3f7d",
-    "size": 52724
+    "md5": "f30e37b7f39c2af5",
+    "size": 52746
   },
   "localization/ja/atlas/ja-activitybigstage1_atlas": {
     "md5": "0c2e58fc0901a607",
     "size": 57380
   },
   "localization/ja/atlas/ja-activityelaman_atlas": {
-    "md5": "fb11da93355970b9",
-    "size": 70965
+    "md5": "88f5e502d6f034a9",
+    "size": 70971
   },
   "localization/ja/atlas/ja-activitymiddle01_atlas": {
     "md5": "7eee78a1f47fdada",
@@ -11640,19 +11648,19 @@
     "size": 47464
   },
   "localization/ko/atlas/ko-activitybig07_atlas": {
-    "md5": "d82c217e1ceb3a49",
+    "md5": "1bcfebfd555275b7",
     "size": 51593
   },
   "localization/ko/atlas/ko-activitybig08_atlas": {
-    "md5": "00a2bd3632047f12",
-    "size": 48226
+    "md5": "7e687b79ede31b47",
+    "size": 48221
   },
   "localization/ko/atlas/ko-activitybigstage1_atlas": {
     "md5": "a09aa5a2c20b5625",
     "size": 64149
   },
   "localization/ko/atlas/ko-activityelaman_atlas": {
-    "md5": "c0700d0e2d66d974",
+    "md5": "3176d75c2fd9831f",
     "size": 78550
   },
   "localization/ko/atlas/ko-activitymiddle01_atlas": {
@@ -12012,11 +12020,11 @@
     "size": 58994
   },
   "localization/zh-tw/atlas/zh-tw-activitybig07_atlas": {
-    "md5": "005e7231e4d7ec51",
-    "size": 48722
+    "md5": "3a489ec9cf417df3",
+    "size": 48718
   },
   "localization/zh-tw/atlas/zh-tw-activitybig08_atlas": {
-    "md5": "885f13b432e00c43",
+    "md5": "d8c5bcce7ddfe6f3",
     "size": 50509
   },
   "localization/zh-tw/atlas/zh-tw-activitybigstage1_atlas": {
@@ -12024,8 +12032,8 @@
     "size": 53578
   },
   "localization/zh-tw/atlas/zh-tw-activityelaman_atlas": {
-    "md5": "fa27ba116ef3fa61",
-    "size": 78912
+    "md5": "6e4fb7b5ba6b3e01",
+    "size": 78915
   },
   "localization/zh-tw/atlas/zh-tw-activitymiddle01_atlas": {
     "md5": "78e60565e7560aab",
@@ -12252,56 +12260,56 @@
     "size": 70097
   },
   "lua/lua_battle": {
-    "md5": "1ea2f6cfe9938bda",
-    "size": 4722140
+    "md5": "6513d0a93c3eb38b",
+    "size": 4722626
   },
   "lua/lua_common": {
     "md5": "ef9c8b6a3136f7ed",
     "size": 683415
   },
   "lua/lua_db": {
-    "md5": "6d2255e7c27a5d00",
-    "size": 4278818
+    "md5": "c72f1f72a3d2c48f",
+    "size": 4278883
   },
   "lua/lua_dblang_en": {
-    "md5": "47f3a842ca5f4032",
-    "size": 24022547
+    "md5": "11b702903060d9a3",
+    "size": 24022449
   },
   "lua/lua_dblang_es": {
-    "md5": "0459fe6ef196195b",
-    "size": 25099964
+    "md5": "73469abd463c4718",
+    "size": 25098525
   },
   "lua/lua_dblang_fr": {
-    "md5": "5a1ac4d810b6e1b3",
-    "size": 25577775
+    "md5": "90df8686dd2c5aa2",
+    "size": 25577312
   },
   "lua/lua_dblang_it": {
-    "md5": "aad707db1c9d6411",
-    "size": 25074812
+    "md5": "0984e56f35c72208",
+    "size": 25075111
   },
   "lua/lua_dblang_ja": {
-    "md5": "3ef1e7b4c13a0954",
-    "size": 26116055
+    "md5": "3ead0b9a1d3ab7f5",
+    "size": 26116634
   },
   "lua/lua_dblang_ko": {
-    "md5": "1b2d4538f35f20c5",
-    "size": 25464664
+    "md5": "d25944597718a559",
+    "size": 25464894
   },
   "lua/lua_dblang_pt": {
-    "md5": "0c4eefd761478b18",
-    "size": 24775091
+    "md5": "d7d1bf5ba67597e5",
+    "size": 24774323
   },
   "lua/lua_dblang_zh-cn": {
     "md5": "78c28639d7a71ace",
     "size": 11117329
   },
   "lua/lua_dblang_zh-tw": {
-    "md5": "0b419e8cdea4b325",
-    "size": 23175736
+    "md5": "9a5da86b50ac0136",
+    "size": 23175870
   },
   "lua/lua_dbtemplate": {
-    "md5": "34fcf0290ba01ad2",
-    "size": 29728796
+    "md5": "4a91cf36fd6b4963",
+    "size": 29730749
   },
   "lua/lua_dbtemplateonline": {
     "md5": "e943b8d3d3b9a844",
@@ -12316,12 +12324,12 @@
     "size": 2240755
   },
   "lua/lua_dbtemplateskill": {
-    "md5": "3554c0a241e54988",
-    "size": 13844730
+    "md5": "9cf7312a1b834545",
+    "size": 13844797
   },
   "lua/lua_dbtemplatespeciality": {
-    "md5": "d6375cda8a7b1aa3",
-    "size": 13491018
+    "md5": "649d6f8ab58650de",
+    "size": 13491762
   },
   "lua/lua_dbtemplatetranslation": {
     "md5": "b672ba58481b9527",
@@ -17156,8 +17164,8 @@
     "size": 893545
   },
   "ui/activityworldboss": {
-    "md5": "dc86027e153879d3",
-    "size": 1019795
+    "md5": "32a6c3ec98249e37",
+    "size": 1019797
   },
   "ui/activityworldbossstage2": {
     "md5": "af8eea3ab1d8bc5e",
@@ -20906,13 +20914,5 @@
   "worldboss/map/worldboss_002-ldw": {
     "md5": "6bb41083b2427ace",
     "size": 542884
-  },
-  "GamepadConfig": {
-    "md5": "46bd0bed1fb08e46",
-    "size": 28
-  },
-  "XDFeatureSettings": {
-    "md5": "1238b9bb70d9fd03",
-    "size": 709
   }
 }
