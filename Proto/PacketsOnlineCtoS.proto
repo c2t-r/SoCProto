@@ -797,6 +797,15 @@ message CSDebugOnlineAdventureSetExp {
   int32 exp = 2;
 }
 
+message CSDebugOnlineGacha {
+  enum Type {
+    GachaNoCondition = 0;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
 message CSOnlineMainQuestEnter {
 }
 

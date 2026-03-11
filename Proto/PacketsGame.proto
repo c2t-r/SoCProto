@@ -1579,6 +1579,7 @@ message db_player_expedition {
   string passed_quest_data = 14;
   string prove_data = 15;
   bool is_pass = 16;
+  string enemy_prop_data = 17;
 }
 
 message db_player_formation_unit {

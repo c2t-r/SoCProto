@@ -409,6 +409,7 @@ message OperationActivityExtraData {
   string inv_code = 3;
   GuildGrantActivity guild_activity = 4;
   repeated db_player_gacha_pool gacha_pools = 7;
+  PlayerMatch match = 9;
 }
 
 message OperationActivityExtraData2 {

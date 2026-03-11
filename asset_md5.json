@@ -4,28 +4,28 @@
     "size": 4102
   },
   "area_setting2": {
-    "md5": "9baf7979bf9a1faa",
-    "size": 1471
+    "md5": "6e8b436fe37a7d3c",
+    "size": 1487
   },
   "asset_bundle": {
-    "md5": "2a7bcbed6cf4e912",
-    "size": 178939
+    "md5": "a47b6c6abba8afce",
+    "size": 179214
   },
   "asset_dep": {
-    "md5": "d646e5eafa1aa2fb",
-    "size": 82350
+    "md5": "917a9e22947cb730",
+    "size": 82635
   },
   "asset_icon": {
-    "md5": "7b5695e1d902722c",
-    "size": 73202
+    "md5": "0615a78d8c14b039",
+    "size": 73236
   },
   "asset_loc": {
-    "md5": "0415a948d27181d7",
-    "size": 4891
+    "md5": "c2357da16f92f629",
+    "size": 4931
   },
   "asset_not_bundle": {
-    "md5": "20a1224ba8b68669",
-    "size": 1791
+    "md5": "af37f3685a2b59d2",
+    "size": 1174
   },
   "asset_sync": {
     "md5": "7cead4f3a4ac7d28",
@@ -36,8 +36,8 @@
     "size": 856447
   },
   "db_template": {
-    "md5": "f8a4749e1cf4b9d8",
-    "size": 2324810
+    "md5": "12ccd435e1b04766",
+    "size": 2360296
   },
   "deviceprofile": {
     "md5": "bdad7f1120046658",
@@ -56,7 +56,7 @@
     "size": 8973
   },
   "resource_version": {
-    "md5": "e8ddb1c9730df77d",
+    "md5": "d46f14b4045c25ba",
     "size": 1237
   },
   "shaders": {
@@ -268,8 +268,8 @@
     "size": 1486822
   },
   "atlas/designation_atlas": {
-    "md5": "f2f653e11804c1cf",
-    "size": 616434
+    "md5": "c12933fc613ea83e",
+    "size": 637539
   },
   "atlas/di_atlas": {
     "md5": "8875d8dda515b2f5",
@@ -340,8 +340,8 @@
     "size": 28436
   },
   "atlas/headframe_arenasafiyyah01_atlas": {
-    "md5": "14b4689e138bd7e3",
-    "size": 84973
+    "md5": "30efc4b428d3a6eb",
+    "size": 84941
   },
   "atlas/headframe_arenasafiyyah_atlas": {
     "md5": "40047c8c96300691",
@@ -352,44 +352,44 @@
     "size": 1880
   },
   "atlas/headframe_momo01_atlas": {
-    "md5": "362482c633db88b1",
-    "size": 62897
+    "md5": "42fdae3a0eb2b414",
+    "size": 62903
   },
   "atlas/headframe_operation16_atlas": {
     "md5": "0efbdb872e2b91f1",
     "size": 81026
   },
   "atlas/head_frame_agata01_atlas": {
-    "md5": "2764916a80627182",
-    "size": 72405
+    "md5": "343715048e82f95d",
+    "size": 72428
   },
   "atlas/head_frame_blackhair01_atlas": {
-    "md5": "ae63f39072b2e37c",
-    "size": 62204
+    "md5": "4f8dc4bfa708ef45",
+    "size": 62196
   },
   "atlas/head_frame_cocoanawal01_atlas": {
-    "md5": "bd816b0287ddaa95",
-    "size": 87131
+    "md5": "8e006871f95e5d87",
+    "size": 87109
   },
   "atlas/head_frame_hunter01_atlas": {
-    "md5": "83201aab9e115824",
-    "size": 48698
+    "md5": "af40f957b3b0460f",
+    "size": 48711
   },
   "atlas/head_frame_lukamar01_atlas": {
-    "md5": "d5bbc930a1da75d7",
-    "size": 61055
+    "md5": "286b5037bf31fd46",
+    "size": 61033
   },
   "atlas/head_frame_redhair01_atlas": {
-    "md5": "41e39691145d259b",
-    "size": 57049
+    "md5": "4468476b339d91d1",
+    "size": 57071
   },
   "atlas/head_frame_spinanna01_atlas": {
-    "md5": "413288ee57115392",
-    "size": 92900
+    "md5": "6f66523d4b05ce22",
+    "size": 92887
   },
   "atlas/head_frame_spmaitha01_atlas": {
-    "md5": "8dc6d51711cee306",
-    "size": 110263
+    "md5": "5e353d79b9ef25b0",
+    "size": 110283
   },
   "atlas/infinitechallenge_atlas": {
     "md5": "b77b3015eeea1ed9",
@@ -448,8 +448,8 @@
     "size": 21387
   },
   "atlas/missiondetail_atlas": {
-    "md5": "c3d59a7fb0390583",
-    "size": 307459
+    "md5": "428ee451c7480c7e",
+    "size": 307468
   },
   "atlas/moduleafk_atlas": {
     "md5": "833d03f5d62b226c",
@@ -492,7 +492,7 @@
     "size": 276598
   },
   "atlas/operationactivity_15_atlas": {
-    "md5": "535b7895ce1d1bd1",
+    "md5": "8c8155d7e2cdafa3",
     "size": 96283
   },
   "atlas/operationactivity_annualreviews_01_atlas": {
@@ -568,16 +568,16 @@
     "size": 448971
   },
   "atlas/operationactivity_crimsonnightday7_atlas": {
-    "md5": "d3e2aecd034f9dea",
-    "size": 121335
+    "md5": "e94dee6513b0fc8a",
+    "size": 121322
   },
   "atlas/operationactivity_customize_guildconstruct_01_atlas": {
     "md5": "5f386b937e477de0",
     "size": 376137
   },
   "atlas/operationactivity_customize_jigsaw_01_atlas": {
-    "md5": "1f40f0c3a0225bf7",
-    "size": 1058779
+    "md5": "d5f47b81ca2f4d87",
+    "size": 1378457
   },
   "atlas/operationactivity_customize_web_01_atlas": {
     "md5": "c30ab50312aa05fd",
@@ -592,7 +592,7 @@
     "size": 145270
   },
   "atlas/operationactivity_halfyearday7_atlas": {
-    "md5": "802400095454d704",
+    "md5": "4c8626f16ce866a6",
     "size": 84611
   },
   "atlas/operationactivity_invitation_atlas": {
@@ -608,12 +608,12 @@
     "size": 223141
   },
   "atlas/operationactivity_obtday14_atlas": {
-    "md5": "d537ea9a42a675c0",
+    "md5": "48c8d4e7482ec164",
     "size": 57491
   },
   "atlas/operationactivity_obtday7_atlas": {
-    "md5": "d2936f59f6fed9f1",
-    "size": 150135
+    "md5": "b236914d0723c49b",
+    "size": 150133
   },
   "atlas/operationactivity_other_01_atlas": {
     "md5": "1a888c2ec6e89db0",
@@ -644,7 +644,7 @@
     "size": 87321
   },
   "atlas/operationactivity_tillingandharvest_atlas": {
-    "md5": "3478e72d5cef9d43",
+    "md5": "ac8e12319dab5b47",
     "size": 150895
   },
   "atlas/operationactivity_tower_01_atlas": {
@@ -656,16 +656,16 @@
     "size": 251953
   },
   "atlas/operationactivity_warmingwinterday7_atlas": {
-    "md5": "e84a2f1101c9c95d",
+    "md5": "c604da136a68b1da",
     "size": 140349
   },
   "atlas/operationactivity_watcherday14_atlas": {
-    "md5": "c51094031844c8fb",
-    "size": 56733
+    "md5": "f70e07d023e33251",
+    "size": 56734
   },
   "atlas/operationactivity_wishofspring_atlas": {
-    "md5": "e2f5e2e226f9d611",
-    "size": 90393
+    "md5": "7d215ae1343d004b",
+    "size": 90394
   },
   "atlas/prequelcapital_atlas": {
     "md5": "552e7fd55d7bac57",
@@ -752,32 +752,32 @@
     "size": 417996
   },
   "atlas/richman_animation_atlas": {
-    "md5": "03fb6f816e69dd35",
-    "size": 58360
+    "md5": "57fd125f5100eb1c",
+    "size": 58346
   },
   "atlas/richman_background_atlas": {
-    "md5": "a1abdd9ef7fc85a0",
-    "size": 167966
+    "md5": "18e32c7f30d826cd",
+    "size": 168045
   },
   "atlas/richman_bridge_atlas": {
-    "md5": "5616fc5871d05bc5",
-    "size": 13008
+    "md5": "8ce34e2b92e2674b",
+    "size": 13007
   },
   "atlas/richman_characters_atlas": {
-    "md5": "8cfa98270b8d278c",
-    "size": 92235
+    "md5": "0c1eebe8421ff4e3",
+    "size": 92238
   },
   "atlas/richman_grid_atlas": {
-    "md5": "f30049beccc128f4",
-    "size": 19227
+    "md5": "518ebcefd7c5e6cf",
+    "size": 19242
   },
   "atlas/richman_mission_atlas": {
-    "md5": "696a14698c6671cc",
-    "size": 514422
+    "md5": "08430d2b68605936",
+    "size": 514377
   },
   "atlas/richman_ui_atlas": {
-    "md5": "2fd9371d56396c4e",
-    "size": 56390
+    "md5": "140f3edbf276b488",
+    "size": 56405
   },
   "atlas/rolecard_atlas": {
     "md5": "c1a87782bf10e35e",
@@ -856,24 +856,24 @@
     "size": 42374
   },
   "atlas/tmpdesignationflow08_atlas": {
-    "md5": "b4b66a7d01b85d3a",
-    "size": 42354
+    "md5": "c675ed07fa9612e7",
+    "size": 42357
   },
   "atlas/tmpdesignationflow09_atlas": {
-    "md5": "011eafe10fe7f52f",
-    "size": 24514
+    "md5": "f125107aa1fc75dc",
+    "size": 24523
   },
   "atlas/tmpdesignationflow11_atlas": {
-    "md5": "befcd6a30b437210",
-    "size": 24152
+    "md5": "0854d10b220638ef",
+    "size": 24151
   },
   "atlas/tmpdesignationflow12_atlas": {
-    "md5": "ab7dd1875b33f8fe",
-    "size": 28026
+    "md5": "1bceeb6911d15a8d",
+    "size": 28027
   },
   "atlas/tmpdesignationflow19_atlas": {
-    "md5": "fff004647a386cb9",
-    "size": 34051
+    "md5": "c34281b84870275a",
+    "size": 34041
   },
   "atlas/towerreverse_atlas": {
     "md5": "d3ad168a6ecbb2f8",
@@ -1848,12 +1848,12 @@
     "size": 1901298
   },
   "battle/effect/battle_effect11": {
-    "md5": "2fe6f7c48583debc",
-    "size": 637014
+    "md5": "e397c9f9f0164ed7",
+    "size": 619346
   },
   "battle/effect/battle_effect12": {
-    "md5": "691573c9be9137ae",
-    "size": 1630132
+    "md5": "d9c601043c26326d",
+    "size": 1631758
   },
   "battle/effect/battle_effect13": {
     "md5": "12900956fd067a6a",
@@ -1916,12 +1916,12 @@
     "size": 1206559
   },
   "battle/effect/battle_effect27": {
-    "md5": "d582f9bf719eabdc",
-    "size": 1497060
+    "md5": "5085e99fd914217d",
+    "size": 1496913
   },
   "battle/effect/battle_effect28": {
-    "md5": "6463d09815c6bce8",
-    "size": 2894023
+    "md5": "50dbd02031caada4",
+    "size": 2894038
   },
   "battle/effect/battle_effect29": {
     "md5": "7f2b76b66b6ce6d3",
@@ -1944,28 +1944,28 @@
     "size": 2077706
   },
   "battle/effect/battle_effect33": {
-    "md5": "e90ea981be0f0b90",
-    "size": 1450943
+    "md5": "0db4c6d6cc15275e",
+    "size": 1461805
   },
   "battle/effect/battle_effect34": {
-    "md5": "dd3482e885196d7d",
-    "size": 2682104
+    "md5": "e97798b8346168c1",
+    "size": 2625075
   },
   "battle/effect/battle_effect35": {
-    "md5": "7619ba482e6e2aba",
-    "size": 10072218
+    "md5": "13380e6a029a0df9",
+    "size": 9195649
   },
   "battle/effect/battle_effect36": {
-    "md5": "f7a9db2ef649251b",
-    "size": 4480302
+    "md5": "c0a6800865854dd7",
+    "size": 5327926
   },
   "battle/effect/battle_effect37": {
-    "md5": "8558030e651314b8",
-    "size": 4239599
+    "md5": "c956c2f8a445b517",
+    "size": 4239326
   },
   "battle/effect/battle_effect38": {
-    "md5": "12e0b6dcab4949d3",
-    "size": 233989
+    "md5": "0d13d6a30d7b29eb",
+    "size": 408225
   },
   "battle/effect/battle_effect4": {
     "md5": "84d567405503506b",
@@ -4568,8 +4568,8 @@
     "size": 1697626
   },
   "font/font": {
-    "md5": "6db37283eba0786b",
-    "size": 29731236
+    "md5": "eec127ed6fe35620",
+    "size": 29730932
   },
   "font/font_battle": {
     "md5": "7485bbc1a03e8674",
@@ -5088,20 +5088,20 @@
     "size": 453053
   },
   "icon/bannar/icon_bannar14": {
-    "md5": "e28caf256b6227ca",
-    "size": 376659
+    "md5": "03c7d52aecd8ad23",
+    "size": 465299
   },
   "icon/bannar/icon_bannar15": {
-    "md5": "51e5005cb5d4d4ec",
-    "size": 508853
+    "md5": "b802a762e20e46b1",
+    "size": 514727
   },
   "icon/bannar/icon_bannar16": {
-    "md5": "621b6d7c0326bcf7",
-    "size": 446943
+    "md5": "5779576447e78d2c",
+    "size": 427313
   },
   "icon/bannar/icon_bannar17": {
-    "md5": "d1b94555651190ff",
-    "size": 81879
+    "md5": "37358e5eb0a75582",
+    "size": 184200
   },
   "icon/bannar/icon_bannar2": {
     "md5": "fffb8702bf21e5b5",
@@ -5855,6 +5855,10 @@
     "md5": "f4d6d143d8ea017b",
     "size": 627476
   },
+  "icon/bg/operationactivity_elamanarena_bg": {
+    "md5": "cdc496bedf14e8e2",
+    "size": 666455
+  },
   "icon/bg/operationactivity_elamanday14_bg": {
     "md5": "608bbcd220fb33cf",
     "size": 632989
@@ -5987,6 +5991,10 @@
     "md5": "5e0e2355d8ed4fd6",
     "size": 664470
   },
+  "icon/bg/operationactivity_jigsawluccia_bg": {
+    "md5": "452ef882f64aded7",
+    "size": 555922
+  },
   "icon/bg/operationactivity_jigsawstage2_bg": {
     "md5": "09abe9d8d859b369",
     "size": 588475
@@ -6070,6 +6078,10 @@
   "icon/bg/operationactivity_moduleboss7_bg": {
     "md5": "fa000bff48d25d67",
     "size": 652186
+  },
+  "icon/bg/operationactivity_moduleboss8_bg": {
+    "md5": "0a447eadb46dcee1",
+    "size": 668367
   },
   "icon/bg/operationactivity_momoday14_bg": {
     "md5": "6933662b906955ed",
@@ -6699,6 +6711,10 @@
     "md5": "166fdfdd2ddfa3b7",
     "size": 546752
   },
+  "icon/bg/share_jigsawluccia_bg": {
+    "md5": "3fb3c6abda262f61",
+    "size": 473899
+  },
   "icon/bg/share_jigsawstage2_bg": {
     "md5": "9217ca2f5a406091",
     "size": 529587
@@ -7047,6 +7063,10 @@
     "md5": "64a7d53e3d1353a5",
     "size": 674285
   },
+  "icon/card/card_hknightssisterfset01": {
+    "md5": "47a83a76cc701b0b",
+    "size": 537316
+  },
   "icon/card/card_hluciaaugurfdeerfset01": {
     "md5": "20c08a1ce4e7de56",
     "size": 492483
@@ -7187,6 +7207,10 @@
     "md5": "8c59e0009913a4a3",
     "size": 410661
   },
+  "icon/card/card_hsolomonprincemset01": {
+    "md5": "6ffa918f27396915",
+    "size": 543774
+  },
   "icon/card/card_hvilderdancerfset01": {
     "md5": "c0c17890beefd035",
     "size": 747324
@@ -7275,13 +7299,29 @@
     "md5": "d759f2f3b404e1d8",
     "size": 438970
   },
+  "icon/card/card_knightslongswordfset01": {
+    "md5": "668c0d9bb2f4706f",
+    "size": 442234
+  },
   "icon/card/card_knightspriestfset01": {
     "md5": "cfb18da5278f69fc",
     "size": 323356
   },
+  "icon/card/card_luciaarcherfset01": {
+    "md5": "f3c8e9e9150abe7e",
+    "size": 315355
+  },
+  "icon/card/card_luciaberserkermset01": {
+    "md5": "a58463f442c1dabd",
+    "size": 541784
+  },
   "icon/card/card_luciaguardianmset01": {
     "md5": "14872acc27572bc4",
     "size": 423349
+  },
+  "icon/card/card_luciaicewizzardfset01": {
+    "md5": "a39380e5494bd752",
+    "size": 298452
   },
   "icon/card/card_mercenaryarchermset01": {
     "md5": "d546dcdc65732876",
@@ -7587,6 +7627,10 @@
     "md5": "78b94f7ce82ff7bb",
     "size": 4781912
   },
+  "icon/card_full/card_hknightssisterfset01": {
+    "md5": "d44fe7244fa729ef",
+    "size": 4076872
+  },
   "icon/card_full/card_hluciaaugurfdeerfset01": {
     "md5": "a235759590f96e33",
     "size": 1735822
@@ -7727,6 +7771,10 @@
     "md5": "42507dc3de9e8d51",
     "size": 1536020
   },
+  "icon/card_full/card_hsolomonprincemset01": {
+    "md5": "7395dbedbb2d1fc9",
+    "size": 4442399
+  },
   "icon/card_full/card_hvilderdancerfset01": {
     "md5": "e0530cee758f50cb",
     "size": 4638850
@@ -7815,9 +7863,17 @@
     "md5": "8359ee6df7504d4e",
     "size": 2434847
   },
+  "icon/card_full/card_knightslongswordfset01": {
+    "md5": "2c1be7d9830cafff",
+    "size": 3106184
+  },
   "icon/card_full/card_knightspriestfset01": {
     "md5": "a697242c32c0fd91",
     "size": 1963316
+  },
+  "icon/card_full/card_luciaarcherfset01": {
+    "md5": "aea1d1d4e424c541",
+    "size": 1901016
   },
   "icon/card_full/card_luciaberserkermset01": {
     "md5": "611f9df09ce26ef1",
@@ -7972,12 +8028,12 @@
     "size": 2688644
   },
   "icon/card_small/icon_card_small1": {
-    "md5": "8a2383e4f72683a9",
-    "size": 842119
+    "md5": "7a50b33c37c4fd2b",
+    "size": 876466
   },
   "icon/card_small/icon_card_small2": {
-    "md5": "ddbee263877f8198",
-    "size": 368412
+    "md5": "aa6c8d04a2b3ced1",
+    "size": 391512
   },
   "icon/career/icon_career1": {
     "md5": "4987e812aa32b3fd",
@@ -8203,6 +8259,10 @@
     "md5": "a856d19cbf34fe35",
     "size": 27865
   },
+  "icon/dls_virtual/dls_virtual_area01_model02": {
+    "md5": "aed16ad75a4ee4e2",
+    "size": 28580
+  },
   "icon/dls_virtual/dls_virtual_area01_model03": {
     "md5": "bec151f7bae9645c",
     "size": 28716
@@ -8214,6 +8274,10 @@
   "icon/dls_virtual/dls_virtual_area02_model01": {
     "md5": "759a7b8fbd710e52",
     "size": 27534
+  },
+  "icon/dls_virtual/dls_virtual_area02_model02": {
+    "md5": "1c5376109bbcd392",
+    "size": 28326
   },
   "icon/dls_virtual/dls_virtual_area02_model03": {
     "md5": "27c2e2b17d148c22",
@@ -8227,6 +8291,10 @@
     "md5": "8b40182d17dc8e84",
     "size": 27341
   },
+  "icon/dls_virtual/dls_virtual_area03_model02": {
+    "md5": "450c3571121edada",
+    "size": 28985
+  },
   "icon/dls_virtual/dls_virtual_area03_model03": {
     "md5": "32d66ef95b4878a6",
     "size": 27988
@@ -8238,6 +8306,10 @@
   "icon/dls_virtual/dls_virtual_area04_model01": {
     "md5": "80a86a6f7b46ed49",
     "size": 26977
+  },
+  "icon/dls_virtual/dls_virtual_area04_model02": {
+    "md5": "3c64d5f60d089b68",
+    "size": 29218
   },
   "icon/dls_virtual/dls_virtual_area04_model03": {
     "md5": "f92ccf06b34eba6d",
@@ -8251,6 +8323,10 @@
     "md5": "47df24b54317961b",
     "size": 30471
   },
+  "icon/dls_virtual/dls_virtual_area05_model02": {
+    "md5": "461ca2473de8a44b",
+    "size": 34990
+  },
   "icon/dls_virtual/dls_virtual_area05_model03": {
     "md5": "3c65135101f49519",
     "size": 37602
@@ -8262,6 +8338,10 @@
   "icon/dls_virtual/dls_virtual_area06_model01": {
     "md5": "71186807eecb4080",
     "size": 41739
+  },
+  "icon/dls_virtual/dls_virtual_area06_model02": {
+    "md5": "fa190b27b92f8243",
+    "size": 43058
   },
   "icon/dls_virtual/dls_virtual_area06_model03": {
     "md5": "e1870833d90253a8",
@@ -8275,6 +8355,10 @@
     "md5": "3e0be08f8eed0e51",
     "size": 30386
   },
+  "icon/dls_virtual/dls_virtual_area07_model02": {
+    "md5": "913a0a8fe6ab92a8",
+    "size": 39926
+  },
   "icon/dls_virtual/dls_virtual_area07_model03": {
     "md5": "c3e4033b4944d437",
     "size": 38381
@@ -8286,6 +8370,10 @@
   "icon/dls_virtual/dls_virtual_area08_model01": {
     "md5": "520a86915868d56d",
     "size": 22736
+  },
+  "icon/dls_virtual/dls_virtual_area08_model02": {
+    "md5": "4282ebcf6d02d165",
+    "size": 23044
   },
   "icon/dls_virtual/dls_virtual_area08_model03": {
     "md5": "96d58e0596c4aed1",
@@ -8299,6 +8387,10 @@
     "md5": "8da1886bcf9895de",
     "size": 27912
   },
+  "icon/dls_virtual/dls_virtual_area09_model02": {
+    "md5": "7a5347cfb2cff904",
+    "size": 35330
+  },
   "icon/dls_virtual/dls_virtual_area09_model03": {
     "md5": "f7c49cfff8131a25",
     "size": 34067
@@ -8310,6 +8402,10 @@
   "icon/dls_virtual/dls_virtual_area10_model01": {
     "md5": "85c17bf5c8d7e3e2",
     "size": 24252
+  },
+  "icon/dls_virtual/dls_virtual_area10_model02": {
+    "md5": "d85d3c66328e21fc",
+    "size": 31174
   },
   "icon/dls_virtual/dls_virtual_area10_model03": {
     "md5": "ac45837647f79197",
@@ -8600,8 +8696,8 @@
     "size": 1032422
   },
   "icon/gachatitle/icon_gachatitle5": {
-    "md5": "fecf73c88365fea0",
-    "size": 909714
+    "md5": "8ed473bde7a839a2",
+    "size": 1026204
   },
   "icon/gift/icon_gift1": {
     "md5": "ae3bdcb7bc236a27",
@@ -8940,8 +9036,12 @@
     "size": 2307098
   },
   "icon/material/icon_material6": {
-    "md5": "07fd377e5f6c958a",
-    "size": 2077808
+    "md5": "f1947fbd96ec7768",
+    "size": 2083362
+  },
+  "icon/material/icon_material7": {
+    "md5": "e857f2025ec8615a",
+    "size": 17538
   },
   "icon/material_full/icon_material_full1": {
     "md5": "788a86748db7177f",
@@ -8968,8 +9068,8 @@
     "size": 4341887
   },
   "icon/material_full/icon_material_full7": {
-    "md5": "11ba81dfa71d63b1",
-    "size": 1632050
+    "md5": "09002c2ab7e00cd6",
+    "size": 1855403
   },
   "icon/material_onlineunitrank/icon_material_onlineunitrank1": {
     "md5": "e7baaaf42e9dd598",
@@ -10251,6 +10351,10 @@
     "md5": "dd43c2e5d3d7864b",
     "size": 1198226
   },
+  "icon/skin_card/skin_card_hsolomonprincemset01": {
+    "md5": "10aff23c2ffcb2f3",
+    "size": 1192257
+  },
   "icon/skin_card/skin_card_hvilderdancerfset01": {
     "md5": "9584c18c7662a5a9",
     "size": 1233038
@@ -10591,6 +10695,10 @@
     "md5": "1f754dce5665d7c7",
     "size": 7864876
   },
+  "icon/skin_card_full/skin_card_hsolomonprincemset01": {
+    "md5": "fe348eb754377e76",
+    "size": 3421148
+  },
   "icon/skin_card_full/skin_card_hvilderdancerfset01": {
     "md5": "97d4184778657c9d",
     "size": 6826282
@@ -10816,8 +10924,8 @@
     "size": 1831752
   },
   "localization/en/activitybigrogue": {
-    "md5": "24d0275b2fc754de",
-    "size": 124231
+    "md5": "966a3b221f39e986",
+    "size": 170998
   },
   "localization/en/activitybigstage1": {
     "md5": "8e0d233b47f7a985",
@@ -10832,8 +10940,8 @@
     "size": 100939
   },
   "localization/en/bannar": {
-    "md5": "c2e1a79824538720",
-    "size": 7915375
+    "md5": "4b19ce5a7a0e676c",
+    "size": 8247626
   },
   "localization/en/card": {
     "md5": "97a1db6cbedfb9ac",
@@ -10860,8 +10968,8 @@
     "size": 35987179
   },
   "localization/en/gachatitle": {
-    "md5": "c9ffed8fe8a8634b",
-    "size": 6600190
+    "md5": "203d0124db452686",
+    "size": 6759323
   },
   "localization/en/jigsaw": {
     "md5": "563660c9b616a947",
@@ -10872,8 +10980,8 @@
     "size": 83266
   },
   "localization/en/operationactivity_append_shop_01": {
-    "md5": "2f597b5018c8b2d6",
-    "size": 329337
+    "md5": "611070d00c6b56ec",
+    "size": 314630
   },
   "localization/en/operationactivity_append_skin_01": {
     "md5": "aa4af807f7349550",
@@ -10884,8 +10992,8 @@
     "size": 141352
   },
   "localization/en/operationactivity_sandboxresult_01": {
-    "md5": "b590f80e4423f408",
-    "size": 229863
+    "md5": "cb673669324c3645",
+    "size": 209885
   },
   "localization/en/sandboxachievement": {
     "md5": "238aa03887f156fa",
@@ -10904,8 +11012,8 @@
     "size": 1262900
   },
   "localization/en/ui": {
-    "md5": "fb7da2441790adb3",
-    "size": 63131
+    "md5": "fb03697d3025f5a1",
+    "size": 64568
   },
   "localization/en/atlas/en-activitybig01_atlas": {
     "md5": "5d356cea2f96aae3",
@@ -10940,20 +11048,20 @@
     "size": 47912
   },
   "localization/en/atlas/en-activitybig07_atlas": {
-    "md5": "efbd253809a373e5",
-    "size": 53832
+    "md5": "13078ececd92ea60",
+    "size": 53829
   },
   "localization/en/atlas/en-activitybig08_atlas": {
-    "md5": "452a2be2c52130a4",
-    "size": 50737
+    "md5": "004705364d2c5539",
+    "size": 50739
   },
   "localization/en/atlas/en-activitybigstage1_atlas": {
     "md5": "c916dbc7f7f780fc",
     "size": 52742
   },
   "localization/en/atlas/en-activityelaman_atlas": {
-    "md5": "19542327ba164199",
-    "size": 69689
+    "md5": "facc65202eb78acb",
+    "size": 69674
   },
   "localization/en/atlas/en-activitymiddle01_atlas": {
     "md5": "a8d7c856aa0765e6",
@@ -11164,20 +11272,20 @@
     "size": 26531235
   },
   "localization/es/ui": {
-    "md5": "e7463aa20490772c",
-    "size": 62731
+    "md5": "4d96a88b87750900",
+    "size": 64144
   },
   "localization/fr/ui": {
-    "md5": "463f5e9c43b58a83",
-    "size": 66624
+    "md5": "65929b9d35a4e3fc",
+    "size": 68452
   },
   "localization/it/ui": {
-    "md5": "ea7501c2d941be0c",
-    "size": 62868
+    "md5": "0f4ccd85fade298e",
+    "size": 63797
   },
   "localization/ja/activitybigrogue": {
-    "md5": "766a9f8f5ba1d00d",
-    "size": 111880
+    "md5": "a264d6aea77de151",
+    "size": 184696
   },
   "localization/ja/activitybigstage1": {
     "md5": "84c742563f22f2cd",
@@ -11192,8 +11300,8 @@
     "size": 99813
   },
   "localization/ja/bannar": {
-    "md5": "ec0a21d861545a66",
-    "size": 7898825
+    "md5": "5f9e8b5c2c39293b",
+    "size": 8199023
   },
   "localization/ja/card": {
     "md5": "72b1caf6c00a8161",
@@ -11220,8 +11328,8 @@
     "size": 40565592
   },
   "localization/ja/gachatitle": {
-    "md5": "09cf08bbdfbe941e",
-    "size": 6554459
+    "md5": "1626ed8d30dc15b3",
+    "size": 6710666
   },
   "localization/ja/jigsaw": {
     "md5": "e6e234d8563ad1ae",
@@ -11244,8 +11352,8 @@
     "size": 150836
   },
   "localization/ja/operationactivity_sandboxresult_01": {
-    "md5": "75cfcfa34267f563",
-    "size": 216848
+    "md5": "62c6403a47a15495",
+    "size": 220777
   },
   "localization/ja/sandboxachievement": {
     "md5": "0db9c015b5572a12",
@@ -11264,8 +11372,8 @@
     "size": 1264224
   },
   "localization/ja/ui": {
-    "md5": "e6cc6754380490d1",
-    "size": 62487
+    "md5": "18aad0fd582eb93a",
+    "size": 64646
   },
   "localization/ja/atlas/ja-activitybig01_atlas": {
     "md5": "9f2668fd090fc458",
@@ -11300,20 +11408,20 @@
     "size": 61192
   },
   "localization/ja/atlas/ja-activitybig07_atlas": {
-    "md5": "af061692615b93ce",
-    "size": 48344
+    "md5": "412c89eeb4da6e8b",
+    "size": 48354
   },
   "localization/ja/atlas/ja-activitybig08_atlas": {
-    "md5": "f30e37b7f39c2af5",
-    "size": 52746
+    "md5": "3dec8a49a68cf553",
+    "size": 52724
   },
   "localization/ja/atlas/ja-activitybigstage1_atlas": {
     "md5": "0c2e58fc0901a607",
     "size": 57380
   },
   "localization/ja/atlas/ja-activityelaman_atlas": {
-    "md5": "88f5e502d6f034a9",
-    "size": 70971
+    "md5": "a7ea1d2b01995857",
+    "size": 70965
   },
   "localization/ja/atlas/ja-activitymiddle01_atlas": {
     "md5": "7eee78a1f47fdada",
@@ -11524,8 +11632,8 @@
     "size": 21991192
   },
   "localization/ko/activitybigrogue": {
-    "md5": "3d488cf88999c03e",
-    "size": 111175
+    "md5": "c9314e290ad1c89e",
+    "size": 180543
   },
   "localization/ko/activitybigstage1": {
     "md5": "08300c74476004e4",
@@ -11540,8 +11648,8 @@
     "size": 100854
   },
   "localization/ko/bannar": {
-    "md5": "10afc72aab007e5b",
-    "size": 7831026
+    "md5": "c733ef2e87015c22",
+    "size": 8169250
   },
   "localization/ko/card": {
     "md5": "7ace3c7de7d8cb95",
@@ -11568,8 +11676,8 @@
     "size": 35413573
   },
   "localization/ko/gachatitle": {
-    "md5": "207a26bb0eb3d48d",
-    "size": 6334262
+    "md5": "d504f37d5733973f",
+    "size": 6484942
   },
   "localization/ko/jigsaw": {
     "md5": "c341928346dde82f",
@@ -11592,8 +11700,8 @@
     "size": 105255
   },
   "localization/ko/operationactivity_sandboxresult_01": {
-    "md5": "c0c8e66abe31ab9d",
-    "size": 220429
+    "md5": "75594c9995b336fb",
+    "size": 220479
   },
   "localization/ko/sandboxachievement": {
     "md5": "5497c70ac6d470bb",
@@ -11612,8 +11720,8 @@
     "size": 1262553
   },
   "localization/ko/ui": {
-    "md5": "ec23a800a60ed392",
-    "size": 62743
+    "md5": "e8d9992dc7145455",
+    "size": 63985
   },
   "localization/ko/atlas/ko-activitybig01_atlas": {
     "md5": "410fb17a15302146",
@@ -11648,20 +11756,20 @@
     "size": 47464
   },
   "localization/ko/atlas/ko-activitybig07_atlas": {
-    "md5": "1bcfebfd555275b7",
-    "size": 51593
+    "md5": "6ba2285b96e429e4",
+    "size": 51600
   },
   "localization/ko/atlas/ko-activitybig08_atlas": {
-    "md5": "7e687b79ede31b47",
-    "size": 48221
+    "md5": "d59d19b145f3ac79",
+    "size": 48222
   },
   "localization/ko/atlas/ko-activitybigstage1_atlas": {
     "md5": "a09aa5a2c20b5625",
     "size": 64149
   },
   "localization/ko/atlas/ko-activityelaman_atlas": {
-    "md5": "3176d75c2fd9831f",
-    "size": 78550
+    "md5": "ba3d4f9a75943e65",
+    "size": 78559
   },
   "localization/ko/atlas/ko-activitymiddle01_atlas": {
     "md5": "8fbfb4524bc3896e",
@@ -11872,8 +11980,8 @@
     "size": 23694175
   },
   "localization/pt/ui": {
-    "md5": "1d3c107d8370246d",
-    "size": 69118
+    "md5": "87236bba5c378233",
+    "size": 70075
   },
   "localization/zh-cn/card": {
     "md5": "1e9040db1ef2810a",
@@ -11884,8 +11992,8 @@
     "size": 1693152
   },
   "localization/zh-cn/ui": {
-    "md5": "4af7d09932180eb6",
-    "size": 24931
+    "md5": "9f0de46eac43b6a3",
+    "size": 25342
   },
   "localization/zh-cn/atlas/zh-cn-bannar_atlas": {
     "md5": "29236d6116051f32",
@@ -11912,8 +12020,8 @@
     "size": 99779
   },
   "localization/zh-tw/bannar": {
-    "md5": "eefa0516f81a1a82",
-    "size": 7881931
+    "md5": "7e8c148ca2e96499",
+    "size": 8055665
   },
   "localization/zh-tw/card": {
     "md5": "c91778cb7f999d30",
@@ -11940,8 +12048,8 @@
     "size": 6159627
   },
   "localization/zh-tw/gachatitle": {
-    "md5": "2422c9c46972a863",
-    "size": 6709908
+    "md5": "b88592b014dd7bf8",
+    "size": 6755722
   },
   "localization/zh-tw/jigsaw": {
     "md5": "6ff50988807f1526",
@@ -11984,8 +12092,8 @@
     "size": 1245990
   },
   "localization/zh-tw/ui": {
-    "md5": "44b1b12acd0451d7",
-    "size": 64514
+    "md5": "593b303dadf2e700",
+    "size": 67499
   },
   "localization/zh-tw/atlas/zh-tw-activitybig01_atlas": {
     "md5": "a95ab68485206f8b",
@@ -12020,19 +12128,19 @@
     "size": 58994
   },
   "localization/zh-tw/atlas/zh-tw-activitybig07_atlas": {
-    "md5": "3a489ec9cf417df3",
+    "md5": "4f5b2b57a61c06b8",
     "size": 48718
   },
   "localization/zh-tw/atlas/zh-tw-activitybig08_atlas": {
-    "md5": "d8c5bcce7ddfe6f3",
-    "size": 50509
+    "md5": "02dc307d81840545",
+    "size": 50498
   },
   "localization/zh-tw/atlas/zh-tw-activitybigstage1_atlas": {
     "md5": "119922f918b6cddb",
     "size": 53578
   },
   "localization/zh-tw/atlas/zh-tw-activityelaman_atlas": {
-    "md5": "6e4fb7b5ba6b3e01",
+    "md5": "25e98ffd998cb4a9",
     "size": 78915
   },
   "localization/zh-tw/atlas/zh-tw-activitymiddle01_atlas": {
@@ -12256,88 +12364,88 @@
     "size": 20263
   },
   "lua/lua_base": {
-    "md5": "aa57f0feb9e1ef30",
-    "size": 70097
+    "md5": "4676736fafed8717",
+    "size": 71177
   },
   "lua/lua_battle": {
-    "md5": "6513d0a93c3eb38b",
-    "size": 4722626
+    "md5": "8454b889cedb219d",
+    "size": 4728921
   },
   "lua/lua_common": {
-    "md5": "ef9c8b6a3136f7ed",
+    "md5": "5531381de6a6b2e8",
     "size": 683415
   },
   "lua/lua_db": {
-    "md5": "c72f1f72a3d2c48f",
-    "size": 4278883
+    "md5": "146b5fe855699807",
+    "size": 4279558
   },
   "lua/lua_dblang_en": {
-    "md5": "11b702903060d9a3",
-    "size": 24022449
+    "md5": "acddd892df9e7307",
+    "size": 24148059
   },
   "lua/lua_dblang_es": {
-    "md5": "73469abd463c4718",
-    "size": 25098525
+    "md5": "83a16799449c45f2",
+    "size": 25291768
   },
   "lua/lua_dblang_fr": {
-    "md5": "90df8686dd2c5aa2",
-    "size": 25577312
+    "md5": "365bcd511064ff98",
+    "size": 25786081
   },
   "lua/lua_dblang_it": {
-    "md5": "0984e56f35c72208",
-    "size": 25075111
+    "md5": "16f0013c5c9ac53e",
+    "size": 25256696
   },
   "lua/lua_dblang_ja": {
-    "md5": "3ead0b9a1d3ab7f5",
-    "size": 26116634
+    "md5": "c5c270de4456aa5c",
+    "size": 26243264
   },
   "lua/lua_dblang_ko": {
-    "md5": "d25944597718a559",
-    "size": 25464894
+    "md5": "5810fcfd22c1e76f",
+    "size": 25585347
   },
   "lua/lua_dblang_pt": {
-    "md5": "d7d1bf5ba67597e5",
-    "size": 24774323
+    "md5": "a40acebeaf8deb40",
+    "size": 24953349
   },
   "lua/lua_dblang_zh-cn": {
     "md5": "78c28639d7a71ace",
     "size": 11117329
   },
   "lua/lua_dblang_zh-tw": {
-    "md5": "9a5da86b50ac0136",
-    "size": 23175870
+    "md5": "ee8419b084746120",
+    "size": 23294005
   },
   "lua/lua_dbtemplate": {
-    "md5": "4a91cf36fd6b4963",
-    "size": 29730749
+    "md5": "98f4725df6010f70",
+    "size": 29840945
   },
   "lua/lua_dbtemplateonline": {
-    "md5": "e943b8d3d3b9a844",
-    "size": 16847864
+    "md5": "eb170968b02df0a8",
+    "size": 17047026
   },
   "lua/lua_dbtemplateperformance": {
-    "md5": "f93942458215bda2",
-    "size": 8519896
+    "md5": "5efcc7f34c02e896",
+    "size": 8519948
   },
   "lua/lua_dbtemplatesandbox": {
     "md5": "6f44f49040ee67f4",
     "size": 2240755
   },
   "lua/lua_dbtemplateskill": {
-    "md5": "9cf7312a1b834545",
-    "size": 13844797
+    "md5": "42ef6118c833e898",
+    "size": 13936901
   },
   "lua/lua_dbtemplatespeciality": {
-    "md5": "649d6f8ab58650de",
-    "size": 13491762
+    "md5": "6560a468ae685f08",
+    "size": 13603128
   },
   "lua/lua_dbtemplatetranslation": {
-    "md5": "b672ba58481b9527",
-    "size": 11718069
+    "md5": "4a884545db06b4d9",
+    "size": 11723360
   },
   "lua/lua_debug": {
-    "md5": "1ea69db878a01401",
-    "size": 1180955
+    "md5": "0a00ec62b832c1cc",
+    "size": 1181027
   },
   "lua/lua_editor": {
     "md5": "9da953c6d636c948",
@@ -12348,8 +12456,8 @@
     "size": 5280122
   },
   "lua/lua_handler": {
-    "md5": "728c80794748c5bb",
-    "size": 1059924
+    "md5": "834d80543335f5f2",
+    "size": 1060749
   },
   "lua/lua_inputcontroller": {
     "md5": "bfb40fb6cc804bdc",
@@ -12360,28 +12468,28 @@
     "size": 193812
   },
   "lua/lua_model": {
-    "md5": "a6fffdd94d823fda",
-    "size": 3020652
+    "md5": "1c5eeb59cfdb25fe",
+    "size": 3025629
   },
   "lua/lua_newsandbox": {
     "md5": "432cc808bcf7d0a6",
     "size": 158427
   },
   "lua/lua_online": {
-    "md5": "a3a21a9d9c1c3df3",
-    "size": 13984816
+    "md5": "97850674cd6f2f77",
+    "size": 13996813
   },
   "lua/lua_pb": {
-    "md5": "60b5417988e5ed6f",
-    "size": 1374333
+    "md5": "2fb4e612876ec1e6",
+    "size": 1375691
   },
   "lua/lua_sandbox2": {
     "md5": "837dd792d95ea134",
     "size": 874118
   },
   "lua/lua_util": {
-    "md5": "ba901b7224893853",
-    "size": 1131579
+    "md5": "1a87dedb56dedc10",
+    "size": 1131737
   },
   "lua/lua___new": {
     "md5": "42956b5d604a703d",
@@ -13040,8 +13148,8 @@
     "size": 173438
   },
   "scenario/scenario_alm-os-da00102": {
-    "md5": "78b3afa4b24eca20",
-    "size": 208315
+    "md5": "7dc3bfb887de790b",
+    "size": 208314
   },
   "scenario/scenario_alm-os-da00201-2": {
     "md5": "b24dc928262fef04",
@@ -14172,8 +14280,8 @@
     "size": 218900
   },
   "scenario/scenario_swn-cp-nico00301": {
-    "md5": "30a69a381e1f331c",
-    "size": 286819
+    "md5": "82d7da0f07120f98",
+    "size": 286878
   },
   "scenario/scenario_s_battle000_001": {
     "md5": "edf07fb07d161af4",
@@ -15880,8 +15988,8 @@
     "size": 2819367
   },
   "scene/gacha": {
-    "md5": "d064b6840b705cc6",
-    "size": 438755
+    "md5": "2df8321ce460d057",
+    "size": 438756
   },
   "scene/weather/scene_weather1": {
     "md5": "40ff3b513b8c940d",
@@ -16348,8 +16456,8 @@
     "size": 4616
   },
   "share/playable/share_effect": {
-    "md5": "faa58fae76899cd4",
-    "size": 1126763
+    "md5": "6f96412dbc9dee84",
+    "size": 1127681
   },
   "share/playable/share_fail": {
     "md5": "d0a32bba2e0e4480",
@@ -17016,16 +17124,16 @@
     "size": 12914808
   },
   "share/tex/share_tex46": {
-    "md5": "da4f69b320c9c6dc",
-    "size": 4815218
+    "md5": "7f901b995d4a1f38",
+    "size": 4803077
   },
   "share/tex/share_tex47": {
-    "md5": "57f32453eeb366bc",
-    "size": 1140855
+    "md5": "1a884c9138eaa622",
+    "size": 1156847
   },
   "share/tex/share_tex48": {
-    "md5": "7e4b5b028d6ca06b",
-    "size": 7872452
+    "md5": "2d30f4b78d677d99",
+    "size": 7903786
   },
   "share/tex/share_tex5": {
     "md5": "f50d195fa0b445ac",
@@ -17096,8 +17204,8 @@
     "size": 1042158
   },
   "ui/activitybig08": {
-    "md5": "4b85d25e112e4574",
-    "size": 1000728
+    "md5": "be62dd5522a63ce3",
+    "size": 1000871
   },
   "ui/activitybigrogue": {
     "md5": "ab12d5c84509b1c4",
@@ -17112,12 +17220,12 @@
     "size": 1248363
   },
   "ui/activityelaman": {
-    "md5": "ba5e2ca8bcac53a1",
-    "size": 762020
+    "md5": "8664d42c5cde409c",
+    "size": 762036
   },
   "ui/activityentrance": {
-    "md5": "aeacfae1e0cbda3a",
-    "size": 381075
+    "md5": "432a94cd3d70ca49",
+    "size": 381799
   },
   "ui/activitylittle01": {
     "md5": "31a89eaab0eb3183",
@@ -17128,8 +17236,8 @@
     "size": 1400070
   },
   "ui/activitylittleadventurestage2": {
-    "md5": "ea7fecf1b6cc8105",
-    "size": 742007
+    "md5": "04e1c18bf50575b4",
+    "size": 742017
   },
   "ui/activitylittledaily": {
     "md5": "c45cf1ed15f9989a",
@@ -17192,8 +17300,8 @@
     "size": 26947
   },
   "ui/battle": {
-    "md5": "641b5b0287fcafcc",
-    "size": 4997232
+    "md5": "06fa6061ec2c5f6c",
+    "size": 5014654
   },
   "ui/battlebook": {
     "md5": "d42db4fa54135dd4",
@@ -17280,8 +17388,8 @@
     "size": 1321158
   },
   "ui/designation": {
-    "md5": "a3dd8de9b03c05f3",
-    "size": 295304
+    "md5": "41caf13fceb3d877",
+    "size": 296037
   },
   "ui/dialogue": {
     "md5": "c54f9c868d340ec4",
@@ -17368,8 +17476,8 @@
     "size": 13933
   },
   "ui/infopreview": {
-    "md5": "704fb7a2c1026f44",
-    "size": 595254
+    "md5": "bdc80ba8f4c0034d",
+    "size": 595481
   },
   "ui/intelligence": {
     "md5": "4aafd529eefff7de",
@@ -17716,8 +17824,8 @@
     "size": 163668
   },
   "ui/popupunitlabel": {
-    "md5": "7c5b3bdf85aa4361",
-    "size": 131047
+    "md5": "47dcd32db854e56d",
+    "size": 131288
   },
   "ui/popupunitselectfilter": {
     "md5": "3422d3139a291b37",
@@ -17904,12 +18012,12 @@
     "size": 690220
   },
   "ui/techonline": {
-    "md5": "2d11a03e34a5ab4b",
-    "size": 1191066
+    "md5": "4bbb28df2916c7c5",
+    "size": 1191065
   },
   "ui/tipsbonusinfo": {
-    "md5": "96428d133890adc7",
-    "size": 81537
+    "md5": "76a01b4b638a248d",
+    "size": 81759
   },
   "ui/tipsiteminfo": {
     "md5": "0d0a188e4526cc7c",
@@ -18016,8 +18124,8 @@
     "size": 74829
   },
   "ui/unit": {
-    "md5": "ab64178ff1bbcaad",
-    "size": 1158668
+    "md5": "4885151eacc5dd7a",
+    "size": 1158925
   },
   "ui/unitenergybar": {
     "md5": "28683e1d3df7b749",
@@ -18855,6 +18963,10 @@
     "md5": "cf92eed0ab7d7c25",
     "size": 32541
   },
+  "ui/gacha_ad/template1_1up_poochrunrun_id180": {
+    "md5": "46c48b6965b8fc62",
+    "size": 32601
+  },
   "ui/gacha_ad/template1_1up_rico_id173": {
     "md5": "2bb9d26566d89c19",
     "size": 32523
@@ -18878,6 +18990,10 @@
   "ui/gacha_ad/template1_1up_shahnaz_id197": {
     "md5": "6b45edfd5b674b75",
     "size": 45174
+  },
+  "ui/gacha_ad/template1_1up_shams_id192": {
+    "md5": "7597c152b5b3470c",
+    "size": 32534
   },
   "ui/gacha_ad/template1_1up_simona_id59": {
     "md5": "ac229c329cce0f74",
@@ -19139,6 +19255,10 @@
     "md5": "317acd2691e1a46d",
     "size": 27831
   },
+  "ui/gacha_ad/template1_role_180": {
+    "md5": "3faa150f2b251423",
+    "size": 26868
+  },
   "ui/gacha_ad/template1_role_187": {
     "md5": "e70a29118f0417e8",
     "size": 28092
@@ -19158,6 +19278,10 @@
   "ui/gacha_ad/template1_role_191": {
     "md5": "dfbf4a3f3a282739",
     "size": 26975
+  },
+  "ui/gacha_ad/template1_role_192": {
+    "md5": "801a42f5a0ad09a1",
+    "size": 26854
   },
   "ui/gacha_ad/template1_role_193": {
     "md5": "674585cd042fc47e",
@@ -19812,8 +19936,12 @@
     "size": 194490
   },
   "ui/operation_activity/operationactivity_elaman": {
-    "md5": "094af02b1ea0dcf1",
-    "size": 310028
+    "md5": "3dfe72f3f9cab5f1",
+    "size": 310175
+  },
+  "ui/operation_activity/operationactivity_elamanarena": {
+    "md5": "dbe70eb0a7bd72ed",
+    "size": 73500
   },
   "ui/operation_activity/operationactivity_elamanday14": {
     "md5": "732b7c2e4b67fc33",
@@ -19915,6 +20043,10 @@
     "md5": "5d6e5a5a5e8f7475",
     "size": 295978
   },
+  "ui/operation_activity/operationactivity_jigsawluccia": {
+    "md5": "aa5fdaedb6ed27a0",
+    "size": 299384
+  },
   "ui/operation_activity/operationactivity_jigsawstage2": {
     "md5": "9c4175cca44dee95",
     "size": 296067
@@ -19948,8 +20080,8 @@
     "size": 139223
   },
   "ui/operation_activity/operationactivity_middle03": {
-    "md5": "f90cb69195127d9b",
-    "size": 148986
+    "md5": "094d4c7e02c59904",
+    "size": 149923
   },
   "ui/operation_activity/operationactivity_middle04": {
     "md5": "3734987c0f93067a",
@@ -19984,8 +20116,8 @@
     "size": 262291
   },
   "ui/operation_activity/operationactivity_moduleboss8": {
-    "md5": "1e5dc8b7b460afa9",
-    "size": 344204
+    "md5": "f0f1c27023e93fe2",
+    "size": 344319
   },
   "ui/operation_activity/operationactivity_momoday14": {
     "md5": "34fc2093f10bc4c0",
@@ -20152,7 +20284,7 @@
     "size": 197584
   },
   "ui/operation_activity/operationactivity_shopskinlukamar": {
-    "md5": "71a1966b99ac2338",
+    "md5": "ed1575342d0b8bd0",
     "size": 168048
   },
   "ui/operation_activity/operationactivity_shopskinmomo": {
@@ -20164,12 +20296,12 @@
     "size": 169011
   },
   "ui/operation_activity/operationactivity_shopskinstage2roleg": {
-    "md5": "0d57a9deddf7e305",
-    "size": 169509
+    "md5": "fcd145feee4585c5",
+    "size": 169513
   },
   "ui/operation_activity/operationactivity_shopskinstage2rolet": {
-    "md5": "45bf6da8543351c5",
-    "size": 199322
+    "md5": "91e25f6cd6e794f8",
+    "size": 199321
   },
   "ui/operation_activity/operationactivity_skingacha": {
     "md5": "322eec23452e6afb",
@@ -20350,6 +20482,10 @@
   "ui/operation_activity/popupjigsawinannashare": {
     "md5": "c28571d4a45002e2",
     "size": 12848
+  },
+  "ui/operation_activity/popupjigsawlucciashare": {
+    "md5": "f18a3ffd6c34ad87",
+    "size": 13587
   },
   "ui/operation_activity/popupjigsawshare": {
     "md5": "02e5982a052fcb09",
@@ -20676,8 +20812,8 @@
     "size": 190601
   },
   "ui/unitonline_nodes/info": {
-    "md5": "8f8c4395972bcb88",
-    "size": 1638869
+    "md5": "9f80e6e4215116d3",
+    "size": 1639227
   },
   "ui/unitonline_nodes/keyskill": {
     "md5": "07de4620d0e493d1",
@@ -20892,8 +21028,8 @@
     "size": 22572
   },
   "uisandbox2/unit": {
-    "md5": "7b1a18ef9ea01583",
-    "size": 894195
+    "md5": "f0a1977777c17abc",
+    "size": 894542
   },
   "uisandbox2/warehouse": {
     "md5": "75bfbe5f9bc10efe",

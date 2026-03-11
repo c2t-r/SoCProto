@@ -646,6 +646,12 @@ message SCDebugOnlineAdventureSetExp {
   DBPlayerAdventure adventure = 1;
 }
 
+message SCDebugOnlineGacha {
+  uint32 id = 1;
+  DBPlayerGachaStatus status = 2;
+  repeated DBSimpleTreasure result = 3;
+}
+
 message SCOnlineMainQuestEnter {
   repeated DBPlayerMainQuest main_quests = 1;
   repeated uint32 unlocked_system_ids = 2;
