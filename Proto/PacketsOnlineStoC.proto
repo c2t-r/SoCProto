@@ -121,6 +121,7 @@ message SCOnlinePlayerInfo {
   repeated PlayerCommerce commerce_infos = 43;
   PlayerHeadData head_data = 44;
   repeated db_player_recover_count recover_counts = 45;
+  db_player_career_preview career_preview = 47;
 }
 
 message SCOnlinePlayerSetName {
@@ -317,6 +318,7 @@ message SCOnlinePostDataSync {
   repeated PlayerContractActivitySimpleInfo contract_activities = 29;
   repeated db_player_artifact_collection artifact_collections = 30;
   repeated PlayerInfiniteChallengeArea infinite_challenge_areas = 31;
+  PlayerLucciaExpedition luccia_expedition = 33;
 }
 
 message SCDebugReloadGameServer {
@@ -646,6 +648,14 @@ message SCDebugOnlineAdventureSetExp {
   DBPlayerAdventure adventure = 1;
 }
 
+message SCDebugOnlineLucciaExpedition {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCDebugOnlineWanted {
+  PlayerWanted wanted = 1;
+}
+
 message SCDebugOnlineGacha {
   uint32 id = 1;
   DBPlayerGachaStatus status = 2;
@@ -874,16 +884,33 @@ message SCOnlineBattleEnd {
     DBTreasurePackage treasure_package = 2;
   }
 
-  message autoChessData {
-    PlayerAutoChess auto_chess = 1;
-    DBTreasurePackage treasure_package = 2;
-  }
-
   message rogueData {
     PlayerRogue rogue = 1;
     PlayerRogueRunEvent event = 2;
     DBTreasurePackage treasure_package = 3;
     bool is_time_out = 4;
+  }
+
+  message autoChessData {
+    PlayerAutoChess auto_chess = 1;
+    DBTreasurePackage treasure_package = 2;
+  }
+
+  message wantedData {
+    PlayerWanted wanted = 1;
+    bool is_time_out = 2;
+    DBTreasurePackage treasure_package = 3;
+    PlayerWantedDetail wanted_result = 4;
+    bool is_high_treasure = 5;
+    int32 add_exp = 6;
+    int32 before_exp = 7;
+    uint32 before_level = 8;
+  }
+
+  message lucciaExpeditionData {
+    PlayerLucciaExpedition luccia_expedition = 1;
+    bool is_pass = 2;
+    DBTreasurePackage treasure_package = 3;
   }
 
   bool is_win = 1;
@@ -909,8 +936,10 @@ message SCOnlineBattleEnd {
   infinite_challenge_data infinite_challenge = 21;
   worldBossData world_boss_data = 22;
   matchData match_data = 23;
-  autoChessData auto_chess_data = 25;
   rogueData rogue_data = 24;
+  autoChessData auto_chess_data = 25;
+  wantedData wanted_data = 26;
+  lucciaExpeditionData luccia_expedition_data = 27;
   bytes report = 97;
   bool unmarshal_report_error = 98;
   uint32 server_timestamp = 99;
@@ -1748,6 +1777,11 @@ message SCOnlineOperationActivityGetAllPointTreasure {
   DBTreasurePackage treasure_package = 2;
 }
 
+message SCOnlineOperationActivityGetOpenTreasure {
+  DBPlayerOperationActivity activity = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
 message SCOnlineElysiumEnter {
   OnlineEvent event = 1;
   repeated db_player_elysium_perform elysium_performs = 2;
@@ -2372,6 +2406,7 @@ message SCOnlineAlchemyRecycle {
 
 message SCOnlineCareerEnter {
   repeated DBPlayerCareer careers = 1;
+  db_player_career_preview preview = 2;
 }
 
 message SCOnlineCareerQuestGetTreasure {
@@ -2391,6 +2426,16 @@ message SCOnlineCareerGetTreasure {
 
 message SCOnlineCareerGetAllTreasure {
   DBPlayerCareer career = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetPreviewTreasure {
+  db_player_career_preview career_preview = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineCareerGetAllPreviewTreasure {
+  db_player_career_preview career_preview = 1;
   DBTreasurePackage treasure_package = 2;
 }
 
@@ -2995,5 +3040,74 @@ message SCOnlineArtifactCollectionActive {
 message SCOnlineArtifactGetLevelTreasure {
   PlayerArtifact artifact = 1;
   DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineWantedGetLevelTreasure {
+  PlayerWanted wanted = 1;
+  DBTreasurePackage treasure_package = 2;
+}
+
+message SCOnlineWantedRefresh {
+  PlayerWanted wanted = 1;
+}
+
+message SCOnlineLucciaExpeditionEnter {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionOpen {
+  PlayerLucciaExpedition luccia_expedition = 1;
+  DBConsume ticket_consume = 2;
+}
+
+message SCOnlineLucciaExpeditionResult {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionContinue {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionTreasureGet {
+  PlayerLucciaExpedition luccia_expedition = 1;
+  DBTreasurePackage treasure_package = 2;
+  db_player_luccia_expedition_prove prove = 4;
+}
+
+message SCOnlineLucciaExpeditionRecover {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionTacticsSkillEquip {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionSurpriseSkillEquip {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionPresetSkillCopy {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionPresetSkillApply {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionPresetSkillClear {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionTechNodeLevelUp {
+  PlayerLucciaExpedition luccia_expedition = 1;
+  DBConsumes consumes = 2;
+}
+
+message SCOnlineLucciaExpeditionFavoriteProveAdd {
+  PlayerLucciaExpedition luccia_expedition = 1;
+}
+
+message SCOnlineLucciaExpeditionFavoriteProveDelete {
+  PlayerLucciaExpedition luccia_expedition = 1;
 }
 

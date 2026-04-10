@@ -726,6 +726,8 @@ message PlayerContractActivity {
   db_player_artifact artifact = 34;
   PlayerRogue rogue = 35;
   PlayerAutoChess auto_chess = 36;
+  PlayerWanted wanted = 37;
+  PlayerLucciaExpedition luccia_expedition = 39;
 }
 
 message PlayerContractActivitySimpleInfo {
@@ -1449,6 +1451,29 @@ message PlayerArtifact {
   repeated db_player_artifact_collection collections = 2;
 }
 
+message PlayerWantedGoalData {
+  message Goal {
+    sint32 type = 1;
+    int32 param0 = 2;
+    repeated uint32 sparam = 3;
+    bool is_finish = 4;
+  }
+
+  Goal goal1 = 1;
+  Goal goal2 = 2;
+  Goal goal3 = 3;
+}
+
+message PlayerWantedDetail {
+  db_player_wanted_detail detail = 1;
+  PlayerWantedGoalData goal_data = 2;
+}
+
+message PlayerWanted {
+  db_player_wanted wanted = 1;
+  repeated PlayerWantedDetail details = 2;
+}
+
 message PlayerAutoChess {
   message Result {
     uint32 difficulty = 1;
@@ -1721,5 +1746,48 @@ message PlayerRogue {
   db_player_rogue rogue = 3;
   repeated PlayerRogueRun runs = 4;
   repeated PlayerRogueTechGroup tech_groups = 5;
+}
+
+message DBPlayerCareers {
+  repeated db_player_career careers = 1;
+}
+
+message PlayerLucciaExpedition {
+  message Quest {
+    uint32 id = 1;
+    uint32 quest_id = 2;
+    bool is_clear = 3;
+    repeated uint32 buff_ids = 4;
+  }
+
+  message Prove {
+    db_player_luccia_expedition_prove data = 1;
+    bool resulted = 2;
+  }
+
+  message TechNode {
+    uint32 id = 1;
+    uint32 level = 2;
+    bool affect = 3;
+  }
+
+  message Result {
+    uint32 difficulty = 1;
+    uint32 clear_normal_quest_count = 2;
+    DBTreasurePackage clear_normal_treasure_package = 3;
+    uint32 clear_boss_quest_count = 4;
+    DBTreasurePackage clear_boss_treasure_package = 5;
+    bool is_win = 6;
+    sint32 round = 7;
+  }
+
+  db_player_luccia_expedition data = 1;
+  repeated db_player_luccia_expedition_mode_status mode_statuses = 2;
+  repeated db_player_luccia_expedition_material materials = 3;
+  repeated db_player_luccia_expedition_prove proves = 4;
+  repeated Quest quests = 5;
+  map<uint32, TechNode> tech_nodes = 6;
+  Result result = 7;
+  repeated db_player_luccia_expedition_preset_skill preset_skills = 8;
 }
 

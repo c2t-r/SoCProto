@@ -36,6 +36,7 @@ message MiniSandboxInfo {
   uint32 change_to_section_id = 2;
   MiniSandboxCustomEventParams custom_event_params = 3;
   string performance_data = 4;
+  string bg = 5;
   bool is_end = 99;
 }
 

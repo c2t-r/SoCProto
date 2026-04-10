@@ -139,6 +139,7 @@ message CSDebugMissionEditorBattleStart {
   string qq_code = 8;
   repeated uint32 special_effect_ids = 9;
   uint32 props_level_limit = 10;
+  repeated uint32 rogue_recruited_unit_ids = 11;
 }
 
 message CSDebugAddSandboxEffect {

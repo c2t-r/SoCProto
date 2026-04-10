@@ -797,6 +797,30 @@ message CSDebugOnlineAdventureSetExp {
   int32 exp = 2;
 }
 
+message CSDebugOnlineLucciaExpedition {
+  enum Type {
+    Unlock = 0;
+    UnlockDifficulties = 1;
+    Reset = 2;
+    Material = 3;
+    TechLevel = 4;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
+message CSDebugOnlineWanted {
+  enum Type {
+    AddExp = 0;
+    ResetRefreshTime = 1;
+    AddHighTreasureTime = 2;
+  }
+
+  Type type = 1;
+  string data = 2;
+}
+
 message CSDebugOnlineGacha {
   enum Type {
     GachaNoCondition = 0;
@@ -878,6 +902,7 @@ message CSOnlineBattleEnd {
   bool debug_end = 3;
   bool give_up = 4;
   sint32 tactic_point = 5;
+  sint32 surprise_point = 6;
 }
 
 message CSOnlineBattlePremake {
@@ -1725,6 +1750,11 @@ message CSOnlineOperationActivityGetAllPointTreasure {
   uint32 id = 1;
 }
 
+message CSOnlineOperationActivityGetOpenTreasure {
+  uint32 id = 1;
+  uint32 treasure_id = 2;
+}
+
 message CSOnlineElysiumEnter {
   uint32 area_id = 1;
 }
@@ -2221,6 +2251,7 @@ message CSOnlineLotteryActivitySelectTreasureOption {
 
 message CSOnlineLotteryActivityDraw {
   uint32 lottery_activity_id = 1;
+  DBConsumes consumes = 2;
 }
 
 message CSOnlineLotteryActivityResetRound {
@@ -2264,6 +2295,13 @@ message CSOnlineCareerGetTreasure {
 
 message CSOnlineCareerGetAllTreasure {
   uint32 career_id = 1;
+}
+
+message CSOnlineCareerGetPreviewTreasure {
+  uint32 preview_quest_id = 1;
+}
+
+message CSOnlineCareerGetAllPreviewTreasure {
 }
 
 message CSOnlineTopArenaApply {
@@ -2897,5 +2935,86 @@ message CSOnlineArtifactCollectionActive {
 message CSOnlineArtifactGetLevelTreasure {
   uint32 artifact_id = 1;
   uint32 level_treasure_id = 2;
+}
+
+message CSOnlineWantedGetLevelTreasure {
+  uint32 wanted_id = 1;
+  uint32 level_id = 2;
+  uint32 contract_activity_id = 3;
+}
+
+message CSOnlineWantedRefresh {
+  uint32 wanted_id = 1;
+  uint32 contract_activity_id = 2;
+}
+
+message CSOnlineLucciaExpeditionEnter {
+  uint32 luccia_expedition_id = 1;
+}
+
+message CSOnlineLucciaExpeditionOpen {
+  uint32 luccia_expedition_id = 1;
+  uint32 difficulty = 2;
+  DBConsume ticket_consume = 3;
+}
+
+message CSOnlineLucciaExpeditionResult {
+  uint32 luccia_expedition_id = 1;
+  bool use_extra_treasure = 2;
+}
+
+message CSOnlineLucciaExpeditionContinue {
+  uint32 luccia_expedition_id = 1;
+}
+
+message CSOnlineLucciaExpeditionTreasureGet {
+  uint32 luccia_expedition_id = 1;
+  bool use_extra_treasure = 2;
+}
+
+message CSOnlineLucciaExpeditionRecover {
+  uint32 luccia_expedition_id = 1;
+}
+
+message CSOnlineLucciaExpeditionTacticsSkillEquip {
+  uint32 luccia_expedition_id = 1;
+  uint32 skill_id = 2;
+  bool is_remove = 3;
+}
+
+message CSOnlineLucciaExpeditionSurpriseSkillEquip {
+  uint32 luccia_expedition_id = 1;
+  uint32 skill_id = 2;
+  uint32 slot_id = 3;
+  bool is_remove = 4;
+}
+
+message CSOnlineLucciaExpeditionPresetSkillCopy {
+  uint32 luccia_expedition_id = 1;
+  uint32 preset_id = 2;
+}
+
+message CSOnlineLucciaExpeditionPresetSkillApply {
+  uint32 luccia_expedition_id = 1;
+  uint32 preset_id = 2;
+}
+
+message CSOnlineLucciaExpeditionPresetSkillClear {
+  uint32 luccia_expedition_id = 1;
+}
+
+message CSOnlineLucciaExpeditionTechNodeLevelUp {
+  uint32 luccia_expedition_id = 1;
+  uint32 node_id = 2;
+  DBConsumes consumes = 3;
+}
+
+message CSOnlineLucciaExpeditionFavoriteProveAdd {
+  uint32 luccia_expedition_id = 1;
+}
+
+message CSOnlineLucciaExpeditionFavoriteProveDelete {
+  uint32 luccia_expedition_id = 1;
+  uint32 id = 2;
 }
 

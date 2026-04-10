@@ -28,6 +28,7 @@ message Attributes {
   sint32 physic_armor = 19;
   sint32 spell_armor = 20;
   sint32 damage_buffer = 21;
+  sint32 overflow_damage = 22;
 }
 
 message Movement {
@@ -976,6 +977,7 @@ message BackCount {
 
 message SurpriseCount {
   sint32 count = 1;
+  sint32 point = 2;
 }
 
 message Setting {

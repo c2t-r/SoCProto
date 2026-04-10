@@ -1295,6 +1295,12 @@ message db_player_career {
   bool challenge_is_get = 7;
 }
 
+message db_player_career_preview {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  string quest_data = 3;
+}
+
 message db_player_career_quest {
   uint64 iduser = 1;
   uint32 idplayer_career = 2;
@@ -1763,6 +1769,76 @@ message db_player_lottery_activity {
   string treasure_option_data = 11;
 }
 
+message db_player_luccia_expedition {
+  enum STATUS {
+    STATUS_FIRST = 0;
+    None = 1;
+    Open = 2;
+    Result = 3;
+    ContinueResult = 4;
+    GetTreasure = 5;
+  }
+
+  uint64 iduser = 1;
+  uint32 id = 2;
+  sint32 status = 3;
+  uint32 daily_next_refresh_at = 4;
+  uint32 weekly_next_refresh_at = 5;
+  uint32 current_difficulty = 6;
+  string used_role_unit_ids = 7;
+  sint32 tactic_point = 8;
+  string tactics_skill_ids = 9;
+  string equipped_tactics_skill_ids = 10;
+  sint32 surprise_point = 11;
+  string surprise_skill_ids = 12;
+  string equipped_surprise_skill_ids = 13;
+  sint32 hp_percent = 14;
+  sint32 hp_max = 15;
+  uint32 theme_id = 17;
+  uint32 next_theme_id = 18;
+  string buff_ids = 19;
+  uint32 tech_level = 22;
+  sint32 tech_exp = 23;
+}
+
+message db_player_luccia_expedition_material {
+  uint64 iduser = 1;
+  uint32 idplayer_luccia_expedition = 2;
+  uint32 id = 3;
+  sint32 count = 4;
+}
+
+message db_player_luccia_expedition_mode_status {
+  uint64 iduser = 1;
+  uint32 idplayer_luccia_expedition = 2;
+  uint32 id = 3;
+  uint32 latest_difficulty = 4;
+  string unlock_difficulty_ids = 5;
+}
+
+message db_player_luccia_expedition_preset_skill {
+  uint64 iduser = 1;
+  uint32 idplayer_luccia_expedition = 2;
+  uint32 id = 3;
+  string equipped_tactics_skill_ids = 4;
+  string equipped_surprise_skill_ids = 5;
+}
+
+message db_player_luccia_expedition_prove {
+  uint64 iduser = 1;
+  uint32 idplayer_luccia_expedition = 2;
+  uint32 id = 3;
+  uint32 mode = 4;
+  uint32 difficulty = 5;
+  uint32 quest_count = 6;
+  uint32 challenge_count = 7;
+  uint32 turn_count = 8;
+  uint32 unit_count = 9;
+  uint32 killed_count = 10;
+  uint32 treasure_count = 11;
+  uint32 created_at = 12;
+}
+
 message db_player_mail {
   uint64 iduser = 1;
   uint32 id = 2;
@@ -1882,6 +1958,7 @@ message db_player_operation_activity {
   bool is_end = 17;
   string point_treasure_got_ids = 19;
   bool is_reunion = 20;
+  string open_treasure_click_got_ids = 21;
 }
 
 message db_player_operation_activity_quest {
@@ -2308,6 +2385,34 @@ message db_player_unit_skin {
   uint64 iduser = 1;
   uint32 id = 2;
   bool active = 3;
+}
+
+message db_player_wanted {
+  uint64 iduser = 1;
+  uint32 id = 2;
+  uint32 level = 3;
+  string level_treasure_got_ids = 4;
+  sint32 refresh_times = 5;
+  uint32 next_refresh_at = 6;
+  sint32 exp = 7;
+  sint32 high_treasure_times = 8;
+  uint32 next_weekly_refresh_at = 9;
+  uint32 high_treasure_recover_at = 10;
+  sint32 battle_count = 11;
+}
+
+message db_player_wanted_detail {
+  uint64 iduser = 1;
+  uint32 idplayer_wanted = 2;
+  uint32 id = 3;
+  uint32 detail_template_id = 4;
+  uint32 difficulty_id = 5;
+  uint32 quest_id = 6;
+  string buff_ids = 7;
+  bool is_finish = 8;
+  sint32 high_treasure_count = 9;
+  string goal_data = 10;
+  string finish_goal_ids = 11;
 }
 
 message db_player_weapon {
