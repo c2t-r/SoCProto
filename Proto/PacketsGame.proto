@@ -2053,6 +2053,13 @@ message db_player_rogue {
   sint32 tech_point = 5;
   string tech_data = 6;
   uint32 free_run_level = 7;
+  string equipped_tactics_skill_ids = 8;
+  string tactics_skill_ids = 9;
+  bool tech_locked = 10;
+  bool finish_no_consume = 11;
+  string artifact_ids = 12;
+  bool tactics_skill_locked = 13;
+  sint32 add_assist_unit_level = 14;
 }
 
 message db_player_rogue_run {
@@ -2078,6 +2085,27 @@ message db_player_rogue_run {
   string boss_buff_ids = 20;
   uint32 bg_id = 21;
   sint32 view_count = 22;
+  string tactics_skill_ids = 23;
+  string equipped_tactics_skill_ids = 24;
+  string effect_ids = 25;
+  string map_passed_battle_quest_ids = 26;
+  string tag_data = 27;
+}
+
+message db_player_rogue_run_artifact {
+  uint64 iduser = 1;
+  uint32 idplayer_rogue_run = 2;
+  uint32 id = 3;
+  string effect_ids = 4;
+  string disabled_effect_ids = 5;
+  uint32 created_at = 6;
+}
+
+message db_player_rogue_run_artifact_normal_register {
+  uint64 iduser = 1;
+  uint32 idplayer_rogue_run = 2;
+  uint32 id = 3;
+  sint32 value = 4;
 }
 
 message db_player_rogue_run_node {
@@ -2089,6 +2117,16 @@ message db_player_rogue_run_node {
   bool is_passed = 6;
   uint32 to_node = 7;
   uint32 show_event_id = 8;
+}
+
+message db_player_rogue_team {
+  uint64 iduser = 1;
+  uint32 idplayer_rogue = 2;
+  uint32 id = 3;
+  uint32 level = 4;
+  string artifact_ids = 5;
+  bool unlocked = 6;
+  bool passed = 7;
 }
 
 message db_player_role {

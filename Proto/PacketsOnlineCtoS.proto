@@ -786,6 +786,7 @@ message CSDebugOnlineRogue {
     Start = 4;
     Enter = 5;
     GiveUp = 6;
+    Skip = 7;
   }
 
   Type type = 1;
@@ -2786,6 +2787,7 @@ message CSOnlineRogueRunStart {
   uint32 mode_id = 2;
   uint32 id = 3;
   uint32 extra_id = 4;
+  uint32 team_id = 5;
 }
 
 message CSOnlineRogueRunFinish {
@@ -2821,6 +2823,19 @@ message CSOnlineRogueShopRefresh {
   uint32 rogue_id = 1;
   uint32 mode_id = 2;
   RogueConsume consume = 3;
+}
+
+message CSOnlineRogueTacticsSkillEquip {
+  uint32 rogue_id = 1;
+  uint32 tactics_skill_id = 2;
+  bool is_remove = 3;
+}
+
+message CSOnlineRogueRunTacticsSkillEquip {
+  uint32 rogue_id = 1;
+  uint32 mod_id = 2;
+  uint32 tactics_skill_id = 3;
+  bool is_remove = 4;
 }
 
 message CSOnlineAutoChessEnter {

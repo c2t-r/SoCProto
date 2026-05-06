@@ -857,6 +857,7 @@ message PlayerAbyssChallengeBattleField {
     repeated uint32 limited_charm_ids = 16;
     BattleRecord max_point_battle_record = 17;
     BattleRecord recently_battle_record = 18;
+    int32 boss_damage_score = 19;
   }
 
   uint32 id = 1;
@@ -1570,14 +1571,46 @@ message PlayerRogueTechGroup {
   int32 index = 2;
 }
 
+message PlayerRogueTagData {
+  message Tag {
+    uint32 tag_id = 1;
+    int32 param1 = 2;
+  }
+
+  repeated Tag tags = 1;
+}
+
+message PlayerRogueArtifactRegisterData {
+  message NormalCount {
+    uint32 id = 1;
+    int32 value = 2;
+  }
+
+  message FixedRegister {
+    uint32 id = 1;
+    int32 value = 2;
+  }
+
+  repeated NormalCount normal_counts = 1;
+  repeated FixedRegister fixed_registers = 2;
+}
+
 message PlayerRogueRunData {
   int32 total_money = 1;
-  int32 total_damage = 2;
+  uint64 total_damage = 2;
   int32 score_rate = 3;
   int32 buff_level = 4;
   uint32 free_run_buff_id = 5;
   repeated uint32 last_seen_unit_ids = 6;
   repeated uint32 last_seen_buff_ids = 7;
+  repeated uint32 node_get_unit_ids = 8;
+  repeated uint32 node_get_assist_unit_ids = 9;
+  repeated uint32 node_get_buff_ids = 10;
+  repeated uint32 last_seen_tactics_skill_ids = 11;
+  repeated uint32 last_seen_artifact_ids = 12;
+  uint32 team_id = 13;
+  repeated uint32 node_get_artifact_ids = 14;
+  repeated uint32 node_get_tactics_skill_ids = 15;
 }
 
 message PlayerRogueRun {
@@ -1585,6 +1618,9 @@ message PlayerRogueRun {
   PlayerRogueRunData data = 2;
   repeated PlayerRogueRunNode nodes = 3;
   bool ack = 4;
+  repeated db_player_rogue_run_artifact artifacts = 5;
+  PlayerRogueArtifactRegisterData register_data = 6;
+  PlayerRogueTagData tag_data = 7;
 }
 
 message PlayerRogueRunFinish {
@@ -1612,6 +1648,7 @@ message PlayerRogueEventSolve {
   repeated uint32 recruit_online_assist_unit_ids = 6;
   bool refresh = 7;
   bool continue = 8;
+  int32 index = 9;
 }
 
 message PlayerRogueRecord {
@@ -1639,6 +1676,7 @@ message PlayerRogueRunEvent {
 
   message RandomRecruit {
     repeated RecruitUnit units = 1;
+    int32 least_recruit_count_limit = 2;
   }
 
   message Finish {
@@ -1660,6 +1698,17 @@ message PlayerRogueRunEvent {
     repeated uint32 buff_ids = 1;
   }
 
+  message ChoiceEvent {
+    message Selection {
+      int32 index = 1;
+      uint32 buff_id = 2;
+      uint32 tactic_skill = 3;
+      uint32 artifact_id = 4;
+    }
+
+    repeated Selection selection_list = 1;
+  }
+
   message RandomEvent {
     uint32 event_id = 1;
   }
@@ -1676,6 +1725,9 @@ message PlayerRogueRunEvent {
 
   message Shop {
     int32 left_refresh_count = 1;
+    int32 add_hp = 2;
+    int32 add_tactic_point = 3;
+    bool has_bought = 4;
   }
 
   message Option {
@@ -1692,6 +1744,9 @@ message PlayerRogueRunEvent {
     uint32 buff_id = 5;
     int32 replacement_money_consume = 6;
     bool is_sell_out = 7;
+    int32 discount_money_consume = 8;
+    uint32 tactic_skill_id = 9;
+    uint32 artifact_id = 10;
   }
 
   uint32 eventId = 1;
@@ -1710,13 +1765,29 @@ message PlayerRogueRunEvent {
   Money money = 19;
   Shop shop = 20;
   bool is_viewed = 21;
+  ChoiceEvent choice_event = 22;
 }
 
 message PlayerRogueEventBonus {
   int32 add_hp = 1;
   int32 add_tactic_point = 2;
   int32 add_money = 3;
+  repeated uint32 add_artifact_ids = 4;
+  repeated uint32 add_tactics_skill_ids = 5;
   DBTreasurePackage treasure_package = 6;
+  repeated uint32 del_buff_ids = 7;
+}
+
+message PlayerRogueArtifactBonus {
+  int32 add_hp = 1;
+  int32 add_tactic_point = 2;
+  int32 add_money = 3;
+  repeated uint32 add_buff_ids = 4;
+  repeated uint32 add_player_role_unit_ids = 5;
+  repeated uint32 add_assist_unit_ids = 6;
+  repeated uint32 add_tactical_skill_ids = 7;
+  repeated uint32 del_buff_ids = 8;
+  repeated uint32 del_artifact_ids = 9;
 }
 
 message PlayerRogueRunEventResult {
@@ -1738,6 +1809,8 @@ message PlayerRogueRunEventResult {
   uint32 event_id = 5;
   uint32 next_event_id = 6;
   bool continue = 7;
+  repeated uint32 artifact_ids = 8;
+  repeated uint32 tactics_skill_ids = 9;
 }
 
 message PlayerRogue {
@@ -1746,6 +1819,11 @@ message PlayerRogue {
   db_player_rogue rogue = 3;
   repeated PlayerRogueRun runs = 4;
   repeated PlayerRogueTechGroup tech_groups = 5;
+  repeated db_player_rogue_team teams = 6;
+}
+
+message PlayerRogueRunSaveData {
+  map<uint32, bytes> data = 1;
 }
 
 message DBPlayerCareers {

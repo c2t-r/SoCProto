@@ -29,6 +29,7 @@ message Attributes {
   sint32 spell_armor = 20;
   sint32 damage_buffer = 21;
   sint32 overflow_damage = 22;
+  sint32 attr_cache = 23;
 }
 
 message Movement {
@@ -992,6 +993,20 @@ message Setting {
     bool unlock = 3;
   }
 
+  message RogueParam {
+    message RogueRegister {
+      uint32 id = 1;
+      sint32 value = 2;
+    }
+
+    repeated RogueRegister rogue_registers = 1;
+    repeated uint32 rogue_recruited_units = 2;
+    sint32 money = 3;
+    sint32 total_got_money = 4;
+    bool use_rogue_tactic_skill = 5;
+    repeated RogueRegister rogue_fixed_registers = 6;
+  }
+
   Map map = 1;
   repeated Player players = 2;
   repeated Skill skills = 3;
@@ -1034,6 +1049,8 @@ message Setting {
   repeated MutatorGroup mutator_groups = 40;
   TeamHPParam team_hp_param = 42;
   repeated AssistUnit assist_units = 41;
+  bool forbid_tactic_skill = 43;
+  RogueParam rogue_param = 44;
 }
 
 message Action {
@@ -1098,6 +1115,7 @@ message Action {
     RoundStart2 = 57;
     RoundEnd2 = 58;
     RogueTeamHpChange = 59;
+    RogueMoneyChange = 60;
   }
 
   message PathPoint {
@@ -1219,6 +1237,11 @@ message Report {
     sint32 hp = 3;
   }
 
+  message RogueParam {
+    sint32 money = 1;
+    sint32 total_got_money = 2;
+  }
+
   bool isWin = 1;
   uint32 turn_count = 2;
   repeated Command commands = 3;
@@ -1252,6 +1275,7 @@ message Report {
   repeated Unit enemy_props = 31;
   uint64 boss_damage_taken = 32;
   uint64 player_total_damage = 33;
+  RogueParam rogue_param = 34;
 }
 
 message BattleReport {

@@ -516,6 +516,7 @@ message SCDebugAbyssCalQuestPoint {
   int32 survive_score = 6;
   int32 hp_score = 7;
   int32 goal_score = 8;
+  int32 boss_damage_score = 9;
 }
 
 message SCDebugSingleBattleStart {
@@ -846,6 +847,7 @@ message SCOnlineBattleEnd {
     int32 history_score = 16;
     int32 goal_score = 17;
     PlayerAbyssChallenge challenge = 18;
+    int32 boss_damage_score = 19;
   }
 
   message gachaData {
@@ -960,6 +962,7 @@ message SCOnlineBattlePremake {
   repeated uint32 forbid_weapon_ids = 5;
   repeated uint32 forbid_charm_ids = 6;
   repeated uint32 optional_online_role_unit_ids = 7;
+  repeated bool no_online_role_unit = 8;
 }
 
 message SCOnlineBattleCommand {
@@ -2937,6 +2940,7 @@ message SCOnlineRogueEventTrigger {
   PlayerRogueRunEventResult last_event_result = 4;
   PlayerRogueRunFinish finish = 5;
   uint32 from_aim_node_id = 6;
+  PlayerRogueArtifactBonus artifact_bonus = 7;
 }
 
 message SCOnlineRogueTechUnlock {
@@ -2953,6 +2957,14 @@ message SCOnlineRogueShopRefresh {
   PlayerRogue rogue = 1;
   PlayerRogueRunEvent event = 2;
   PlayerRogueRunEventResult last_event_result = 3;
+}
+
+message SCOnlineRogueTacticsSkillEquip {
+  PlayerRogue rogue = 1;
+}
+
+message SCOnlineRogueRunTacticsSkillEquip {
+  PlayerRogue rogue = 1;
 }
 
 message SCOnlineAutoChessEnter {

@@ -4,40 +4,40 @@
     "size": 4102
   },
   "area_setting2": {
-    "md5": "c8065b10b64f1843",
-    "size": 1546
+    "md5": "f37dbd2bff61313e",
+    "size": 1548
   },
   "asset_bundle": {
-    "md5": "7705dc2a66ed8d0d",
-    "size": 190393
+    "md5": "762a445c8db7b36e",
+    "size": 194097
   },
   "asset_dep": {
-    "md5": "5d6624ab378d8a5c",
-    "size": 89357
+    "md5": "0449e6df998e4bc6",
+    "size": 89573
   },
   "asset_icon": {
-    "md5": "9edf1ecdfbe3dfe5",
-    "size": 76881
+    "md5": "2e3bad3122c2c58e",
+    "size": 77408
   },
   "asset_loc": {
-    "md5": "9de48e5a545d821f",
-    "size": 5024
+    "md5": "ef6d443c5de2dee9",
+    "size": 5062
   },
   "asset_not_bundle": {
-    "md5": "af37f3685a2b59d2",
-    "size": 1174
+    "md5": "a86c667b2a6ab33c",
+    "size": 2547
   },
   "asset_sync": {
     "md5": "7cead4f3a4ac7d28",
     "size": 1196
   },
   "bnk_events": {
-    "md5": "c340b35b7f1572be",
-    "size": 861049
+    "md5": "fd541381ee93c10d",
+    "size": 898903
   },
   "db_template": {
-    "md5": "5f8f2dbd5db11062",
-    "size": 2547145
+    "md5": "e4122998ec859d4b",
+    "size": 2710123
   },
   "deviceprofile": {
     "md5": "bdad7f1120046658",
@@ -48,15 +48,15 @@
     "size": 28
   },
   "game_conf": {
-    "md5": "d84a4376c4e6d1dd",
-    "size": 3423
+    "md5": "5d067675e02842a8",
+    "size": 3439
   },
   "input_actions": {
     "md5": "9c85ac4326b13198",
     "size": 8973
   },
   "resource_version": {
-    "md5": "ddc20ad2798c297d",
+    "md5": "5cdf8c82d0bedb5e",
     "size": 1237
   },
   "shaders": {
@@ -64,8 +64,8 @@
     "size": 4129
   },
   "shared": {
-    "md5": "d6d6a9eb23d96b3d",
-    "size": 4528015
+    "md5": "7375d1d5e510be7b",
+    "size": 4531097
   },
   "tmp_sprite_asset": {
     "md5": "7f6dec98c6ac5e11",
@@ -127,13 +127,17 @@
     "md5": "91a8ff7b96a3e42d",
     "size": 558707
   },
+  "atlas/activitybigrogue02_atlas": {
+    "md5": "06bf98d2bcbd6785",
+    "size": 214328
+  },
   "atlas/activitybigrogue_atlas": {
-    "md5": "9bb6795b8b9e5062",
-    "size": 148769
+    "md5": "ea6ecc2d6db1ba56",
+    "size": 161541
   },
   "atlas/activitybigrogue_ponit_atlas": {
-    "md5": "037fa502ff1bf709",
-    "size": 152267
+    "md5": "4eabcbe18cda0497",
+    "size": 206267
   },
   "atlas/activitybigstage1_atlas": {
     "md5": "0127761d1bafa6fa",
@@ -144,8 +148,8 @@
     "size": 213055
   },
   "atlas/activitycommon_atlas": {
-    "md5": "1c1eef8c3498eabc",
-    "size": 340348
+    "md5": "b0c123e2afd93d5f",
+    "size": 343153
   },
   "atlas/activitylittle01_atlas": {
     "md5": "d72045e63ef60394",
@@ -264,8 +268,8 @@
     "size": 894598
   },
   "atlas/common3_atlas": {
-    "md5": "c9675f980c7b29c9",
-    "size": 44370
+    "md5": "bed736a6485ea254",
+    "size": 45723
   },
   "atlas/common_atlas": {
     "md5": "a6e6a3a5cc1c9caf",
@@ -276,8 +280,8 @@
     "size": 1486822
   },
   "atlas/designation_atlas": {
-    "md5": "81397f8f8d36c835",
-    "size": 644402
+    "md5": "342583708c675df3",
+    "size": 664682
   },
   "atlas/di_atlas": {
     "md5": "8875d8dda515b2f5",
@@ -296,8 +300,8 @@
     "size": 70426
   },
   "atlas/energybar_atlas": {
-    "md5": "771b61604e426037",
-    "size": 46887
+    "md5": "772b5cd58a496e68",
+    "size": 73373
   },
   "atlas/envelopeconcept_atlas": {
     "md5": "40a29a89b5057051",
@@ -348,56 +352,60 @@
     "size": 28436
   },
   "atlas/headframe_arenasafiyyah01_atlas": {
-    "md5": "0b6ce8df46ad20d6",
-    "size": 84957
+    "md5": "793be4d9cfadf7c9",
+    "size": 84959
   },
   "atlas/headframe_atlas": {
     "md5": "9f1f5103722f0465",
     "size": 1880
   },
   "atlas/headframe_momo01_atlas": {
-    "md5": "b1d43f0c4d805044",
-    "size": 62876
+    "md5": "b3d4087fea13ea95",
+    "size": 62901
   },
   "atlas/headframe_operation16_atlas": {
     "md5": "0efbdb872e2b91f1",
     "size": 81026
   },
   "atlas/head_frame_agata01_atlas": {
-    "md5": "be9bcdfa6235c620",
-    "size": 72419
+    "md5": "abfc83ca878440c1",
+    "size": 72407
   },
   "atlas/head_frame_blackhair01_atlas": {
-    "md5": "14a1893a1793299a",
-    "size": 62197
+    "md5": "2c19207fac2d7493",
+    "size": 62190
   },
   "atlas/head_frame_cocoanawal01_atlas": {
-    "md5": "830d32e1c80617a8",
-    "size": 87094
+    "md5": "3ebd804ff9bda0a5",
+    "size": 87109
   },
   "atlas/head_frame_hunter01_atlas": {
-    "md5": "6793a883ecfa26d3",
-    "size": 48716
+    "md5": "938337a32062448c",
+    "size": 48718
   },
   "atlas/head_frame_lukamar01_atlas": {
-    "md5": "f669428f7a10363a",
-    "size": 61061
+    "md5": "7489676153d5f249",
+    "size": 61010
   },
   "atlas/head_frame_redhair01_atlas": {
-    "md5": "a08ddc9b00f1808e",
-    "size": 57057
+    "md5": "a2e571902106f977",
+    "size": 57072
   },
   "atlas/head_frame_spinanna01_atlas": {
-    "md5": "941ce40b8be4347e",
+    "md5": "42561e0809ba7d8f",
     "size": 92900
   },
   "atlas/head_frame_spmaitha01_atlas": {
-    "md5": "6c07b1fdbebc49cb",
-    "size": 110253
+    "md5": "a0d9da48485f2779",
+    "size": 110243
+  },
+  "atlas/head_frame_spsamantha01_atlas": {
+    "md5": "dba80c4c98d52ede",
+    "size": 27422
   },
   "atlas/infinitechallenge_atlas": {
-    "md5": "b77b3015eeea1ed9",
-    "size": 130730
+    "md5": "42f0bd247f97b48e",
+    "size": 162696
   },
   "atlas/instruction_atlas": {
     "md5": "0879e787702c5ac8",
@@ -436,8 +444,8 @@
     "size": 41895
   },
   "atlas/material_atlas": {
-    "md5": "f9f89f8224b2e429",
-    "size": 481325
+    "md5": "e3f307b096cb697f",
+    "size": 492848
   },
   "atlas/mercenary_atlas": {
     "md5": "373e00b12165b914",
@@ -452,8 +460,8 @@
     "size": 21387
   },
   "atlas/missiondetail_atlas": {
-    "md5": "7d95aa2bab3f4d07",
-    "size": 307463
+    "md5": "67047fd82029fd2f",
+    "size": 307467
   },
   "atlas/moduleafk_atlas": {
     "md5": "833d03f5d62b226c",
@@ -496,8 +504,8 @@
     "size": 276598
   },
   "atlas/operationactivity_15_atlas": {
-    "md5": "1ca4130e6f640a87",
-    "size": 96275
+    "md5": "5f0a8010dce76184",
+    "size": 96283
   },
   "atlas/operationactivity_annualreviews_01_atlas": {
     "md5": "976c613c849aea13",
@@ -528,12 +536,12 @@
     "size": 261592
   },
   "atlas/operationactivity_append_schedule_06_atlas": {
-    "md5": "288ed78e19f71773",
-    "size": 417549
+    "md5": "6da3af3950b4c25c",
+    "size": 545203
   },
   "atlas/operationactivity_append_shop_01_atlas": {
-    "md5": "343c3aa5ae5f7a95",
-    "size": 394535
+    "md5": "fe8712809729ebf8",
+    "size": 419313
   },
   "atlas/operationactivity_append_skin_01_atlas": {
     "md5": "1c98782ede9e3da0",
@@ -588,12 +596,12 @@
     "size": 13994
   },
   "atlas/operationactivity_cooking_atlas": {
-    "md5": "b70d13c3052cd0be",
-    "size": 14004
+    "md5": "b5ec70903ed82b4c",
+    "size": 14011
   },
   "atlas/operationactivity_crimsonnightday7_atlas": {
-    "md5": "8690e9bc29a4576a",
-    "size": 121335
+    "md5": "14b86b4634108136",
+    "size": 121327
   },
   "atlas/operationactivity_customize_guildconstruct_01_atlas": {
     "md5": "5f386b937e477de0",
@@ -616,8 +624,8 @@
     "size": 145270
   },
   "atlas/operationactivity_halfyearday7_atlas": {
-    "md5": "7a191159e906ea0f",
-    "size": 84611
+    "md5": "e947e49cf4641ded",
+    "size": 84612
   },
   "atlas/operationactivity_invitation_atlas": {
     "md5": "511af4a6b7a411f8",
@@ -632,12 +640,12 @@
     "size": 223141
   },
   "atlas/operationactivity_obtday14_atlas": {
-    "md5": "c63515b190ebd0bc",
-    "size": 57491
+    "md5": "15376b5ab02018d6",
+    "size": 57495
   },
   "atlas/operationactivity_obtday7_atlas": {
-    "md5": "259cb287fabc7948",
-    "size": 150136
+    "md5": "4e58e10d248d70b0",
+    "size": 150132
   },
   "atlas/operationactivity_other_01_atlas": {
     "md5": "1a888c2ec6e89db0",
@@ -668,7 +676,7 @@
     "size": 87321
   },
   "atlas/operationactivity_tillingandharvest_atlas": {
-    "md5": "1440ae27c1a79356",
+    "md5": "dcda908c7f4dac14",
     "size": 150895
   },
   "atlas/operationactivity_tower_01_atlas": {
@@ -680,16 +688,16 @@
     "size": 251953
   },
   "atlas/operationactivity_warmingwinterday7_atlas": {
-    "md5": "803c321f80965e2a",
-    "size": 140364
+    "md5": "f0489802a4abf9ef",
+    "size": 140360
   },
   "atlas/operationactivity_watcherday14_atlas": {
-    "md5": "badee6a31495cb5e",
-    "size": 56741
+    "md5": "22bbdf95db4c270b",
+    "size": 56728
   },
   "atlas/operationactivity_wishofspring_atlas": {
-    "md5": "3eee0b5cff599fbd",
-    "size": 90381
+    "md5": "bdb4535865b50050",
+    "size": 90393
   },
   "atlas/prequelcapital_atlas": {
     "md5": "552e7fd55d7bac57",
@@ -772,36 +780,36 @@
     "size": 190229
   },
   "atlas/richman2_ui_atlas": {
-    "md5": "42c9db083c41d5ff",
-    "size": 417996
+    "md5": "32929457cb363bde",
+    "size": 417987
   },
   "atlas/richman_animation_atlas": {
-    "md5": "db632bb687a26e77",
-    "size": 58346
+    "md5": "fa23e78fa53e714b",
+    "size": 58317
   },
   "atlas/richman_background_atlas": {
-    "md5": "8a2dc83ed1ab265f",
-    "size": 168005
+    "md5": "63eb064ae7e5fdea",
+    "size": 168029
   },
   "atlas/richman_bridge_atlas": {
-    "md5": "8aa1cf63df6bfff4",
+    "md5": "b6de2fbe82b772c4",
     "size": 13007
   },
   "atlas/richman_characters_atlas": {
-    "md5": "b28f64d0463cc76d",
-    "size": 92235
+    "md5": "d5695e09b0de3f0b",
+    "size": 92232
   },
   "atlas/richman_grid_atlas": {
-    "md5": "3b542899b81db916",
-    "size": 19248
+    "md5": "adfa971a6e46d10e",
+    "size": 19227
   },
   "atlas/richman_mission_atlas": {
-    "md5": "eb5423237789d13e",
-    "size": 514379
+    "md5": "240404d74093fd66",
+    "size": 514544
   },
   "atlas/richman_ui_atlas": {
-    "md5": "802555c57a2fa7fb",
-    "size": 56347
+    "md5": "913d7ab4e89405bb",
+    "size": 56293
   },
   "atlas/rolecard_atlas": {
     "md5": "c1a87782bf10e35e",
@@ -880,24 +888,24 @@
     "size": 42374
   },
   "atlas/tmpdesignationflow08_atlas": {
-    "md5": "e50ce777a20db66a",
-    "size": 42359
+    "md5": "9c965dc50104ecec",
+    "size": 42340
   },
   "atlas/tmpdesignationflow09_atlas": {
-    "md5": "ff4f5be00abd5400",
+    "md5": "10438dd491b79035",
     "size": 24519
   },
   "atlas/tmpdesignationflow11_atlas": {
-    "md5": "e02eb79533af53cf",
-    "size": 24158
+    "md5": "4c4f8aca4f8e851a",
+    "size": 24170
   },
   "atlas/tmpdesignationflow12_atlas": {
-    "md5": "08cc89d5cdc66f58",
-    "size": 28024
+    "md5": "a5bee9ae549f5d47",
+    "size": 28009
   },
   "atlas/tmpdesignationflow19_atlas": {
-    "md5": "33e7237c8c28a162",
-    "size": 34050
+    "md5": "05391f15c579d601",
+    "size": 34041
   },
   "atlas/towerreverse_atlas": {
     "md5": "d3ad168a6ecbb2f8",
@@ -980,8 +988,8 @@
     "size": 18229145
   },
   "audio/compress/audio19.bin": {
-    "md5": "991603276424fdf6",
-    "size": 24594123
+    "md5": "cf16431e09e12dfa",
+    "size": 24594014
   },
   "audio/compress/audio2.bin": {
     "md5": "24ef7198a43a1e0b",
@@ -996,7 +1004,7 @@
     "size": 18500354
   },
   "audio/compress/audio22.bin": {
-    "md5": "b800a1a3c50a59c2",
+    "md5": "737bcf346178a1da",
     "size": 16765417
   },
   "audio/compress/audio23.bin": {
@@ -1008,7 +1016,7 @@
     "size": 17114544
   },
   "audio/compress/audio25.bin": {
-    "md5": "3d5b250b0811bcb1",
+    "md5": "235e1a2761b4fb23",
     "size": 19179333
   },
   "audio/compress/audio26.bin": {
@@ -1020,11 +1028,11 @@
     "size": 34127225
   },
   "audio/compress/audio28.bin": {
-    "md5": "493cfa51e6270133",
+    "md5": "a63a544568b18903",
     "size": 35684827
   },
   "audio/compress/audio29.bin": {
-    "md5": "404aff9fbbd06eae",
+    "md5": "b65ff8efc9a46924",
     "size": 24509316
   },
   "audio/compress/audio3.bin": {
@@ -1032,7 +1040,7 @@
     "size": 11493682
   },
   "audio/compress/audio30.bin": {
-    "md5": "d35082b2d6b3b513",
+    "md5": "e53651dd29f2a1fa",
     "size": 24695839
   },
   "audio/compress/audio31.bin": {
@@ -1040,11 +1048,11 @@
     "size": 22864689
   },
   "audio/compress/audio32.bin": {
-    "md5": "2c576b6fc394ab91",
+    "md5": "76d9613dcc105119",
     "size": 20732670
   },
   "audio/compress/audio33.bin": {
-    "md5": "836ff29fa5e3522d",
+    "md5": "8ecb71cf3cf7f8ec",
     "size": 5407819
   },
   "audio/compress/audio34.bin": {
@@ -1088,44 +1096,44 @@
     "size": 11210222
   },
   "audio/compress/audio43.bin": {
-    "md5": "cead9eb68d00c235",
-    "size": 10606873
+    "md5": "8898465d2f12878d",
+    "size": 10868827
   },
   "audio/compress/audio44.bin": {
-    "md5": "694ac6929239e5cb",
-    "size": 10802068
+    "md5": "b5c4ac19be750019",
+    "size": 11057378
   },
   "audio/compress/audio45.bin": {
-    "md5": "5e4d17e6c9b5779a",
-    "size": 10502800
+    "md5": "311924c70dac81da",
+    "size": 10668785
   },
   "audio/compress/audio46.bin": {
-    "md5": "b51ed851441cab0d",
-    "size": 10558379
+    "md5": "2137651e2da75613",
+    "size": 10615242
   },
   "audio/compress/audio47.bin": {
-    "md5": "e419431e03c70248",
-    "size": 10561814
+    "md5": "36c938862df4f520",
+    "size": 10583382
   },
   "audio/compress/audio48.bin": {
-    "md5": "1de6ccce938eeb4a",
-    "size": 10495161
+    "md5": "c6fd8096a8c341cb",
+    "size": 10516530
   },
   "audio/compress/audio49.bin": {
-    "md5": "3bfcafcfe1d6dc3e",
-    "size": 10520872
+    "md5": "4bb70cb5a844b45b",
+    "size": 10525442
   },
   "audio/compress/audio5.bin": {
     "md5": "d9b755ac7866f990",
     "size": 12033537
   },
   "audio/compress/audio50.bin": {
-    "md5": "525d29bb9d606a18",
-    "size": 10503705
+    "md5": "4bd29ba67c715540",
+    "size": 10508314
   },
   "audio/compress/audio51.bin": {
-    "md5": "65873a387a7c699d",
-    "size": 390608
+    "md5": "234383cb725af6f7",
+    "size": 3678205
   },
   "audio/compress/audio6.bin": {
     "md5": "8111dc2fbb3b9dec",
@@ -1136,12 +1144,12 @@
     "size": 10961149
   },
   "audio/compress/audio8.bin": {
-    "md5": "df6c5aafd88e4f6b",
+    "md5": "7bca10684a3bf970",
     "size": 12689450
   },
   "audio/compress/audio9.bin": {
-    "md5": "caf44a4f159af518",
-    "size": 39834421
+    "md5": "a484bf58a1a0c3c9",
+    "size": 41014408
   },
   "audio/compress/cnaudio1.bin": {
     "md5": "349f3fd2ab0aa73c",
@@ -1888,8 +1896,8 @@
     "size": 11011108
   },
   "battle/8bit": {
-    "md5": "ca7956aa1e32ab90",
-    "size": 195225
+    "md5": "e90d46eeb2a097b0",
+    "size": 196550
   },
   "battle/base": {
     "md5": "80a86ce94370fea4",
@@ -1908,8 +1916,8 @@
     "size": 85327
   },
   "battle/effect/battle_effect1": {
-    "md5": "650f3b259a3c3d14",
-    "size": 1447999
+    "md5": "949bd8a2eadb2214",
+    "size": 1447996
   },
   "battle/effect/battle_effect10": {
     "md5": "abcc3d6f191ca336",
@@ -1924,8 +1932,8 @@
     "size": 1630048
   },
   "battle/effect/battle_effect13": {
-    "md5": "8717a5b169a85872",
-    "size": 1733378
+    "md5": "4bc98173d5cd9011",
+    "size": 1733362
   },
   "battle/effect/battle_effect14": {
     "md5": "b2cfaeed42826747",
@@ -1940,140 +1948,144 @@
     "size": 866158
   },
   "battle/effect/battle_effect17": {
-    "md5": "0d6f5f621f10e25f",
-    "size": 1175495
+    "md5": "bbc85ff3349f6852",
+    "size": 1174471
   },
   "battle/effect/battle_effect18": {
-    "md5": "18991494b68e0f6e",
-    "size": 1075238
+    "md5": "03b4bcfca60124b8",
+    "size": 1075253
   },
   "battle/effect/battle_effect19": {
-    "md5": "564e08fc0f72ab02",
-    "size": 1430793
+    "md5": "1914ef632a8ff54d",
+    "size": 1430781
   },
   "battle/effect/battle_effect2": {
     "md5": "2868b23a06ab8211",
     "size": 1138195
   },
   "battle/effect/battle_effect20": {
-    "md5": "6b3fd6610e74570a",
-    "size": 1800827
+    "md5": "fae9051c0b091149",
+    "size": 1800135
   },
   "battle/effect/battle_effect21": {
-    "md5": "04c7cf8a15b855fe",
-    "size": 1466042
+    "md5": "510f4ed13a5482e3",
+    "size": 1463856
   },
   "battle/effect/battle_effect22": {
-    "md5": "5cf87041c65ff5a3",
-    "size": 4423026
+    "md5": "4b88d589936d33c3",
+    "size": 4423247
   },
   "battle/effect/battle_effect23": {
     "md5": "a68470da804618d3",
     "size": 1480708
   },
   "battle/effect/battle_effect24": {
-    "md5": "56a4a5225fc6d760",
-    "size": 1460337
+    "md5": "1213edd89533c56b",
+    "size": 1205462
   },
   "battle/effect/battle_effect25": {
-    "md5": "2ae77c8f6640be91",
-    "size": 3244694
+    "md5": "2d931a0b1bac6f54",
+    "size": 3244705
   },
   "battle/effect/battle_effect26": {
-    "md5": "8982b887d8c4a756",
-    "size": 1206669
+    "md5": "9fcbbde2929a0153",
+    "size": 1202976
   },
   "battle/effect/battle_effect27": {
     "md5": "f9a20cac9147f76c",
     "size": 1496855
   },
   "battle/effect/battle_effect28": {
-    "md5": "fe6bc4b2c791cc2b",
+    "md5": "828eff8c15874364",
     "size": 2857976
   },
   "battle/effect/battle_effect29": {
-    "md5": "4fd7defb8043b171",
-    "size": 2796830
+    "md5": "8d864839019dd69a",
+    "size": 2795293
   },
   "battle/effect/battle_effect3": {
-    "md5": "81f4c307870a91cb",
-    "size": 1125539
+    "md5": "3ec20cab77449156",
+    "size": 1124042
   },
   "battle/effect/battle_effect30": {
-    "md5": "4322e2b32ca60321",
-    "size": 1472092
+    "md5": "b85abf1b361980de",
+    "size": 1472087
   },
   "battle/effect/battle_effect31": {
-    "md5": "7954765ddb061c9b",
-    "size": 1095531
+    "md5": "4622d3cda889c9af",
+    "size": 1090880
   },
   "battle/effect/battle_effect32": {
-    "md5": "f386dfac32208844",
-    "size": 2077198
+    "md5": "558f36805333f064",
+    "size": 2077199
   },
   "battle/effect/battle_effect33": {
-    "md5": "d3b740fd324e8b45",
-    "size": 2284540
+    "md5": "a48426a7fda5795c",
+    "size": 2284553
   },
   "battle/effect/battle_effect34": {
     "md5": "e1c93427d41a56ee",
     "size": 2053772
   },
   "battle/effect/battle_effect35": {
-    "md5": "2c2adb2750333b42",
-    "size": 1351503
+    "md5": "78af900b2d0acdd0",
+    "size": 1351566
   },
   "battle/effect/battle_effect36": {
-    "md5": "c66ea4dc8d587308",
-    "size": 2731298
+    "md5": "db9bb5d983225db1",
+    "size": 2730041
   },
   "battle/effect/battle_effect37": {
-    "md5": "55a6e776a6353136",
-    "size": 9849406
+    "md5": "1926901534c27376",
+    "size": 9848816
   },
   "battle/effect/battle_effect38": {
-    "md5": "bb5c008cce8d2122",
-    "size": 1994667
+    "md5": "5d3fe0b701bf3114",
+    "size": 1994717
   },
   "battle/effect/battle_effect39": {
-    "md5": "01315f742712c4f5",
-    "size": 4291647
+    "md5": "68d9d41d0d2bfa00",
+    "size": 4291646
   },
   "battle/effect/battle_effect4": {
-    "md5": "92503a0d52faf100",
-    "size": 1896369
+    "md5": "e11ea157dc9a31ca",
+    "size": 1896363
   },
   "battle/effect/battle_effect40": {
     "md5": "a3f41fa6b85027d3",
     "size": 4032340
   },
   "battle/effect/battle_effect41": {
-    "md5": "56a95fd248cd98e0",
-    "size": 1474602
+    "md5": "7511d4ac78523a35",
+    "size": 1564522
   },
   "battle/effect/battle_effect42": {
-    "md5": "019102616a8c3936",
-    "size": 143067
+    "md5": "4fcb8e833226f7b2",
+    "size": 6135772
+  },
+  "battle/effect/battle_effect43": {
+    "md5": "4486e7a8c4c45e68",
+    "size": 395925
   },
   "battle/effect/battle_effect5": {
-    "md5": "8fe893d80a869987",
-    "size": 3808814
+    "md5": "5fbda6c0c63fd2c7",
+    "size": 3802636
   },
   "battle/effect/battle_effect6": {
     "md5": "075e03cb6070013f",
     "size": 1295575
   },
   "battle/effect/battle_effect7": {
-    "md5": "94a3f0e25049e25d",
-    "size": 3112520
+    "md5": "83916bc1554a41ae",
+    "size": 3112408
   },
   "battle/effect/battle_effect8": {
     "md5": "c2a02bafce5c0509",
     "size": 2601432
   },
   "battle/effect/battle_effect9": {
-    "md5": "24c40caddb7e451d",
-    "size": 2407118
+    "md5": "463784c8dc1d24d3",
+    "size": 2406580
   },
   "battle/map/battle000_001": {
     "md5": "9b572f980dbefb9c",
@@ -2128,16 +2140,16 @@
     "size": 962516
   },
   "battle/map/battle000_010-spcl": {
-    "md5": "8adef74324830461",
-    "size": 715593
+    "md5": "9c0713a42058a069",
+    "size": 715592
   },
   "battle/map/battle000_010": {
     "md5": "49715109b57c0096",
     "size": 743174
   },
   "battle/map/battle000_011": {
-    "md5": "88e9395626820027",
-    "size": 1291663
+    "md5": "6eba7c73f151bac7",
+    "size": 1291659
   },
   "battle/map/battle000_012-spcl": {
     "md5": "8533232566ad751f",
@@ -2148,8 +2160,8 @@
     "size": 935279
   },
   "battle/map/battle000_013": {
-    "md5": "3a1885bc2d1122be",
-    "size": 1362884
+    "md5": "11880a3e0500f5a5",
+    "size": 1362880
   },
   "battle/map/battle000_014": {
     "md5": "af5197414a78083d",
@@ -2200,8 +2212,8 @@
     "size": 1052953
   },
   "battle/map/battle000_026": {
-    "md5": "b190dc6dc4f2a3e7",
-    "size": 693087
+    "md5": "90c4554f4c8712ff",
+    "size": 693091
   },
   "battle/map/battle000_027": {
     "md5": "eb5d8f108b416821",
@@ -2260,8 +2272,8 @@
     "size": 1102618
   },
   "battle/map/battle008": {
-    "md5": "c02691670d21c1f2",
-    "size": 935117
+    "md5": "606318c418605491",
+    "size": 935116
   },
   "battle/map/battle009": {
     "md5": "925bae1bf8d73606",
@@ -2316,8 +2328,8 @@
     "size": 1177264
   },
   "battle/map/battle022": {
-    "md5": "1d5d99cd5b5f0367",
-    "size": 1342648
+    "md5": "8d004303cf787935",
+    "size": 1342647
   },
   "battle/map/battle023": {
     "md5": "954f8a120410efd3",
@@ -2388,16 +2400,16 @@
     "size": 1627414
   },
   "battle/map/stage_cave-in-ni00801": {
-    "md5": "e73f865d153b3775",
-    "size": 2364005
+    "md5": "f5ee841bb3eee55e",
+    "size": 2364003
   },
   "battle/map/stage_cave-in-ni00901": {
     "md5": "8b07218e00cf78e2",
     "size": 1715556
   },
   "battle/map/stage_cave-in-ni01001": {
-    "md5": "521fc338aabfbd7a",
-    "size": 2217719
+    "md5": "6a412bb378e1f271",
+    "size": 2217717
   },
   "battle/map/stage_cave-in-ni01101": {
     "md5": "0d067a108fc83d52",
@@ -2528,8 +2540,8 @@
     "size": 753693
   },
   "battle/map/stage_city-ca-du00201": {
-    "md5": "7b634aaeb5976aeb",
-    "size": 858525
+    "md5": "0cb18c1a5323e628",
+    "size": 858524
   },
   "battle/map/stage_city-ca-du00201_snow": {
     "md5": "7034665daf90626a",
@@ -2564,12 +2576,12 @@
     "size": 1241445
   },
   "battle/map/stage_city-ca-du01001": {
-    "md5": "fd5c0928ea106129",
-    "size": 1165550
+    "md5": "e23821bcc71664d0",
+    "size": 1165549
   },
   "battle/map/stage_city-ca-du01101": {
-    "md5": "7cb68058975f8a00",
-    "size": 1490870
+    "md5": "47b64cc828846f0c",
+    "size": 1490868
   },
   "battle/map/stage_city-ca-du01201": {
     "md5": "db3eda72e5b3eb95",
@@ -2592,8 +2604,8 @@
     "size": 1685939
   },
   "battle/map/stage_city-ca-ni00101": {
-    "md5": "a0e5904386a2b33d",
-    "size": 735650
+    "md5": "224d4be5f521e098",
+    "size": 735648
   },
   "battle/map/stage_city-ca-ni00201": {
     "md5": "c2e662d1a6e48863",
@@ -2700,8 +2712,8 @@
     "size": 1288787
   },
   "battle/map/stage_city-os-da01501": {
-    "md5": "5c7f0f4898044313",
-    "size": 1866444
+    "md5": "386036116404da84",
+    "size": 1866442
   },
   "battle/map/stage_city-os-da01601": {
     "md5": "0c598a759f4f0a61",
@@ -2712,8 +2724,8 @@
     "size": 1572715
   },
   "battle/map/stage_city-os-da01702": {
-    "md5": "f64f480c9f92b529",
-    "size": 3513189
+    "md5": "f45dc28b5bd0018f",
+    "size": 3513185
   },
   "battle/map/stage_city-os-da01801": {
     "md5": "e0bb4475372c82b4",
@@ -2764,8 +2776,8 @@
     "size": 1588236
   },
   "battle/map/stage_city-os-du01801": {
-    "md5": "ad88f7233c326b22",
-    "size": 1679266
+    "md5": "de4e0f87b2d7c3d4",
+    "size": 1679262
   },
   "battle/map/stage_city-os-duco00802": {
     "md5": "003706b528ab5a6a",
@@ -2776,8 +2788,8 @@
     "size": 2259815
   },
   "battle/map/stage_city-os-ni00101": {
-    "md5": "3de7c5fcf963b06f",
-    "size": 1952626
+    "md5": "cdc131b0e668c104",
+    "size": 1952624
   },
   "battle/map/stage_city-os-ni00201": {
     "md5": "362b8d5ac848b9b3",
@@ -2888,8 +2900,8 @@
     "size": 2630550
   },
   "battle/map/stage_city-spcl-dawn00401": {
-    "md5": "8ba0b7049f5368e8",
-    "size": 1262188
+    "md5": "a7f73dea43f3fc65",
+    "size": 1262183
   },
   "battle/map/stage_city-spcl-du00301": {
     "md5": "c5e503a3379e7477",
@@ -2924,8 +2936,8 @@
     "size": 1146438
   },
   "battle/map/stage_city-spcl-nith00301-002": {
-    "md5": "434760c380bae1f0",
-    "size": 1051938
+    "md5": "8e39044cd7627547",
+    "size": 1051935
   },
   "battle/map/stage_city-spcl-nith00301": {
     "md5": "8f68ade65e8e1ecc",
@@ -2992,8 +3004,8 @@
     "size": 1207649
   },
   "battle/map/stage_desert-os-ni00301": {
-    "md5": "61073cfdf1f67108",
-    "size": 1148088
+    "md5": "9de30b9af32cfb44",
+    "size": 1148090
   },
   "battle/map/stage_desert-os-ni00401": {
     "md5": "dcf91a6716db6c68",
@@ -3072,8 +3084,8 @@
     "size": 1041106
   },
   "battle/map/stage_home-pb-ni00101": {
-    "md5": "58d5624457a01fba",
-    "size": 1068843
+    "md5": "6dc3c5ca5cfecbcb",
+    "size": 1068840
   },
   "battle/map/stage_home-th-da00101": {
     "md5": "34d3b04941b594fb",
@@ -3416,12 +3428,12 @@
     "size": 878642
   },
   "battle/map/stage_lxy-cp-da00501": {
-    "md5": "83eb0ee956f5ebcd",
-    "size": 1391563
+    "md5": "a44ba693a031f80c",
+    "size": 1439904
   },
   "battle/map/stage_lxy-cp-da00601": {
-    "md5": "e50ccde238cd06a8",
-    "size": 1032504
+    "md5": "16b22889cbfd187f",
+    "size": 1137066
   },
   "battle/map/stage_lxy-cp-du00201-00": {
     "md5": "4faea8661fdee368",
@@ -3476,8 +3488,8 @@
     "size": 708605
   },
   "battle/map/stage_marsh-os-da00401": {
-    "md5": "c1c5715a1235fbca",
-    "size": 999931
+    "md5": "b2599c44525d2f78",
+    "size": 999928
   },
   "battle/map/stage_marsh-os-da00501": {
     "md5": "a4f12124ce8f2948",
@@ -3544,8 +3556,8 @@
     "size": 876450
   },
   "battle/map/stage_marsh-spcl-ni00201-000": {
-    "md5": "0c84a2875a053a47",
-    "size": 1199611
+    "md5": "618dac5732c3a084",
+    "size": 1199609
   },
   "battle/map/stage_marsh-spcl-ni00201-001": {
     "md5": "651744a8a39ceb10",
@@ -3556,8 +3568,8 @@
     "size": 403154
   },
   "battle/map/stage_mountain-os-da00201": {
-    "md5": "a90d9cfc8f412016",
-    "size": 300575
+    "md5": "ee65f1ff69066d6b",
+    "size": 300571
   },
   "battle/map/stage_mountain-os-da00401": {
     "md5": "60ef859a6ec0c544",
@@ -3604,8 +3616,8 @@
     "size": 852706
   },
   "battle/map/stage_mountain-os-da01601": {
-    "md5": "e63920d1b56383f9",
-    "size": 638751
+    "md5": "312b8d5644e6ee03",
+    "size": 638748
   },
   "battle/map/stage_mountain-os-da01701": {
     "md5": "f7fd2654cf750c1c",
@@ -3680,8 +3692,8 @@
     "size": 1421806
   },
   "battle/map/stage_mountain-os-ni01001": {
-    "md5": "22dbabd661117345",
-    "size": 1013904
+    "md5": "ae4d0c3dc025a3fc",
+    "size": 1013902
   },
   "battle/map/stage_mountain-os-ni01101": {
     "md5": "26e208cd12cea345",
@@ -3780,8 +3792,8 @@
     "size": 1005124
   },
   "battle/map/stage_plain-cp-da00901": {
-    "md5": "842128e540cc3ecb",
-    "size": 1215910
+    "md5": "631499d7db79781b",
+    "size": 1215912
   },
   "battle/map/stage_plain-cp-du00101": {
     "md5": "5cfeb39f58682d08",
@@ -3792,7 +3804,7 @@
     "size": 1445017
   },
   "battle/map/stage_plain-cp-du00401": {
-    "md5": "71542c0ec32cef85",
+    "md5": "ebff9b13491a32ab",
     "size": 802150
   },
   "battle/map/stage_plain-cp-du00501": {
@@ -3844,8 +3856,8 @@
     "size": 922521
   },
   "battle/map/stage_plain-os-da00201": {
-    "md5": "96907de76d069e72",
-    "size": 454745
+    "md5": "7e704c9d42b4c9e8",
+    "size": 454741
   },
   "battle/map/stage_plain-os-da00301": {
     "md5": "e063a2ad15ce745b",
@@ -3884,16 +3896,16 @@
     "size": 836721
   },
   "battle/map/stage_plain-os-da01301": {
-    "md5": "09aa656e21f61937",
-    "size": 594923
+    "md5": "35a47928a3d5c2ba",
+    "size": 594921
   },
   "battle/map/stage_plain-os-da01401": {
     "md5": "2e356d37ed974fde",
     "size": 1432068
   },
   "battle/map/stage_plain-os-da01601": {
-    "md5": "5acd81538a2c25d4",
-    "size": 953619
+    "md5": "726b9d2e1b0dde5e",
+    "size": 953615
   },
   "battle/map/stage_plain-os-da01701": {
     "md5": "5587ea518e0d0c37",
@@ -4008,16 +4020,16 @@
     "size": 341086
   },
   "battle/perform/battle_perform1": {
-    "md5": "e0b1e73d49f451c6",
-    "size": 730871
+    "md5": "14a6028d96cd68e1",
+    "size": 731617
   },
   "battle/props/battle_props1": {
     "md5": "eafbbe481dbe2bed",
     "size": 705152
   },
   "battle/props/battle_props2": {
-    "md5": "7e22c5e878b6a426",
-    "size": 536186
+    "md5": "9cb91a3a460d1dce",
+    "size": 536187
   },
   "battle/unit/battle_unit1": {
     "md5": "40826dd814748588",
@@ -4076,8 +4088,8 @@
     "size": 2201121
   },
   "battle/unit/battle_unit22": {
-    "md5": "7c5120bfeacc3180",
-    "size": 1194191
+    "md5": "e49bffa55dde592a",
+    "size": 1194152
   },
   "battle/unit/battle_unit23": {
     "md5": "8dd3ee1118fb3a33",
@@ -4088,16 +4100,16 @@
     "size": 1795537
   },
   "battle/unit/battle_unit25": {
-    "md5": "1fe82fc6cae171fe",
-    "size": 49769
+    "md5": "bc587d82cfc394f7",
+    "size": 243697
   },
   "battle/unit/battle_unit3": {
     "md5": "5f44e2336ea4e5aa",
     "size": 2031514
   },
   "battle/unit/battle_unit4": {
-    "md5": "91c106b741cdcdcb",
-    "size": 1243138
+    "md5": "94ad74d5683589de",
+    "size": 1065536
   },
   "battle/unit/battle_unit5": {
     "md5": "fc8a5686b7553c02",
@@ -4144,8 +4156,8 @@
     "size": 1387346
   },
   "battle/weapon/battle_weapon6": {
-    "md5": "60f47ed0069e946a",
-    "size": 1409383
+    "md5": "6fb8f454fb532bb1",
+    "size": 1469257
   },
   "capital/dest_mark": {
     "md5": "26befdb335673b21",
@@ -4356,8 +4368,8 @@
     "size": 86758
   },
   "capital/setting_group/capital_home-os_common_group": {
-    "md5": "c1a3ad57888ba011",
-    "size": 203063
+    "md5": "81c4434595242d9e",
+    "size": 203071
   },
   "capital/setting_group/capital_home-os_noise_group": {
     "md5": "87a4e10e768c772d",
@@ -4392,8 +4404,8 @@
     "size": 59129
   },
   "capital/setting_group/capital_ldw-cp-extra_group": {
-    "md5": "43057d9baa185612",
-    "size": 269401
+    "md5": "5c86e6fcc2aa0a02",
+    "size": 269402
   },
   "capital/setting_group/capital_ldw-cp-night_group": {
     "md5": "00dc4b1c369ef5d1",
@@ -4604,16 +4616,16 @@
     "size": 1337282
   },
   "dreamlands/map/dls_virtual-sky-da00102": {
-    "md5": "bea5c1a12a17abf1",
-    "size": 912383
+    "md5": "2104b1475737e4f1",
+    "size": 919107
   },
   "dreamlands/map/dls_virtual-sky-da00102_linkage02": {
-    "md5": "5eed9a26261e1fe2",
-    "size": 1150315
+    "md5": "74babb6d04057805",
+    "size": 1150303
   },
   "dreamlands/map/dls_virtual-sky-da00201": {
-    "md5": "96f0021bbeb15651",
-    "size": 2018158
+    "md5": "edc47a65ad2fd523",
+    "size": 2013709
   },
   "dreamlands/map/dls_virtual-sky-da00201_cvr01": {
     "md5": "0550fb95d1f4cf08",
@@ -4624,8 +4636,8 @@
     "size": 2050728
   },
   "dreamlands/prefab/dreamlands_prefab1": {
-    "md5": "938489c645c65599",
-    "size": 1347524
+    "md5": "44cef465237713b7",
+    "size": 1285625
   },
   "dreamlands/prefab/building/dls_virtual_area01_default": {
     "md5": "be160d3b9ca14984",
@@ -4800,24 +4812,24 @@
     "size": 2369825
   },
   "dreamlands/prefab/furniture/dreamlands_prefab_furniture4": {
-    "md5": "b683ef2441fb4dd7",
-    "size": 1596547
+    "md5": "3b6c7302577b8372",
+    "size": 1800506
   },
   "dreamlands/prefab/furniture_ui/dreamlands_prefab_furniture_ui1": {
-    "md5": "a10a551f51b3cd17",
-    "size": 68637
+    "md5": "aaf378f6656f8b15",
+    "size": 72971
   },
   "eventgames/richman": {
     "md5": "eef6443bbaa0e966",
     "size": 392673
   },
   "eventgames/richman2": {
-    "md5": "059f5719f515047f",
-    "size": 1697876
+    "md5": "c4a688dcbd34bae9",
+    "size": 1698190
   },
   "font/font": {
-    "md5": "d8776b21333f3c0e",
-    "size": 29982784
+    "md5": "4898c47e9c2ac850",
+    "size": 29987137
   },
   "font/font_battle": {
     "md5": "7485bbc1a03e8674",
@@ -5131,6 +5143,62 @@
     "md5": "0c4f22e97f787163",
     "size": 221657
   },
+  "icon/activitybigrogue/activitybigrogue02_bar01": {
+    "md5": "cdf07130ed2a2c1c",
+    "size": 91427
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar02": {
+    "md5": "b5e22a001a3708a0",
+    "size": 81422
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar03": {
+    "md5": "45ec2bfcb1fa2fbc",
+    "size": 104796
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar04": {
+    "md5": "89a8ae98d3eb6d8c",
+    "size": 96130
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar05": {
+    "md5": "93821ca0ae0d48d5",
+    "size": 95532
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar06": {
+    "md5": "a1d0a10c86cdd7a3",
+    "size": 97089
+  },
+  "icon/activitybigrogue/activitybigrogue02_bar07": {
+    "md5": "0d62807e62f1b2ea",
+    "size": 86583
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg01": {
+    "md5": "1284c3c675e2db8c",
+    "size": 1562769
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg02": {
+    "md5": "be470c68e332069d",
+    "size": 1547075
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg03": {
+    "md5": "9cb90f52b766de90",
+    "size": 1668927
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg04": {
+    "md5": "edbcdd651a6072de",
+    "size": 1348144
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg05": {
+    "md5": "b2eb36f5c4db0f4b",
+    "size": 1458256
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg06": {
+    "md5": "27bfe58a991e3d11",
+    "size": 1442352
+  },
+  "icon/activitybigrogue/activitybigrogue02_bg07": {
+    "md5": "af0ceb2830518d8c",
+    "size": 1399185
+  },
   "icon/activitybigrogue/activitybigrogue_bar01": {
     "md5": "6d3b8102d3c52c54",
     "size": 94942
@@ -5179,9 +5247,17 @@
     "md5": "a04620d2bcbfa66c",
     "size": 1111810
   },
-  "icon/activitybigrogue/activitybigrogue_bossbuff_pic": {
-    "md5": "8fbe28ccc1e1ffd7",
+  "icon/activitybigrogue/activitybigrogue_bossbuff_pic01": {
+    "md5": "ed212395dd0ebd90",
     "size": 82386
+  },
+  "icon/activitybigrogue/activitybigrogue_bossbuff_pic02": {
+    "md5": "3d7a343ea839fc37",
+    "size": 78774
+  },
+  "icon/activitybigrogue/activitybigrogue_bossbuff_pic03": {
+    "md5": "32a9f01c7e43cfbf",
+    "size": 82231
   },
   "icon/activitybigrogue/activitybigrogue_briefing_bg01": {
     "md5": "ed05e30317b66571",
@@ -5206,6 +5282,18 @@
   "icon/activitybigrogue/activitybigrogue_homepage_bg01": {
     "md5": "7fe7e7d07252354a",
     "size": 1603662
+  },
+  "icon/activitybigrogue/activitybigrogue_homepage_bg02": {
+    "md5": "9436ab2b4a7112cd",
+    "size": 118640
+  },
+  "icon/activitybigrogue/activitybigrogue_homepage_bg03": {
+    "md5": "e109ee9d13d8bf72",
+    "size": 25717
+  },
+  "icon/activitybigrogue/activitybigrogue_homepage_bg04": {
+    "md5": "bdf773661cd89058",
+    "size": 27163
   },
   "icon/activitybigrogue/activitybigrogue_shop_bar": {
     "md5": "79d4704af5c9a627",
@@ -5232,8 +5320,8 @@
     "size": 558577
   },
   "icon/activitybigrogue/buff_flashcard": {
-    "md5": "597f3a77e857fa65",
-    "size": 120249
+    "md5": "506992e70524cc96",
+    "size": 124983
   },
   "icon/activitybigrogue/event_line": {
     "md5": "c3bac30aecb81b41",
@@ -5242,6 +5330,58 @@
   "icon/activitybigrogue/title_activitybigrogue": {
     "md5": "82c88a8f4ec738c0",
     "size": 103286
+  },
+  "icon/activitybigrogue02/activitybigrogue02_enterence_bg": {
+    "md5": "06b14093d2dbadae",
+    "size": 353806
+  },
+  "icon/activitybigrogue02/activitybigrogue02_homepage_bg01": {
+    "md5": "840753c7e1ba908d",
+    "size": 1214569
+  },
+  "icon/activitybigrogue02/activitybigrogue02_homepage_bg03": {
+    "md5": "0176e6f49e2589b7",
+    "size": 110455
+  },
+  "icon/activitybigrogue02/activitybigrogue02_homepage_bg04": {
+    "md5": "b0b4489f8f1c2922",
+    "size": 37159
+  },
+  "icon/activitybigrogue02/activitybigrogue02_homepage_bg05": {
+    "md5": "dc2bd9fc955e045b",
+    "size": 43134
+  },
+  "icon/activitybigrogue02/activitybigrogue02_questbar": {
+    "md5": "9b3c7322258b6975",
+    "size": 103301
+  },
+  "icon/activitybigrogue02/activitybigrogue02_shop_bg01": {
+    "md5": "18082f6bf6cf889d",
+    "size": 389201
+  },
+  "icon/activitybigrogue02/activitybigrogue02_shop_item": {
+    "md5": "cec3d21653c94b96",
+    "size": 72883
+  },
+  "icon/activitybigrogue02/activitybigrogue02_teamselect_itembg01": {
+    "md5": "9ea0fa47188b9018",
+    "size": 48083
+  },
+  "icon/activitybigrogue02/activitybigrogue02_tech_bg01": {
+    "md5": "a6731f5c35d6ea0b",
+    "size": 403115
+  },
+  "icon/activitybigrogue02/activitybigrogue02_tech_bg02": {
+    "md5": "a8cd32aaf8430b84",
+    "size": 1124363
+  },
+  "icon/activitybigrogue02/activitybigrogue_homepage_bg": {
+    "md5": "a6d6d3c0d18592b8",
+    "size": 22832
+  },
+  "icon/activitybigrogue02/title_activitybigrogue02": {
+    "md5": "5d3889c12e2f7c27",
+    "size": 63249
   },
   "icon/activitybigstage1/icon_activitybigstage11": {
     "md5": "b69c1d5bce1f3781",
@@ -5544,12 +5684,12 @@
     "size": 479687
   },
   "icon/bannar/icon_bannar17": {
-    "md5": "a34414450ccdc1af",
-    "size": 451067
+    "md5": "e23a97d7341234e4",
+    "size": 455340
   },
   "icon/bannar/icon_bannar18": {
-    "md5": "ee192d281b7dad49",
-    "size": 52647
+    "md5": "e765f4b3c04f5cd6",
+    "size": 217274
   },
   "icon/bannar/icon_bannar2": {
     "md5": "fffb8702bf21e5b5",
@@ -6195,6 +6335,10 @@
     "md5": "cf1851fab630472a",
     "size": 656931
   },
+  "icon/bg/operationactivity_bigrogue02_bg": {
+    "md5": "9c43c27c408cc28f",
+    "size": 641336
+  },
   "icon/bg/operationactivity_bigrogue_bg": {
     "md5": "55dfb4c9c10d7756",
     "size": 632857
@@ -6262,6 +6406,10 @@
   "icon/bg/operationactivity_chapterhard01_bg": {
     "md5": "2a917a084cd51060",
     "size": 624446
+  },
+  "icon/bg/operationactivity_chapterhard02_bg": {
+    "md5": "d931c7985ccbee7d",
+    "size": 647541
   },
   "icon/bg/operationactivity_claraday14_bg": {
     "md5": "7b2af2be66aed604",
@@ -6899,6 +7047,10 @@
     "md5": "9ca9b6e53352a169",
     "size": 660959
   },
+  "icon/bg/operationactivity_shopskinspsamantha_bg": {
+    "md5": "1ab159069d43a0c2",
+    "size": 632347
+  },
   "icon/bg/operationactivity_shopskinstage2roleg_bg": {
     "md5": "91d64ba384830fc9",
     "size": 629193
@@ -7343,13 +7495,129 @@
     "md5": "8e9b58c5407c6ddc",
     "size": 234630
   },
+  "icon/bigrogue_artifact/artifact_1": {
+    "md5": "8b51c97f4e41632d",
+    "size": 8514
+  },
+  "icon/bigrogue_artifact/artifact_10": {
+    "md5": "572df4cde2b65786",
+    "size": 13883
+  },
+  "icon/bigrogue_artifact/artifact_11": {
+    "md5": "dd7686912e0db758",
+    "size": 10530
+  },
+  "icon/bigrogue_artifact/artifact_12": {
+    "md5": "56ae4be7e98a694b",
+    "size": 12202
+  },
+  "icon/bigrogue_artifact/artifact_13": {
+    "md5": "f6af849c4969e45e",
+    "size": 12708
+  },
+  "icon/bigrogue_artifact/artifact_14": {
+    "md5": "f8d4dcda19156a2c",
+    "size": 9433
+  },
+  "icon/bigrogue_artifact/artifact_15": {
+    "md5": "0748003419b740d4",
+    "size": 11249
+  },
+  "icon/bigrogue_artifact/artifact_16": {
+    "md5": "63f88cb63971db6b",
+    "size": 18178
+  },
+  "icon/bigrogue_artifact/artifact_17": {
+    "md5": "a3ed9a010a8f4885",
+    "size": 16195
+  },
+  "icon/bigrogue_artifact/artifact_18": {
+    "md5": "f2d5c4cefb9c67c7",
+    "size": 17553
+  },
+  "icon/bigrogue_artifact/artifact_19": {
+    "md5": "45bd30439da9e969",
+    "size": 16341
+  },
+  "icon/bigrogue_artifact/artifact_2": {
+    "md5": "ce60788489d2b910",
+    "size": 10118
+  },
+  "icon/bigrogue_artifact/artifact_20": {
+    "md5": "ebccd15f003ff9f5",
+    "size": 7411
+  },
+  "icon/bigrogue_artifact/artifact_21": {
+    "md5": "b52ae86e5c073f79",
+    "size": 14403
+  },
+  "icon/bigrogue_artifact/artifact_22": {
+    "md5": "dacdd7f39916a144",
+    "size": 13150
+  },
+  "icon/bigrogue_artifact/artifact_23": {
+    "md5": "b6de9fa1ea9d5b69",
+    "size": 11727
+  },
+  "icon/bigrogue_artifact/artifact_24": {
+    "md5": "0e288d8167360fc3",
+    "size": 10537
+  },
+  "icon/bigrogue_artifact/artifact_25": {
+    "md5": "31b9238d1d745e80",
+    "size": 14627
+  },
+  "icon/bigrogue_artifact/artifact_3": {
+    "md5": "880d57f3e6e43c14",
+    "size": 18006
+  },
+  "icon/bigrogue_artifact/artifact_4": {
+    "md5": "4d9a118001c7cb92",
+    "size": 15962
+  },
+  "icon/bigrogue_artifact/artifact_5": {
+    "md5": "6badbf2305dad23c",
+    "size": 18083
+  },
+  "icon/bigrogue_artifact/artifact_6": {
+    "md5": "f6c7651c87cab6d3",
+    "size": 15386
+  },
+  "icon/bigrogue_artifact/artifact_7": {
+    "md5": "228c29ec219dc506",
+    "size": 17729
+  },
+  "icon/bigrogue_artifact/artifact_8": {
+    "md5": "ae2c52792b5821ff",
+    "size": 10339
+  },
+  "icon/bigrogue_artifact/artifact_9": {
+    "md5": "597604dbb09a72d0",
+    "size": 11206
+  },
   "icon/bigrogue_target/event_briefing": {
     "md5": "ae772055d8cfc4e5",
     "size": 4087
   },
+  "icon/bigrogue_target/event_dreamcatcher": {
+    "md5": "52dea1eda9ec6406",
+    "size": 4464
+  },
   "icon/bigrogue_target/event_information": {
     "md5": "1e157dfcc9719529",
     "size": 4033
+  },
+  "icon/bigrogue_target/event_monsterlv1": {
+    "md5": "59b82d43cfc53e9d",
+    "size": 3916
+  },
+  "icon/bigrogue_target/event_monsterlv2": {
+    "md5": "890c84d25854e077",
+    "size": 4595
+  },
+  "icon/bigrogue_target/event_monsterlv3": {
+    "md5": "fab9b723f532c75d",
+    "size": 5232
   },
   "icon/bigrogue_target/event_next": {
     "md5": "c693762e94ad13fd",
@@ -7363,9 +7631,17 @@
     "md5": "3bdbfb8c58238ad9",
     "size": 5124
   },
+  "icon/bigrogue_target/event_relic": {
+    "md5": "6453bd098afd5f42",
+    "size": 4353
+  },
   "icon/bigrogue_target/event_rest": {
     "md5": "ad6617bf2197079c",
     "size": 3843
+  },
+  "icon/bigrogue_target/event_rumor": {
+    "md5": "36e64a48479a2337",
+    "size": 4166
   },
   "icon/bigrogue_target/event_shop": {
     "md5": "93aefc1619c1d408",
@@ -7374,6 +7650,10 @@
   "icon/bigrogue_target/event_tactic": {
     "md5": "efa470646b9d10cd",
     "size": 4534
+  },
+  "icon/bigrogue_target/event_tactical": {
+    "md5": "56968e316a93383f",
+    "size": 3980
   },
   "icon/bigrogue_target/event_trade": {
     "md5": "7344d1cbd08fba42",
@@ -7386,6 +7666,30 @@
   "icon/bigrogue_target/event_wish": {
     "md5": "747bfb6993becc3b",
     "size": 4954
+  },
+  "icon/bigrogue_team/icon_bigrogue_team01": {
+    "md5": "d97dd109c1496105",
+    "size": 24935
+  },
+  "icon/bigrogue_team/icon_bigrogue_team02": {
+    "md5": "71a6d0b1f5c26a9c",
+    "size": 23076
+  },
+  "icon/bigrogue_team/icon_bigrogue_team03": {
+    "md5": "f98cd1352b30a7c5",
+    "size": 26361
+  },
+  "icon/bigrogue_team/icon_bigrogue_team04": {
+    "md5": "ae5270c82fc8c097",
+    "size": 23840
+  },
+  "icon/bigrogue_team/icon_bigrogue_team05": {
+    "md5": "2ee3c1e62e56a5f2",
+    "size": 23948
+  },
+  "icon/bigrogue_team/icon_bigrogue_team06": {
+    "md5": "f069b20fb238c948",
+    "size": 23117
   },
   "icon/blessing/icon_blessing1": {
     "md5": "8b67ef0c6b0f6d42",
@@ -7400,8 +7704,8 @@
     "size": 24873
   },
   "icon/buff/icon_buff1": {
-    "md5": "1e5f956799b75a2b",
-    "size": 427823
+    "md5": "232fa4039ff5e0d0",
+    "size": 473048
   },
   "icon/buffactivity/icon_buffactivity1": {
     "md5": "6443e5e6180a5fc7",
@@ -8624,12 +8928,12 @@
     "size": 2362476
   },
   "icon/character/icon_character1": {
-    "md5": "9508e4acac467de3",
-    "size": 2034097
+    "md5": "c90e149107d81a68",
+    "size": 2037881
   },
   "icon/character_head/icon_character_head1": {
-    "md5": "850f6d8399cfa04b",
-    "size": 1008209
+    "md5": "3b0f634ba75ecff5",
+    "size": 1009689
   },
   "icon/charm/icon_charm1": {
     "md5": "07d57c5045226d43",
@@ -8832,8 +9136,8 @@
     "size": 377266
   },
   "icon/common/icon_common1": {
-    "md5": "26b5009c1775e2cd",
-    "size": 2674388
+    "md5": "281970b136c0eae6",
+    "size": 2673903
   },
   "icon/dls_virtual/dls_virtual_area01_model00": {
     "md5": "b8dadcbb55087383",
@@ -9044,8 +9348,8 @@
     "size": 5618665
   },
   "icon/elysium_furniture/icon_elysium_furniture3": {
-    "md5": "6193cb289e637328",
-    "size": 1482070
+    "md5": "be0796302eb54a90",
+    "size": 1802961
   },
   "icon/elysium_furniture_full/icon_elysium_furniture_full1": {
     "md5": "48201c7eb60e8e2e",
@@ -9163,6 +9467,10 @@
     "md5": "9b13f67d72474177",
     "size": 4658383
   },
+  "icon/face/icon_face10": {
+    "md5": "b9c7ecf0bf7b68b6",
+    "size": 102175
+  },
   "icon/face/icon_face2": {
     "md5": "3ef44367125683e7",
     "size": 4859240
@@ -9192,8 +9500,8 @@
     "size": 5233608
   },
   "icon/face/icon_face9": {
-    "md5": "f2bda5d1ae421c3b",
-    "size": 4820126
+    "md5": "25ec316fe1dd75fe",
+    "size": 5081306
   },
   "icon/face_faction/icon_face_faction1": {
     "md5": "2e05ac3bf356dc7f",
@@ -9236,8 +9544,8 @@
     "size": 975549
   },
   "icon/gacha/icon_gacha13": {
-    "md5": "609eedf9e071ccb5",
-    "size": 112522
+    "md5": "d2036c309e0de12b",
+    "size": 2338999
   },
   "icon/gacha/icon_gacha2": {
     "md5": "ee8cc0e48893add2",
@@ -9292,8 +9600,8 @@
     "size": 1156035
   },
   "icon/gachatitle/icon_gachatitle6": {
-    "md5": "455c9c3c5cf6d1de",
-    "size": 63395
+    "md5": "531dea1bad45c4fc",
+    "size": 183951
   },
   "icon/gift/icon_gift1": {
     "md5": "ae3bdcb7bc236a27",
@@ -9304,20 +9612,20 @@
     "size": 2733912
   },
   "icon/head_bg/icon_head_bg1": {
-    "md5": "19759cb32be5379d",
-    "size": 1421274
+    "md5": "6c958d2ab462a798",
+    "size": 1451733
   },
   "icon/head_bg_animation/icon_head_bg_animation1": {
     "md5": "19a534f5193dc341",
     "size": 49950
   },
   "icon/head_bg_drop/icon_head_bg_drop1": {
-    "md5": "089eaccb7fc491e2",
-    "size": 947891
+    "md5": "ff329a41cf41902e",
+    "size": 977096
   },
   "icon/head_frame/icon_head_frame1": {
-    "md5": "2e97f9f410c40150",
-    "size": 1780607
+    "md5": "84ffe489923d10af",
+    "size": 1807628
   },
   "icon/head_frame_dynamic/icon_head_frame_dynamic1": {
     "md5": "9f2a510f6f253c00",
@@ -10032,8 +10340,8 @@
     "size": 2018246
   },
   "icon/material/icon_material7": {
-    "md5": "d280b2f357c34c9d",
-    "size": 270086
+    "md5": "f0c926bb417ef6e9",
+    "size": 765627
   },
   "icon/material_full/icon_material_full1": {
     "md5": "788a86748db7177f",
@@ -10060,8 +10368,8 @@
     "size": 4233646
   },
   "icon/material_full/icon_material_full7": {
-    "md5": "78635af0f59d4bef",
-    "size": 2488827
+    "md5": "cc7681b30c9d60f3",
+    "size": 2537595
   },
   "icon/material_onlineunitrank/icon_material_onlineunitrank1": {
     "md5": "e7baaaf42e9dd598",
@@ -10128,8 +10436,8 @@
     "size": 3919716
   },
   "icon/onlinebattlepass/icon_onlinebattlepass4": {
-    "md5": "b15f341a80f31a77",
-    "size": 20507
+    "md5": "257bbc53a17e71a5",
+    "size": 143967
   },
   "icon/onlineexpedition/icon_onlineexpedition1": {
     "md5": "52ab1de2c1ba15e1",
@@ -10596,8 +10904,8 @@
     "size": 641208
   },
   "icon/online_shop_gift/icon_online_shop_gift1": {
-    "md5": "acc73401d35cf30f",
-    "size": 504078
+    "md5": "f01b3c6779e16eae",
+    "size": 592973
   },
   "icon/online_shop_recommend/icon_online_shop_recommend1": {
     "md5": "30c4d962cce26cae",
@@ -10664,8 +10972,8 @@
     "size": 4051
   },
   "icon/operationactivity_append_shop_01/icon_operationactivity_append_shop_011": {
-    "md5": "1adb80e0db225bb3",
-    "size": 505515
+    "md5": "49fb892a95de3823",
+    "size": 577127
   },
   "icon/operationactivity_append_skin_01/title_skingachaspsafiyyah": {
     "md5": "311a5e3fb996eae5",
@@ -11144,8 +11452,12 @@
     "size": 2579749
   },
   "icon/skill/icon_skill7": {
-    "md5": "b8a825ed96bfa60e",
-    "size": 2823072
+    "md5": "e97516e4fcdbbd13",
+    "size": 2978752
+  },
+  "icon/skill/icon_skill8": {
+    "md5": "8a21dff6ee0a333c",
+    "size": 195983
   },
   "icon/skin_card/skin_card_hbanditthemaskmset01": {
     "md5": "b13e0090c5b872bf",
@@ -11291,6 +11603,14 @@
     "md5": "733ff5006b030e41",
     "size": 982992
   },
+  "icon/skin_card/skin_card_hlucialiongeneralfset01": {
+    "md5": "54f0895b143ce9fa",
+    "size": 1354237
+  },
+  "icon/skin_card/skin_card_hluciamisslambfset01": {
+    "md5": "920af0c6605610e2",
+    "size": 948670
+  },
   "icon/skin_card/skin_card_hluciarabbitricofset01": {
     "md5": "00130f2e60abe19a",
     "size": 1122626
@@ -11338,6 +11658,10 @@
   "icon/skin_card/skin_card_hpapalprincemset01": {
     "md5": "6db44a4e2cec2251",
     "size": 1250150
+  },
+  "icon/skin_card/skin_card_hpapalsamanthaf2set01": {
+    "md5": "5a6fcd9daa4a9091",
+    "size": 1470786
   },
   "icon/skin_card/skin_card_hpapalsamanthafset01": {
     "md5": "2658cbe2a4fe4249",
@@ -11659,6 +11983,14 @@
     "md5": "6f5693f3d32efd15",
     "size": 4808817
   },
+  "icon/skin_card_full/skin_card_hlucialiongeneralfset01": {
+    "md5": "65fe8ecd0b5e9ed5",
+    "size": 7362345
+  },
+  "icon/skin_card_full/skin_card_hluciamisslambfset01": {
+    "md5": "c124fc95f0ff0386",
+    "size": 4544380
+  },
   "icon/skin_card_full/skin_card_hluciarabbitricofset01": {
     "md5": "190c311051b9adcb",
     "size": 5468838
@@ -11939,13 +12271,17 @@
     "md5": "d065a591bb8b9cf7",
     "size": 13783
   },
+  "icon/unitenergybar/unitenergybar03": {
+    "md5": "9f8108cca6110008",
+    "size": 18663
+  },
   "icon/unitpersonality/icon_unitpersonality1": {
     "md5": "3db8caf896e747aa",
     "size": 1284177
   },
   "icon/unitpersonality/icon_unitpersonality2": {
-    "md5": "45e143b09ee78909",
-    "size": 1052809
+    "md5": "ba4cc93810f33051",
+    "size": 1119028
   },
   "icon/unittag/icon_unittag1": {
     "md5": "fb321942e851fa79",
@@ -12016,8 +12352,8 @@
     "size": 1933886
   },
   "infinitechallenge/map/challengestage_bak": {
-    "md5": "a3682cb399d2e2d9",
-    "size": 1007212
+    "md5": "ac9dc72b1fd2a195",
+    "size": 1007208
   },
   "localization/en": {
     "md5": "04ace7d2c3542427",
@@ -12040,11 +12376,11 @@
     "size": 1831752
   },
   "localization/en/activitybigluccia": {
-    "md5": "7fe4573171eaa5c7",
-    "size": 95714
+    "md5": "6e633dc0b17a0447",
+    "size": 69217
   },
   "localization/en/activitybigrogue": {
-    "md5": "966a3b221f39e986",
+    "md5": "98862614b40b99e5",
     "size": 170998
   },
   "localization/en/activitybigstage1": {
@@ -12060,8 +12396,8 @@
     "size": 100939
   },
   "localization/en/bannar": {
-    "md5": "98eae6da6924ecb7",
-    "size": 8520472
+    "md5": "e332a19542b3552d",
+    "size": 8670533
   },
   "localization/en/card": {
     "md5": "97a1db6cbedfb9ac",
@@ -12088,8 +12424,8 @@
     "size": 35987179
   },
   "localization/en/gachatitle": {
-    "md5": "d38cf38dec0c68f0",
-    "size": 6910366
+    "md5": "17a93fc36a7fbca6",
+    "size": 7029972
   },
   "localization/en/jigsaw": {
     "md5": "563660c9b616a947",
@@ -12100,8 +12436,8 @@
     "size": 83266
   },
   "localization/en/operationactivity_append_shop_01": {
-    "md5": "611070d00c6b56ec",
-    "size": 314630
+    "md5": "cd29749d96c37b1d",
+    "size": 362567
   },
   "localization/en/operationactivity_append_skin_01": {
     "md5": "aa4af807f7349550",
@@ -12136,8 +12472,8 @@
     "size": 1262900
   },
   "localization/en/ui": {
-    "md5": "c3ece5755cd28d0a",
-    "size": 65623
+    "md5": "71d7e52d9fc3a462",
+    "size": 66511
   },
   "localization/en/atlas/en-activitybig01_atlas": {
     "md5": "5d356cea2f96aae3",
@@ -12172,19 +12508,19 @@
     "size": 47912
   },
   "localization/en/atlas/en-activitybig07_atlas": {
-    "md5": "209ed5786fbca3be",
-    "size": 53828
+    "md5": "eb4164226b37b004",
+    "size": 53832
   },
   "localization/en/atlas/en-activitybig08_atlas": {
-    "md5": "e9e49aa1aa38be19",
-    "size": 50737
+    "md5": "a75f8484124b2954",
+    "size": 50738
   },
   "localization/en/atlas/en-activitybigstage1_atlas": {
     "md5": "c916dbc7f7f780fc",
     "size": 52742
   },
   "localization/en/atlas/en-activityelaman_atlas": {
-    "md5": "9dfdf406fbc1c720",
+    "md5": "3037630a13d6e4b1",
     "size": 69681
   },
   "localization/en/atlas/en-activitymiddle01_atlas": {
@@ -12396,23 +12732,23 @@
     "size": 26531235
   },
   "localization/es/ui": {
-    "md5": "fc6578e9fe7bc3ce",
-    "size": 65201
+    "md5": "d782b591275d30b8",
+    "size": 66372
   },
   "localization/fr/ui": {
-    "md5": "f59bed280cff5263",
-    "size": 71520
+    "md5": "20c67c4182a8d47b",
+    "size": 73380
   },
   "localization/it/ui": {
-    "md5": "bb12f8cb548f3364",
-    "size": 65840
+    "md5": "30f77967cc9ec48c",
+    "size": 67246
   },
   "localization/ja/activitybigluccia": {
-    "md5": "f0605a156ae46709",
-    "size": 95715
+    "md5": "da30a7437fce6407",
+    "size": 72638
   },
   "localization/ja/activitybigrogue": {
-    "md5": "a264d6aea77de151",
+    "md5": "231be3f58d53acfd",
     "size": 184696
   },
   "localization/ja/activitybigstage1": {
@@ -12428,8 +12764,8 @@
     "size": 99813
   },
   "localization/ja/bannar": {
-    "md5": "c32d57f1aac655ed",
-    "size": 8466089
+    "md5": "1bd08a71cf4fbc23",
+    "size": 8628509
   },
   "localization/ja/card": {
     "md5": "72b1caf6c00a8161",
@@ -12456,8 +12792,8 @@
     "size": 40565592
   },
   "localization/ja/gachatitle": {
-    "md5": "a3846ec87eb70974",
-    "size": 6860567
+    "md5": "93b9a8e9a5a1cc6b",
+    "size": 6981262
   },
   "localization/ja/jigsaw": {
     "md5": "e6e234d8563ad1ae",
@@ -12468,8 +12804,8 @@
     "size": 82495
   },
   "localization/ja/operationactivity_append_shop_01": {
-    "md5": "469c3aa966fe855d",
-    "size": 328421
+    "md5": "239a39e5688ed298",
+    "size": 375068
   },
   "localization/ja/operationactivity_append_skin_01": {
     "md5": "218c9e63faebc193",
@@ -12504,8 +12840,8 @@
     "size": 1264224
   },
   "localization/ja/ui": {
-    "md5": "a7e677c24370ce16",
-    "size": 67397
+    "md5": "ec81368f56a643ab",
+    "size": 69473
   },
   "localization/ja/atlas/ja-activitybig01_atlas": {
     "md5": "9f2668fd090fc458",
@@ -12540,20 +12876,20 @@
     "size": 61192
   },
   "localization/ja/atlas/ja-activitybig07_atlas": {
-    "md5": "a07672dfd7fb3215",
+    "md5": "00e9afc3fe3f2507",
     "size": 48354
   },
   "localization/ja/atlas/ja-activitybig08_atlas": {
-    "md5": "2ebcbf6f2316f299",
-    "size": 52735
+    "md5": "e0288b0e78f6adbb",
+    "size": 52724
   },
   "localization/ja/atlas/ja-activitybigstage1_atlas": {
     "md5": "0c2e58fc0901a607",
     "size": 57380
   },
   "localization/ja/atlas/ja-activityelaman_atlas": {
-    "md5": "b35c248522d53713",
-    "size": 70965
+    "md5": "f362caccd675c1b2",
+    "size": 70973
   },
   "localization/ja/atlas/ja-activitymiddle01_atlas": {
     "md5": "7eee78a1f47fdada",
@@ -12764,12 +13100,12 @@
     "size": 21991192
   },
   "localization/ko/activitybigluccia": {
-    "md5": "9e253e3c70777d70",
-    "size": 95714
+    "md5": "0a06e115973554b1",
+    "size": 71181
   },
   "localization/ko/activitybigrogue": {
-    "md5": "c9314e290ad1c89e",
-    "size": 180543
+    "md5": "849428f2813a29de",
+    "size": 180542
   },
   "localization/ko/activitybigstage1": {
     "md5": "08300c74476004e4",
@@ -12784,8 +13120,8 @@
     "size": 100854
   },
   "localization/ko/bannar": {
-    "md5": "009233cca48750da",
-    "size": 8419999
+    "md5": "414ea2a02348da39",
+    "size": 8542670
   },
   "localization/ko/card": {
     "md5": "7ace3c7de7d8cb95",
@@ -12812,8 +13148,8 @@
     "size": 35413573
   },
   "localization/ko/gachatitle": {
-    "md5": "367974dbfe49bdb4",
-    "size": 6632931
+    "md5": "488256b8c99ebbfd",
+    "size": 6751282
   },
   "localization/ko/jigsaw": {
     "md5": "c341928346dde82f",
@@ -12824,8 +13160,8 @@
     "size": 82038
   },
   "localization/ko/operationactivity_append_shop_01": {
-    "md5": "4afcc1008fff51c7",
-    "size": 316815
+    "md5": "42e663b2220dcf6b",
+    "size": 363046
   },
   "localization/ko/operationactivity_append_skin_01": {
     "md5": "823d5ba22a733a17",
@@ -12860,8 +13196,8 @@
     "size": 1262553
   },
   "localization/ko/ui": {
-    "md5": "06e29bb758f90378",
-    "size": 65217
+    "md5": "71a5b9794a3d97bc",
+    "size": 65729
   },
   "localization/ko/atlas/ko-activitybig01_atlas": {
     "md5": "410fb17a15302146",
@@ -12896,20 +13232,20 @@
     "size": 47464
   },
   "localization/ko/atlas/ko-activitybig07_atlas": {
-    "md5": "25eb21c80a8ba70b",
+    "md5": "5686fb90b2a5d2bb",
     "size": 51593
   },
   "localization/ko/atlas/ko-activitybig08_atlas": {
-    "md5": "66801e28d75c8a8b",
-    "size": 48215
+    "md5": "c7f1c1171d4e573f",
+    "size": 48226
   },
   "localization/ko/atlas/ko-activitybigstage1_atlas": {
     "md5": "a09aa5a2c20b5625",
     "size": 64149
   },
   "localization/ko/atlas/ko-activityelaman_atlas": {
-    "md5": "b204ba650c713ca5",
-    "size": 78555
+    "md5": "7712c33e627cf4fb",
+    "size": 78554
   },
   "localization/ko/atlas/ko-activitymiddle01_atlas": {
     "md5": "8fbfb4524bc3896e",
@@ -13120,8 +13456,8 @@
     "size": 23694175
   },
   "localization/pt/ui": {
-    "md5": "b24bc45d5d45f639",
-    "size": 71475
+    "md5": "2740041ed318cf14",
+    "size": 72706
   },
   "localization/zh-cn/card": {
     "md5": "1e9040db1ef2810a",
@@ -13132,8 +13468,8 @@
     "size": 1693152
   },
   "localization/zh-cn/ui": {
-    "md5": "3d68a9759b9ab9d5",
-    "size": 25904
+    "md5": "7cc2ef45dca61a56",
+    "size": 26203
   },
   "localization/zh-cn/atlas/zh-cn-bannar_atlas": {
     "md5": "29236d6116051f32",
@@ -13148,8 +13484,8 @@
     "size": 96806
   },
   "localization/zh-tw/activitybigrogue": {
-    "md5": "5f268fb3936d35c7",
-    "size": 108408
+    "md5": "ee07eced529a501a",
+    "size": 194229
   },
   "localization/zh-tw/activitybigstage1": {
     "md5": "5537fdbe7f766b96",
@@ -13164,8 +13500,8 @@
     "size": 99779
   },
   "localization/zh-tw/bannar": {
-    "md5": "bb1359bcc4bc8961",
-    "size": 8425538
+    "md5": "bc92feb0b7c07058",
+    "size": 8596747
   },
   "localization/zh-tw/card": {
     "md5": "c91778cb7f999d30",
@@ -13192,8 +13528,8 @@
     "size": 6159627
   },
   "localization/zh-tw/gachatitle": {
-    "md5": "16b5088d11b4e350",
-    "size": 6902303
+    "md5": "46a9d772fa1388a4",
+    "size": 7027278
   },
   "localization/zh-tw/jigsaw": {
     "md5": "6ff50988807f1526",
@@ -13204,8 +13540,8 @@
     "size": 80873
   },
   "localization/zh-tw/operationactivity_append_shop_01": {
-    "md5": "9f789f8fd73a8a14",
-    "size": 320817
+    "md5": "26392a594a48f47a",
+    "size": 367253
   },
   "localization/zh-tw/operationactivity_append_skin_01": {
     "md5": "28fa557f6ed61b34",
@@ -13240,8 +13576,8 @@
     "size": 1245990
   },
   "localization/zh-tw/ui": {
-    "md5": "e794044aeae96573",
-    "size": 70816
+    "md5": "3850d362999b6ae2",
+    "size": 71700
   },
   "localization/zh-tw/atlas/zh-tw-activitybig01_atlas": {
     "md5": "a95ab68485206f8b",
@@ -13276,20 +13612,20 @@
     "size": 58994
   },
   "localization/zh-tw/atlas/zh-tw-activitybig07_atlas": {
-    "md5": "e6681367bbb3069d",
-    "size": 48728
+    "md5": "310a924e31d61add",
+    "size": 48718
   },
   "localization/zh-tw/atlas/zh-tw-activitybig08_atlas": {
-    "md5": "82513c89e96b1762",
-    "size": 50498
+    "md5": "f906d6cc43162ce8",
+    "size": 50509
   },
   "localization/zh-tw/atlas/zh-tw-activitybigstage1_atlas": {
     "md5": "119922f918b6cddb",
     "size": 53578
   },
   "localization/zh-tw/atlas/zh-tw-activityelaman_atlas": {
-    "md5": "2c86ed65a04f292c",
-    "size": 78915
+    "md5": "8bf6969d4782d2db",
+    "size": 78919
   },
   "localization/zh-tw/atlas/zh-tw-activitymiddle01_atlas": {
     "md5": "78e60565e7560aab",
@@ -13512,67 +13848,67 @@
     "size": 20263
   },
   "lua/lua_base": {
-    "md5": "4676736fafed8717",
-    "size": 71177
+    "md5": "2acd16c5b3ef6353",
+    "size": 71215
   },
   "lua/lua_battle": {
-    "md5": "3c793c1eeb9b7a90",
-    "size": 4805977
+    "md5": "e4a9928489f9475e",
+    "size": 4872232
   },
   "lua/lua_common": {
-    "md5": "eb583976d5863dc8",
-    "size": 689989
+    "md5": "8f163bef2a7d307b",
+    "size": 693125
   },
   "lua/lua_db": {
-    "md5": "d028ea5a17623090",
-    "size": 4410913
+    "md5": "1defbc9d27e90056",
+    "size": 4527701
   },
   "lua/lua_dblang_en": {
-    "md5": "f783254dd8303c09",
-    "size": 25147488
+    "md5": "7ff964db46e2dff6",
+    "size": 25667715
   },
   "lua/lua_dblang_es": {
-    "md5": "ed15755a8f91e722",
-    "size": 26340036
+    "md5": "bb6ceed26e7a3af4",
+    "size": 26853325
   },
   "lua/lua_dblang_fr": {
-    "md5": "d3fcb1acf9f46050",
-    "size": 26842708
+    "md5": "503a95991d5a27e3",
+    "size": 27356245
   },
   "lua/lua_dblang_it": {
-    "md5": "1e4de756386e1a96",
-    "size": 26304663
+    "md5": "0846d2ea7356d98b",
+    "size": 26804731
   },
   "lua/lua_dblang_ja": {
-    "md5": "c906319546568f78",
-    "size": 27372343
+    "md5": "d2f1d354833615a1",
+    "size": 27883947
   },
   "lua/lua_dblang_ko": {
-    "md5": "8e193966f8b2b869",
-    "size": 26642938
+    "md5": "7e7963c5c812c6eb",
+    "size": 27150426
   },
   "lua/lua_dblang_pt": {
-    "md5": "a3cc614241e1e955",
-    "size": 25995821
+    "md5": "eb37eaa56697234d",
+    "size": 26496983
   },
   "lua/lua_dblang_zh-cn": {
     "md5": "78c28639d7a71ace",
     "size": 11117329
   },
   "lua/lua_dblang_zh-tw": {
-    "md5": "b9a2321cda3e2275",
-    "size": 24288575
+    "md5": "54afc7dbc0df291d",
+    "size": 24746362
   },
   "lua/lua_dbtemplate": {
-    "md5": "0c05ca059bcbb102",
-    "size": 31281357
+    "md5": "14b9b39863ed3643",
+    "size": 31778167
   },
   "lua/lua_dbtemplateonline": {
-    "md5": "e7f28cd85f853d03",
-    "size": 18044457
+    "md5": "969793197169642c",
+    "size": 18927169
   },
   "lua/lua_dbtemplateperformance": {
-    "md5": "6c2cbed2ada7f33f",
+    "md5": "ed6dfc7cde6ca7a4",
     "size": 8967839
   },
   "lua/lua_dbtemplatesandbox": {
@@ -13580,32 +13916,32 @@
     "size": 2248509
   },
   "lua/lua_dbtemplateskill": {
-    "md5": "273549d4f21652d0",
-    "size": 14926258
+    "md5": "2bd24a8e5e858a7a",
+    "size": 15224810
   },
   "lua/lua_dbtemplatespeciality": {
-    "md5": "a04360e172297200",
-    "size": 14488110
+    "md5": "63da6f8e1ca9c9a6",
+    "size": 15010569
   },
   "lua/lua_dbtemplatetranslation": {
-    "md5": "ca4e756d66a6be91",
-    "size": 12079738
+    "md5": "76bc481b13d5c4bf",
+    "size": 12154802
   },
   "lua/lua_debug": {
-    "md5": "4bbfec5a50a2f239",
-    "size": 1223165
+    "md5": "ca579012fe71be59",
+    "size": 1231254
   },
   "lua/lua_editor": {
-    "md5": "9852567a060ad26c",
-    "size": 3274388
+    "md5": "6e88080f87916568",
+    "size": 3286071
   },
   "lua/lua_game": {
-    "md5": "9f32dd62fac5b18c",
-    "size": 5288271
+    "md5": "fc7c59cdfba7b0c3",
+    "size": 5296355
   },
   "lua/lua_handler": {
-    "md5": "e42695ea6706999c",
-    "size": 1085426
+    "md5": "ba455899b2b3d2f1",
+    "size": 1086622
   },
   "lua/lua_inputcontroller": {
     "md5": "bfb40fb6cc804bdc",
@@ -13616,32 +13952,32 @@
     "size": 196040
   },
   "lua/lua_model": {
-    "md5": "7a24f624bf6714bc",
-    "size": 3159179
+    "md5": "695a5037bde1093c",
+    "size": 3183976
   },
   "lua/lua_newsandbox": {
     "md5": "75758a5b2eebddcb",
     "size": 158548
   },
   "lua/lua_online": {
-    "md5": "0d4eb9273f6b97bb",
-    "size": 14573617
+    "md5": "5e3fd9e4b2b0ec60",
+    "size": 14759837
   },
   "lua/lua_pb": {
-    "md5": "d5dd31f673756aa9",
-    "size": 1418850
+    "md5": "b634adbd28c650f3",
+    "size": 1433611
   },
   "lua/lua_sandbox2": {
     "md5": "4ed29d098f6144cc",
     "size": 874910
   },
   "lua/lua_util": {
-    "md5": "059b4de11d6e42e2",
-    "size": 1139296
+    "md5": "68fde63ed051cefb",
+    "size": 1142396
   },
   "lua/lua___new": {
-    "md5": "8b6fa8af762da88a",
-    "size": 2513008
+    "md5": "986d70f21dfc7412",
+    "size": 2517022
   },
   "minisandbox/map/capital_alm-arena-da00101": {
     "md5": "1aaa9d86b2d125b8",
@@ -14155,6 +14491,10 @@
     "md5": "e5f697200cd74de4",
     "size": 2898375
   },
+  "movie/cg_skill_rogneda.mp4": {
+    "md5": "8c91f41edd7f204d",
+    "size": 2388802
+  },
   "movie/cg_skill_safiyyah.mp4": {
     "md5": "2b5ddb59b7a26e28",
     "size": 1898452
@@ -14247,6 +14587,10 @@
     "md5": "4819a5ef14d16541",
     "size": 2500932
   },
+  "movie/cg_skill_ulya.mp4": {
+    "md5": "0d60bb9d8358d336",
+    "size": 26497406
+  },
   "movie/cg_skill_xavier.mp4": {
     "md5": "81fba500210aa686",
     "size": 1421895
@@ -14315,6 +14659,10 @@
     "md5": "ecb449edc55fe06a",
     "size": 2572043
   },
+  "movie/cg_skin_spsamantha.mp4": {
+    "md5": "464cd8429effe11e",
+    "size": 2504182
+  },
   "movie/cg_skin_stage2role_g.mp4": {
     "md5": "5cd948ff0e1fed87",
     "size": 1927502
@@ -14332,8 +14680,8 @@
     "size": 38247521
   },
   "newui/abyss": {
-    "md5": "6dae073cc993e224",
-    "size": 2742026
+    "md5": "a6b5e577b128e1e0",
+    "size": 2743345
   },
   "newui/entrustregion": {
     "md5": "cd3a136f48355358",
@@ -14344,20 +14692,20 @@
     "size": 298480
   },
   "newui/infinitechallenge": {
-    "md5": "6d7262bf3eb68d83",
-    "size": 437816
+    "md5": "3945e2120289433a",
+    "size": 438090
   },
   "newui/messageboard": {
     "md5": "788661dcf02311b6",
     "size": 91299
   },
   "newui/moduleafk": {
-    "md5": "d6132ce60d19f4fe",
-    "size": 832300
+    "md5": "124f498d8d8f8f6d",
+    "size": 830383
   },
   "newui/modulebosschallenge": {
-    "md5": "cd587a97125381ea",
-    "size": 658234
+    "md5": "13007f8e2893383e",
+    "size": 659006
   },
   "newui/obtbattlepass": {
     "md5": "af87fa0685657ee5",
@@ -14384,8 +14732,8 @@
     "size": 173441
   },
   "scenario/scenario_alm-os-da00102": {
-    "md5": "af71203e937c7c54",
-    "size": 208339
+    "md5": "801fcdd05852b26b",
+    "size": 208321
   },
   "scenario/scenario_alm-os-da00201-2": {
     "md5": "ebf5e18a95f2b283",
@@ -14400,16 +14748,16 @@
     "size": 197386
   },
   "scenario/scenario_alm-thea-da00101": {
-    "md5": "ad018d5550bc8363",
-    "size": 140360
+    "md5": "364d7fb9853b63cc",
+    "size": 140342
   },
   "scenario/scenario_battle000_012-spcl": {
-    "md5": "1050699f63e980a9",
-    "size": 584688
+    "md5": "5b95e3543fdad735",
+    "size": 584670
   },
   "scenario/scenario_battle000_012": {
-    "md5": "2526183fe6519b0a",
-    "size": 457467
+    "md5": "cab692b1876250c7",
+    "size": 457453
   },
   "scenario/scenario_battle000_019": {
     "md5": "35f4ce5290daefd4",
@@ -14420,152 +14768,152 @@
     "size": 103651
   },
   "scenario/scenario_battle002": {
-    "md5": "7c50441c93615560",
-    "size": 620220
+    "md5": "03c805bac2133163",
+    "size": 620207
   },
   "scenario/scenario_cave-in-ni01101": {
-    "md5": "740fe3cb130f6ad3",
+    "md5": "b16ba1c49cfdc6b8",
     "size": 1600129
   },
   "scenario/scenario_cave-spcl-co00101": {
-    "md5": "d52aa17cfb68c6cc",
-    "size": 224815
+    "md5": "e7890b4713d5eea0",
+    "size": 224798
   },
   "scenario/scenario_cave-spcl-da00101": {
-    "md5": "53ed7fb994a83636",
-    "size": 191535
+    "md5": "fabb6290438d25d5",
+    "size": 191518
   },
   "scenario/scenario_cave-spcl-ni00101": {
-    "md5": "2cf851cbbc29f393",
+    "md5": "48abf43033017b24",
     "size": 192776
   },
   "scenario/scenario_cave-spcl-ni00201-lda": {
-    "md5": "f7649448ce9b8f18",
-    "size": 513232
+    "md5": "327b1947266c4cde",
+    "size": 513218
   },
   "scenario/scenario_cg": {
-    "md5": "2e4c117d351c74e5",
-    "size": 7161053
+    "md5": "93acf80917316cc5",
+    "size": 7161038
   },
   "scenario/scenario_city-ca-da01901": {
-    "md5": "2812950e5209c1cb",
-    "size": 823025
+    "md5": "7248fc035129ab7c",
+    "size": 823007
   },
   "scenario/scenario_city-ca-da02001": {
-    "md5": "a56aa9527aeade66",
-    "size": 872205
+    "md5": "42ffa1c98479a9bf",
+    "size": 872186
   },
   "scenario/scenario_city-ca-da02301": {
-    "md5": "9b3f6ce087955580",
-    "size": 154878
+    "md5": "0376137e9bb85d39",
+    "size": 154862
   },
   "scenario/scenario_city-ca-du00301": {
-    "md5": "84a4cfe078bef835",
-    "size": 109182
+    "md5": "0d628fc887733342",
+    "size": 109167
   },
   "scenario/scenario_city-ca-ni02201": {
     "md5": "76f2945fa8054a2d",
     "size": 291740
   },
   "scenario/scenario_city-cp-da00101": {
-    "md5": "f895f3207d25b1d6",
-    "size": 200222
+    "md5": "4fea40a2ad09864d",
+    "size": 200207
   },
   "scenario/scenario_city-os-da00101-00": {
-    "md5": "fcfef69da58cdee4",
-    "size": 608192
+    "md5": "ff289bf2c1070678",
+    "size": 608172
   },
   "scenario/scenario_city-os-da00401": {
     "md5": "7a4375c456663134",
     "size": 394986
   },
   "scenario/scenario_city-os-da00501": {
-    "md5": "0070cb5ab8bf4743",
-    "size": 238453
+    "md5": "3767ada7d4a4bbfb",
+    "size": 238440
   },
   "scenario/scenario_city-os-da00701": {
-    "md5": "a5590dea3cda29e9",
-    "size": 669867
+    "md5": "4253db341245623b",
+    "size": 669849
   },
   "scenario/scenario_city-os-da00801": {
-    "md5": "9c1a23117a2587e4",
-    "size": 523629
+    "md5": "0c609a4733bd114f",
+    "size": 523612
   },
   "scenario/scenario_city-os-da00901": {
-    "md5": "2e706288bec18e8d",
-    "size": 251009
+    "md5": "f57b4887121e97dc",
+    "size": 250992
   },
   "scenario/scenario_city-os-da01501": {
     "md5": "1cd783801e7063ac",
     "size": 358135
   },
   "scenario/scenario_city-os-da01601": {
-    "md5": "ac406ce4c76e01fe",
-    "size": 32634
+    "md5": "d682b04a0acaaf36",
+    "size": 32619
   },
   "scenario/scenario_city-os-da01701": {
-    "md5": "ea62e86730017ce5",
-    "size": 151917
+    "md5": "7675d2b882cb0918",
+    "size": 151900
   },
   "scenario/scenario_city-os-da01702": {
-    "md5": "9a3689025f86c4f9",
-    "size": 162963
+    "md5": "dd1563f611336b7e",
+    "size": 162946
   },
   "scenario/scenario_city-os-du00501": {
-    "md5": "9ead5039fa66ecff",
-    "size": 485452
+    "md5": "815fa2276043366e",
+    "size": 485451
   },
   "scenario/scenario_city-os-du00701": {
-    "md5": "cbfcfc609043b079",
-    "size": 752872
+    "md5": "8a6df26d17c8f46f",
+    "size": 752855
   },
   "scenario/scenario_city-os-du01401": {
-    "md5": "073b46544ac4496b",
-    "size": 185000
+    "md5": "ce8967820a8dbebd",
+    "size": 184986
   },
   "scenario/scenario_city-os-du01601": {
-    "md5": "24da11c4d65bf639",
-    "size": 289899
+    "md5": "308ddfaaf1577e63",
+    "size": 289880
   },
   "scenario/scenario_city-os-du01701": {
-    "md5": "510850987522c236",
-    "size": 32991
+    "md5": "d80ef10c61947ffa",
+    "size": 32974
   },
   "scenario/scenario_city-os-du01801": {
-    "md5": "75f848fb1c438167",
-    "size": 208166
+    "md5": "4405aef16e65e73c",
+    "size": 208150
   },
   "scenario/scenario_city-os-duco00105": {
-    "md5": "af7624232de803c8",
-    "size": 432049
+    "md5": "fe409c03604f6dc2",
+    "size": 432034
   },
   "scenario/scenario_city-os-duco00205": {
     "md5": "c6fb32dfe330d737",
     "size": 501988
   },
   "scenario/scenario_city-os-duco00305": {
-    "md5": "d7d4c5565893fa99",
-    "size": 341146
+    "md5": "630e9e3f19f1a923",
+    "size": 341130
   },
   "scenario/scenario_city-os-ni00108": {
-    "md5": "3874cd7c94219ad8",
-    "size": 532322
+    "md5": "2694b99c279825af",
+    "size": 532306
   },
   "scenario/scenario_city-os-ni00208": {
     "md5": "934f91725866d02a",
     "size": 580931
   },
   "scenario/scenario_city-os-ni01401": {
-    "md5": "bbc8cd5f81b05f64",
-    "size": 224118
+    "md5": "963d2a0cdcfdac39",
+    "size": 224100
   },
   "scenario/scenario_city-os-ni01601": {
-    "md5": "8c24b57499732fca",
-    "size": 203727
+    "md5": "026aaa2ead922cfa",
+    "size": 203710
   },
   "scenario/scenario_city-os-niri00801": {
-    "md5": "c3e0520fe9702440",
-    "size": 399962
+    "md5": "fb03c7eb31f28d21",
+    "size": 399949
   },
   "scenario/scenario_city-os-nisn00601": {
     "md5": "3c9d66a792a3b1f0",
@@ -14576,56 +14924,56 @@
     "size": 866948
   },
   "scenario/scenario_city-spcl-da00101": {
-    "md5": "ec1489601bd8ec7c",
-    "size": 142610
+    "md5": "46cbff889a60d1b8",
+    "size": 142598
   },
   "scenario/scenario_city-spcl-da00501": {
-    "md5": "43acbeafbe9e7845",
-    "size": 136587
+    "md5": "194e04b78df0138a",
+    "size": 136571
   },
   "scenario/scenario_city-spcl-da00601": {
-    "md5": "a3a62cfa51febdca",
-    "size": 406627
+    "md5": "2ca9aefddee7facd",
+    "size": 406610
   },
   "scenario/scenario_city-spcl-da00801": {
-    "md5": "82291705177e0e4c",
-    "size": 643186
+    "md5": "476eab2c111c3565",
+    "size": 643167
   },
   "scenario/scenario_city-spcl-da00901-00": {
-    "md5": "817d2dd2272bf0a9",
-    "size": 405578
+    "md5": "7270929142b7957e",
+    "size": 405565
   },
   "scenario/scenario_city-spcl-da00901-01": {
-    "md5": "4e124e691d07dab9",
-    "size": 341290
+    "md5": "4c4b29965e58b235",
+    "size": 341273
   },
   "scenario/scenario_city-spcl-da00901-02": {
-    "md5": "cc7c3929dff98c27",
-    "size": 400020
+    "md5": "785b68ff3cfb634b",
+    "size": 400005
   },
   "scenario/scenario_city-spcl-dawn00401": {
-    "md5": "5306515d9508ad94",
-    "size": 363741
+    "md5": "6a644286b72a0c17",
+    "size": 363726
   },
   "scenario/scenario_city-spcl-du00301": {
     "md5": "f400ab8120c6b165",
     "size": 112934
   },
   "scenario/scenario_city-spcl-ni00101": {
-    "md5": "e4496d710f658ebf",
-    "size": 82189
+    "md5": "0052f9deef916d1f",
+    "size": 82174
   },
   "scenario/scenario_city-spcl-ni00201": {
-    "md5": "0f52b22e1ed29b82",
-    "size": 403899
+    "md5": "3f06a322d3d6eaf7",
+    "size": 403881
   },
   "scenario/scenario_city-spcl-ni00301": {
     "md5": "4f2ab74c7cbbf619",
     "size": 524281
   },
   "scenario/scenario_city-spcl-ni00401": {
-    "md5": "1d6738041f0ad8de",
-    "size": 635033
+    "md5": "8bae21ccd67dc19d",
+    "size": 635021
   },
   "scenario/scenario_city-spcl-ni00701": {
     "md5": "03782629691271c2",
@@ -14636,532 +14984,532 @@
     "size": 386930
   },
   "scenario/scenario_cook_2": {
-    "md5": "0309e974a0962ab8",
-    "size": 144739
+    "md5": "bd81f306c7d785b6",
+    "size": 144724
   },
   "scenario/scenario_createchar": {
-    "md5": "c92526afcb3bcdef",
-    "size": 176081
+    "md5": "a53d6a0f79120b97",
+    "size": 176085
   },
   "scenario/scenario_desert-os-da01101": {
-    "md5": "e3b755063a35bc8f",
-    "size": 366052
+    "md5": "607e8329a1c5e9d5",
+    "size": 366037
   },
   "scenario/scenario_desert-os-da01201": {
     "md5": "11f6faa9ff98d1ad",
     "size": 314367
   },
   "scenario/scenario_desert-spcl-da00101": {
-    "md5": "8df9ca202626d9ea",
-    "size": 277214
+    "md5": "820899b8ce6835bb",
+    "size": 277196
   },
   "scenario/scenario_desert-spcl-da00201-1": {
-    "md5": "a5a089a8e489b345",
-    "size": 741671
+    "md5": "a34f6f7da3d12745",
+    "size": 741653
   },
   "scenario/scenario_desert-spcl-da00201-2": {
-    "md5": "7c62aa907c3af5a4",
-    "size": 535828
+    "md5": "81eed7c29443d6fe",
+    "size": 535812
   },
   "scenario/scenario_desert-spcl-da00201": {
-    "md5": "7353119a0ade0931",
-    "size": 197418
+    "md5": "4a66af3f1af445c0",
+    "size": 197399
   },
   "scenario/scenario_desert-spcl-ni00201-1": {
-    "md5": "2f922be4bf5031b0",
-    "size": 269911
+    "md5": "9c15dfbfe52db135",
+    "size": 269893
   },
   "scenario/scenario_desert-spcl-ni00201": {
-    "md5": "b69958bd3c651257",
-    "size": 444624
+    "md5": "b8c1c2d681c129da",
+    "size": 444605
   },
   "scenario/scenario_dls_virtual-sky-da00101": {
-    "md5": "af2b4bab7e5d53f9",
-    "size": 87741
+    "md5": "8d88b6e5460ca713",
+    "size": 87727
   },
   "scenario/scenario_dls_virtual-sky-da00201": {
-    "md5": "182c694dd2276c4f",
-    "size": 746842
+    "md5": "f3716d97cfac1b6c",
+    "size": 746825
   },
   "scenario/scenario_dls_virtual-sky-da00201_cvr01": {
-    "md5": "63097b28dbe3ceb4",
-    "size": 830018
+    "md5": "9aca7f52179fd284",
+    "size": 829999
   },
   "scenario/scenario_dls_virtual-sky-da00201_cvr02": {
-    "md5": "7f261ffbb06478b8",
-    "size": 381926
+    "md5": "7a6a3260326f2f6c",
+    "size": 381909
   },
   "scenario/scenario_dls_virtual-sky-da00202": {
-    "md5": "d354f596584ec269",
-    "size": 674119
+    "md5": "ad552d8c20ff9999",
+    "size": 674102
   },
   "scenario/scenario_dls_virtual-sky-da00203": {
-    "md5": "8c0b538a3e8a8781",
-    "size": 258734
+    "md5": "c8bc94b7b0cb96ee",
+    "size": 258717
   },
   "scenario/scenario_dls_virtual-sky-da00301": {
-    "md5": "60392e3e08bf71b3",
-    "size": 2483390
+    "md5": "9e77dd2c764c616a",
+    "size": 2483380
   },
   "scenario/scenario_dls_virtual-sky-da00302": {
-    "md5": "beb2ebfa6966aa1f",
-    "size": 2169042
+    "md5": "9775845f92ef92ea",
+    "size": 2169027
   },
   "scenario/scenario_dls_virtual-sky-da00303": {
-    "md5": "8bdf55ea8e4b0c37",
-    "size": 866364
+    "md5": "a20736ae08a03e5e",
+    "size": 866357
   },
   "scenario/scenario_dls_virtual-sky-da00304": {
-    "md5": "846e27ab7d79eceb",
-    "size": 2302674
+    "md5": "c092a7e9c84b71a5",
+    "size": 2302658
   },
   "scenario/scenario_dls_virtual-sky-da00305": {
-    "md5": "c309b8548ac0284b",
-    "size": 506272
+    "md5": "da1ebc893f144ca3",
+    "size": 506256
   },
   "scenario/scenario_dls_virtual-sky-da00306": {
-    "md5": "4552adf99a2db1be",
-    "size": 1663948
+    "md5": "ffa3cbfbb70f7125",
+    "size": 1663934
   },
   "scenario/scenario_end": {
-    "md5": "72c2fe5d3c93904c",
-    "size": 181492
+    "md5": "590451530ba9b4fa",
+    "size": 181481
   },
   "scenario/scenario_end_act": {
-    "md5": "cdfedf245acff021",
-    "size": 96205
+    "md5": "e868fde4944f4709",
+    "size": 96191
   },
   "scenario/scenario_end_alm": {
-    "md5": "d354230dc50770e1",
-    "size": 87939
+    "md5": "3638a143547abe4c",
+    "size": 87924
   },
   "scenario/scenario_end_alm2": {
-    "md5": "8f02ddfefd0099be",
-    "size": 131947
+    "md5": "dc20a7c7bc507b30",
+    "size": 131932
   },
   "scenario/scenario_end_fhg": {
-    "md5": "c75a25126c193e22",
-    "size": 97884
+    "md5": "a7cd3c03ca014f63",
+    "size": 97869
   },
   "scenario/scenario_end_lxy": {
-    "md5": "ef06da751789ad58",
-    "size": 130730
+    "md5": "051e0450bd12dd3f",
+    "size": 130716
   },
   "scenario/scenario_end_qzx": {
-    "md5": "9c75febf24b92bcb",
-    "size": 117399
+    "md5": "9713b4380c88e86e",
+    "size": 117384
   },
   "scenario/scenario_end_swn": {
-    "md5": "fe3d44cfd0bdea2b",
-    "size": 160035
+    "md5": "731829d265c93ed9",
+    "size": 160020
   },
   "scenario/scenario_end_swn_02": {
-    "md5": "10500e439e5362c5",
-    "size": 139509
+    "md5": "0910c3fd172f9b61",
+    "size": 139494
   },
   "scenario/scenario_end_union-a": {
-    "md5": "bc9b1f186192ed66",
-    "size": 87704
+    "md5": "e2f9ab1c9e90602c",
+    "size": 87691
   },
   "scenario/scenario_friendship_hcrimsondetectivefset": {
-    "md5": "32ded626f3b69191",
-    "size": 211219
+    "md5": "31aebac0458abd6d",
+    "size": 211202
   },
   "scenario/scenario_friendship_hcrimsongeneralfset": {
-    "md5": "83de54bd62d978c4",
-    "size": 174465
+    "md5": "3aca1aef95b690d3",
+    "size": 174450
   },
   "scenario/scenario_friendship_hcrimsonlavierfset": {
-    "md5": "ad891e3492a68548",
-    "size": 241627
+    "md5": "9c84ee53cc33253c",
+    "size": 241614
   },
   "scenario/scenario_friendship_hcrimsonsophiafset": {
-    "md5": "f0811657a478245f",
-    "size": 285376
+    "md5": "b9191e428465ccf6",
+    "size": 285358
   },
   "scenario/scenario_friendship_hdarklightdarkknight": {
     "md5": "7e7104217e76ea1f",
     "size": 269749
   },
   "scenario/scenario_friendship_hiriafprince": {
-    "md5": "564c1f24625285fa",
-    "size": 231653
+    "md5": "b807eb5f77d6cff6",
+    "size": 231636
   },
   "scenario/scenario_friendship_hknightscaptainmset": {
-    "md5": "dd2d7abb30164964",
-    "size": 156866
+    "md5": "9e3d3eeb5d0798b5",
+    "size": 156851
   },
   "scenario/scenario_friendship_hknightsicemagefset": {
-    "md5": "d28ee8a7e0a03463",
-    "size": 174152
+    "md5": "79a7c0bb28af5964",
+    "size": 174134
   },
   "scenario/scenario_friendship_hknightsoldknight": {
-    "md5": "fe0cfacc219c59ab",
-    "size": 166188
+    "md5": "7e26091be10c223d",
+    "size": 166173
   },
   "scenario/scenario_friendship_hknightspaladinf": {
-    "md5": "00ee0aa94386842b",
-    "size": 171496
+    "md5": "c0bb9ae7a4a499ad",
+    "size": 171479
   },
   "scenario/scenario_friendship_hluciayoungcolonelm": {
-    "md5": "3c8b75ca54880609",
-    "size": 181921
+    "md5": "34756e45810ddb4e",
+    "size": 181905
   },
   "scenario/scenario_friendship_hpapalbishopf": {
-    "md5": "d46bcefccaf051c9",
-    "size": 192472
+    "md5": "cb5ac32daa1c7e23",
+    "size": 192454
   },
   "scenario/scenario_friendship_hpapaljudgercfset": {
-    "md5": "316e613767977259",
-    "size": 177893
+    "md5": "122e858dfb3e3b71",
+    "size": 177878
   },
   "scenario/scenario_friendship_hpapalmercenaryleader": {
-    "md5": "dc62b9ed0e646cb2",
-    "size": 224988
+    "md5": "7e5a2e384d3c1d53",
+    "size": 224972
   },
   "scenario/scenario_friendship_hpapalprincem": {
-    "md5": "c9d65b3986ee2c45",
-    "size": 168179
+    "md5": "48183be809923ccd",
+    "size": 168159
   },
   "scenario/scenario_friendship_hplayerleaderada": {
-    "md5": "a93f4f47848e344f",
-    "size": 242646
+    "md5": "cd62ce8532fa9e25",
+    "size": 242631
   },
   "scenario/scenario_friendship_hplayerlittlewitch": {
-    "md5": "871c73399ae255d9",
-    "size": 215550
+    "md5": "2700b735b8a8bc1c",
+    "size": 215532
   },
   "scenario/scenario_friendship_hplayermercenaryboy": {
-    "md5": "9ec0317a361cf338",
-    "size": 217615
+    "md5": "e8fdbc1a947ac082",
+    "size": 217600
   },
   "scenario/scenario_friendship_hplayermercenarygirl": {
-    "md5": "520037a91b4a6c80",
-    "size": 255770
+    "md5": "0e4cd23559c90fd7",
+    "size": 255752
   },
   "scenario/scenario_friendship_hplayersisterlavier": {
-    "md5": "49bc7994d79223f5",
-    "size": 186933
+    "md5": "87e7caba2e97cd2f",
+    "size": 186918
   },
   "scenario/scenario_friendship_hsolomonblind": {
-    "md5": "62316fc894229a80",
-    "size": 166506
+    "md5": "979517ec72c925cb",
+    "size": 166491
   },
   "scenario/scenario_friendship_hsolomonbusinessman": {
-    "md5": "851330321ed1b6f7",
-    "size": 192392
+    "md5": "071f51cff307ac24",
+    "size": 192374
   },
   "scenario/scenario_friendship_hsolomonhalfblood": {
-    "md5": "79415106ec730de5",
-    "size": 164499
+    "md5": "48f14afaf3e52441",
+    "size": 164484
   },
   "scenario/scenario_friendship_hsolomonparrotgirl": {
-    "md5": "27daafb5a420456f",
-    "size": 177462
+    "md5": "c33fab1f2b0d84e1",
+    "size": 177448
   },
   "scenario/scenario_friendship_hvilderdancerf": {
-    "md5": "8b708877f59bed8f",
-    "size": 204345
+    "md5": "b11a80da85cc2467",
+    "size": 204325
   },
   "scenario/scenario_friendship_hvildersistersinger": {
-    "md5": "2857a61cfbb604ee",
-    "size": 176844
+    "md5": "2462165973565877",
+    "size": 176827
   },
   "scenario/scenario_friendship_hvilderwitchf": {
-    "md5": "75c55e57a31c2909",
-    "size": 180726
+    "md5": "b8a8e7ed43ee8f48",
+    "size": 180709
   },
   "scenario/scenario_friendship_liuxingdui": {
-    "md5": "1c07e19020cc9815",
-    "size": 209203
+    "md5": "4f0443b333848d3a",
+    "size": 209186
   },
   "scenario/scenario_fs_hbanditthemaskmset": {
-    "md5": "9b6ad0914c63ecd8",
-    "size": 292185
+    "md5": "454ad5f9fcd34f20",
+    "size": 292167
   },
   "scenario/scenario_fs_hcrimsonhousemaidkiller": {
-    "md5": "83f8bb0a4520ec8d",
-    "size": 186914
+    "md5": "a5e7f3fa5e906964",
+    "size": 186895
   },
   "scenario/scenario_fs_hcrimsonmafialeaderfset": {
-    "md5": "0158ff92b1a22098",
-    "size": 186284
+    "md5": "9ad6ec410f266113",
+    "size": 186263
   },
   "scenario/scenario_fs_hcrimsonsfather": {
-    "md5": "e9312a720871a014",
-    "size": 181072
+    "md5": "4349c01535705e33",
+    "size": 181050
   },
   "scenario/scenario_fs_hiriacommandermset": {
-    "md5": "4243c4fcf1b6a2a3",
-    "size": 180463
+    "md5": "c5d28e5806c5b729",
+    "size": 180446
   },
   "scenario/scenario_fs_hirialadymunafset": {
-    "md5": "e84492e45dd6e108",
-    "size": 168869
+    "md5": "00ec144017ae18ed",
+    "size": 168856
   },
   "scenario/scenario_fs_hiriayoungcolonelmset": {
-    "md5": "8d5fd2366d95fb39",
-    "size": 226505
+    "md5": "168489cd14fbd34c",
+    "size": 226487
   },
   "scenario/scenario_fs_hpapalcommandermset": {
-    "md5": "cf98f23d6b0d8745",
-    "size": 173704
+    "md5": "c50e78e168a5f759",
+    "size": 173687
   },
   "scenario/scenario_fs_hpapalsamanthafset": {
-    "md5": "2670c54dfc9e15a1",
-    "size": 195794
+    "md5": "f302dd3881b377ff",
+    "size": 195913
   },
   "scenario/scenario_fs_hpolicetwinsfset": {
-    "md5": "bd368f8b6976955b",
-    "size": 240942
+    "md5": "3d23a09c6b21f294",
+    "size": 240922
   },
   "scenario/scenario_fs_hpolicetwinsmset": {
-    "md5": "551fff736e84bc01",
-    "size": 208304
+    "md5": "6c565d734db39d44",
+    "size": 208284
   },
   "scenario/scenario_fs_hvildergraywolfmset": {
-    "md5": "bcc66fb5f5bc83ca",
-    "size": 229937
+    "md5": "a05f6e37f85a320d",
+    "size": 229922
   },
   "scenario/scenario_fs_hvildersisterchieffset": {
-    "md5": "5f70de972a35ac2b",
-    "size": 212651
+    "md5": "262c5660dc6a02cc",
+    "size": 212635
   },
   "scenario/scenario_home-ch-da00101": {
-    "md5": "1542457908223877",
-    "size": 456468
+    "md5": "16c559ff2983ccd0",
+    "size": 456536
   },
   "scenario/scenario_home-ch-ni00101": {
-    "md5": "25e2ed491af9d9b5",
-    "size": 344450
+    "md5": "aa9068f1229ca10c",
+    "size": 344433
   },
   "scenario/scenario_home-fh-da00201": {
-    "md5": "4dc95e052c5c817b",
-    "size": 400530
+    "md5": "855a764bb8fac01a",
+    "size": 400519
   },
   "scenario/scenario_home-fh-da00202": {
-    "md5": "6191851553842a2e",
-    "size": 406589
+    "md5": "cf5932336b4389af",
+    "size": 406572
   },
   "scenario/scenario_home-fh-da00301": {
-    "md5": "747d608fcd48f1b3",
-    "size": 591135
+    "md5": "be24fe9a0025cf5f",
+    "size": 591121
   },
   "scenario/scenario_home-fh-da00302": {
-    "md5": "00d5ee30150bd5f5",
-    "size": 950497
+    "md5": "b4064898a5b66524",
+    "size": 950485
   },
   "scenario/scenario_home-fh-daco00201": {
-    "md5": "67d87c8a81cdcb9f",
-    "size": 205789
+    "md5": "360935e013a6719c",
+    "size": 205771
   },
   "scenario/scenario_home-fh-ni00301": {
-    "md5": "bbcef3687680b398",
-    "size": 556820
+    "md5": "2942a6aed0b14823",
+    "size": 556805
   },
   "scenario/scenario_home-fh-ni00302": {
-    "md5": "005832eee0390f6b",
-    "size": 943192
+    "md5": "ecc6e4c0a624560d",
+    "size": 943174
   },
   "scenario/scenario_home-fh-niri00201": {
-    "md5": "3a28bfe7388cb23b",
-    "size": 328189
+    "md5": "0a90d356ae90a4ca",
+    "size": 328174
   },
   "scenario/scenario_home-fh-niri00301": {
-    "md5": "a5b42badeadf80ac",
-    "size": 190922
+    "md5": "b7f0ec2d982dec8b",
+    "size": 190909
   },
   "scenario/scenario_home-hp-da00101": {
-    "md5": "6fc89168b50df8eb",
-    "size": 92221
+    "md5": "3fc8511c84da390b",
+    "size": 92205
   },
   "scenario/scenario_home-mh-da00101": {
-    "md5": "92014b8b67ffecee",
-    "size": 721634
+    "md5": "16446081c970f6ed",
+    "size": 721752
   },
   "scenario/scenario_home-mh-da00102": {
-    "md5": "7fc16f0f8adfe0b9",
-    "size": 297245
+    "md5": "403cd97e7e8ae8f5",
+    "size": 297231
   },
   "scenario/scenario_home-mh-daco00101": {
-    "md5": "3e776b01634950fd",
-    "size": 503923
+    "md5": "f1dd9318581a7793",
+    "size": 503908
   },
   "scenario/scenario_home-mh-du00101": {
-    "md5": "6d6ae095d4a29a1d",
-    "size": 287504
+    "md5": "2b65962bcc2f253c",
+    "size": 287489
   },
   "scenario/scenario_home-mh-ni00101": {
-    "md5": "977dd2597245e9f3",
-    "size": 567119
+    "md5": "1b83ce41467a483f",
+    "size": 567103
   },
   "scenario/scenario_home-mk-da00101": {
-    "md5": "715dca429fee41a2",
-    "size": 233495
+    "md5": "ab9eb015a9280297",
+    "size": 233476
   },
   "scenario/scenario_home-mk-du00101": {
-    "md5": "6440d9a35a03d589",
-    "size": 186877
+    "md5": "1fb48c552bc09a74",
+    "size": 186860
   },
   "scenario/scenario_home-mk-ni00101": {
-    "md5": "0576a4f757dc7648",
-    "size": 257930
+    "md5": "fda8fde1e892a624",
+    "size": 257908
   },
   "scenario/scenario_home-os-da00101": {
-    "md5": "e31d9c59a42a9b2c",
-    "size": 1229705
+    "md5": "0a7e2c9631eb6766",
+    "size": 1229690
   },
   "scenario/scenario_home-os-da00201": {
-    "md5": "41a4e4f53498a64e",
-    "size": 650043
+    "md5": "e9afbf48b25fe6ed",
+    "size": 650023
   },
   "scenario/scenario_home-os-da00301": {
-    "md5": "2e6be0f668d66c1d",
-    "size": 1219608
+    "md5": "456377b85d11b225",
+    "size": 1219593
   },
   "scenario/scenario_home-os-du00101": {
-    "md5": "62050799117ff99f",
-    "size": 530097
+    "md5": "45f0d712a1bb75be",
+    "size": 530078
   },
   "scenario/scenario_home-os-ni00101": {
-    "md5": "44884781c2f20cc0",
-    "size": 317949
+    "md5": "6a9c8f2d31045bac",
+    "size": 317931
   },
   "scenario/scenario_home-os-ni00301": {
-    "md5": "0e8a23d1ff5c8be6",
-    "size": 154755
+    "md5": "78d9a205a732b82d",
+    "size": 154739
   },
   "scenario/scenario_home-pb-da00101": {
-    "md5": "b206dfa6543c1fad",
-    "size": 284765
+    "md5": "9fda6801b4d86185",
+    "size": 284747
   },
   "scenario/scenario_home-pb-da00102": {
-    "md5": "11b04a83416d5011",
-    "size": 361953
+    "md5": "f672d887ac9df454",
+    "size": 361937
   },
   "scenario/scenario_home-pb-ni00101": {
-    "md5": "a1ae7d9ef9403310",
-    "size": 577502
+    "md5": "55c1bfb645baed2a",
+    "size": 577486
   },
   "scenario/scenario_home-pb-ni00102": {
-    "md5": "aa815c7d9c0065f6",
-    "size": 428280
+    "md5": "bc854f0f0de48f09",
+    "size": 428264
   },
   "scenario/scenario_home-pb-ni00105": {
-    "md5": "3c30a2e57fe8865f",
-    "size": 193706
+    "md5": "a31255cf1e107623",
+    "size": 193693
   },
   "scenario/scenario_home-pb-ni00109": {
-    "md5": "fd518cfecc86cf1b",
-    "size": 650548
+    "md5": "9f09f6c11c63c577",
+    "size": 650531
   },
   "scenario/scenario_innerstage01": {
-    "md5": "b7ca507140ffdbb5",
-    "size": 315027
+    "md5": "70af3d66396dd1b3",
+    "size": 315009
   },
   "scenario/scenario_innerstage02": {
-    "md5": "c58fadc9ca104c39",
-    "size": 233659
+    "md5": "16b6fc50f5ff0a9d",
+    "size": 233641
   },
   "scenario/scenario_innerstage03": {
-    "md5": "e5d0efe6f0c4d487",
-    "size": 289544
+    "md5": "8f2a06d868f6ddb5",
+    "size": 289526
   },
   "scenario/scenario_innerstage05": {
-    "md5": "0b042234a44822ee",
-    "size": 241113
+    "md5": "3655a0c6307d84b9",
+    "size": 241170
   },
   "scenario/scenario_innerstage06": {
-    "md5": "1cf11f369125329d",
-    "size": 239621
+    "md5": "c321ab23366142f0",
+    "size": 239606
   },
   "scenario/scenario_innerstage07": {
-    "md5": "939f6a50f2458850",
-    "size": 171863
+    "md5": "e64918bb569d8676",
+    "size": 171843
   },
   "scenario/scenario_innerstage08": {
-    "md5": "b30b2429bda75f33",
-    "size": 171838
+    "md5": "dffb920283a31296",
+    "size": 171816
   },
   "scenario/scenario_innerstage09": {
-    "md5": "a4368f5c7ed0a65a",
-    "size": 262321
+    "md5": "e0fa3bd5eb43441d",
+    "size": 262301
   },
   "scenario/scenario_innerstage10": {
-    "md5": "c410141077d119d1",
-    "size": 269209
+    "md5": "1687765f5f79657d",
+    "size": 269191
   },
   "scenario/scenario_innerstage11": {
-    "md5": "e13421f7dd4978cb",
-    "size": 271937
+    "md5": "5b18a00687c9e6b3",
+    "size": 271917
   },
   "scenario/scenario_innerstage13": {
-    "md5": "6c6a6f3bff72f5c3",
-    "size": 200756
+    "md5": "69583cae806e6fc4",
+    "size": 200739
   },
   "scenario/scenario_innerstage14": {
-    "md5": "c8a4b11b6e3c4d8e",
-    "size": 248858
+    "md5": "1dd99287ec654bfa",
+    "size": 248838
   },
   "scenario/scenario_innerstage15": {
-    "md5": "d313c1744d439e5d",
-    "size": 226880
+    "md5": "573b2a407a3b736a",
+    "size": 226856
   },
   "scenario/scenario_innerstage16": {
-    "md5": "451c0881987a55b0",
-    "size": 223587
+    "md5": "a5e15c3c6a239e58",
+    "size": 223568
   },
   "scenario/scenario_innerstage_alm": {
-    "md5": "f50d03fc52b45570",
-    "size": 132324
+    "md5": "084ca9ec6971011c",
+    "size": 132309
   },
   "scenario/scenario_innerstage_lxy": {
     "md5": "22c9a674f566997e",
     "size": 902899
   },
   "scenario/scenario_innerstage_swnxs": {
-    "md5": "121b61c0d07847f2",
-    "size": 200051
+    "md5": "a46ee8da29626712",
+    "size": 200034
   },
   "scenario/scenario_innerstage_tlp": {
-    "md5": "cc8fc311c072eb0f",
-    "size": 284084
+    "md5": "18b341a13ca5317f",
+    "size": 284068
   },
   "scenario/scenario_interior-ca-da00301": {
-    "md5": "ab889a5ea7c9e267",
-    "size": 341285
+    "md5": "4aef58d96aa0a3bc",
+    "size": 341268
   },
   "scenario/scenario_interior-ca-da00401": {
     "md5": "402a9888c2174a83",
     "size": 342756
   },
   "scenario/scenario_interior-ca-da00601": {
-    "md5": "404b30696ee61233",
-    "size": 466713
+    "md5": "2a091756e9aa7ef0",
+    "size": 466694
   },
   "scenario/scenario_interior-ca-da00701": {
-    "md5": "bae88b49875ddaff",
-    "size": 123123
+    "md5": "1685bb11b22c499d",
+    "size": 123108
   },
   "scenario/scenario_interior-ca-da00801": {
-    "md5": "6e04f8baadca9f5f",
-    "size": 354574
+    "md5": "9c060b0233fdc7c6",
+    "size": 354555
   },
   "scenario/scenario_interior-ca-da01301": {
-    "md5": "267e755768510965",
-    "size": 492008
+    "md5": "9a36a91b6121eabf",
+    "size": 491993
   },
   "scenario/scenario_interior-ca-du00301": {
-    "md5": "42a664f943527f7d",
-    "size": 300021
+    "md5": "d10da2f7ab2de00a",
+    "size": 300005
   },
   "scenario/scenario_interior-ca-du01401": {
-    "md5": "c607be1e5f3803d9",
-    "size": 209759
+    "md5": "5d47189e84686691",
+    "size": 209742
   },
   "scenario/scenario_interior-ca-ni00101": {
-    "md5": "95ff83f92c98c040",
-    "size": 455621
+    "md5": "9a01d20cd1b651ed",
+    "size": 455607
   },
   "scenario/scenario_interior-ca-ni00301": {
     "md5": "c0c03762910b362a",
@@ -15172,88 +15520,88 @@
     "size": 333092
   },
   "scenario/scenario_interior-ca-ni00501": {
-    "md5": "65805568d9eb8f24",
-    "size": 140530
+    "md5": "6d127e850540ca40",
+    "size": 140515
   },
   "scenario/scenario_interior-ca-ni00801": {
-    "md5": "d4b5c711f95e455b",
-    "size": 351092
+    "md5": "b3f3df9955c0b73b",
+    "size": 351073
   },
   "scenario/scenario_interior-cp-ni00101": {
     "md5": "5b526e6eec1f7ecc",
     "size": 93145
   },
   "scenario/scenario_interior-dzt-da00101": {
-    "md5": "275d0140cdf9c484",
-    "size": 156911
+    "md5": "cdc90accb5744679",
+    "size": 156892
   },
   "scenario/scenario_interior-in-da00201": {
-    "md5": "a22a5be16c89628e",
-    "size": 161650
+    "md5": "519589a6efc96e6d",
+    "size": 161635
   },
   "scenario/scenario_interior-in-da00501": {
-    "md5": "bcac4b097ffaaecd",
-    "size": 190068
+    "md5": "c3b59045ca4ee1e9",
+    "size": 190049
   },
   "scenario/scenario_interior-in-ni00101": {
-    "md5": "3f47f41657da1424",
-    "size": 158284
+    "md5": "c0dad42fa2a07e06",
+    "size": 158268
   },
   "scenario/scenario_interior-in-ni00201": {
-    "md5": "cd9d99e40e0841b0",
-    "size": 422937
+    "md5": "2ca51a5ad8822c11",
+    "size": 422920
   },
   "scenario/scenario_interior-in-ni00501": {
-    "md5": "601caf1e86e0bf51",
-    "size": 231886
+    "md5": "6c37f6b3d8c3db9b",
+    "size": 231868
   },
   "scenario/scenario_interior-in-ni01001": {
-    "md5": "f88e3ca4c22f74a4",
-    "size": 315892
+    "md5": "cdc9baa7ef5b9ad7",
+    "size": 315879
   },
   "scenario/scenario_interior-pa-da00201": {
     "md5": "be1fecb1794316e8",
     "size": 230523
   },
   "scenario/scenario_interior-pa-da00601": {
-    "md5": "a96c7ef8441de82c",
-    "size": 164283
+    "md5": "8ca134b91aa14b3a",
+    "size": 164268
   },
   "scenario/scenario_interior-pa-da01101-2": {
-    "md5": "f3dc23409ff48829",
-    "size": 200550
+    "md5": "819fe12fc61343c5",
+    "size": 200537
   },
   "scenario/scenario_interior-pa-da01101": {
-    "md5": "3a8f3f5e5ad5d4fe",
-    "size": 434395
+    "md5": "0658e4a43f99a315",
+    "size": 434382
   },
   "scenario/scenario_interior-pa-ni00101": {
-    "md5": "ebce4b9f5f3aa9a8",
-    "size": 234605
+    "md5": "037a762b3df13d74",
+    "size": 234587
   },
   "scenario/scenario_interior-pa-ni00201": {
     "md5": "cddfa968e005b0c8",
     "size": 178422
   },
   "scenario/scenario_interior-pa-ni00701": {
-    "md5": "c2abf35a72b91684",
-    "size": 290756
+    "md5": "4dfb3daffd4e003d",
+    "size": 290753
   },
   "scenario/scenario_interior-pa-ni01101": {
-    "md5": "106d56829f974b0c",
-    "size": 144741
+    "md5": "f4b02f3241c1723e",
+    "size": 144724
   },
   "scenario/scenario_interior-spcl-da00101": {
     "md5": "4431604135518023",
     "size": 174106
   },
   "scenario/scenario_interior-spcl-da00701": {
-    "md5": "42339502d08f7262",
-    "size": 248257
+    "md5": "751f9c41e71f9633",
+    "size": 248245
   },
   "scenario/scenario_interior-spcl-da00801": {
-    "md5": "64b4ef44194f945e",
-    "size": 156528
+    "md5": "29b062ebda78bb6d",
+    "size": 156512
   },
   "scenario/scenario_interior-spcl-ni00201": {
     "md5": "a45243582b58ff7a",
@@ -15272,44 +15620,44 @@
     "size": 256977
   },
   "scenario/scenario_interior-spcl-ni00401": {
-    "md5": "61e75af6a28ddd6c",
-    "size": 192756
+    "md5": "8c9cfa100589c7cc",
+    "size": 192757
   },
   "scenario/scenario_interior-spcl-ni00501-1": {
     "md5": "2dfe3fad61993c6a",
     "size": 234643
   },
   "scenario/scenario_interior-spcl-ni00601-2": {
-    "md5": "7b8e93df362a3023",
-    "size": 381792
+    "md5": "aa0a164cf15bbba9",
+    "size": 381776
   },
   "scenario/scenario_interior-spcl-ni00601": {
-    "md5": "7f4c506c86a51369",
-    "size": 703006
+    "md5": "711b335ffc5d85af",
+    "size": 702980
   },
   "scenario/scenario_interior-spcl-ni00602-2": {
-    "md5": "30ed4342a4e6b672",
-    "size": 332705
+    "md5": "6655ec41b5a24fec",
+    "size": 332688
   },
   "scenario/scenario_interior-spcl-ni00602": {
-    "md5": "85561b93eacb1d6c",
-    "size": 1419871
+    "md5": "4646d95f0d68f29f",
+    "size": 1419853
   },
   "scenario/scenario_interior-spcl-ni00701": {
     "md5": "afaa4cb91bb1c2a3",
     "size": 240745
   },
   "scenario/scenario_interior-spcl-ni00801": {
-    "md5": "6644c867c41e93a5",
-    "size": 172483
+    "md5": "f3367acf32f58301",
+    "size": 172467
   },
   "scenario/scenario_interior-ug-ni00101": {
-    "md5": "0c3c5596ae190bee",
-    "size": 393417
+    "md5": "59e549da1d150deb",
+    "size": 393402
   },
   "scenario/scenario_interior-ug-ni00201": {
-    "md5": "73bc8b28198c43ff",
-    "size": 411862
+    "md5": "c4f91af00252833a",
+    "size": 411848
   },
   "scenario/scenario_interior-ug-ni00301": {
     "md5": "bb873caefec2a141",
@@ -15324,60 +15672,60 @@
     "size": 200382
   },
   "scenario/scenario_lda-cave-da00101": {
-    "md5": "38d5be7ac65e6c4d",
-    "size": 371173
+    "md5": "9c71231ae891206f",
+    "size": 371161
   },
   "scenario/scenario_lda-cave-ni00101": {
-    "md5": "9fd27488cc44678f",
-    "size": 419492
+    "md5": "5a8f58b4f3dbfcf2",
+    "size": 419478
   },
   "scenario/scenario_ldw-cp-du00101": {
-    "md5": "648f70ed7afb6087",
-    "size": 318091
+    "md5": "f51d5e7922e593c0",
+    "size": 318076
   },
   "scenario/scenario_ldw-cp-ni00101": {
-    "md5": "de31a3b56703c96e",
-    "size": 281744
+    "md5": "6f8358c655d4479d",
+    "size": 281727
   },
   "scenario/scenario_lxy-cp-da00501": {
-    "md5": "3bb77c8bcc295561",
-    "size": 182104
+    "md5": "d0858b6f9a31d59d",
+    "size": 182087
   },
   "scenario/scenario_lxy-cp-dawn00101": {
-    "md5": "672697ed53c5cc57",
-    "size": 245750
+    "md5": "c409efee13fda079",
+    "size": 245810
   },
   "scenario/scenario_lxy-cp-du00202": {
     "md5": "57b8c26567bf13db",
     "size": 333041
   },
   "scenario/scenario_lxy-cp-ni00401-00": {
-    "md5": "22fd935cb927dbb3",
-    "size": 235979
+    "md5": "c45b3b9b83ee03be",
+    "size": 235964
   },
   "scenario/scenario_lxy-cp-ni00501": {
-    "md5": "c1d3b05e1dff727d",
-    "size": 162538
+    "md5": "c9ed45478d6afb21",
+    "size": 162521
   },
   "scenario/scenario_lxy-os-da00101": {
-    "md5": "9c239e013141a7d9",
-    "size": 521775
+    "md5": "97006f9203ce6ce0",
+    "size": 521761
   },
   "scenario/scenario_lxy-os-da00102": {
-    "md5": "e7b6dcbf13fd1275",
-    "size": 901850
+    "md5": "1b84d919532961f0",
+    "size": 901839
   },
   "scenario/scenario_lxy-os-da00201": {
-    "md5": "27c50d5e92b038cc",
-    "size": 133126
+    "md5": "9e8e456315743682",
+    "size": 133112
   },
   "scenario/scenario_lxy-os-da00202": {
-    "md5": "328294990b3089b6",
-    "size": 146965
+    "md5": "9c32df2cd8e251c0",
+    "size": 146948
   },
   "scenario/scenario_lxy-os-ni00202": {
-    "md5": "eb3d0c19892df295",
-    "size": 142236
+    "md5": "a1c0b18fbdbb75cf",
+    "size": 142219
   },
   "scenario/scenario_lyc-arena-da00101": {
     "md5": "1e3775ea34ccba37",
@@ -15436,12 +15784,12 @@
     "size": 289585
   },
   "scenario/scenario_lyc-pb-da00101": {
-    "md5": "fb7c6403979a7f8e",
-    "size": 167134
+    "md5": "9d54df5c5ea6b5d9",
+    "size": 167118
   },
   "scenario/scenario_lyc-pb-ni00101": {
-    "md5": "0a98c4788d5aee7d",
-    "size": 205019
+    "md5": "afeca3b8eaf5bcf5",
+    "size": 205003
   },
   "scenario/scenario_marsh-os-da00101": {
     "md5": "247ceaaf229d54a1",
@@ -15464,12 +15812,12 @@
     "size": 246188
   },
   "scenario/scenario_marsh-spcl-da00101": {
-    "md5": "bfe2d681ac52d5bc",
-    "size": 151518
+    "md5": "45ef35bc5bf14f79",
+    "size": 151501
   },
   "scenario/scenario_marsh-spcl-ni00101": {
-    "md5": "c7ff8639e07554bf",
-    "size": 177784
+    "md5": "6ead08ce6570919c",
+    "size": 177767
   },
   "scenario/scenario_mountain-os-da00801-2": {
     "md5": "7f348c00c409ea44",
@@ -15484,12 +15832,12 @@
     "size": 308485
   },
   "scenario/scenario_mountain-spcl-da00101": {
-    "md5": "60dfb3e96c8772de",
-    "size": 150056
+    "md5": "4769fd0ac91813f1",
+    "size": 150036
   },
   "scenario/scenario_mountain-spcl-da00401": {
-    "md5": "8deac79cbac93982",
-    "size": 354816
+    "md5": "0c7a70b0354f21fb",
+    "size": 355005
   },
   "scenario/scenario_mountain-spcl-du00301": {
     "md5": "7f89ffffd1e36a72",
@@ -15500,128 +15848,128 @@
     "size": 236618
   },
   "scenario/scenario_plain-cp-da00901": {
-    "md5": "7c94e75bc8be3135",
-    "size": 855198
+    "md5": "81d4aa7da002fff9",
+    "size": 855175
   },
   "scenario/scenario_plain-cp-du00901": {
-    "md5": "df8d848dac34332e",
-    "size": 483192
+    "md5": "7ed05120c03f12e4",
+    "size": 483177
   },
   "scenario/scenario_plain-cp-ni00401": {
-    "md5": "54b7ef671667e9aa",
-    "size": 480944
+    "md5": "8018ffa1e8a223bf",
+    "size": 480927
   },
   "scenario/scenario_plain-spcl-da00301": {
-    "md5": "be8270e406d9027d",
-    "size": 342672
+    "md5": "aa13acc68a2c3292",
+    "size": 342655
   },
   "scenario/scenario_plain-spcl-da00501": {
-    "md5": "948ea4c0206fadbc",
-    "size": 269878
+    "md5": "63940b7e21999aab",
+    "size": 269864
   },
   "scenario/scenario_plain-spcl-du00301": {
-    "md5": "46e11fe8c97b9a3b",
-    "size": 314657
+    "md5": "e4cdb9fdc1b3935b",
+    "size": 314640
   },
   "scenario/scenario_plain-spcl-ni00601": {
-    "md5": "5a565e847e31aef7",
-    "size": 246088
+    "md5": "aa77d7789c533c2b",
+    "size": 246075
   },
   "scenario/scenario_plain-spcl-nith00101": {
-    "md5": "29c91e6e38d59023",
-    "size": 224377
+    "md5": "ca9f312e0d45bbb5",
+    "size": 224368
   },
   "scenario/scenario_staff_alm": {
-    "md5": "7f893b80d4e520eb",
-    "size": 4822198
+    "md5": "3f23fcce41da110a",
+    "size": 4822183
   },
   "scenario/scenario_staff_alm2": {
-    "md5": "476568b1caa1f484",
-    "size": 8229990
+    "md5": "5332140723401be9",
+    "size": 8229975
   },
   "scenario/scenario_staff_fhg": {
-    "md5": "0628b2ad7e76b5f0",
-    "size": 5407744
+    "md5": "9a454174203a7dfa",
+    "size": 5407729
   },
   "scenario/scenario_staff_lxy1": {
-    "md5": "af51eb1356f50094",
-    "size": 5120300
+    "md5": "604cf2c3eb4ad4d6",
+    "size": 5120285
   },
   "scenario/scenario_staff_qst": {
-    "md5": "45672807fbbea9c7",
-    "size": 5949394
+    "md5": "6086147947e3f184",
+    "size": 5949379
   },
   "scenario/scenario_staff_swn1": {
-    "md5": "3069c04ac8a3ecfb",
-    "size": 5174671
+    "md5": "26b9dff66f952d15",
+    "size": 5174656
   },
   "scenario/scenario_staff_swn2": {
-    "md5": "b5017b3df7ccc8f3",
-    "size": 6271329
+    "md5": "6072abe8c8b62a2e",
+    "size": 6271314
   },
   "scenario/scenario_staff_w": {
-    "md5": "23c2be6345a0cad9",
-    "size": 60539
+    "md5": "b145fa88bd86c3c6",
+    "size": 60524
   },
   "scenario/scenario_staff_wgj": {
-    "md5": "fefed549c4c3206b",
-    "size": 6977734
+    "md5": "58de71d00be91c0b",
+    "size": 6977719
   },
   "scenario/scenario_swn-cp-da00101": {
-    "md5": "079d2e79bd94ad48",
-    "size": 117359
+    "md5": "39bfa250944920a4",
+    "size": 117345
   },
   "scenario/scenario_swn-cp-da00102": {
-    "md5": "abf36cbf6039d4ad",
-    "size": 248104
+    "md5": "6a84863f430a4a89",
+    "size": 248089
   },
   "scenario/scenario_swn-cp-da00201": {
-    "md5": "c6bc83bb958e988c",
-    "size": 227454
+    "md5": "7c8e9283f12954e2",
+    "size": 227435
   },
   "scenario/scenario_swn-cp-da00501": {
-    "md5": "28691667e16d694a",
-    "size": 167766
+    "md5": "b69e375a61987feb",
+    "size": 167750
   },
   "scenario/scenario_swn-cp-ni00101": {
-    "md5": "078ab0072a7de24b",
-    "size": 264655
+    "md5": "a1c44511eb0a3ffb",
+    "size": 264637
   },
   "scenario/scenario_swn-cp-ni00201": {
-    "md5": "8ead0cd8b28ac6ab",
-    "size": 147100
+    "md5": "d01364bf5a719bb4",
+    "size": 147086
   },
   "scenario/scenario_swn-cp-ni00501": {
-    "md5": "8ba6a8899ebd6af4",
-    "size": 219080
+    "md5": "f7029087464df152",
+    "size": 219060
   },
   "scenario/scenario_swn-cp-nico00301": {
-    "md5": "1e08578bb8206dd2",
-    "size": 287235
+    "md5": "04044c0887accb3f",
+    "size": 287220
   },
   "scenario/scenario_s_battle000_001": {
-    "md5": "8dc3b068ed1f3bce",
-    "size": 262162
+    "md5": "30c69423b3f70918",
+    "size": 262148
   },
   "scenario/scenario_s_battle000_012-spcl_a": {
-    "md5": "c232a2b5f383152a",
-    "size": 576578
+    "md5": "31d39309180b1eee",
+    "size": 576562
   },
   "scenario/scenario_s_battle000_031": {
-    "md5": "e65f0c7e5f2c0973",
-    "size": 392807
+    "md5": "e510353302c0a5e9",
+    "size": 393037
   },
   "scenario/scenario_s_battle011": {
-    "md5": "f2e8d5c54f3ec7b6",
-    "size": 321589
+    "md5": "e493806a3101806e",
+    "size": 321573
   },
   "scenario/scenario_s_battle017": {
-    "md5": "0805872e0efc54b9",
-    "size": 346885
+    "md5": "6b6bbb5a541f40fb",
+    "size": 346867
   },
   "scenario/scenario_s_battle018": {
-    "md5": "7c5ad12c72837ca0",
-    "size": 150645
+    "md5": "7bccff30e94ea865",
+    "size": 150631
   },
   "scenario/scenario_s_city-ca-da00101": {
     "md5": "b16ee449216d36fc",
@@ -15632,20 +15980,20 @@
     "size": 364960
   },
   "scenario/scenario_s_city-ca-da00601": {
-    "md5": "fbc95ee87018f1a7",
-    "size": 453015
+    "md5": "b698d6d5e1884095",
+    "size": 452993
   },
   "scenario/scenario_s_city-ca-da00901": {
     "md5": "e63fad69352f1c97",
     "size": 406408
   },
   "scenario/scenario_s_city-ca-du00101": {
-    "md5": "aeda67052fa94b91",
-    "size": 452724
+    "md5": "c685350d060fb02c",
+    "size": 452707
   },
   "scenario/scenario_s_city-ca-du00201": {
-    "md5": "9fd673b221c40d1f",
-    "size": 932761
+    "md5": "c02d4d767606a1cf",
+    "size": 932765
   },
   "scenario/scenario_s_city-ca-du00702": {
     "md5": "87a2df79055c6c0d",
@@ -15660,8 +16008,8 @@
     "size": 124393
   },
   "scenario/scenario_s_city-pit-da00401": {
-    "md5": "1d2df622b879aef6",
-    "size": 182545
+    "md5": "2828cfb951733fa4",
+    "size": 182510
   },
   "scenario/scenario_s_desert-os-da00101": {
     "md5": "33bb7c86bbcf6a03",
@@ -15676,64 +16024,64 @@
     "size": 179947
   },
   "scenario/scenario_s_interior-pa-da00501": {
-    "md5": "a5e91bda9bbc176e",
-    "size": 161235
+    "md5": "a0d33672320efc35",
+    "size": 161221
   },
   "scenario/scenario_s_mountain-os-da01201": {
-    "md5": "619da4cd64803209",
-    "size": 359548
+    "md5": "fdaeb3eef033de05",
+    "size": 359534
   },
   "scenario/scenario_s_mountain-os-da01601": {
     "md5": "3e1e0af6b340e95b",
     "size": 201878
   },
   "scenario/scenario_s_mountain-spcl-da00201": {
-    "md5": "95a00aec68b3453d",
-    "size": 336269
+    "md5": "83ae326aa155977c",
+    "size": 336249
   },
   "scenario/scenario_s_plain-cp-da00501": {
-    "md5": "cd0cf4d247006790",
-    "size": 414878
+    "md5": "d31a42bb29b5715b",
+    "size": 414887
   },
   "scenario/scenario_s_plain-cp-ni00201": {
-    "md5": "ac878d97d1e3d040",
-    "size": 166281
+    "md5": "843bf4d74443abab",
+    "size": 166273
   },
   "scenario/scenario_s_plain-os-da00201": {
-    "md5": "6eb6a1070df4de02",
-    "size": 214728
+    "md5": "da23c3a5bbaad6e3",
+    "size": 214713
   },
   "scenario/scenario_s_plain-os-da00701": {
-    "md5": "6a0de32ee476c1af",
-    "size": 390505
+    "md5": "075eb366b918bb70",
+    "size": 390659
   },
   "scenario/scenario_s_plain-os-da00801": {
-    "md5": "b17984a427364478",
-    "size": 166361
+    "md5": "5d475845bc9b2891",
+    "size": 166347
   },
   "scenario/scenario_s_plain-os-ni00501": {
     "md5": "701fa49d9c1586ff",
     "size": 191094
   },
   "scenario/scenario_s_plain-os-ni00701": {
-    "md5": "79adac0f916f1484",
-    "size": 395855
+    "md5": "1c3e34513e41591f",
+    "size": 395928
   },
   "scenario/scenario_tarot_get": {
-    "md5": "db96aeaa16a9581e",
-    "size": 63727
+    "md5": "0a4c1f4596f183c0",
+    "size": 63715
   },
   "scenario/scenario_tarot_put": {
-    "md5": "86744c2e5708d253",
-    "size": 87457
+    "md5": "1a6af5e9037211e1",
+    "size": 87445
   },
   "scenario/scenario_ui_daynightswitch": {
-    "md5": "804311dcf27ed048",
-    "size": 100074
+    "md5": "d67361f9e6e86bff",
+    "size": 100065
   },
   "scenario/scenario_voice_ep0_1": {
-    "md5": "bf52238446630768",
-    "size": 450012
+    "md5": "83305c16b79e551f",
+    "size": 449998
   },
   "scenario/ending_mask/ending_swnpart1_01": {
     "md5": "d3fa3e0ce3d4ef8d",
@@ -16476,8 +16824,8 @@
     "size": 1496621
   },
   "scenario/scene/scene_city-os-da01702": {
-    "md5": "e89acb0da42be0ab",
-    "size": 3467491
+    "md5": "680324110a4d03f5",
+    "size": 3467487
   },
   "scenario/scene/scene_city-os-da01801": {
     "md5": "9173f3e15b1a90e4",
@@ -16624,8 +16972,8 @@
     "size": 293388
   },
   "scenario/scene/scene_desert-spcl-da00101": {
-    "md5": "a5516742b77432c8",
-    "size": 507182
+    "md5": "cf14cb94b8e6f3d7",
+    "size": 507178
   },
   "scenario/scene/scene_desert-spcl-da00201": {
     "md5": "cb231d17847aa2b8",
@@ -16688,48 +17036,48 @@
     "size": 952801
   },
   "scenario/scene/scene_home-fh-da00101-snow-login": {
-    "md5": "0e56422bd8237ab8",
-    "size": 3537041
+    "md5": "4b03e436a19ed42a",
+    "size": 3537027
   },
   "scenario/scene/scene_home-fh-da00201": {
-    "md5": "bd689e5e0088018a",
-    "size": 1411105
+    "md5": "e1d92d06cdde54a2",
+    "size": 1411100
   },
   "scenario/scene/scene_home-fh-da00202": {
     "md5": "69cfe0c4aa08f5cf",
     "size": 460386
   },
   "scenario/scene/scene_home-fh-da00301": {
-    "md5": "54e1ba97f54289c8",
-    "size": 602602
+    "md5": "19b6092067c4ba44",
+    "size": 602596
   },
   "scenario/scene/scene_home-fh-daco00201": {
     "md5": "3aa30ed34a41b7dc",
     "size": 1634379
   },
   "scenario/scene/scene_home-fh-day00101-login": {
-    "md5": "3ff6dac20d84e8b3",
-    "size": 606015
+    "md5": "08162e81c351ded1",
+    "size": 606005
   },
   "scenario/scene/scene_home-fh-day00102-login": {
-    "md5": "3b5f683491104782",
-    "size": 616012
+    "md5": "bdb4b05e4c1560f9",
+    "size": 615998
   },
   "scenario/scene/scene_home-fh-du00201": {
     "md5": "905e7a102f4c9add",
     "size": 2342614
   },
   "scenario/scene/scene_home-fh-ni00101-login": {
-    "md5": "950eb221a7bf6d36",
-    "size": 610728
+    "md5": "3b486444b3cc1332",
+    "size": 610719
   },
   "scenario/scene/scene_home-fh-ni00101-snow-login": {
-    "md5": "08c4e379f9ec45de",
-    "size": 3789245
+    "md5": "ea016083e4c00407",
+    "size": 3789231
   },
   "scenario/scene/scene_home-fh-ni00102-login": {
-    "md5": "ab3573c6afec9faf",
-    "size": 620793
+    "md5": "5cd102ba63909a7e",
+    "size": 620780
   },
   "scenario/scene/scene_home-fh-ni00201": {
     "md5": "6377cb6f022d92fc",
@@ -16800,8 +17148,8 @@
     "size": 2501645
   },
   "scenario/scene/scene_home-os-da00301": {
-    "md5": "9ee572aed8a7f73d",
-    "size": 2377691
+    "md5": "c974601c05b55fcb",
+    "size": 2377687
   },
   "scenario/scene/scene_home-os-du00101": {
     "md5": "741195e9cd240f28",
@@ -16860,12 +17208,12 @@
     "size": 673204
   },
   "scenario/scene/scene_innerstage": {
-    "md5": "b669b5f49cf23fa0",
-    "size": 75560
+    "md5": "275e538a98fba6c0",
+    "size": 75545
   },
   "scenario/scene/scene_innerstage_black": {
-    "md5": "240bbc753ec26bbb",
-    "size": 19178
+    "md5": "b1005739237bffe5",
+    "size": 19163
   },
   "scenario/scene/scene_interior-ca-da00101": {
     "md5": "39899173f9080a73",
@@ -17208,8 +17556,8 @@
     "size": 1117362
   },
   "scenario/scene/scene_lyc-os-da00101-login": {
-    "md5": "9bb2ddfe9ea691df",
-    "size": 3361460
+    "md5": "2a4bc3e30ff80ab9",
+    "size": 3361452
   },
   "scenario/scene/scene_lyc-os-da00101": {
     "md5": "7c23ddc1b0d97573",
@@ -17220,8 +17568,8 @@
     "size": 3242326
   },
   "scenario/scene/scene_lyc-os-ni00101-login": {
-    "md5": "4921461951610c2b",
-    "size": 3391461
+    "md5": "f7dcf74d4ad24dac",
+    "size": 3391451
   },
   "scenario/scene/scene_lyc-os-ni00101": {
     "md5": "be6b418b1226dff6",
@@ -17340,8 +17688,8 @@
     "size": 1524299
   },
   "scenario/scene/scene_plain-spcl-nith00101": {
-    "md5": "aa230b2f1fc0475e",
-    "size": 715291
+    "md5": "4c56c3d35dc46227",
+    "size": 715289
   },
   "scenario/scene/scene_swn-cp-da00101": {
     "md5": "9ed4516c09e20f12",
@@ -17408,20 +17756,20 @@
     "size": 3550311
   },
   "scenario/scene/scene_s_city-ca-du00201": {
-    "md5": "1c4a29de29cabee4",
-    "size": 805834
+    "md5": "a3064860f704de4e",
+    "size": 805833
   },
   "scenario/scene/scene_virtual-sky-da00101": {
     "md5": "e708fb5019728f62",
     "size": 1239345
   },
   "scene/afk": {
-    "md5": "5151e351b2997bd2",
-    "size": 2819381
+    "md5": "47c3fbbffad258e7",
+    "size": 2819367
   },
   "scene/gacha": {
-    "md5": "d9918ef503ecfc8d",
-    "size": 438764
+    "md5": "3e1054b9bc3448c0",
+    "size": 438751
   },
   "scene/weather/scene_weather1": {
     "md5": "fa09a9dd6fd971da",
@@ -17434,6 +17782,10 @@
   "share/anim/share_activitybig07": {
     "md5": "4d54cc6bf481a30c",
     "size": 6931
+  },
+  "share/anim/share_activitybigrogue": {
+    "md5": "e144486a6401e42b",
+    "size": 7381
   },
   "share/anim/share_activitybigstage1": {
     "md5": "a18a9a5d5ebaf5fa",
@@ -17448,8 +17800,8 @@
     "size": 6842
   },
   "share/anim/share_ani": {
-    "md5": "226a36673bc73514",
-    "size": 97306
+    "md5": "7f1baef63ec43336",
+    "size": 97744
   },
   "share/anim/share_animation": {
     "md5": "37f6f9f07df8e537",
@@ -17476,8 +17828,8 @@
     "size": 8712
   },
   "share/anim/share_button": {
-    "md5": "3c4f5e6817f27f28",
-    "size": 10028
+    "md5": "0375143c386706b4",
+    "size": 10102
   },
   "share/anim/share_capitalaerialview": {
     "md5": "44744a41676624d8",
@@ -17544,8 +17896,8 @@
     "size": 7462
   },
   "share/anim/share_legacy": {
-    "md5": "ad3d322a9abc888f",
-    "size": 123130
+    "md5": "b1faf375b489c6b7",
+    "size": 122925
   },
   "share/anim/share_light": {
     "md5": "5546cbe1fd73a3cb",
@@ -17652,8 +18004,8 @@
     "size": 15176
   },
   "share/anim/share_sandboxelaman": {
-    "md5": "5849b01fb94518fa",
-    "size": 6793
+    "md5": "637c10aa5c5dd587",
+    "size": 7399
   },
   "share/anim/share_sandboxresult": {
     "md5": "5c841d7914c52755",
@@ -17768,8 +18120,8 @@
     "size": 10612955
   },
   "share/fbx/share_fbx13": {
-    "md5": "22732d3282cc7f38",
-    "size": 481441
+    "md5": "c7f02696b808b5d5",
+    "size": 504664
   },
   "share/fbx/share_fbx2": {
     "md5": "40eafc543c344e12",
@@ -17900,8 +18252,8 @@
     "size": 4616
   },
   "share/playable/share_effect": {
-    "md5": "3d0750dcd609e540",
-    "size": 1271070
+    "md5": "f3ce1715376f2915",
+    "size": 1308812
   },
   "share/playable/share_fail": {
     "md5": "d0a32bba2e0e4480",
@@ -17924,12 +18276,12 @@
     "size": 4674
   },
   "share/playable/share_guardian": {
-    "md5": "9357ad6179afabac",
-    "size": 16614
+    "md5": "381363c26ce5e232",
+    "size": 17143
   },
   "share/playable/share_hknights": {
-    "md5": "c307532507aa56e1",
-    "size": 20705
+    "md5": "d194541be9b434e2",
+    "size": 21047
   },
   "share/playable/share_icewizard": {
     "md5": "e7f13831360282ee",
@@ -18560,8 +18912,8 @@
     "size": 3043115
   },
   "share/tex/share_tex32": {
-    "md5": "8ab985e35d6979aa",
-    "size": 4191146
+    "md5": "308f3e4a4813cfa5",
+    "size": 4240243
   },
   "share/tex/share_tex33": {
     "md5": "7e00194b2a17e3db",
@@ -18608,8 +18960,8 @@
     "size": 4356502
   },
   "share/tex/share_tex43": {
-    "md5": "e630e103ae9cf60e",
-    "size": 10109681
+    "md5": "8c1a046729f4accd",
+    "size": 10129951
   },
   "share/tex/share_tex44": {
     "md5": "043a039e6b6bdcc8",
@@ -18636,8 +18988,8 @@
     "size": 1245284
   },
   "share/tex/share_tex5": {
-    "md5": "f50d195fa0b445ac",
-    "size": 2828222
+    "md5": "a617652733eaebf4",
+    "size": 2831815
   },
   "share/tex/share_tex50": {
     "md5": "7702279e21ca62e4",
@@ -18648,8 +19000,12 @@
     "size": 13507110
   },
   "share/tex/share_tex52": {
-    "md5": "4e4f66213b8ec911",
-    "size": 20686714
+    "md5": "a16a719846d4028a",
+    "size": 21465036
+  },
+  "share/tex/share_tex53": {
+    "md5": "3e11fee39121a0c9",
+    "size": 1250735
   },
   "share/tex/share_tex6": {
     "md5": "b39bfc0914c9a8bc",
@@ -18716,20 +19072,20 @@
     "size": 1041794
   },
   "ui/activitybig08": {
-    "md5": "30ec56da28d0ace4",
-    "size": 1000094
+    "md5": "2e8da7ad7a651277",
+    "size": 1000233
   },
   "ui/activitybigluccia": {
-    "md5": "f59db7a5664f17d2",
-    "size": 2651739
+    "md5": "7929d2f3378313f0",
+    "size": 2651401
   },
   "ui/activitybigrogue": {
-    "md5": "b54baca2c637d008",
-    "size": 3577073
+    "md5": "301ae10e1ecf39a9",
+    "size": 3173500
   },
   "ui/activitybigrogue02": {
-    "md5": "70fa339f769eeae0",
-    "size": 102269
+    "md5": "93102a21ec572176",
+    "size": 1891475
   },
   "ui/activitybigstage1": {
     "md5": "859a73d5d9b8e8ee",
@@ -18744,12 +19100,12 @@
     "size": 762281
   },
   "ui/activityentrance": {
-    "md5": "f458f9dbbd76321f",
-    "size": 395871
+    "md5": "e57353c60e78621d",
+    "size": 407613
   },
   "ui/activitylittle01": {
-    "md5": "94dd120842cfc413",
-    "size": 909018
+    "md5": "385b8befb1953c52",
+    "size": 909396
   },
   "ui/activitylittleadventure": {
     "md5": "46dc8cd9e511c778",
@@ -18768,8 +19124,8 @@
     "size": 608569
   },
   "ui/activitymiddle01": {
-    "md5": "37cae41f13fdd98e",
-    "size": 845935
+    "md5": "1bf975bed71b6c9c",
+    "size": 845766
   },
   "ui/activitymiddle02": {
     "md5": "c8ffe8407f32104c",
@@ -18792,8 +19148,8 @@
     "size": 893482
   },
   "ui/activityworldboss": {
-    "md5": "46611840ae9a3e81",
-    "size": 1019599
+    "md5": "30ec281adb16941b",
+    "size": 1019607
   },
   "ui/activityworldbossstage2": {
     "md5": "714513777b8167ca",
@@ -18820,8 +19176,8 @@
     "size": 26948
   },
   "ui/battle": {
-    "md5": "b6666a5450b44014",
-    "size": 5040807
+    "md5": "eb0a85175823230d",
+    "size": 5046186
   },
   "ui/battlebook": {
     "md5": "12441335645bc7a0",
@@ -18904,12 +19260,12 @@
     "size": 5060
   },
   "ui/debug": {
-    "md5": "fbaaacd4497144b6",
-    "size": 1344076
+    "md5": "7c26a9564f4f6684",
+    "size": 1348081
   },
   "ui/designation": {
-    "md5": "cf618d7677092d30",
-    "size": 296610
+    "md5": "e8da92faa3bdb9bf",
+    "size": 301513
   },
   "ui/dialogue": {
     "md5": "79789a65b264f6ef",
@@ -18940,8 +19296,8 @@
     "size": 956450
   },
   "ui/ewcommerce": {
-    "md5": "343b73757260bd2a",
-    "size": 2264006
+    "md5": "9fec5a0ac871eafa",
+    "size": 2264603
   },
   "ui/faction": {
     "md5": "e21759304069904c",
@@ -18968,8 +19324,8 @@
     "size": 1499740
   },
   "ui/headframe": {
-    "md5": "50289c3cdbb3e73c",
-    "size": 564568
+    "md5": "5c01c7db878701c6",
+    "size": 692000
   },
   "ui/hospital": {
     "md5": "55738b4fe5229883",
@@ -19064,8 +19420,8 @@
     "size": 651629
   },
   "ui/missioneditor": {
-    "md5": "72fd80aaf7a579de",
-    "size": 4808905
+    "md5": "5d18b7dafd898915",
+    "size": 4816670
   },
   "ui/multiple": {
     "md5": "829f76c7a9d30296",
@@ -19112,8 +19468,8 @@
     "size": 82449
   },
   "ui/popupavatarinfobattle": {
-    "md5": "5adfaeda72a72222",
-    "size": 379578
+    "md5": "62e2041413003e17",
+    "size": 379594
   },
   "ui/popupbaseinfo": {
     "md5": "414822c16f762ccd",
@@ -19248,8 +19604,8 @@
     "size": 36693
   },
   "ui/popupnpcdetail": {
-    "md5": "5b713fdaecf4d09c",
-    "size": 787687
+    "md5": "3bd81559eec6012c",
+    "size": 789967
   },
   "ui/popuponlinetechforcefieldtips": {
     "md5": "85fe23a2bfe9e240",
@@ -19336,12 +19692,12 @@
     "size": 21876
   },
   "ui/popuptreasureexchangebatchview": {
-    "md5": "539b6c71485717aa",
-    "size": 141695
+    "md5": "54395c9d1834b80d",
+    "size": 141696
   },
   "ui/popuptreasureexchangeview": {
-    "md5": "e72f82e4faaef64e",
-    "size": 163441
+    "md5": "0b2435bd87d01944",
+    "size": 163497
   },
   "ui/popupunitlabel": {
     "md5": "885721e2d4c0a953",
@@ -19364,8 +19720,8 @@
     "size": 122783
   },
   "ui/ranking": {
-    "md5": "6714913abbb3038e",
-    "size": 318888
+    "md5": "e65bfa8df678446e",
+    "size": 318363
   },
   "ui/remind": {
     "md5": "40ea61218a70443b",
@@ -19388,8 +19744,8 @@
     "size": 1092943
   },
   "ui/resultonline": {
-    "md5": "f22ff6da80b4c4f1",
-    "size": 1732794
+    "md5": "a9ac02fdc5cee112",
+    "size": 1733691
   },
   "ui/revelation": {
     "md5": "34ae8bf9ff90c2aa",
@@ -19416,16 +19772,16 @@
     "size": 502639
   },
   "ui/sandboxelaman": {
-    "md5": "506afcc5a8b272e6",
-    "size": 4371706
+    "md5": "7b365145ab27e66f",
+    "size": 4370854
   },
   "ui/sandboxeventlog": {
     "md5": "f285690e66ecebf3",
     "size": 88812
   },
   "ui/sandboxlauncher": {
-    "md5": "a441657baa4e92e3",
-    "size": 2378296
+    "md5": "b364cb5e8ecc9276",
+    "size": 2378166
   },
   "ui/sandboxlaunchreward": {
     "md5": "48fd10c8a2f20195",
@@ -19652,8 +20008,8 @@
     "size": 1161143
   },
   "ui/unitenergybar": {
-    "md5": "28683e1d3df7b749",
-    "size": 52063
+    "md5": "0234715f01e450e1",
+    "size": 61527
   },
   "ui/unitselect": {
     "md5": "63766c4ffade2b08",
@@ -19935,6 +20291,10 @@
     "md5": "b3886e7dfcd9616e",
     "size": 15013469
   },
+  "ui/dynamic_card_full/skin_card_hpapalsamanthaf2set01": {
+    "md5": "f6d1a8fa8244bf78",
+    "size": 19699874
+  },
   "ui/dynamic_card_full/skin_card_hplayerlittlewitchfset02": {
     "md5": "0e9947168e385ae8",
     "size": 10188772
@@ -20176,8 +20536,8 @@
     "size": 57063
   },
   "ui/gacha_ad/advertisement_optional1upmodule9": {
-    "md5": "e3c28f0640e40350",
-    "size": 84355
+    "md5": "00a7058e2883861c",
+    "size": 84539
   },
   "ui/gacha_ad/advertisement_optional2up": {
     "md5": "02038220d09d2cb3",
@@ -20328,8 +20688,8 @@
     "size": 32613
   },
   "ui/gacha_ad/template1_1up_anna_id198": {
-    "md5": "a43b73923b8ed1f2",
-    "size": 32624
+    "md5": "6518064161f556c9",
+    "size": 32630
   },
   "ui/gacha_ad/template1_1up_auguste_id121": {
     "md5": "5b930f0c7d270536",
@@ -20511,6 +20871,10 @@
     "md5": "d116cb78501fda8c",
     "size": 32589
   },
+  "ui/gacha_ad/template1_1up_rogneda_id200": {
+    "md5": "0d031feac703b6de",
+    "size": 45140
+  },
   "ui/gacha_ad/template1_1up_safiyyah_id108": {
     "md5": "42847f8dc09b0838",
     "size": 32591
@@ -20602,6 +20966,10 @@
   "ui/gacha_ad/template1_1up_tristan_id146": {
     "md5": "33831ef3917eac16",
     "size": 32561
+  },
+  "ui/gacha_ad/template1_1up_ulya_id201": {
+    "md5": "c1ddfac71931dd84",
+    "size": 32604
   },
   "ui/gacha_ad/template1_1up_xavier_id55": {
     "md5": "f6852cedef8a6165",
@@ -20854,6 +21222,14 @@
   "ui/gacha_ad/template1_role_199": {
     "md5": "6b3734d4f812fd71",
     "size": 27303
+  },
+  "ui/gacha_ad/template1_role_200": {
+    "md5": "5302b8a64500ee53",
+    "size": 26704
+  },
+  "ui/gacha_ad/template1_role_201": {
+    "md5": "f33d9557f5cf7fb4",
+    "size": 26733
   },
   "ui/gacha_ad/template1_role_43": {
     "md5": "7a601014c8ea18ac",
@@ -21256,20 +21632,20 @@
     "size": 70784
   },
   "ui/operation_activity/operationactivity_01": {
-    "md5": "beff80f577473941",
-    "size": 92249
+    "md5": "656d79f85f6ad02e",
+    "size": 93002
   },
   "ui/operation_activity/operationactivity_02": {
-    "md5": "3bcd8ae4d301db84",
-    "size": 244516
+    "md5": "fb258da89a9dbf19",
+    "size": 245457
   },
   "ui/operation_activity/operationactivity_03": {
     "md5": "2477f0ab6bf43477",
     "size": 91644
   },
   "ui/operation_activity/operationactivity_04": {
-    "md5": "ad694d978bdac299",
-    "size": 301147
+    "md5": "0e5432c86b400d58",
+    "size": 302242
   },
   "ui/operation_activity/operationactivity_05": {
     "md5": "6adb023915001e72",
@@ -21316,8 +21692,8 @@
     "size": 492994
   },
   "ui/operation_activity/operationactivity_16": {
-    "md5": "db2d925e550024a9",
-    "size": 100129
+    "md5": "f9a246b53a4711c0",
+    "size": 100558
   },
   "ui/operation_activity/operationactivity_17": {
     "md5": "c1c5a9253c828e7b",
@@ -21399,6 +21775,10 @@
     "md5": "a37949200cd71a9a",
     "size": 1307911
   },
+  "ui/operation_activity/operationactivity_bigrogue02": {
+    "md5": "f641298ec34a7763",
+    "size": 1357800
+  },
   "ui/operation_activity/operationactivity_bigstage1": {
     "md5": "5e1579ee7d7c4a7b",
     "size": 210766
@@ -21450,6 +21830,10 @@
   "ui/operation_activity/operationactivity_chapterhard01": {
     "md5": "63526e696e8c2556",
     "size": 255413
+  },
+  "ui/operation_activity/operationactivity_chapterhard02": {
+    "md5": "0526871b6af9113e",
+    "size": 256005
   },
   "ui/operation_activity/operationactivity_claraday14": {
     "md5": "1fb91caac9b03e0b",
@@ -21528,8 +21912,8 @@
     "size": 125968
   },
   "ui/operation_activity/operationactivity_fate": {
-    "md5": "88dff4d39e2073d1",
-    "size": 95439
+    "md5": "14bc040889efa6d5",
+    "size": 96755
   },
   "ui/operation_activity/operationactivity_friendlymatch": {
     "md5": "173cc5eb7bb0b703",
@@ -21600,24 +21984,24 @@
     "size": 167857
   },
   "ui/operation_activity/operationactivity_jigsaw": {
-    "md5": "5cee739dd28374ce",
-    "size": 294463
+    "md5": "8b33b099779c83d6",
+    "size": 295298
   },
   "ui/operation_activity/operationactivity_jigsawelaman": {
-    "md5": "3a998369ff2f48bb",
-    "size": 295377
+    "md5": "ace20de64b13ad7f",
+    "size": 296726
   },
   "ui/operation_activity/operationactivity_jigsawinanna": {
-    "md5": "ca2dc13f69ceb672",
-    "size": 295809
+    "md5": "01d6a331e964654b",
+    "size": 296772
   },
   "ui/operation_activity/operationactivity_jigsawluccia": {
-    "md5": "15e3c034600ebe10",
-    "size": 299266
+    "md5": "d2a1280b11f7791b",
+    "size": 300081
   },
   "ui/operation_activity/operationactivity_jigsawstage2": {
-    "md5": "b1426af770baee23",
-    "size": 295901
+    "md5": "b54f533dc4977af6",
+    "size": 296821
   },
   "ui/operation_activity/operationactivity_link": {
     "md5": "78ea2b1d75956584",
@@ -21879,6 +22263,10 @@
     "md5": "e799eec82ea46cd8",
     "size": 170036
   },
+  "ui/operation_activity/operationactivity_shopskinspsamantha": {
+    "md5": "71111dd8bab77628",
+    "size": 196053
+  },
   "ui/operation_activity/operationactivity_shopskinstage2roleg": {
     "md5": "eca65c87bdbfd3bc",
     "size": 170540
@@ -21944,12 +22332,12 @@
     "size": 653257
   },
   "ui/operation_activity/operationactivity_starupyeganeh": {
-    "md5": "024b61fc13ba7bdf",
-    "size": 649109
+    "md5": "a8ef5ce8c12c4dc0",
+    "size": 649049
   },
   "ui/operation_activity/operationactivity_tasklist_chapter13": {
-    "md5": "6e53b17a613cfdf6",
-    "size": 165825
+    "md5": "9b3e3d2356ecb7de",
+    "size": 166447
   },
   "ui/operation_activity/operationactivity_teadonday14": {
     "md5": "12d2153ef49c784a",
@@ -22012,8 +22400,8 @@
     "size": 121920
   },
   "ui/operation_activity/operationactivity_wish": {
-    "md5": "944e549cec849b04",
-    "size": 467896
+    "md5": "5b6ee1c3211ce910",
+    "size": 468696
   },
   "ui/operation_activity/operationactivity_wishofspring": {
     "md5": "3697d0ea6ae5718f",
@@ -22032,8 +22420,8 @@
     "size": 237338
   },
   "ui/operation_activity/popupactivitytask": {
-    "md5": "0759072ee6f09461",
-    "size": 111984
+    "md5": "f673c9209fd5eff7",
+    "size": 112245
   },
   "ui/operation_activity/popupannualreviewsshare00": {
     "md5": "4c154b92712a36fd",
@@ -22148,16 +22536,16 @@
     "size": 126260
   },
   "ui/operation_activity/popuptasklistfriendlymatch": {
-    "md5": "24bf383fcf9768d5",
-    "size": 108644
+    "md5": "554649212877cdba",
+    "size": 108859
   },
   "ui/operation_activity/popuptasklistschedulelittle": {
     "md5": "7c0808fe2f2bd70d",
     "size": 23856
   },
   "ui/operation_activity/popuptasklist_guildconstruct": {
-    "md5": "d4b7d4fefe9154d1",
-    "size": 108610
+    "md5": "f098e7b6b2d8d58c",
+    "size": 108614
   },
   "ui/operation_activity/remainingtime": {
     "md5": "535db242270bbc5a",
@@ -22176,8 +22564,8 @@
     "size": 16790
   },
   "ui/operation_activity/tmpactivitytaskitem": {
-    "md5": "e52c58f081025525",
-    "size": 98040
+    "md5": "45d2d555ed9ef9fe",
+    "size": 98276
   },
   "ui/operation_activity/tmpcollectionrole01": {
     "md5": "93f95f304ccb49e7",
@@ -22188,20 +22576,20 @@
     "size": 10145
   },
   "ui/operation_activity/tmpitem": {
-    "md5": "19e900afd72226f1",
-    "size": 81481
+    "md5": "8b65f9c05417c227",
+    "size": 83183
   },
   "ui/operation_activity/tmpitemchapter13": {
-    "md5": "a5a8d86cd9ac96a4",
-    "size": 99412
+    "md5": "32ea4e2c36c274d6",
+    "size": 99702
   },
   "ui/operation_activity/tmpitemchapter13_2in1": {
-    "md5": "685cd054152ec139",
-    "size": 97345
+    "md5": "1c7f2c5e73c0c668",
+    "size": 97542
   },
   "ui/operation_activity/tmpitemmodule": {
-    "md5": "11e8e587a77f64df",
-    "size": 75637
+    "md5": "09c833df0732e972",
+    "size": 75788
   },
   "ui/operation_activity/tmpitemobtday7": {
     "md5": "f6a4630cc31391b1",
@@ -22268,12 +22656,12 @@
     "size": 101994
   },
   "ui/operation_activity/tmpitem_new": {
-    "md5": "979a05a51e2d15bf",
-    "size": 73328
+    "md5": "aed33d5727298584",
+    "size": 73838
   },
   "ui/operation_activity/tmpitem_new02": {
-    "md5": "1976dc162d73b5dd",
-    "size": 77088
+    "md5": "bb91f42e738f32a8",
+    "size": 77648
   },
   "ui/operation_activity/tmpnewweaponewcommerce01": {
     "md5": "6b7f2b50b7126280",
@@ -22336,8 +22724,8 @@
     "size": 31946
   },
   "ui/quest_questnodes/chapterui": {
-    "md5": "a359d6abc39bd254",
-    "size": 242895
+    "md5": "a22291a2eae0f75b",
+    "size": 242926
   },
   "ui/quest_questnodes/questuinew": {
     "md5": "ac442bc5becafed6",
@@ -22368,8 +22756,8 @@
     "size": 40103
   },
   "ui/quest_questnodes/uihardmissiondetailquestview": {
-    "md5": "0df52b0b4eb559f7",
-    "size": 173727
+    "md5": "21fb9cec02486380",
+    "size": 173704
   },
   "ui/quest_questnodes/uihardmodwdg": {
     "md5": "7646930d139575b0",
@@ -22512,7 +22900,7 @@
     "size": 62960
   },
   "ui/unitonline_nodes/skinui": {
-    "md5": "4093aa302dd4331f",
+    "md5": "3c79bc238f71c2ba",
     "size": 128781
   },
   "ui/unitonline_nodes/sp_mainui": {
