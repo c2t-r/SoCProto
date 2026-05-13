@@ -4,7 +4,7 @@
 {
   "android_app": "https://play.google.com/store/apps/details?id=com.xd.ssrpgjp#",
   "android_app_json": "",
-  "android_md5": "b64c2b0138de9f5c",
+  "android_md5": "a903a206c2dd9f32",
   "android_version": "",
   "background_download": false,
   "compatibility_testing": false,
@@ -12,11 +12,11 @@
   "enable_voices": "cn,jp,kr",
   "gamepad": false,
   "ios_app": "https://apps.apple.com/jp/app/id6461049770",
-  "ios_md5": "4eecba14b407e9fb",
+  "ios_md5": "6cbd6edcf76a1b53",
   "ios_version": "",
   "launcher_md5": "2.6.1.1",
   "nohash": false,
-  "pc_md5": "6c020b7742cf3f08",
+  "pc_md5": "9d7f7ad138a511fe",
   "require_version": "2.1.0",
   "tag": "",
   "tcp": "ssrpg-jp-prod-gate.xdgtw.com:20000",
@@ -28,7 +28,7 @@
 }
 ```
 
-asset_md5: `http://ssrpg-static.xdcdn.com/review/WebAssets/asset_md5_6c020b7742cf3f08.unity3d`  
+asset_md5: `http://ssrpg-static.xdcdn.com/review/WebAssets/asset_md5_9d7f7ad138a511fe.unity3d`  
 lua_pb: `http://ssrpg-static.xdcdn.com/review/WebAssets/lua/lua_pb_b634adbd28c650f3.unity3d`  
 
 ## proto
